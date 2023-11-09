@@ -1,3 +1,7 @@
+.custom-container{
+    max-width: 1510px !important;
+}
+
 .form-section {
     // background: rgb(1, 7, 17);
     // background: radial-gradient(circle, rgba(1, 7, 17, 1) 85%, rgba(39, 48, 63, 1) 100%);
@@ -38,7 +42,7 @@
                 color: #fff;
                 font-weight: bold;
                 width: 20%;
-                font-size: 70px;
+                font-size: 120px;
                 @media only screen and (max-width: 769px)  {
                    
                    width: 100%;
@@ -87,7 +91,7 @@
             position: absolute;
             border-radius: 40px;
             top: 45px;
-            left: 27px;
+            left: 100px;
             background: linear-gradient(to bottom, transparent, #F36A24);
             padding: 3px;
             @media only screen and (max-width: 1200px)  {
@@ -122,7 +126,7 @@
                  }
 
             form {
-                width: 80%;
+                width: 95%;
                 margin-left: auto;
                 @media only screen and (max-width: 1400px)  {
                     width: 58%;

@@ -7,7 +7,7 @@ const Footer = () => {
     <>
       <div className='form-section'>
       <div className='circle-blur'></div>
-        <div className='container'>
+        <div className='container custom-container'>
           <div className='row'>
             <div className='col-md-3'>
               <div className='talk-wrapper'>
@@ -59,12 +59,13 @@ const Footer = () => {
       </div>
 
       <div className='footer'>
-       <div className='container'>
+       <div className='container custom-container'>
         <div className='row'>
         <div className='d-flex justify-content-between align-items-center'>
             <div className='footer-arrow-img'>
               <img src={footerImg} />
             </div>
+            <p className='' style={{color:"white",marginTop:"12px"}}>raahul.decrypt@gmail.com</p>
             <div className='footer-line'></div>
         </div>
 
