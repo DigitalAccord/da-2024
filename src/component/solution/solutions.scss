@@ -15,6 +15,7 @@
         background-size: 100%;
         background-position: center;
         background-repeat: no-repeat;
+        z-index: 0;
 
         @media only screen and (max-width: 992px) {
             z-index: -1;
@@ -281,21 +282,14 @@
 
 
     .solution-text-wrapper {
-        width: 1046px;
+        max-width: 1046px;
        position: relative;
        margin: auto;
     height:452px ;
+    position: relative;
+    z-index: 1;
         .solution-text-wrapper-bg {
-            border-radius: 452px;
-            background: linear-gradient(0deg, rgba(171, 113, 100, 0.50) 0%, rgba(243, 106, 36, 0.50) 100%);
-            backdrop-filter: blur(8px);
-            width: 452px;
-            height: 452px;
-           position: absolute;
-           left: 50%;
-           right: 50%;
-           overflow: hidden;
-        
+          
          
 
         }
@@ -316,7 +310,7 @@
                     line-height: 101.5px;
                     
                     text-transform: capitalize;
-                    z-index: 2  ;
+                  
                     text-align: center;
                     overflow: visible   ;
                 }
@@ -327,7 +321,7 @@
                     border-radius: 359px;
                     background: linear-gradient(180deg, #F36A24 0%, #C74300 107.94%);
                     box-shadow: -32px -3px 20px 0px rgba(0, 0, 0, 0.25);
-                    z-index: 1;
+                    
 
                 }
             }
