@@ -1,38 +1,98 @@
 import React from 'react'
 import './solutions.scss'
+import arrow from "../../assets/arrow.png"
+import thumb from "../../assets/thumb.png"
 const Solutions = () => {
   return (
     <>
-    <div className='solutions-wrapper'>
-      <div className='container custom-container-solution'>
-          <div className='d-flex'>
+      <div className='solutions-wrapper'>
+        <div className='container custom-container-solution'>
+          <div class="d-md-flex flex-md-column flex-lg-row  gap-5">
             <div className='building-section'>
-                <div className='building-section-middle text-center'>
-                    <div className='building-section-middle-col1'>
-                        <h1 className=''>0</h1>
-                        <p>Happy</p>
-                        <p>Clients</p>
-                    </div>
+              <div className='building-section-middle text-center'>
+                <div className='building-section-middle-col1 mb-5 mt-5'>
+                  <h1 className='p-0 m-0'>0</h1>
+                  <p className='p-0 m-0'>Happy<br />Cleints</p>
 
-                    <div className='building-section-middle-col1'>
-                    <h1 className='text-white'>0</h1>
-                        <p>Happy</p>
-                        <p>Clients</p>
-                    </div>
-                    <div className='building-section-middle-col1'>
-                    <h1 className='text-white'>0</h1>
-                        <p>Happy</p>
-                        <p>Clients</p>
-                    </div>
                 </div>
+
+                <div className='building-section-middle-col1 mb-5'>
+                  <h1 className='text-white'>0</h1>
+                  <p className='p-0 m-0 text-center' >IT Tickets<br />Solved</p>
+
+                </div>
+                <div className='building-section-middle-col1 mb-5 '>
+                  <h1 className='text-white'>0</h1>
+                  <p className='p-0 m-0'>Happy<br />Clients</p>
+                </div>
+              </div>
             </div>
-            <div className='year-section'>
-              <div className='year-section-left'></div>
-              <div className='year-section-right'></div>
+            <div className='year-section-parent'>
+              <div className='year-section'>
+                <div className='year-section-left'>
+                  <h3>About Us</h3>
+                  <img src={arrow} className='' />
+                </div>
+                <div className='year-section-right'>
+                  <h3>About Us</h3>
+                  <img src={thumb} className='' />
+                </div>
+              </div>
+
+              <div className='progress-div d-flex gap-3 mt-3'>
+                <div className='progress-div-box d-none d-md-block'>
+                  <div className='text-center mt-3'>
+                    <h1>2014</h1>
+                    <h3>0%</h3>
+                    <p>Digital Accords Beginning</p>
+                  </div>
+                </div>
+                <div className='progress-div-box d-none d-md-block'>
+                  <div className='text-center mt-3'>
+                    <h1>2017</h1>
+                    <h3>0%</h3>
+
+                  </div>
+                </div>
+                <div className='progress-div-box d-none d-md-block'>
+                  <div className='text-center mt-3'>
+                    <h1>2020</h1>
+                    <h3>0%</h3>
+
+                  </div>
+                </div>
+                <div className='progress-div-box'>
+                  <div className='text-center mt-3'>
+                    <h1>Present</h1>
+                    <h3>0%</h3>
+
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+        </div>
+        <div className='container '>
+          <div className='row mt-5'>
+            <div className='col-md-12'>
+              <div className='solution-text-wrapper mt-5'>
+                <div className='solution-text-wrapper-bg'></div>
+                  <div className='solution-text-heading'>
+                  <div>
+                  <h1 className='text-white'>Solutions
+                      To Grow Your
+                      Business</h1>
+                  </div>
+                      <div className='circle-arrow'>
+                        h1
+                      </div>
+                  </div>
+                </div>
+            
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
     </>
   )
 }
