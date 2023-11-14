@@ -4,6 +4,7 @@ import arrow from "../../assets/arrow.png"
 import thumb from "../../assets/thumb.png"
 import arrow1 from '../../assets/Arrow 4.png'
 import overflow from '../../assets/overflow.png'
+import round from '../../assets/round.png'
 const Solutions = () => {
   return (
     <>
@@ -77,6 +78,7 @@ const Solutions = () => {
         <div className='container '>
           <div className='row mt-5'>
             <div className='col-md-12'>
+              {/* <div style={{width:"100%",height:"300px"}}></div> */}
               <div className='solution-text-wrapper mt-5'>
                 <div className='solution-text-wrapper-bg'></div>
                   <div className='solution-text-heading'>
@@ -84,6 +86,10 @@ const Solutions = () => {
                   <h1 className='text-white'>Solutions
                       To Grow Your
                       Business</h1>
+                  </div>
+                 <div className='media-query-flex'>
+                 <div className='media-query-circle'>
+                    <img src={round} className=''/>
                   </div>
                       <div className='circle-arrow'>
                      <img src={arrow1} className='img-fluid'  alt='/'/>
@@ -95,6 +101,7 @@ const Solutions = () => {
 
                      </div>
                       </div>
+                 </div>
                   </div>
                 </div>
             

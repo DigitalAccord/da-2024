@@ -1,0 +1,42 @@
+.solution_wrapper{
+    max-width: 1420px !important;
+    margin: auto;
+    padding :0px 10px;
+    .solution-content{
+     
+        .solution-head{
+            h1{
+                color: #FFF;
+                font-family: Poppins;
+                font-size: 64px;
+                font-style: normal;
+                font-weight: 800;
+                line-height: 53.5px; /* 83.594% */
+                text-transform: capitalize;
+            }
+           .parent{
+            max-width: 400px;
+          
+            .bg-circle-wrapper{
+                background-image: url("../../assets/round.png");
+                height: 202px;
+                width: 202px;
+                background-position: center;
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+                .circle-overflow{
+                    background: linear-gradient(180deg, #F36A24 0%, #C74300 107.94%);
+                    box-shadow: -32px -3px 20px 0px rgba(0, 0, 0, 0.25);
+                    height: 168px;
+                    width: 169px;
+                    border-radius: 359px;
+                    
+                    .circle-img{
+
+                    }
+                }
+            }
+           }
+        }
+    }
+}

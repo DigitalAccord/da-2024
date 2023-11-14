@@ -305,6 +305,38 @@
             height: 400px;
             position: relative;
             margin: auto;
+            @media only screen and (max-width: 767px) {
+              width: 100%;
+              height: 100%;
+              justify-content: center;
+              
+            }
+            @media only screen and (max-width: 500px) {
+                padding: 0px 0px;
+                
+              }
+            .media-query-flex{
+                display: flex;
+                justify-content: start;
+                position: relative;
+               
+            }
+            .media-query-circle{
+                display: none;
+                @media only screen and (max-width: 768px) {
+                    display:block;
+                    img{
+                        width: 202px;
+                        height: 202px;
+                    }
+                  
+                }
+                
+            }
+            @media only screen and (max-width: 768px) {
+                display:block;
+                background-image: none;
+            }
 
 
             h1 {
@@ -316,9 +348,18 @@
                 line-height: 101.5px;
 
                 text-transform: capitalize;
-
                 text-align: center;
                 overflow: visible;
+                @media only screen and (max-width: 992px) {
+                    font-size: 65px;
+                    line-height: 70.5px;
+                    margin-top: 30px;
+                }
+                @media only screen and (max-width: 768px) {
+                    margin-top: 0px;
+                   
+           }
+                
             }
 
             .circle-arrow {
@@ -333,6 +374,12 @@
                 margin:0 auto;
                flex-direction: column;
                 overflow: display;
+                @media only screen and (max-width: 768px) {
+                    min-width: 169px;
+                    height: 169px;
+                    margin-left: -69px;
+                   
+           }
                 p{
                     color: #FFF;
                     font-family: Avenir Next Condensed;
@@ -343,6 +390,11 @@
                     letter-spacing: 2.25px;
                     text-transform: uppercase;
                     margin-left: 70px;
+                    @media only screen and (max-width: 769px) {
+                        
+                        margin-left: -20px;
+                       
+               }
                 }
 
                 .overflow-blur {
@@ -355,6 +407,11 @@
                     left:40px;
                     transform: rotate(-90deg);
                     overflow: hidden;
+                    @media only screen and (max-width: 769px) {
+                        width: 202px;
+                        height: 103px;
+                       
+               }
                 }
 
                 img {
@@ -362,6 +419,12 @@
                     z-index: 1;
                     margin:0 auto;
                     padding-top: 60px;
+                    @media only screen and (max-width: 768px) {
+                        max-width: 90px;
+                        padding-top: 116px;
+                        margin-left: -20px;
+                       
+               }
 
                 }
 
