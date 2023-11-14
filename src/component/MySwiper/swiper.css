@@ -1,0 +1,12 @@
+.slick-arrow {
+  display: none !important;
+}
+
+.your-item {
+  padding: 10px;
+  border: 1px solid black;
+  margin-left: -27%;
+}
+.your-item.active {
+  border-color: red;
+}/*# sourceMappingURL=swiper.css.map */
