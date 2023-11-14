@@ -283,49 +283,91 @@
 
     .solution-text-wrapper {
         max-width: 1046px;
-       position: relative;
-       margin: auto;
-    height:452px ;
-    position: relative;
-    z-index: 1;
-        .solution-text-wrapper-bg {
-          
-         
+        position: relative;
+        margin: auto;
 
-        }
-            .solution-text-heading {
-                display: flex;
-                justify-content: space-between;
-              
-              overflow: visible;
-                padding: 0px 100px;
-              
+        position: relative;
+        z-index: 1;
 
-                h1 {
-                    color: #FFF;
-                    font-family: Poppins;
-                    font-size: 118px;
-                    font-style: normal;
-                    font-weight: 800;
-                    line-height: 101.5px;
-                    
-                    text-transform: capitalize;
-                  
-                    text-align: center;
-                    overflow: visible   ;
-                }
+        .solution-text-wrapper-bg {}
 
-                .circle-arrow {
-                    min-width: 359px;
-                    height: 359px;
-                    border-radius: 359px;
-                    background: linear-gradient(180deg, #F36A24 0%, #C74300 107.94%);
-                    box-shadow: -32px -3px 20px 0px rgba(0, 0, 0, 0.25);
-                    
+        .solution-text-heading {
+            display: flex;
+            justify-content: center;
+            overflow: visible;
+            padding: 0px 100px;
+            background-image: url("../../assets/round.png");
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            right: 0;
+            width: 500px;
+            height: 400px;
+            position: relative;
+            margin: auto;
 
-                }
+
+            h1 {
+                color: #FFF;
+                font-family: Poppins;
+                font-size: 118px;
+                font-style: normal;
+                font-weight: 800;
+                line-height: 101.5px;
+
+                text-transform: capitalize;
+
+                text-align: center;
+                overflow: visible;
             }
-        
+
+            .circle-arrow {
+                position: relative;
+                min-width: 359px;
+                height: 359px;
+                border-radius: 359px;
+                background: linear-gradient(180deg, #F36A24 0%, #C74300 107.94%);
+                box-shadow: -32px -3px 20px 0px rgba(0, 0, 0, 0.25);
+                display: flex;
+                justify-content: center;
+                margin:0 auto;
+               flex-direction: column;
+                overflow: display;
+                p{
+                    color: #FFF;
+                    font-family: Avenir Next Condensed;
+                    font-size: 10px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 93.6%; /* 9.36px */
+                    letter-spacing: 2.25px;
+                    text-transform: uppercase;
+                    margin-left: 70px;
+                }
+
+                .overflow-blur {
+                    border-radius: 0px 0px 700px 700px;
+                    background: rgba(217, 217, 217, 0.02);
+                    backdrop-filter: blur(14.5px);
+                    width: 452px;
+                    height: 231px;
+                    position: absolute;
+                    left:40px;
+                    transform: rotate(-90deg);
+                    overflow: hidden;
+                }
+
+                img {
+                    max-width: 223px;
+                    z-index: 1;
+                    margin:0 auto;
+                    padding-top: 60px;
+
+                }
+
+            }
+        }
+
     }
 
 

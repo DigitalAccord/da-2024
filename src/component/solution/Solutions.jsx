@@ -2,6 +2,8 @@ import React from 'react'
 import './solutions.scss'
 import arrow from "../../assets/arrow.png"
 import thumb from "../../assets/thumb.png"
+import arrow1 from '../../assets/Arrow 4.png'
+import overflow from '../../assets/overflow.png'
 const Solutions = () => {
   return (
     <>
@@ -84,7 +86,14 @@ const Solutions = () => {
                       Business</h1>
                   </div>
                       <div className='circle-arrow'>
-                        h1
+                     <img src={arrow1} className='img-fluid'  alt='/'/>
+                     <p>Scroll</p>
+                     <br/>
+                   
+                     <div className='overflow-blur'>
+                   
+
+                     </div>
                       </div>
                   </div>
                 </div>
