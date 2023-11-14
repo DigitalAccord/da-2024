@@ -81,7 +81,7 @@ const CenterMode = () => {
           <div
             key={card.id}
             className={`your-item ${card.id === activeCardId+1 ? 'active' : ''}` } 
-            onClick={() => handleCardClick(card.id)}
+            onChange={() => handleCardClick(card.id)}
           >
             <h3>{card.title}</h3>
           </div>
