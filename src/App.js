@@ -10,18 +10,20 @@ import CenterMode from './component/MySwiper/Swiper';
 
 import Category from './component/category/Category';
 import Solutions from './component/solution/Solutions';
+import { Banner } from './Banner/Banner';
 
 function App() {
   return (
    <>
+   <Banner/>
    <Solutions/>
-
-   {/* <Solution_respo/> */}
-   <Craousel/>
+   <Solution_respo/>
+   {/* <Craousel/> */}
+   <CenterMode/>
    <Category/>
    <Footer/>
 
-   <CenterMode/>
+   
    {/* <Craousel/> */}
    {/* <Category/>
    <Footer/> */}

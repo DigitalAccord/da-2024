@@ -20,9 +20,13 @@
         @media only screen and (max-width: 992px) {
             z-index: -1;
         }
+        
+        
+
     }
 
     .custom-container-solution {
+        
 
         max-width: 1420px !important;
         margin: auto;
@@ -288,6 +292,9 @@
 
         position: relative;
         z-index: 1;
+        @media only screen and (max-width: 768px) {
+            display: none;
+        }
 
         .solution-text-wrapper-bg {}
 

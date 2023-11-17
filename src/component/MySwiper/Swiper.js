@@ -6,13 +6,13 @@ import './swiper.css';
 
 const CenterMode = () => {
   const [cardsData, setCardsData] = useState([
-    { id: 1, title: 'Card 1' },
-    { id: 2, title: 'Card 2' },
-    { id: 3, title: 'Card 3' },
-    { id: 4, title: 'Card 4' },
-    { id: 5, title: 'Card 5' },
-    { id: 6, title: 'Card 6' },
-    { id: 7, title: 'Card 7' },
+    { id: 1, title: 'Discover Our:', content:"DESIGN" },
+    { id: 2, title: 'McCormacks 4WD', content:"SEO | DESIGN" },
+    { id: 3, title: 'GW Homes', content:"WEB DESIGN | UX | UI" },
+    { id: 4, title: 'Sunlover Heating',content:"DESIGN"  },
+    { id: 5, title: 'Card 5' ,content:"DESIGN" },
+    { id: 6, title: 'Card 6' ,content:"DESIGN" },
+    { id: 7, title: 'Card 7' ,content:"DESIGN" },
 
   ]);
 
@@ -48,9 +48,27 @@ const CenterMode = () => {
     initialSlide: 1,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1400,
         settings: {
           slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 2,
           slidesToScroll: 1,
           infinite: true,
           dots: true
@@ -60,14 +78,13 @@ const CenterMode = () => {
         breakpoint: 600,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1,
-          initialSlide: 2
+          slidesToScroll: 1
         }
       },
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1
         }
       }
@@ -75,7 +92,7 @@ const CenterMode = () => {
   };
 
   return (
-    <div style={{ background: 'white', padding: '20px 0px', overflow: 'hidden' }}>
+    <div className="slider-bg" >
       <Slider {...settings}>
         {cardsData.map((card) => (
           <div
@@ -83,7 +100,18 @@ const CenterMode = () => {
             className={`your-item ${card.id === activeCardId+1 ? 'active' : ''}` } 
             onChange={() => handleCardClick(card.id)}
           >
+
+           <div className="slider-content">
+            <div className="slider-content-top">
             <h3>{card.title}</h3>
+            <p>{card.content}</p>
+            </div>
+            <div className="slider-content-bottom">
+              <h1>Century Pools</h1>
+              <div className="bottom-line"></div>
+              <button>Case Study</button>
+            </div>
+           </div>
           </div>
         ))}
       </Slider>

@@ -88,6 +88,11 @@
   background: linear-gradient(to bottom, transparent, #F36A24);
   padding: 3px;
 }
+@media only screen and (max-width: 1440px) {
+  .form-section .left-section-wraper .map-wraper {
+    left: 60px;
+  }
+}
 @media only screen and (max-width: 1200px) {
   .form-section .left-section-wraper .map-wraper {
     width: 350px;
@@ -105,6 +110,11 @@
   background: var(--Classic-Orange-Fill, linear-gradient(155deg, #F36A24 15.87%, #8C3305 101.33%));
   margin-left: auto;
   padding: 90px 100px;
+}
+@media only screen and (max-width: 1024px) {
+  .form-section .left-section-wraper .form-wrapper {
+    padding: 90px 76px;
+  }
 }
 @media only screen and (max-width: 1200px) {
   .form-section .left-section-wraper .form-wrapper {

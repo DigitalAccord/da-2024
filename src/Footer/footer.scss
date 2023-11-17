@@ -94,6 +94,10 @@
             left: 100px;
             background: linear-gradient(to bottom, transparent, #F36A24);
             padding: 3px;
+         
+            @media only screen and (max-width: 1440px)  {
+                left: 60px;
+            }
             @media only screen and (max-width: 1200px)  {
                 width: 350px;
             }
@@ -115,6 +119,9 @@
             margin-left: auto;
             padding: 90px 100px;
            
+            @media only screen and (max-width: 1024px)  {
+                padding: 90px 76px;
+            }
             @media only screen and (max-width: 1200px)  {
                 max-width: 400px;
             }

@@ -4,6 +4,9 @@
     padding: 0px 10px;
     position: relative;
     margin-top: 181px;
+    @media only screen and (min-width: 768px) {
+        display: none;
+    }
     .solution-content {
 
         .solution-head {
@@ -55,6 +58,9 @@
                         border-radius: 359px;
                         margin-left: 100px;
                         margin-top: 10px;
+                        @media screen and (max-width:375px) {
+                            margin-right: 50px;
+                        }
                         display: flex;
                         justify-content: start;
                         align-items: center;

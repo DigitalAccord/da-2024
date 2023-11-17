@@ -62,10 +62,11 @@ const Footer = () => {
        <div className='container custom-container'>
         <div className='row'>
         <div className='d-flex justify-content-between align-items-center'>
-            <div className='footer-arrow-img'>
+            <div className='footer-arrow-img d-flex align-items-center gap-3'>
               <img src={footerImg} />
+              <p className='' style={{color:"white",marginTop:"12px"}}>raahul.decrypt@gmail.com</p>
             </div>
-            <p className='' style={{color:"white",marginTop:"12px"}}>raahul.decrypt@gmail.com</p>
+          
             <div className='footer-line'></div>
         </div>
 

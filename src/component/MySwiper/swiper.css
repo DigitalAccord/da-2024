@@ -2,11 +2,204 @@
   display: none !important;
 }
 
-.your-item {
-  padding: 10px;
-  border: 1px solid black;
-  margin-left: -27%;
+.slick-dots li button {
+  font-size: 30px !important;
 }
-.your-item.active {
-  border-color: red;
+
+.slick-dots li button:before {
+  color: white !important;
+  font-size: 20px !important;
+  opacity: none !important;
+  position: absolute;
+  top: 30px;
+}
+@media screen and (min-width: 1400px) {
+  .slick-dots li button:before {
+    left: -340px;
+  }
+}
+
+.slick-dots li.slick-active button:before {
+  color: orangered !important;
+  font-size: 20px !important;
+}
+
+.slider-bg {
+  padding: 100px 0px;
+}
+.slider-bg .your-item {
+  margin-left: -27%;
+  margin-top: 100px;
+}
+@media screen and (max-width: 1024px) {
+  .slider-bg .your-item {
+    margin-left: -50%;
+  }
+}
+@media screen and (max-width: 575px) {
+  .slider-bg .your-item {
+    margin-top: 60px;
+  }
+}
+.slider-bg .your-item .slider-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  height: 481px;
+  padding: 20px 50px;
+  width: 90% !important;
+  margin: 0 auto;
+  border: 1px solid black;
+  border-radius: 35px;
+  background: linear-gradient(0deg, rgba(39, 48, 63, 0.85) 0%, rgba(39, 48, 63, 0.85) 100%), url("../../assets/card.png"), lightgray -1.874px 0px/178.199% 100% no-repeat;
+  background-position: center;
+}
+@media screen and (max-width: 575px) {
+  .slider-bg .your-item .slider-content {
+    height: 269px;
+    padding: 20px 10px;
+  }
+}
+.slider-bg .your-item .slider-content .slider-content-top h3 {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+@media screen and (max-width: 575px) {
+  .slider-bg .your-item .slider-content .slider-content-top h3 {
+    font-size: 12px;
+  }
+}
+.slider-bg .your-item .slider-content .slider-content-top p {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 275;
+  line-height: normal;
+}
+@media screen and (max-width: 575px) {
+  .slider-bg .your-item .slider-content .slider-content-top p {
+    font-size: 20px;
+  }
+}
+.slider-bg .your-item .slider-content .slider-content-bottom {
+  display: none;
+}
+.slider-bg .your-item.active {
+  margin-top: 0;
+}
+.slider-bg .your-item.active .slider-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100% !important;
+  height: 674px;
+  padding: 20px 50px;
+  border-radius: 35px;
+  border: 1px solid rgba(255, 132, 69, 0);
+  background: linear-gradient(180deg, rgba(243, 106, 36, 0) 0%, rgba(243, 106, 36, 0.8) 45.83%, rgba(0, 0, 0, 0.8) 100%), url("../../assets/card.png"), lightgray -786.457px -122px/285.415% 130.476% no-repeat;
+  box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.25);
+  background-position: center;
+}
+@media screen and (max-width: 575px) {
+  .slider-bg .your-item.active .slider-content {
+    height: 378px;
+    padding: 20px 10px;
+  }
+}
+.slider-bg .your-item.active .slider-content .slider-content-top h3 {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+@media screen and (max-width: 575px) {
+  .slider-bg .your-item.active .slider-content .slider-content-top h3 {
+    font-size: 12px;
+  }
+}
+.slider-bg .your-item.active .slider-content .slider-content-top p {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: normal;
+}
+@media screen and (max-width: 575px) {
+  .slider-bg .your-item.active .slider-content .slider-content-top {
+    font-size: 14px;
+  }
+}
+.slider-bg .your-item.active .slider-content .slider-content-bottom {
+  display: block;
+}
+.slider-bg .your-item.active .slider-content .slider-content-bottom h1 {
+  width: 30px;
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 65px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 58px;
+  /* 89.231% */
+  /* Adjust font size for large screens (lg) and larger */
+  /* Adjust font size for extra-large screens (xl) and larger */
+}
+@media screen and (max-width: 575px) {
+  .slider-bg .your-item.active .slider-content .slider-content-bottom h1 {
+    font-size: 14px !important;
+    line-height: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .slider-bg .your-item.active .slider-content .slider-content-bottom h1 {
+    font-size: 50px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .slider-bg .your-item.active .slider-content .slider-content-bottom h1 {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .slider-bg .your-item.active .slider-content .slider-content-bottom h1 {
+    font-size: 35px;
+  }
+}
+.slider-bg .your-item.active .slider-content .slider-content-bottom .bottom-line {
+  max-width: 406px;
+  height: 3px;
+  background: #FFF;
+  margin: 50px 0px;
+  outline: none;
+}
+@media screen and (max-width: 575px) {
+  .slider-bg .your-item.active .slider-content .slider-content-bottom .bottom-line {
+    margin: 14px 0px;
+  }
+}
+.slider-bg .your-item.active .slider-content .slider-content-bottom button {
+  border-radius: 28px;
+  border: 1px solid #FFF;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: #FFF;
+  background: transparent;
+  padding: 10px 30px;
+}
+@media screen and (max-width: 575px) {
+  .slider-bg .your-item.active .slider-content .slider-content-bottom button {
+    padding: 10px 23px;
+    font-size: 12px;
+  }
 }/*# sourceMappingURL=swiper.css.map */
