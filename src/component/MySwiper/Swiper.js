@@ -3,7 +3,31 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './swiper.css';
+const AboveTextCarousel = ({ cardsData, activeCardId }) => {
+  const activeIndex = activeCardId - 1;
+  const titlesBeforeActive = cardsData.slice(0, activeIndex).map((card) => card.title);
+  const titleAfterActive = cardsData.slice(activeIndex + 1).map((card) => card.title);
 
+  return (
+    <div className="above-text-carousel">
+      <ul className="carousel-list">
+        {titlesBeforeActive.map((title, index) => (
+          <li key={index} className="carousel-item">
+            {title}
+          </li>
+        ))}
+        <li className={`carousel-item active`}>
+          {cardsData[activeIndex].title}
+        </li>
+        {titleAfterActive.map((title, index) => (
+          <li key={index} className="carousel-item">
+            {title}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
 const CenterMode = () => {
   const [cardsData, setCardsData] = useState([
     { id: 1, title: 'Discover Our:', content:"DESIGN" },
@@ -93,6 +117,7 @@ const CenterMode = () => {
 
   return (
     <div className="slider-bg" >
+       <AboveTextCarousel cardsData={cardsData} activeCardId={activeCardId} />
       <Slider {...settings}>
         {cardsData.map((card) => (
           <div

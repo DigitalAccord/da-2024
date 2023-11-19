@@ -106,6 +106,32 @@
   justify-content: space-between;
   padding: 30px 20px;
 }
+.solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-left .hover-container {
+  position: relative;
+  display: inline-block;
+}
+.solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-left .hover-container .arrow-image,
+.solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-left .hover-container .arrow-icon img {
+  transition: opacity 0.3s ease-in-out;
+}
+.solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-left .hover-container .arrow-icon {
+  font-size: 35px;
+  color: #F36A24;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  opacity: 0;
+  display: none;
+  margin-left: -116px;
+}
+.solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-left .hover-container:hover .arrow-image {
+  opacity: 0;
+}
+.solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-left .hover-container:hover .arrow-icon {
+  opacity: 1;
+  height: 100%;
+  width: 100%;
+}
 .solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-left h3 {
   color: #FFF;
   font-family: Poppins;

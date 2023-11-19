@@ -122,6 +122,39 @@
                     align-items: end;
                     justify-content: space-between;
                     padding: 30px 20px;
+                    .hover-container {
+                        position: relative;
+                        display: inline-block;
+                    
+                        .arrow-image,
+                        .arrow-icon img {
+                          transition: opacity 0.3s ease-in-out;
+                        }
+                    
+                        .arrow-icon  {
+                            font-size: 35px;
+                            color:#F36A24;
+                          position: absolute;
+                          top: 15px;
+                          left: 15px;
+                          opacity: 0;
+                          display: none;
+                          margin-left: -116px;
+                        }
+                    
+                        &:hover {
+                          .arrow-image {
+                            opacity: 0;
+                          }
+                    
+                          .arrow-icon  {
+                            opacity: 1;
+                            height: 100%;
+                            width: 100%;
+                            
+                          }
+                        }
+                      }
 
 
                     h3 {
@@ -442,3 +475,9 @@
 
 
 }
+
+
+
+
+
+

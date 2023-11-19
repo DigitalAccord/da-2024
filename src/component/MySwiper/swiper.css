@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .slick-arrow {
   display: none !important;
 }
@@ -202,4 +203,39 @@
     padding: 10px 23px;
     font-size: 12px;
   }
+}
+
+.above-text-carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  max-width: 1024px;
+  margin: 10px auto;
+}
+.above-text-carousel .carousel-item {
+  margin: 0 10px;
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 20px;
+  cursor: pointer;
+  list-style: none;
+}
+.above-text-carousel .carousel-item.active {
+  font-weight: bold;
+}
+.above-text-carousel .carousel-list {
+  display: flex;
+  padding: 0;
+  color: #FFF;
+}
+.above-text-carousel .carousel-list .carousel-item {
+  position: relative;
+}
+.above-text-carousel .carousel-list .carousel-item::before {
+  content: "•";
+  margin-right: 5px;
+}
+.above-text-carousel .carousel-list .carousel-item:first-child::before {
+  content: "";
 }/*# sourceMappingURL=swiper.css.map */

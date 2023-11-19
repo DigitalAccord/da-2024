@@ -5,6 +5,8 @@ import thumb from "../../assets/thumb.png"
 import arrow1 from '../../assets/Arrow 4.png'
 import overflow from '../../assets/overflow.png'
 import round from '../../assets/round.png'
+import hover from '../../assets/hoverImg.png'
+import { FiArrowUpRight } from 'react-icons/fi';
 const Solutions = () => {
   return (
     <>
@@ -34,7 +36,13 @@ const Solutions = () => {
               <div className='year-section'>
                 <div className='year-section-left'>
                   <h3>About Us</h3>
-                  <img src={arrow} className='' />
+                  <div className='hover-container'>
+                    <img src={arrow} alt='Arrow' className='arrow-image' />
+                    <div className='hover-icon'>
+                      {/* <FiArrowUpRight className='arrow-icon' /> */}
+                      <img src={hover} className=''/>
+                    </div>
+                  </div>
                 </div>
                 <div className='year-section-right'>
                   <h3>About Us</h3>
@@ -81,30 +89,30 @@ const Solutions = () => {
               {/* <div style={{width:"100%",height:"300px"}}></div> */}
               <div className='solution-text-wrapper mt-5'>
                 <div className='solution-text-wrapper-bg'></div>
-                  <div className='solution-text-heading'>
+                <div className='solution-text-heading'>
                   <div>
-                  <h1 className='text-white'>Solutions
+                    <h1 className='text-white'>Solutions
                       To Grow Your
                       Business</h1>
                   </div>
-                 <div className='media-query-flex'>
-                 <div className='media-query-circle'>
-                    <img src={round} className=''/>
-                  </div>
-                      <div className='circle-arrow'>
-                     <img src={arrow1} className='img-fluid'  alt='/'/>
-                     <p>Scroll</p>
-                     <br/>
-                   
-                     <div className='overflow-blur'>
-                   
+                  <div className='media-query-flex'>
+                    <div className='media-query-circle'>
+                      <img src={round} className='' />
+                    </div>
+                    <div className='circle-arrow'>
+                      <img src={arrow1} className='img-fluid' alt='/' />
+                      <p>Scroll</p>
+                      <br />
 
-                     </div>
+                      <div className='overflow-blur'>
+
+
                       </div>
-                 </div>
+                    </div>
                   </div>
                 </div>
-            
+              </div>
+
             </div>
           </div>
         </div>
