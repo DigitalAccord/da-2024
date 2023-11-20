@@ -17,6 +17,11 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+@media screen and (max-width: 575px) {
+  .banner-bg {
+    min-height: 100vh;
+  }
+}
 .banner-bg .navbar {
   background: rgba(39, 48, 63, 0.24);
   -webkit-backdrop-filter: blur(22.5px);
@@ -40,6 +45,11 @@
 }
 .banner-bg .navbar .nav ul li span {
   margin-left: 10px;
+}
+@media screen and (max-width: 575px) {
+  .banner-bg .navbar .nav ul li .menu-text {
+    display: none;
+  }
 }
 .banner-bg .navbar .nav ul li .span {
   border: 1px solid #E37E49;
@@ -76,6 +86,11 @@
   line-height: normal;
   letter-spacing: 3.136px;
 }
+@media screen and (max-width: 575px) {
+  .banner-bg .banner-text h1 {
+    font-size: 40px;
+  }
+}
 .banner-bg .banner-text p {
   color: #FFF;
   font-family: "HeyNovember", sans-serif;
@@ -84,6 +99,11 @@
   font-weight: 400;
   line-height: 90.5%;
   letter-spacing: 2.646px;
+}
+@media screen and (max-width: 575px) {
+  .banner-bg .banner-text p {
+    font-size: 80px;
+  }
 }
 
 .menu {

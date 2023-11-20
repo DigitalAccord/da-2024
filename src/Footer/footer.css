@@ -201,6 +201,11 @@
     width: 100%;
   }
 }
+.footer .footer-arrow-img p {
+  font-weight: bold;
+  color: white;
+  margin-top: 12px;
+}
 .footer .footer-line {
   background-color: #FFF;
   height: 1px;

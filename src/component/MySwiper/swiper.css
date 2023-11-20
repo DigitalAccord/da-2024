@@ -28,13 +28,26 @@
 .slider-bg {
   padding: 100px 0px;
 }
+.slider-bg .slider-width {
+  width: 59%;
+}
+@media screen and (max-width: 1400px) {
+  .slider-bg .slider-width {
+    width: 73%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .slider-bg .slider-width {
+    width: 94%;
+  }
+}
 .slider-bg .your-item {
-  margin-left: -27%;
+  margin-left: 66%;
   margin-top: 100px;
 }
 @media screen and (max-width: 1024px) {
   .slider-bg .your-item {
-    margin-left: -50%;
+    margin-left: 46%;
   }
 }
 @media screen and (max-width: 575px) {
@@ -221,8 +234,10 @@
   cursor: pointer;
   list-style: none;
 }
-.above-text-carousel .carousel-item.active {
-  font-weight: bold;
+@media screen and (max-width: 575px) {
+  .above-text-carousel .carousel-item {
+    font-size: 14px;
+  }
 }
 .above-text-carousel .carousel-list {
   display: flex;

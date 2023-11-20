@@ -3,44 +3,42 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './swiper.css';
-const AboveTextCarousel = ({ cardsData, activeCardId }) => {
-  const activeIndex = activeCardId - 1;
-  const titlesBeforeActive = cardsData.slice(0, activeIndex).map((card) => card.title);
-  const titleAfterActive = cardsData.slice(activeIndex + 1).map((card) => card.title);
+const AboveTextCarousel = ({ cardsData, activeCardId,setting }) => {
+  console.log({ cardsData, activeCardId })
 
+  const activeIndex = activeCardId;
+  const titlesBeforeActive = activeCardId === 0 ? cardsData.length - 1 : activeCardId - 1
+  const titleAfterActive = activeCardId === cardsData.length - 1 ? 0 : activeCardId + 1
+  console.log("title slider",titlesBeforeActive, activeCardId, titleAfterActive)
+ 
   return (
     <div className="above-text-carousel">
-      <ul className="carousel-list">
-        {titlesBeforeActive.map((title, index) => (
-          <li key={index} className="carousel-item">
-            {title}
-          </li>
-        ))}
-        <li className={`carousel-item active`}>
-          {cardsData[activeIndex].title}
+    <ul className="carousel-list">
+        <li className="carousel-item active" style={{fontWeight:"400"}}>
+          {cardsData[titlesBeforeActive].title}
         </li>
-        {titleAfterActive.map((title, index) => (
-          <li key={index} className="carousel-item">
-            {title}
-          </li>
-        ))}
-      </ul>
-    </div>
+      <li className={`carousel-item active middle`} style={{fontWeight:"bold"}}>
+        {cardsData[activeIndex].title}
+      </li>
+        <li className="carousel-item active">
+        {cardsData[titleAfterActive].title}
+        </li>
+    </ul>
+  </div>
   );
 };
 const CenterMode = () => {
   const [cardsData, setCardsData] = useState([
-    { id: 1, title: 'Discover Our:', content:"DESIGN" },
-    { id: 2, title: 'McCormacks 4WD', content:"SEO | DESIGN" },
-    { id: 3, title: 'GW Homes', content:"WEB DESIGN | UX | UI" },
-    { id: 4, title: 'Sunlover Heating',content:"DESIGN"  },
-    { id: 5, title: 'Card 5' ,content:"DESIGN" },
-    { id: 6, title: 'Card 6' ,content:"DESIGN" },
-    { id: 7, title: 'Card 7' ,content:"DESIGN" },
-
+    { id: 1, title: 'McCormacks', content:"DESIGN" },
+    { id: 2, title: 'GW', content:"SEO | DESIGN" },
+    { id: 3, title: 'Sunlover', content:"WEB DESIGN | UX | UI" },
+    { id: 4, title: 'McCormacks',content:"DESIGN"  },
+    { id: 5, title: 'GW' ,content:"DESIGN" },
+    { id: 6, title: 'Sunlover' ,content:"DESIGN" },
+    { id: 7, title: 'Sunlover' ,content:"DESIGN" },
   ]);
 
-  const [activeCardId, setActiveCardId] = useState(2);
+  const [activeCardId, setActiveCardId] = useState(1);
   const [cardId, setCardId] = useState(-1);
   const [maxCard, setMaxCard] = useState(0);
 
@@ -53,11 +51,7 @@ const CenterMode = () => {
   }, []); 
 
   const handleCardChange = (index) => {
-      if(index === maxCard-1) {
-        setActiveCardId(0);
-    } else {
-        setActiveCardId(index - cardId);
-    }
+      setActiveCardId(index)
   };
 
   const settings = {
@@ -70,6 +64,8 @@ const CenterMode = () => {
     CenterMode: true,
     slidesToScroll: 1,
     initialSlide: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
     responsive: [
       {
         breakpoint: 1400,
@@ -114,16 +110,73 @@ const CenterMode = () => {
       }
     ]
   };
-
+  const setting = {
+    
+    dots: true,
+    
+    infinite: false,
+    speed: 500,
+    slidesToShow: 4,
+    CenterMode: true,
+    slidesToScroll: 1,
+    initialSlide: 1,
+    responsive: [
+      {
+        breakpoint: 1400,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: false,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: false,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: false,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  };
   return (
     <div className="slider-bg" >
-       <AboveTextCarousel cardsData={cardsData} activeCardId={activeCardId} />
+       <div className="slider-width">
+       <Slider {...setting}>
+       <AboveTextCarousel cardsData={cardsData} activeCardId={activeCardId} setting={setting} />
+       </Slider>
+       </div>
       <Slider {...settings}>
-        {cardsData.map((card) => (
+        {cardsData.map((card, index) => (
           <div
             key={card.id}
-            className={`your-item ${card.id === activeCardId+1 ? 'active' : ''}` } 
-            onChange={() => handleCardClick(card.id)}
+            className={`your-item ${index === activeCardId ? 'active' : ''}` } 
+            onChange={() => handleCardClick(index)}
           >
 
            <div className="slider-content">

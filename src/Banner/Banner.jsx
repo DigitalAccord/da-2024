@@ -15,7 +15,7 @@ export const Banner = () => {
                                 setModal(true);
                                 console.log("true");
                             }}>
-                                <a href='/'>Menu
+                                <a href='/'><span className='menu-text'>Menu</span>
                                     <span>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="41" height="12" viewBox="0 0 41 12" fill="none">
                                             <path d="M0 10.8351H41" stroke="url(#paint0_linear_688_46472)" />
@@ -36,7 +36,7 @@ export const Banner = () => {
                             </li>
 
                             <li>
-                                <a href='/'>Let’s Talk
+                                <a href='/'><span className='menu-text'>Let’s Talk</span>
                                     <span className='span'>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="26" viewBox="0 0 24 26" fill="none">
                                             <path d="M24 12.3351C24 18.9626 18.6274 24.3351 12 24.3351C10.7825 24.3351 9.6073 24.1538 8.5 23.8167C7.61946 23.5486 3.52946 25.2003 3.52946 25.2003C3.52946 25.2003 4.26502 21.5682 3.52946 20.8351C1.34923 18.6624 0 15.6563 0 12.3351C0 5.70773 5.37258 0.335144 12 0.335144C18.6274 0.335144 24 5.70773 24 12.3351Z" fill="white" />

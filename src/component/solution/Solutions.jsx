@@ -32,21 +32,24 @@ const Solutions = () => {
                 </div>
               </div>
             </div>
-            <div className='year-section-parent'>
+            <div className='year-section-parent mt-2'>
               <div className='year-section'>
                 <div className='year-section-left'>
                   <h3>About Us</h3>
-                  <div className='hover-container'>
                     <img src={arrow} alt='Arrow' className='arrow-image' />
+                  <div className='hover-container'>
                     <div className='hover-icon'>
-                      {/* <FiArrowUpRight className='arrow-icon' /> */}
-                      <img src={hover} className=''/>
                     </div>
                   </div>
                 </div>
                 <div className='year-section-right'>
                   <h3>About Us</h3>
-                  <img src={thumb} className='' />
+
+                <div className='hover-container'>
+                    <img src={thumb} alt='thumb' className='arrow-image' />
+                    <div className='hover-icon'>
+                    </div>
+                  </div>
                 </div>
               </div>
 
