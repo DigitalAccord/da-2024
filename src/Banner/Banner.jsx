@@ -1,20 +1,58 @@
 import React, { useState } from 'react'
+import PropTypes from 'prop-types';
 import './banner.scss'
-export const Banner = () => {
-    const [modal, setModal] = useState(false);
-    return (
-        <>
 
-<div style={{position:"relative",height:"100%",width:"100%"}}>
-            <div className={`banner-bg ${modal == true ? "blur" : ""}`}>
-                <div className='navbar'>
+
+const NavMenu = ({ isOpen, className, children }) => {
+    const popupStyle = {
+      display: isOpen ? 'block' : 'none',
+    };
+  
+    const overlayStyle = {
+      display: isOpen ? 'flex' : 'none',
+    };
+  
+    return (
+      <div>
+        <div className={`overlay ${className}`} style={overlayStyle}>
+            <div className={`popup `} style={popupStyle}>
+                {children}
+            </div>
+        </div>
+      </div>
+    );
+  };
+  
+  NavMenu.propTypes = {
+    isOpen: PropTypes.bool.isRequired,
+    animation: PropTypes.string.isRequired,
+    children: PropTypes.node.isRequired,
+  };
+
+export const Banner = () => {
+    const [isPopup, setPopup] = useState(false);
+    const [isAnimation, setAnimation] = useState(false);
+
+    const handlePopup = () => {
+        setPopup(!isPopup);
+        handleAnimation()
+    };
+
+    const handleAnimation = () => {
+        setTimeout(() => {
+            setAnimation(isPopup);
+        }, 200);
+      };
+    return (
+    <>
+        <div style={{position:"relative",height:"100%",width:"100%"}}>
+            <div className={`banner-bg }`}>
+                <div className={isPopup ? 'navbar dark' : ' navbar'}>
                     <div className='nav'>
                         <ul>
                             <li onClick={(e) => {
                                 e.preventDefault();
-                                setModal(true);
-                                console.log("true");
-                            }}>
+                                handlePopup()}}>
                                 <a href='/'><span className='menu-text'>Menu</span>
                                     <span>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="41" height="12" viewBox="0 0 41 12" fill="none">
@@ -54,16 +92,11 @@ export const Banner = () => {
                     <h1>RESULTS BEGIN</h1>
                     <p><span>W</span>HERE<span>?</span></p>
                 </div>
+            <NavMenu isOpen={isPopup} className={isAnimation ? '' : 'slideIn'}>
+                tata
+            </NavMenu>
             </div>
-            {modal && (
-                <div className='menu'>
-
-                </div>
-
-
-
-            )}
-</div>
-        </>
+        </div>
+    </>
     )
 }
