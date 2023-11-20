@@ -93,7 +93,51 @@ export const Banner = () => {
                     <p><span>W</span>HERE<span>?</span></p>
                 </div>
             <NavMenu isOpen={isPopup} className={isAnimation ? '' : 'slideIn'}>
-                tata
+                <div className='outerCircle'>
+                    <div className='topLeft'>
+                        <div className='subMenuDot1'>
+                        <div className='menuItems'>
+                            <h2 className='heading'>Home</h2>
+                        </div>
+                        </div>
+                        <div className='subMenuDot2'>
+                        <div className='menuItems'>
+                            <h2 className='heading'>about us</h2>
+                        </div>
+                        </div>
+                    </div>
+                    <div className='topRight'>
+                        <div className='subMenuDot1'>
+                        <div className='menuItems'>
+                            <h2 className='heading'>Digital performance</h2>
+                        </div>
+                        </div>
+                        <div className='subMenuDot2'>
+                        <div className='menuItems'>
+                            <h2 className='heading'>User experience</h2>
+                        </div>
+                        </div>
+                    </div>
+                    <div className=' bottomLeft'>
+                        <div className='subMenuDot1'>
+                        <div className='menuItems'>
+                            <h2 className='heading'>our work</h2>
+                        </div>
+                        </div>
+                        <div className='subMenuDot2'>
+                        <div className='menuItems'>
+                            <h2 className='heading'>case studies</h2>
+                        </div>
+                        </div>
+                    </div>
+                    <div className='bottomRight'>
+                        <div className='subMenuDot1'>
+                        <div className='menuItems'>
+                            <h2 className='heading'>business it</h2>
+                        </div>
+                        </div>
+                    </div>
+                </div>
             </NavMenu>
             </div>
         </div>
