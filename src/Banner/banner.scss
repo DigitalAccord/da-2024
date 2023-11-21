@@ -1,60 +1,63 @@
 @font-face {
-  font-family: 'HeyNovember';
-  src: url('../fonts//Hey\ November.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Impact';
-  src: url('../impact-font/impact.ttf') format('truetype');
-}
-
-
-.blur {
-  filter: blur(3px);
-
-}
-
-.banner-bg {
-  background: linear-gradient(180deg, rgba(24, 29, 38, 0.136) 0%, rgba(56, 68, 90, 0) 27%, rgba(24, 29, 38, 1) 100%), url("../assets/banner.png");
-  min-height: 100vh;
-  width: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  @media screen and (max-width:575px) {
-    min-height: 100vh;
-
+    font-family: 'HeyNovember';
+    src: url('../fonts//Hey\ November.ttf') format('truetype');
   }
-
-  .navbar {
-    background: rgba(39, 48, 63, 0.24);
-    backdrop-filter: blur(22.5px);
-    width: 100%;
-
-    .nav {
-      width: 1440px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      padding-top: 10px;
-      padding-left: 50px;
-      padding-right: 50px;
-
-      ul {
-        display: flex;
-        list-style: none;
-        gap: 25px;
-
-        li {
-          span {
-            margin-left: 10px;
+  @font-face {
+    font-family: 'Impact';
+    src: url('../impact-font/impact.ttf') format('truetype');
+  }
+  
+ 
+  .blur{
+    filter: blur(3px);  
+    
+  }
+    .banner-bg {
+        background: linear-gradient(180deg, rgba(24, 29, 38, 0.136) 0%, rgba(56, 68, 90, 0) 27%, rgba(24, 29, 38, 1) 100%), url("../assets/banner.png");
+        min-height: 100vh;
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        @media screen and (max-width:575px) {
+          min-height: 100vh;
+        
+        }
+      
+        .navbar {
+          background: rgba(39, 48, 63, 0.24);
+          backdrop-filter: blur(22.5px);
+          width: 100%;
+          transition: background 1s ease;
+          &.dark{
+            background: rgba(39, 48, 63, 0.65);
+            backdrop-filter: blur(22.5px);
+            position: relative;
+            z-index: 999;
           }
-
-          .menu-text {
-            @media screen and (max-width:575px) {
-              display: none;
-            }
+      
+          .nav {
+            width: 1440px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding-top: 10px;
+            padding-left: 50px;
+            padding-right: 50px;
+      
+            ul {
+              display: flex;
+              list-style: none;
+              gap: 25px;
+      
+              li {
+                span {
+                  margin-left: 10px;
+                }
+                .menu-text{
+                  @media screen and (max-width:575px) {
+                    display: none;
+                  }
 
           }
 
@@ -190,14 +193,299 @@
       }
     }
   }
+  
 
 
-}
-
-.close {
-  top: -100%;
-  transition: all .5s ease;
-  width: 100%;
-  height: 100vh;
-  position: absolute;
+.overlay {
+    position: absolute;
+    top: -100%; 
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 70.25px);
+    transition: top 1s ease;
+    background: rgba(39, 48, 63, 0.65);
+    backdrop-filter: blur(22.5px);
+    z-index: 998;
+    justify-content: center;
+    align-items: center;
+    &.slideIn {
+      top: 70.25px;; 
+    }
+    .outerCircle{
+      position: relative;
+      .menuItems{
+        .heading{
+          color: #FFF;
+          text-align: right;
+          font-family: Poppins;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          letter-spacing: 0.96px;
+          text-transform: uppercase;
+        }
+      }
+      .subMenu{
+        // display: none;
+        ul{
+          list-style: none;
+          text-align: start;
+        }
+      }
+    
+      .topLeft{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        border-top: 1px solid;
+        border-left: 1px solid;
+        border-color: #F36A24;
+        background: transparent;
+        width: 300px;
+        height: 300px;
+        transition: width 0.3s, height 0.3s, transform 0.3s;
+        transform-origin: bottom left;
+        border-top-left-radius: 100%;
+        .subMenuDot1{
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          position: absolute;
+          background: #F36A24;
+          top: 0%;
+          right: 33%;
+          .menuItems{
+            position: relative;
+            bottom: 100%;
+            left: -150%;
+            .subMenu{
+              li{
+                position: relative;
+                &:first-child{
+                  left: -25%;
+                }
+                &:nth-child(2){
+                  left: -50%;
+                }
+                &:nth-child(3){
+                  left: -75%;
+                }
+              }
+            }
+          }
+        }
+        .subMenuDot2{
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          position: absolute;
+          background: #F36A24;
+          bottom: 33%;
+          left: 0%;
+          .menuItems{
+            position: relative;
+            bottom: 100%;
+            left: -150%;
+            .subMenu{
+              li{
+                position: relative;
+                &:first-child{
+                  left: -25%;
+                }
+                &:nth-child(2){
+                  left: -50%;
+                }
+                &:nth-child(3){
+                  left: -75%;
+                }
+              }
+            }
+          }
+        }
+      }
+      .topRight{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        border-top: 1px solid;
+        border-right: 1px solid;
+        border-color: #F36A24;
+        background: transparent;
+        width: 300px;
+        height: 300px;
+        transition: width 0.3s, height 0.3s, transform 0.3s;
+        transform-origin: bottom right;
+        border-top-right-radius: 100%;
+        .subMenuDot1{
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          position: absolute;
+          background: #F36A24;
+          top: 25%;
+          left: 66%;
+          .menuItems{
+            position: relative;
+            bottom: 100%;
+            right: -150%;
+            .subMenu{
+              li{
+                position: relative;
+                &:first-child{
+                  right: -25%;
+                }
+                &:nth-child(2){
+                  right: -50%;
+                }
+                &:nth-child(3){
+                  right: -75%;
+                }
+              }
+            }
+          }
+        }
+        .subMenuDot2{
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          position: absolute;
+          background: #F36A24;
+          bottom: calc(0% - 25px);
+          right: calc(0% - 25px);
+          .menuItems{
+            position: relative;
+            bottom: 50%;
+            right: -150%;
+            .subMenu{
+              li{
+                position: relative;
+                &:first-child{
+                  right: -40%;
+                }
+                &:nth-child(2){
+                  right: -50%;
+                }
+                &:nth-child(3){
+                  right: -40%;
+                }
+              }
+            }
+          }
+        }
+      }
+      .bottomLeft{
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: transparent;
+        border-left: 1px solid;
+        border-bottom: 1px solid;
+        border-color: #F36A24;
+        width: 300px;
+        height: 300px;
+        transition: width 0.3s, height 0.3s, transform 0.3s;
+        transform-origin: top left;
+        border-bottom-left-radius: 100%;
+        .subMenuDot1{
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          position: absolute;
+          background: #F36A24;
+          left: 0%;
+          top: 33%;
+          .menuItems{
+            position: relative;
+            top: 0;
+            left: -150%;
+            .subMenu{
+              li{
+                position: relative;
+                &:first-child{
+                  left: -75%;
+                }
+                &:nth-child(2){
+                  left: -50%;
+                }
+                &:nth-child(3){
+                  left: -25%;
+                }
+              }
+            }
+          }
+        }
+        .subMenuDot2{
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          position: absolute;
+          background: #F36A24;
+          bottom: 0%;
+          right: 33%;
+          .menuItems{
+            position: relative;
+            top: 0;
+            left: -150%;
+            .subMenu{
+              li{
+                position: relative;
+                &:first-child{
+                  left: -75%;
+                }
+                &:nth-child(2){
+                  left: -50%;
+                }
+                &:nth-child(3){
+                  left: -25%;
+                }
+              }
+            }
+          }
+        }
+      }
+      .bottomRight{
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: transparent;
+        border-right: 1px solid;
+        border-bottom: 1px solid;
+        border-color: #F36A24;
+        width: 300px;
+        height: 300px;
+        transition: width 0.3s, height 0.3s, transform 0.3s;
+        transform-origin: top right;
+        border-bottom-right-radius: 100%;
+        .subMenuDot1{
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          position: absolute;
+          background: #F36A24;
+          bottom: 25%;
+          left: 66%;
+          .menuItems{
+            position: relative;
+            top: 0;
+            right: -150%;
+            .subMenu{
+              li{
+                position: relative;
+                &:first-child{
+                  right: -75%;
+                }
+                &:nth-child(2){
+                  right: -50%;
+                }
+                &:nth-child(3){
+                  right: -25%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
