@@ -129,7 +129,7 @@
   left: 0;
   top: -100%;
   width: 100%;
-  height: calc(100vh - 70.25px);
+  min-height: calc(100vh - 70.25px);
   transition: top 1s ease;
   background: rgba(39, 48, 63, 0.65);
   -webkit-backdrop-filter: blur(22.5px);
@@ -143,20 +143,52 @@
 }
 .overlay.slideOut {
   top: -100%;
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 70.25px);
+  transition: top 1s ease;
+  background: rgba(39, 48, 63, 0.65);
+  -webkit-backdrop-filter: blur(22.5px);
+          backdrop-filter: blur(22.5px);
+  z-index: 998;
+  justify-content: center;
+  align-items: center;
 }
 .overlay .outerCircle {
   position: relative;
 }
-.overlay .outerCircle .menuItems .heading {
+@media screen and (max-width: 1220px) {
+  .overlay .outerCircle {
+    display: none;
+  }
+}
+.overlay .outerCircle .menuItems {
+  display: flex;
+  align-items: center;
+}
+.overlay .outerCircle .menuItems .MenuHeading {
   color: #FFF;
-  text-align: right;
   font-family: Poppins;
-  font-size: 24px;
+  font-size: clamp(14px, 5.5vw, 18px);
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   letter-spacing: 0.96px;
   text-transform: uppercase;
+}
+.overlay .outerCircle .menuItems .menuItemIcon {
+  background: #161B23;
+  border-radius: 50%;
+  border-bottom: 0.89px solid #F36A24;
+  margin: 10px;
+  min-width: 90px;
+  min-height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 1s ease;
 }
 .overlay .outerCircle .subMenu ul {
   list-style: none;
@@ -177,18 +209,19 @@
   border-top-left-radius: 100%;
 }
 .overlay .outerCircle .topLeft .subMenuDot1 {
-  width: 50px;
-  height: 50px;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
   position: absolute;
-  background: #F36A24;
-  top: 0%;
+  top: 3%;
   right: 33%;
 }
 .overlay .outerCircle .topLeft .subMenuDot1 .menuItems {
   position: relative;
-  bottom: 100%;
-  left: -150%;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  bottom: 100px;
+  right: 150px;
 }
 .overlay .outerCircle .topLeft .subMenuDot1 .menuItems .subMenu li {
   position: relative;
@@ -203,18 +236,19 @@
   left: -75%;
 }
 .overlay .outerCircle .topLeft .subMenuDot2 {
-  width: 50px;
-  height: 50px;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
   position: absolute;
-  background: #F36A24;
   bottom: 33%;
-  left: 0%;
+  left: 3%;
 }
 .overlay .outerCircle .topLeft .subMenuDot2 .menuItems {
   position: relative;
-  bottom: 100%;
-  left: -150%;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  bottom: 50px;
+  left: -215px;
 }
 .overlay .outerCircle .topLeft .subMenuDot2 .menuItems .subMenu li {
   position: relative;
@@ -243,18 +277,19 @@
   border-top-right-radius: 100%;
 }
 .overlay .outerCircle .topRight .subMenuDot1 {
-  width: 50px;
-  height: 50px;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
   position: absolute;
-  background: #F36A24;
   top: 25%;
-  left: 66%;
+  left: 67%;
 }
 .overlay .outerCircle .topRight .subMenuDot1 .menuItems {
   position: relative;
-  bottom: 100%;
-  right: -150%;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  bottom: 100px;
+  left: calc(100% - 18px);
 }
 .overlay .outerCircle .topRight .subMenuDot1 .menuItems .subMenu li {
   position: relative;
@@ -269,18 +304,19 @@
   right: -75%;
 }
 .overlay .outerCircle .topRight .subMenuDot2 {
-  width: 50px;
-  height: 50px;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
   position: absolute;
-  background: #F36A24;
-  bottom: calc(0% - 25px);
-  right: calc(0% - 25px);
+  bottom: calc(0% - 11px);
+  right: calc(0% - 11px);
 }
 .overlay .outerCircle .topRight .subMenuDot2 .menuItems {
   position: relative;
-  bottom: 50%;
-  right: -150%;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  bottom: 50px;
+  left: calc(100% + 8px);
 }
 .overlay .outerCircle .topRight .subMenuDot2 .menuItems .subMenu li {
   position: relative;
@@ -309,18 +345,19 @@
   border-bottom-left-radius: 100%;
 }
 .overlay .outerCircle .bottomLeft .subMenuDot1 {
-  width: 50px;
-  height: 50px;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
   position: absolute;
-  background: #F36A24;
-  left: 0%;
+  left: 3%;
   top: 33%;
 }
 .overlay .outerCircle .bottomLeft .subMenuDot1 .menuItems {
   position: relative;
-  top: 0;
-  left: -150%;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  bottom: 0px;
+  left: -215px;
 }
 .overlay .outerCircle .bottomLeft .subMenuDot1 .menuItems .subMenu li {
   position: relative;
@@ -335,18 +372,19 @@
   left: -25%;
 }
 .overlay .outerCircle .bottomLeft .subMenuDot2 {
-  width: 50px;
-  height: 50px;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
   position: absolute;
-  background: #F36A24;
-  bottom: 0%;
+  bottom: 3%;
   right: 33%;
 }
 .overlay .outerCircle .bottomLeft .subMenuDot2 .menuItems {
   position: relative;
-  top: 0;
-  left: -150%;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  bottom: -25px;
+  left: -215px;
 }
 .overlay .outerCircle .bottomLeft .subMenuDot2 .menuItems .subMenu li {
   position: relative;
@@ -375,18 +413,19 @@
   border-bottom-right-radius: 100%;
 }
 .overlay .outerCircle .bottomRight .subMenuDot1 {
-  width: 50px;
-  height: 50px;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
   position: absolute;
-  background: #F36A24;
   bottom: 25%;
-  left: 66%;
+  left: 67%;
 }
 .overlay .outerCircle .bottomRight .subMenuDot1 .menuItems {
   position: relative;
-  top: 0;
-  right: -150%;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  top: 1px;
+  left: calc(100% + 1px);
 }
 .overlay .outerCircle .bottomRight .subMenuDot1 .menuItems .subMenu li {
   position: relative;
@@ -399,4 +438,23 @@
 }
 .overlay .outerCircle .bottomRight .subMenuDot1 .menuItems .subMenu li:nth-child(3) {
   right: -25%;
+}
+.overlay .outerCircle .subMenuDot1.active, .overlay .outerCircle .subMenuDot2.active {
+  background: #F36A24;
+}
+.overlay .outerCircle .subMenuDot1.active .menuItems, .overlay .outerCircle .subMenuDot2.active .menuItems {
+  display: flex;
+  align-items: center;
+}
+.overlay .outerCircle .subMenuDot1.active .menuItems .menuItemIcon, .overlay .outerCircle .subMenuDot2.active .menuItems .menuItemIcon {
+  background: linear-gradient(180deg, #F36A24 0%, #C74300 100%);
+  box-shadow: 0px 0px 12px 0px rgba(255, 173, 132, 0.3);
+  border-radius: 50%;
+  border-top: 1.048px solid rgba(255, 255, 255, 0.46);
+}
+.overlay .popup {
+  background: url("../assets/roundImg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 530px;
 }/*# sourceMappingURL=banner.css.map */
