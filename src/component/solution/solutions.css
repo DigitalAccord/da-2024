@@ -2,13 +2,6 @@
   background: linear-gradient(180deg, rgb(24, 29, 38) 0%, rgb(56, 68, 90) 27%, rgb(24, 29, 38) 100%);
   position: relative;
 }
-.solutions-wrapper .scroll-wrapper {
-  background-image: url("../../assets/fullbgImage.png");
-  background-position: center;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  min-height: 500px;
-}
 .solutions-wrapper::after {
   position: absolute;
   content: "";

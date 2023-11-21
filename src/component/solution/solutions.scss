@@ -4,11 +4,11 @@
 
     position: relative;
     .scroll-wrapper{
-       background-image: url('../../assets/fullbgImage.png');
-       background-position: center;
-       background-size: 100% 100%;
-       background-repeat: no-repeat;
-       min-height: 500px;
+    //    background-image: url('../../assets/fullbgImage.png');
+    //    background-position: center;
+    //    background-size: 100% 100%;
+    //    background-repeat: no-repeat;
+    //    min-height: 500px;
     }
     &::after {
         position: absolute;

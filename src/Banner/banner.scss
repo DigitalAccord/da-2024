@@ -149,7 +149,8 @@
     left: 0;
     top: -100%; 
     width: 100%;
-    min-height: calc(100vh - 70.25px);
+    height: calc(100vh - 70.25px);
+    min-height: 750px;
     transition: top 1s ease;
     background: rgba(39, 48, 63, 0.65);
     backdrop-filter: blur(22.5px);
