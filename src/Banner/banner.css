@@ -27,6 +27,14 @@
   -webkit-backdrop-filter: blur(22.5px);
           backdrop-filter: blur(22.5px);
   width: 100%;
+  transition: background 1s ease;
+}
+.banner-bg .navbar.dark {
+  background: rgba(39, 48, 63, 0.65);
+  -webkit-backdrop-filter: blur(22.5px);
+          backdrop-filter: blur(22.5px);
+  position: relative;
+  z-index: 999;
 }
 .banner-bg .navbar .nav {
   width: 1440px;
@@ -114,4 +122,358 @@
   left: 0;
   right: 0;
   bottom: 0;
+}
+
+.overlay {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 70.25px);
+  transition: top 1s ease;
+  background: rgba(39, 48, 63, 0.65);
+  -webkit-backdrop-filter: blur(22.5px);
+          backdrop-filter: blur(22.5px);
+  z-index: 998;
+  justify-content: center;
+  align-items: center;
+}
+.overlay.slideIn {
+  top: 70.25px;
+}
+.overlay .outerCircle {
+  position: relative;
+}
+.overlay .outerCircle .innerCircle {
+  min-width: 200px;
+  position: absolute;
+  min-height: 200px;
+  max-width: 550px;
+  max-height: 550px;
+  background: black;
+  top: -100px;
+  left: -100px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.overlay .outerCircle .menuItems .heading {
+  color: #FFF;
+  text-align: right;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.96px;
+  text-transform: uppercase;
+}
+.overlay .outerCircle .subMenu ul {
+  list-style: none;
+  text-align: start;
+}
+.overlay .outerCircle .topLeft {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-top: 1px solid;
+  border-left: 1px solid;
+  border-color: #F36A24;
+  background: transparent;
+  width: 300px;
+  height: 300px;
+  transition: width 0.3s, height 0.3s, transform 0.3s;
+  transform-origin: bottom left;
+  border-top-left-radius: 100%;
+}
+.overlay .outerCircle .topLeft .subMenuDot1 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  background: #F36A24;
+  top: 0%;
+  right: 33%;
+}
+.overlay .outerCircle .topLeft .subMenuDot1 .menuItems {
+  position: relative;
+  bottom: 100%;
+  left: -150%;
+}
+.overlay .outerCircle .topLeft .subMenuDot1 .menuItems .subMenu li {
+  position: relative;
+}
+.overlay .outerCircle .topLeft .subMenuDot1 .menuItems .subMenu li:first-child {
+  left: -25%;
+}
+.overlay .outerCircle .topLeft .subMenuDot1 .menuItems .subMenu li:nth-child(2) {
+  left: -50%;
+}
+.overlay .outerCircle .topLeft .subMenuDot1 .menuItems .subMenu li:nth-child(3) {
+  left: -75%;
+}
+.overlay .outerCircle .topLeft .subMenuDot2 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  background: #F36A24;
+  bottom: 33%;
+  left: 0%;
+}
+.overlay .outerCircle .topLeft .subMenuDot2 .menuItems {
+  position: relative;
+  bottom: 100%;
+  left: -150%;
+}
+.overlay .outerCircle .topLeft .subMenuDot2 .menuItems .subMenu li {
+  position: relative;
+}
+.overlay .outerCircle .topLeft .subMenuDot2 .menuItems .subMenu li:first-child {
+  left: -25%;
+}
+.overlay .outerCircle .topLeft .subMenuDot2 .menuItems .subMenu li:nth-child(2) {
+  left: -50%;
+}
+.overlay .outerCircle .topLeft .subMenuDot2 .menuItems .subMenu li:nth-child(3) {
+  left: -75%;
+}
+.overlay .outerCircle .topRight {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-top: 1px solid;
+  border-right: 1px solid;
+  border-color: #F36A24;
+  background: transparent;
+  width: 300px;
+  height: 300px;
+  transition: width 0.3s, height 0.3s, transform 0.3s;
+  transform-origin: bottom right;
+  border-top-right-radius: 100%;
+}
+.overlay .outerCircle .topRight .subMenuDot1 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  background: #F36A24;
+  top: 25%;
+  left: 66%;
+}
+.overlay .outerCircle .topRight .subMenuDot1 .menuItems {
+  position: relative;
+  bottom: 100%;
+  right: -150%;
+}
+.overlay .outerCircle .topRight .subMenuDot1 .menuItems .subMenu li {
+  position: relative;
+}
+.overlay .outerCircle .topRight .subMenuDot1 .menuItems .subMenu li:first-child {
+  right: -25%;
+}
+.overlay .outerCircle .topRight .subMenuDot1 .menuItems .subMenu li:nth-child(2) {
+  right: -50%;
+}
+.overlay .outerCircle .topRight .subMenuDot1 .menuItems .subMenu li:nth-child(3) {
+  right: -75%;
+}
+.overlay .outerCircle .topRight .subMenuDot2 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  background: #F36A24;
+  bottom: calc(0% - 25px);
+  right: calc(0% - 25px);
+}
+.overlay .outerCircle .topRight .subMenuDot2 .menuItems {
+  position: relative;
+  bottom: 50%;
+  right: -150%;
+}
+.overlay .outerCircle .topRight .subMenuDot2 .menuItems .subMenu li {
+  position: relative;
+}
+.overlay .outerCircle .topRight .subMenuDot2 .menuItems .subMenu li:first-child {
+  right: -40%;
+}
+.overlay .outerCircle .topRight .subMenuDot2 .menuItems .subMenu li:nth-child(2) {
+  right: -50%;
+}
+.overlay .outerCircle .topRight .subMenuDot2 .menuItems .subMenu li:nth-child(3) {
+  right: -40%;
+}
+.overlay .outerCircle .bottomLeft {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: transparent;
+  border-left: 1px solid;
+  border-bottom: 1px solid;
+  border-color: #F36A24;
+  width: 300px;
+  height: 300px;
+  transition: width 0.3s, height 0.3s, transform 0.3s;
+  transform-origin: top left;
+  border-bottom-left-radius: 100%;
+}
+.overlay .outerCircle .bottomLeft .subMenuDot1 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  background: #F36A24;
+  left: 0%;
+  top: 33%;
+}
+.overlay .outerCircle .bottomLeft .subMenuDot1 .menuItems {
+  position: relative;
+  top: 0;
+  left: -150%;
+}
+.overlay .outerCircle .bottomLeft .subMenuDot1 .menuItems .subMenu li {
+  position: relative;
+}
+.overlay .outerCircle .bottomLeft .subMenuDot1 .menuItems .subMenu li:first-child {
+  left: -75%;
+}
+.overlay .outerCircle .bottomLeft .subMenuDot1 .menuItems .subMenu li:nth-child(2) {
+  left: -50%;
+}
+.overlay .outerCircle .bottomLeft .subMenuDot1 .menuItems .subMenu li:nth-child(3) {
+  left: -25%;
+}
+.overlay .outerCircle .bottomLeft .subMenuDot2 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  background: #F36A24;
+  bottom: 0%;
+  right: 33%;
+}
+.overlay .outerCircle .bottomLeft .subMenuDot2 .menuItems {
+  position: relative;
+  top: 0;
+  left: -150%;
+}
+.overlay .outerCircle .bottomLeft .subMenuDot2 .menuItems .subMenu li {
+  position: relative;
+}
+.overlay .outerCircle .bottomLeft .subMenuDot2 .menuItems .subMenu li:first-child {
+  left: -75%;
+}
+.overlay .outerCircle .bottomLeft .subMenuDot2 .menuItems .subMenu li:nth-child(2) {
+  left: -50%;
+}
+.overlay .outerCircle .bottomLeft .subMenuDot2 .menuItems .subMenu li:nth-child(3) {
+  left: -25%;
+}
+.overlay .outerCircle .bottomRight {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: transparent;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  border-color: #F36A24;
+  width: 300px;
+  height: 300px;
+  transition: width 0.3s, height 0.3s, transform 0.3s;
+  transform-origin: top right;
+  border-bottom-right-radius: 100%;
+}
+.overlay .outerCircle .bottomRight .subMenuDot1 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  background: #F36A24;
+  bottom: 25%;
+  left: 66%;
+}
+.overlay .outerCircle .bottomRight .subMenuDot1 .menuItems {
+  position: relative;
+  top: 0;
+  right: -150%;
+}
+.overlay .outerCircle .bottomRight .subMenuDot1 .menuItems .subMenu li {
+  position: relative;
+}
+.overlay .outerCircle .bottomRight .subMenuDot1 .menuItems .subMenu li:first-child {
+  right: -75%;
+}
+.overlay .outerCircle .bottomRight .subMenuDot1 .menuItems .subMenu li:nth-child(2) {
+  right: -50%;
+}
+.overlay .outerCircle .bottomRight .subMenuDot1 .menuItems .subMenu li:nth-child(3) {
+  right: -25%;
+}
+.overlay .bg-circle-text {
+  background-image: url("../assets//roundImg.png");
+  text-align: center;
+  position: relative;
+  width: 553px;
+  height: 553px;
+  max-width: 553px;
+  max-height: 553px;
+  background-position: center;
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  position: relative;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1600px) {
+  .overlay .bg-circle-text {
+    max-width: 503px;
+    max-height: 503px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .overlay .bg-circle-text {
+    max-width: 453px;
+    max-height: 453px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .overlay .bg-circle-text {
+    max-width: 403px;
+    max-height: 403px;
+  }
+}
+.overlay .bg-circle-text .banner-text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0;
+}
+.overlay .bg-circle-text .banner-text h1 {
+  color: #FFF;
+  text-align: center;
+  font-family: "Impact", sans-serif;
+  font-size: clamp(32px, 5.5vw, 50px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 2.021px;
+}
+.overlay .bg-circle-text .banner-text p {
+  color: #FFF;
+  font-family: "HeyNovember", sans-serif;
+  font-size: clamp(48px, 5.5vw, 72px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 90.5%;
+  letter-spacing: 1.705px;
+  margin: 0;
 }/*# sourceMappingURL=banner.css.map */
