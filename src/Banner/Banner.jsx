@@ -13,7 +13,7 @@ const NavMenu = ({ isOpen, className, children }) => {
     };
 
     const overlayStyle = {
-        display: isOpen ? 'block' : 'none',
+        display: 'block',
     };
 
     return (
@@ -205,7 +205,16 @@ export const Banner = () => {
                     </div>
                 </div>
                 <div className='centerText text-light'>
-                    <h2>RESULTS BEGIN</h2>
+                    <div className='subMenuItems show'>
+                        <h1>RESULTS BEGIN</h1>
+                        <p className='hereLine'><span>W</span>HERE<span>?</span></p>
+                    </div>
+                    <div className='subMenuItems '>
+                        <a href='/#'>Google Advertising</a>
+                        <a href='/#'>Social Media Management</a>
+                        <a href='/#'>Social Media advertising</a>
+                        <a href='/#'>Social Media advertising</a>
+                    </div>
                 </div>
             </NavMenu>
             </div>
