@@ -55,7 +55,6 @@ const CenterMode = () => {
   };
 
   const settings = {
-    
     dots: true,
     afterChange: handleCardChange,
     infinite: true,
