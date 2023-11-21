@@ -176,6 +176,12 @@
       align-items: center;
     }
 
+    .centerText{
+      position: absolute;
+      max-width: 500px;
+      max-height: 500px;
+      overflow: hidden;
+    }
     .outerCircle {
       position: relative;
       @media screen and (max-width:1220px) {

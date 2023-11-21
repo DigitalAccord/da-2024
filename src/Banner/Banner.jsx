@@ -116,6 +116,8 @@ export const Banner = () => {
                     </div>
                 </div>
             <NavMenu isOpen={isPopup} className={isPopup ? 'slideIn' : 'slideOut'}>
+                
+                
                 <div className='outerCircle'>
                     <div className='topLeft'>
                         <div className='subMenuDot1 active'>
@@ -201,6 +203,9 @@ export const Banner = () => {
                         </div>
                         </div>
                     </div>
+                </div>
+                <div className='centerText text-light'>
+                    <h2>RESULTS BEGIN</h2>
                 </div>
             </NavMenu>
             </div>

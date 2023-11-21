@@ -156,6 +156,12 @@
   justify-content: center;
   align-items: center;
 }
+.overlay .centerText {
+  position: absolute;
+  max-width: 500px;
+  max-height: 500px;
+  overflow: hidden;
+}
 .overlay .outerCircle {
   position: relative;
 }
