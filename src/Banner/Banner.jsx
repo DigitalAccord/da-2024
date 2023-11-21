@@ -13,7 +13,7 @@ const NavMenu = ({ isOpen, className, children }) => {
     };
 
     const overlayStyle = {
-        display: isOpen ? 'block' : 'none',
+        display: 'block',
     };
 
     return (
@@ -116,6 +116,8 @@ export const Banner = () => {
                     </div>
                 </div>
             <NavMenu isOpen={isPopup} className={isPopup ? 'slideIn' : 'slideOut'}>
+                
+                
                 <div className='outerCircle'>
                     <div className='topLeft'>
                         <div className='subMenuDot1 active'>
@@ -200,6 +202,18 @@ export const Banner = () => {
                             <h2 className='MenuHeading'>business it</h2>
                         </div>
                         </div>
+                    </div>
+                </div>
+                <div className='centerText text-light'>
+                    <div className='subMenuItems show'>
+                        <h1>RESULTS BEGIN</h1>
+                        <p className='hereLine'><span>W</span>HERE<span>?</span></p>
+                    </div>
+                    <div className='subMenuItems '>
+                        <a href='/#'>Google Advertising</a>
+                        <a href='/#'>Social Media Management</a>
+                        <a href='/#'>Social Media advertising</a>
+                        <a href='/#'>Social Media advertising</a>
                     </div>
                 </div>
             </NavMenu>
