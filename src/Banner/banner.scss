@@ -177,6 +177,59 @@
       align-items: center;
     }
 
+    .centerText{
+      position: absolute;
+      max-width: 500px;
+      max-height: 500px;
+      overflow: hidden;
+      .subMenuItems{
+        display: none;
+        &.show{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          a{
+            color: #FFF;
+            font-family: Poppins;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+            letter-spacing: 0.56px;
+            cursor: pointer;
+            text-decoration: none;
+            margin-bottom: 10px;
+          }
+        }
+
+      }
+      h1 {
+          color: #FFF;
+          text-align: center;
+          font-family: 'Impact', sans-serif;
+          font-size: clamp(32px, 5.5vw, 50px);
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          letter-spacing: 2.021px;
+        }
+
+        .hereLine {
+          color: #FFF;
+          font-family: 'HeyNovember', sans-serif;
+          font-size: clamp(48px, 5.5vw, 72px);
+          font-style: normal;
+          font-weight: 400;
+          line-height: 90.5%;
+          letter-spacing: 1.705px;
+          margin: 0;
+        }
+        span {
+          filter: blur(3px);
+          -webkit-filter: blur(3px);
+        }
+    }
     .outerCircle {
       position: relative;
       @media screen and (max-width:1220px) {
@@ -237,14 +290,8 @@
         }
 
         .subMenuDot1 {
-          width: 22px;
-          height: 22px;
-          border-radius: 50%;
-          position: absolute;
-          // background: #F36A24;
           top: 3%;
           right: 33%;
-
           .menuItems {
             position: relative;
             min-width: max-content;
@@ -272,11 +319,6 @@
         }
 
         .subMenuDot2 {
-          width: 22px;
-          height: 22px;
-          border-radius: 50%;
-          position: absolute;
-          // background: #F36A24;
           bottom: 33%;
           left: 3%;
 
@@ -322,11 +364,6 @@
         border-top-right-radius: 100%;
 
         .subMenuDot1 {
-          width: 22px;
-          height: 22px;
-          border-radius: 50%;
-          position: absolute;
-          // background: #F36A24;
           top: 25%;
           left: 67%;
 
@@ -357,11 +394,6 @@
         }
 
         .subMenuDot2 {
-          width: 22px;
-          height: 22px;
-          border-radius: 50%;
-          position: absolute;
-          // background: #F36A24;
           bottom: calc(0% - 11px);
           right: calc(0% - 11px);
 
@@ -407,13 +439,8 @@
         border-bottom-left-radius: 100%;
 
         .subMenuDot1 {
-          width: 22px;
-          height: 22px;
-          border-radius: 50%;
-          position: absolute;
-          // background: #F36A24;
           left: 3%;
-          top: 33%;
+          top: 33%; 
 
           .menuItems {
             position: relative;
@@ -442,11 +469,6 @@
         }
 
         .subMenuDot2 {
-          width: 22px;
-          height: 22px;
-          border-radius: 50%;
-          position: absolute;
-          // background: #F36A24;
           bottom: 3%;
           right: 33%;
 
@@ -492,11 +514,6 @@
         border-bottom-right-radius: 100%;
 
         .subMenuDot1 {
-          width: 22px;
-          height: 22px;
-          border-radius: 50%;
-          position: absolute;
-          // background: #F36A24;
           bottom: 25%;
           left: 67%;
 
@@ -527,7 +544,12 @@
         }
       }
       .subMenuDot1 ,.subMenuDot2{
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        position: absolute;
         &.active{
+          border: 2px solid #fff;
           background: #F36A24;
           .menuItems {
             display: flex;

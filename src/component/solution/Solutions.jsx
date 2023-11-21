@@ -7,7 +7,7 @@ import overflow from '../../assets/overflow.png'
 import round from '../../assets/round.png'
 import hover from '../../assets/hoverImg.png'
 import { FiArrowUpRight } from 'react-icons/fi';
-import HorizontalScroll from 'react-scroll-horizontal'
+// import HorizontalScroll from 'react-scroll-horizontal'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
