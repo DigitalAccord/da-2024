@@ -135,8 +135,8 @@
 
 .overlay {
     position: absolute;
-    top: -100%; 
     left: 0;
+    top: -100%; 
     width: 100%;
     height: calc(100vh - 70.25px);
     transition: top 1s ease;
@@ -145,8 +145,13 @@
     z-index: 998;
     justify-content: center;
     align-items: center;
+    
     &.slideIn {
-      top: 70.25px;; 
+      top: 70.25px;
+    }
+    
+    &.slideOut {
+      top: -100%; 
     }
     .outerCircle{
       position: relative;

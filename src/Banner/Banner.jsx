@@ -92,7 +92,7 @@ export const Banner = () => {
                     <h1>RESULTS BEGIN</h1>
                     <p><span>W</span>HERE<span>?</span></p>
                 </div>
-            <NavMenu isOpen={isPopup} className={isAnimation ? '' : 'slideIn'}>
+            <NavMenu isOpen={isPopup} className={isPopup ? 'slideIn' : 'slideOut'}>
                 <div className='outerCircle'>
                     <div className='topLeft'>
                         <div className='subMenuDot1'>
