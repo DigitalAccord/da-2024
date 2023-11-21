@@ -1,0 +1,97 @@
+.solution_wrapper {
+    max-width: 1420px !important;
+    margin: auto;
+    padding: 0px 10px;
+    position: relative;
+    margin-top: 181px;
+    @media only screen and (min-width: 768px) {
+        display: none;
+    }
+    .solution-content {
+
+        .solution-head {
+            text-align: center;
+
+
+            h1 {
+                color: #FFF;
+                font-family: Poppins;
+                font-size: 64px;
+                font-style: normal;
+                font-weight: 800;
+                line-height: 53.5px;
+                /* 83.594% */
+                text-transform: capitalize;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: -137px;
+                z-index: 99;
+
+
+            }
+
+            .parent {
+                max-width: 400px;
+                margin: 0 auto;
+                display: flex;
+                justify-content: center;
+
+                .bg-circle-wrapper {
+                    background-image: url("../../assets/round.png");
+                    height: 202px;
+                    width: 380px;
+                    background-position: left;
+                    background-size: 60% 100%;
+                    background-repeat: no-repeat;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    left: 12px;
+
+                    .circle-overflow {
+                        background: linear-gradient(180deg, #F36A24 0%, #C74300 107.94%);
+                        box-shadow: -32px -3px 20px 0px rgba(0, 0, 0, 0.25);
+                        height: 168px;
+                        width: 169px;
+                        border-radius: 359px;
+                        margin-left: 100px;
+                        margin-top: 10px;
+                        @media screen and (max-width:375px) {
+                            margin-right: 50px;
+                        }
+                        display: flex;
+                        justify-content: start;
+                        align-items: center;
+
+                        .overflow-blur {
+                            border-radius: 0px 0px 700px 700px;
+                            background: rgba(217, 217, 217, 0.02);
+                            backdrop-filter: blur(14.5px);
+                            width: 202px;
+                            height: 103px;
+                            position: absolute;
+                            top: 53px;
+                            right: 0;
+                            transform: rotate(-90deg);
+                            overflow: hidden;
+                            z-index: 0;
+                        }
+
+                        .circle-img {
+                            position: relative;
+                            z-index: 2;
+
+
+                            img {
+                                width: 94px;
+                                margin-left: -30px
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
