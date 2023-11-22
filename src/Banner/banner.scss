@@ -14,85 +14,186 @@
 
 }
 
+.bannerLayerSky{
+  background: url("../assets/banner/Sky.png");
+  height: 120vh;
+  min-height: 1420px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; 
+  position: relative; 
+  overflow: hidden;
+  .bannerLayerSun{
+    background: url("../assets/banner/Sun.png");
+    height: 120vh;
+    min-height: 1420px;
+    width: 100%;
+    background-position: center bottom -50%;
+    transition: background-position 3s ease;
+    background-repeat: no-repeat;
+    background-size: 40%;
+    &.animation{
+      background-position: center bottom 40%;
+    }
+    .bannerLayerBuildings{
+      background: url("../assets/banner/buildings.png");
+      height: 120vh;
+      min-height: 1420px;
+      width: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; 
+      &::before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 45%;
+        bottom: 0%;
+        left: 0%;
+        background: linear-gradient(180deg, rgba(24, 29, 38, 0.00) 29.7%, #181D26 74.93%);
+      }
+      .bannerLayerShadow{
+        background: url("../assets/banner/shadow.png");
+        height: 120vh;
+        min-height: 1230px;
+        width: 100%;
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        background-size: 900px;
+        opacity: 0;
+        position: relative;
+        transition: opacity 3s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+        &.animation{
+          opacity: 1;
+        }
+        @media screen and (max-width:1400px) {
+          background-position: center bottom -200px;
+        }
+        
+        .banner-text-container {
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          flex-direction: column;
+          min-height: 420px;
+          span {
+            filter: blur(3px);
+            -webkit-filter: blur(3px);
+          }
+      
+          h1 {
+            color: #FFF;
+            text-align: center;
+            font-family: 'Impact', sans-serif;
+            font-size: clamp(36px, 5.5vw, 78px);
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 3.136px;
+          }
+      
+          p {
+            color: #FFF;
+            font-family: 'HeyNovember', sans-serif;
+            font-size: clamp(96px, 5.5vw, 176px);
+            font-style: normal;
+            font-weight: 400;
+            line-height: 90.5%;
+            letter-spacing: 2.646px;
+      
+            @media screen and (max-width:575px) {
+              font-size: 80px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.navbar {
+  background: rgba(39, 48, 63, 0.24);
+  backdrop-filter: blur(22.5px);
+  width: 100%;
+  transition: background 1s ease;
+
+  &.dark {
+    background: rgba(39, 48, 63, 0.65);
+    backdrop-filter: blur(22.5px);
+    position: relative;
+    z-index: 999;
+  }
+
+  .nav {
+    width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+
+    ul {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+
+      li {
+        span {
+          margin-left: 10px;
+        }
+
+        .menu-text {
+          @media screen and (max-width:575px) {
+            display: none;
+          }
+
+        }
+
+        .span {
+          border: 1px solid #E37E49;
+          stroke: #E37E49;
+          border-radius: 50%;
+          padding: 15px;
+        }
+
+        a {
+          color: #FFF;
+          text-decoration: none;
+          font-family: 'Poppins', sans-serif;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          letter-spacing: 0.72px;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
+
 .banner-bg {
   background: linear-gradient(180deg, rgba(24, 29, 38, 0.136) 0%, rgba(56, 68, 90, 0) 27%, rgba(24, 29, 38, 1) 100%), url("../assets/banner.png");
   min-height: 100vh;
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
 
   @media screen and (max-width:575px) {
     min-height: 100vh;
 
   }
 
-  .navbar {
-    background: rgba(39, 48, 63, 0.24);
-    backdrop-filter: blur(22.5px);
-    width: 100%;
-    transition: background 1s ease;
 
-    &.dark {
-      background: rgba(39, 48, 63, 0.65);
-      backdrop-filter: blur(22.5px);
-      position: relative;
-      z-index: 999;
-    }
-
-    .nav {
-      width: 1440px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      padding-top: 10px;
-      padding-left: 50px;
-      padding-right: 50px;
-
-      ul {
-        display: flex;
-        list-style: none;
-        gap: 25px;
-
-        li {
-          span {
-            margin-left: 10px;
-          }
-
-          .menu-text {
-            @media screen and (max-width:575px) {
-              display: none;
-            }
-
-          }
-
-          .span {
-            border: 1px solid #E37E49;
-            stroke: #E37E49;
-            border-radius: 50%;
-            padding: 15px;
-          }
-
-          a {
-            color: #FFF;
-            text-decoration: none;
-            font-family: 'Poppins', sans-serif;
-            font-size: 18px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
-            letter-spacing: 0.72px;
-            text-transform: uppercase;
-          }
-        }
-      }
-    }
-  }
-
-  .banner-text {
-    text-align: center;
-    padding-top: 100px;
-
+  .banner-text-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
     span {
       filter: blur(3px);
       -webkit-filter: blur(3px);
@@ -150,7 +251,7 @@
     top: -100%; 
     width: 100%;
     height: calc(100vh - 70.25px);
-    min-height: 750px;
+    min-height: 1015px;
     transition: top 1s ease;
     background: rgba(39, 48, 63, 0.65);
     backdrop-filter: blur(22.5px);
@@ -163,12 +264,11 @@
     }
     
     &.slideOut {
-      top: -100%; 
       position: absolute;
-      top: -100%;
+      top: -1400vh;
       left: 0;
       width: 100%;
-      height: calc(100vh - 70.25px);
+      min-height: 10px;
       transition: top 1s ease;
       background: rgba(39, 48, 63, 0.65);
       backdrop-filter: blur(22.5px);
@@ -183,24 +283,31 @@
       max-height: 500px;
       overflow: hidden;
       .subMenuItems{
-        display: none;
+        overflow: hidden;
+        opacity: 0;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 0px;
+        transition: height 1s ease, opacity 1s ease;
+        a{
+          color: #FFF;
+          font-family: Poppins;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 300;
+          line-height: normal;
+          letter-spacing: 0.56px;
+          cursor: pointer;
+          text-decoration: none;
+          margin-bottom: 10px;
+        }
         &.show{
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          a{
-            color: #FFF;
-            font-family: Poppins;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 300;
-            line-height: normal;
-            letter-spacing: 0.56px;
-            cursor: pointer;
-            text-decoration: none;
-            margin-bottom: 10px;
-          }
+          height: 500px;
+          opacity: 1;
         }
 
       }
@@ -239,6 +346,7 @@
       .menuItems {
         display: flex;
         align-items: center;
+        cursor: pointer;
         .MenuHeading {
           color: #FFF;
           font-family: Poppins;

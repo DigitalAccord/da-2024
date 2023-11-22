@@ -93,7 +93,7 @@ const Solutions = () => {
     <>
       <div className='solutions-wrapper'>
         <div className='container custom-container-solution'>
-          <div class="d-md-flex flex-md-column flex-lg-row  gap-5">
+          <div className="d-md-flex flex-md-column flex-lg-row  gap-5">
             <div className='building-section'>
               <div className='building-section-middle text-center'>
                 <div className='building-section-middle-col1 mb-5 mt-5'>
