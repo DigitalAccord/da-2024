@@ -1,29 +1,12 @@
 .solutions-wrapper {
-  background: linear-gradient(180deg, rgb(24, 29, 38) 0%, rgb(56, 68, 90) 27%, rgb(24, 29, 38) 100%);
+  background: rgba(255, 255, 255, 0);
   position: relative;
-}
-.solutions-wrapper::after {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url("../../assets/solutionbg.png");
-  background-size: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: 0;
-}
-@media only screen and (max-width: 992px) {
-  .solutions-wrapper::after {
-    z-index: -1;
-  }
 }
 .solutions-wrapper .custom-container-solution {
   max-width: 1420px !important;
   margin: auto;
   margin-top: 50px;
+  margin-bottom: 50px;
 }
 .solutions-wrapper .custom-container-solution .building-section {
   background-image: url("../../assets/buildinbg.png");
@@ -344,19 +327,91 @@
   font-weight: 275;
   line-height: normal;
 }
-.solutions-wrapper .solution-text-wrapper {
-  max-width: 1046px;
-  position: relative;
-  margin: auto;
+
+.scroll-width-div {
+  overflow-x: scroll;
+}
+.scroll-width-div::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+  opacity: 0;
+}
+.scroll-width-div .slider-bg {
+  background-position: center;
+  background-size: cover;
+  width: 8286px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 100px;
+  min-height: 1000px;
+  background-repeat: no-repeat;
+  padding: 50px 0px;
+  /* Fix the syntax for multiple backgrounds using linear-gradient */
+  background: linear-gradient(180deg, rgba(24, 29, 38, 0) 0%, #181D26 100%), linear-gradient(180deg, #181D26 0%, rgba(24, 29, 38, 0) 40%), url("../../assets/Service side scroll.png") lightgray;
+  mix-blend-mode: lighten;
+  background-position: top;
+}
+.scroll-width-div .design-development-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+.scroll-width-div .design-development-wrapper .design-development-text h1 {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 112.375%;
+  /* 71.92px */
+}
+.scroll-width-div .design-development-wrapper .design-development-text p {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 30px;
+  /* 150% */
+}
+.scroll-width-div .design-development-wrapper .design-development-text button {
+  display: flex;
+  width: 173px;
+  height: 60px;
+  padding: 19px 27px;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-shrink: 0;
+  border-radius: 62px;
+  background: var(--Classic-Orange-Fill, linear-gradient(155deg, #F36A24 15.87%, #8C3305 101.33%));
+  outline: none;
+  border: none;
+  text-align: right;
+  color: #FFF;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.scroll-width-div .design-development-wrapper .design-development-img img {
+  max-width: 632px;
+  min-height: 601px;
+}
+.scroll-width-div .solution-text-wrapper {
   position: relative;
   z-index: 1;
 }
 @media only screen and (max-width: 768px) {
-  .solutions-wrapper .solution-text-wrapper {
+  .scroll-width-div .solution-text-wrapper {
     display: none;
   }
 }
-.solutions-wrapper .solution-text-wrapper .solution-text-heading {
+.scroll-width-div .solution-text-wrapper .solution-text-heading {
   display: flex;
   justify-content: center;
   overflow: visible;
@@ -366,47 +421,47 @@
   background-size: contain;
   background-repeat: no-repeat;
   right: 0;
-  width: 500px;
+  width: 1200px;
   height: 400px;
   position: relative;
   margin: auto;
 }
 @media only screen and (max-width: 767px) {
-  .solutions-wrapper .solution-text-wrapper .solution-text-heading {
+  .scroll-width-div .solution-text-wrapper .solution-text-heading {
     width: 100%;
     height: 100%;
     justify-content: center;
   }
 }
 @media only screen and (max-width: 500px) {
-  .solutions-wrapper .solution-text-wrapper .solution-text-heading {
+  .scroll-width-div .solution-text-wrapper .solution-text-heading {
     padding: 0px 0px;
   }
 }
-.solutions-wrapper .solution-text-wrapper .solution-text-heading .media-query-flex {
+.scroll-width-div .solution-text-wrapper .solution-text-heading .media-query-flex {
   display: flex;
   justify-content: start;
   position: relative;
 }
-.solutions-wrapper .solution-text-wrapper .solution-text-heading .media-query-circle {
+.scroll-width-div .solution-text-wrapper .solution-text-heading .media-query-circle {
   display: none;
 }
 @media only screen and (max-width: 768px) {
-  .solutions-wrapper .solution-text-wrapper .solution-text-heading .media-query-circle {
+  .scroll-width-div .solution-text-wrapper .solution-text-heading .media-query-circle {
     display: block;
   }
-  .solutions-wrapper .solution-text-wrapper .solution-text-heading .media-query-circle img {
+  .scroll-width-div .solution-text-wrapper .solution-text-heading .media-query-circle img {
     width: 202px;
     height: 202px;
   }
 }
 @media only screen and (max-width: 768px) {
-  .solutions-wrapper .solution-text-wrapper .solution-text-heading {
+  .scroll-width-div .solution-text-wrapper .solution-text-heading {
     display: block;
     background-image: none;
   }
 }
-.solutions-wrapper .solution-text-wrapper .solution-text-heading h1 {
+.scroll-width-div .solution-text-wrapper .solution-text-heading h1 {
   color: #FFF;
   font-family: Poppins;
   font-size: 118px;
@@ -417,19 +472,12 @@
   text-align: center;
   overflow: visible;
 }
-@media only screen and (max-width: 992px) {
-  .solutions-wrapper .solution-text-wrapper .solution-text-heading h1 {
-    font-size: 65px;
-    line-height: 70.5px;
-    margin-top: 30px;
-  }
-}
 @media only screen and (max-width: 768px) {
-  .solutions-wrapper .solution-text-wrapper .solution-text-heading h1 {
+  .scroll-width-div .solution-text-wrapper .solution-text-heading h1 {
     margin-top: 0px;
   }
 }
-.solutions-wrapper .solution-text-wrapper .solution-text-heading .circle-arrow {
+.scroll-width-div .solution-text-wrapper .solution-text-heading .circle-arrow {
   position: relative;
   min-width: 359px;
   height: 359px;
@@ -443,13 +491,13 @@
   overflow: display;
 }
 @media only screen and (max-width: 768px) {
-  .solutions-wrapper .solution-text-wrapper .solution-text-heading .circle-arrow {
+  .scroll-width-div .solution-text-wrapper .solution-text-heading .circle-arrow {
     min-width: 169px;
     height: 169px;
     margin-left: -69px;
   }
 }
-.solutions-wrapper .solution-text-wrapper .solution-text-heading .circle-arrow p {
+.scroll-width-div .solution-text-wrapper .solution-text-heading .circle-arrow p {
   color: #FFF;
   font-family: Avenir Next Condensed;
   font-size: 10px;
@@ -462,11 +510,11 @@
   margin-left: 70px;
 }
 @media only screen and (max-width: 769px) {
-  .solutions-wrapper .solution-text-wrapper .solution-text-heading .circle-arrow p {
+  .scroll-width-div .solution-text-wrapper .solution-text-heading .circle-arrow p {
     margin-left: -20px;
   }
 }
-.solutions-wrapper .solution-text-wrapper .solution-text-heading .circle-arrow .overflow-blur {
+.scroll-width-div .solution-text-wrapper .solution-text-heading .circle-arrow .overflow-blur {
   border-radius: 0px 0px 700px 700px;
   background: rgba(217, 217, 217, 0.02);
   -webkit-backdrop-filter: blur(14.5px);
@@ -479,21 +527,26 @@
   overflow: hidden;
 }
 @media only screen and (max-width: 769px) {
-  .solutions-wrapper .solution-text-wrapper .solution-text-heading .circle-arrow .overflow-blur {
+  .scroll-width-div .solution-text-wrapper .solution-text-heading .circle-arrow .overflow-blur {
     width: 202px;
     height: 103px;
   }
 }
-.solutions-wrapper .solution-text-wrapper .solution-text-heading .circle-arrow img {
+.scroll-width-div .solution-text-wrapper .solution-text-heading .circle-arrow img {
   max-width: 223px;
   z-index: 1;
   margin: 0 auto;
   padding-top: 60px;
 }
 @media only screen and (max-width: 768px) {
-  .solutions-wrapper .solution-text-wrapper .solution-text-heading .circle-arrow img {
+  .scroll-width-div .solution-text-wrapper .solution-text-heading .circle-arrow img {
     max-width: 90px;
     padding-top: 116px;
     margin-left: -20px;
   }
+}
+
+::-webkit-scrollbar-track {
+  /* background: #f9f9f9; */
+  background: none !important;
 }/*# sourceMappingURL=solutions.css.map */

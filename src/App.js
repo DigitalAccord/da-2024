@@ -17,7 +17,7 @@ function App() {
    <>
    <Banner/>
    <Solutions/>
-   <Solution_respo/>
+   {/* <Solution_respo/> */}
    {/* <Craousel/> */}
    <CenterMode/>
    <Category/>

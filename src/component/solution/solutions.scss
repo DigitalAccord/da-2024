@@ -33,6 +33,7 @@
         max-width: 1420px !important;
         margin: auto;
         margin-top: 50px;
+        margin-bottom: 50px;
 
 
         .building-section {
@@ -433,19 +434,55 @@
     }
 }
 .scroll-width-div{
-    width: 99vw;
     overflow-x: scroll;
 
+  
+   
+    &::-webkit-scrollbar{
+        width: 0;  
+        background: transparent; 
+        opacity: 0;
+    
+        
+    }
+    
+
     .slider-bg{
-      background-image: url('../../assets/fullbgImage.png');
-      background-position: center;
-      background-size:contain;
-      width:8286px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 100px;
-      min-height: 500px;
+    //   background-image: url('../../assets/Service\ side\ scroll.png');
+    //   background-position: center;
+    //   background-size:cover;
+    //   width:8286px;
+    //   display: flex;
+    //   justify-content: space-between;
+    //   align-items: center;
+    //   gap: 100px;
+    //   min-height: 1000px;
+    //   background-repeat: no-repeat;
+    //   padding: 0;
+    //   background: linear-gradient(180deg, rgba(24, 29, 38, 0) 0%, #181D26 100%), linear-gradient(180deg, #181D26 0%, rgba(24, 29, 38, 0) 10%), url('../../assets//Service\ side\ scroll.png'), lightgray cover no-repeat;
+    // mix-blend-mode: lighten;
+    // background-position: top;
+
+    background-position: center;
+    background-size: cover;
+    width: 8286px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+    min-height: 1000px;
+    background-repeat: no-repeat;
+    padding: 50px 0px;
+    
+    /* Fix the syntax for multiple backgrounds using linear-gradient */
+    background: 
+        linear-gradient(180deg, rgba(24, 29, 38, 0) 0%, #181D26 100%), 
+        linear-gradient(180deg, #181D26 0%, rgba(24, 29, 38, 0) 40%), 
+        url('../../assets/Service side scroll.png') lightgray;
+    
+    mix-blend-mode: lighten;
+    background-position: top;
+}
       // overflow-x:scroll;
       .design-development-wrapper {
          
@@ -489,8 +526,8 @@
                   background: var(--Classic-Orange-Fill, linear-gradient(155deg, #F36A24 15.87%, #8C3305 101.33%));
                   outline: none;
                   border: none;
-  
-  
+                text-align: right;
+                  
                   color: #FFF;
                   text-align: center;
                   font-family: Poppins;
@@ -506,7 +543,7 @@
   
               img {
                   max-width: 632px;
-                  min-height: 691px;
+                  min-height: 601px;
               }
           }
       
@@ -579,8 +616,8 @@
               h1 {
                   color: #FFF;
                   font-family: Poppins;
-                  font-size: 118px;
-                  font-style: normal;
+                  font-size: 118px; 
+                  font-style: normal; 
                   font-weight: 800;
                   line-height: 101.5px;
   
@@ -588,11 +625,7 @@
                   text-align: center;
                   overflow: visible;
   
-                  @media only screen and (max-width: 992px) {
-                      font-size: 65px;
-                      line-height: 70.5px;
-                      margin-top: 30px;
-                  }
+                
   
                   @media only screen and (max-width: 768px) {
                       margin-top: 0px;
@@ -680,15 +713,13 @@
   
       }
     }
-}
+
 
 
 
 
 ::-webkit-scrollbar {
-    width: 0;  
-    background: transparent; 
-    opacity: 0;
+  
      
 }
 ::-webkit-scrollbar-track {
