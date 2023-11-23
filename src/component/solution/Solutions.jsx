@@ -12,6 +12,7 @@ import digitalMarketingImg from '../../assets/digitalMarketingImg.png'
 import itImg from '../../assets/ItImg.png'
 import $ from 'jquery';
 import Solution_respo from '../Sulution_respo/Solution_respo'
+import waves1 from '../../assets/wave1.png'
 const Solutions = () => {
   const intialWidth = window.innerWidth - 15
   const [windowWidth, setWindowWidth] = useState(intialWidth);
@@ -59,7 +60,7 @@ const Solutions = () => {
           <div class="d-md-flex flex-md-column flex-lg-row  gap-5">
             <div className='building-section'>
               <div className='building-section-middle text-center'>
-                <div className='building-section-middle-col1 mb-5 mt-5'>
+                <div className='building-section-middle-col1 mb-5 mt-0 mt-sm-5'>
                   <h1 className='p-0 m-0'>0</h1>
                   <p className='p-0 m-0'>Happy<br />Cleints</p>
 
@@ -103,13 +104,21 @@ const Solutions = () => {
                     <h1>2014</h1>
                     <h3>0%</h3>
                     <p>Digital Accords Beginning</p>
+                    {/* <div className='wavesbg'>
+
+                   </div> */}
                   </div>
                 </div>
                 <div className='progress-div-box d-none d-md-block'>
-                  <div className='text-center mt-3'>
-                    <h1>2017</h1>
-                    <h3>0%</h3>
+                  <div className='inner-layer'>
+                    <div className='inner-layer1'>
+                     
+                        <div className='text-center mt-3'>
+                              <h1>2017</h1>
+                              <h3>0%</h3>
 
+                          </div>
+                    </div>
                   </div>
                 </div>
                 <div className='progress-div-box d-none d-md-block'>
@@ -156,9 +165,11 @@ const Solutions = () => {
                   </div>
                 </div>
               </div>
-              {/* <Solution_respo/> */}
-            </div>
 
+            </div>
+            <div className='container d-md-none'>
+              <Solution_respo />
+            </div>
             <div className='design-development-wrapper container'>
               <div className='design-development-text'>
                 <h1>Design &
@@ -190,7 +201,7 @@ const Solutions = () => {
 
             <div className='design-development-wrapper container'>
               <div className='design-development-text'>
-                <h1>Business<br/>
+                <h1>Business<br />
                   I.T.</h1>
                 <p>Our Brisbane IT experts can help transform your business through modernising your technology to future-proof your business. Our helpdesk team provides skilled Business IT solutions to ensure your business is always at peak performance.</p>
                 <div className='d-flex justify-content-end pt-2 mx-5' >
