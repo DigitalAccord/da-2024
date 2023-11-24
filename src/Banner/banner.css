@@ -54,7 +54,7 @@
 }
 .bannerLayerSky .bannerLayerSun .bannerLayerBuildings .bannerLayerShadow {
   background: url("../assets/banner/shadow.png");
-  height: 120vh;
+  height: 100vh;
   min-height: 1230px;
   width: 100%;
   background-position: center bottom;
@@ -70,6 +70,7 @@
 @media screen and (max-width: 1400px) {
   .bannerLayerSky .bannerLayerSun .bannerLayerBuildings .bannerLayerShadow {
     background-position: center bottom -200px;
+    min-height: 1140px;
   }
 }
 .bannerLayerSky .bannerLayerSun .bannerLayerBuildings .bannerLayerShadow .banner-text-container {
@@ -132,6 +133,11 @@
   padding-left: 50px;
   padding-right: 50px;
 }
+@media screen and (min-width: 768px) {
+  .navbar .nav .mobileLogo {
+    display: none;
+  }
+}
 .navbar .nav ul {
   display: flex;
   list-style: none;
@@ -140,7 +146,7 @@
 .navbar .nav ul li span {
   margin-left: 10px;
 }
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 767px) {
   .navbar .nav ul li .menu-text {
     display: none;
   }
@@ -230,7 +236,7 @@
 .overlay {
   position: absolute;
   left: 0;
-  top: -100%;
+  top: -100vh;
   width: 100%;
   height: calc(100vh - 70.25px);
   min-height: 1015px;
@@ -246,24 +252,18 @@
   top: 70.25px;
 }
 .overlay.slideOut {
-  position: absolute;
-  top: -1400vh;
-  left: 0;
-  width: 100%;
-  min-height: 10px;
-  transition: top 1s ease;
-  background: rgba(39, 48, 63, 0.65);
-  -webkit-backdrop-filter: blur(22.5px);
-          backdrop-filter: blur(22.5px);
-  z-index: 998;
-  justify-content: center;
-  align-items: center;
+  top: -110%;
 }
 .overlay .centerText {
   position: absolute;
   max-width: 500px;
   max-height: 500px;
   overflow: hidden;
+}
+@media screen and (max-width: 1220px) {
+  .overlay .centerText {
+    display: none;
+  }
 }
 .overlay .centerText .subMenuItems {
   overflow: hidden;
@@ -316,6 +316,487 @@
 .overlay .centerText span {
   filter: blur(3px);
   -webkit-filter: blur(3px);
+}
+.overlay .laptopCircle {
+  position: relative;
+  width: 100%;
+}
+.overlay .laptopCircle::before {
+  content: "";
+  position: absolute;
+  width: 585px;
+  height: 585px;
+  top: 50%;
+  left: -284px;
+  border: 2px solid #F36A24;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+@media screen and (min-width: 1221px) {
+  .overlay .laptopCircle {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .overlay .laptopCircle {
+    display: none;
+  }
+}
+.overlay .laptopCircle .laptopMenuDiv {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+.overlay .laptopCircle .laptopMenuDiv .menuBackIcon {
+  background: #F36A24;
+  border-radius: 50%;
+  border-bottom: 0.89px solid #F36A24;
+  min-width: 90px;
+  min-height: 90px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 1s ease;
+  cursor: pointer;
+}
+.overlay .laptopCircle .laptopMenuDiv .menuBackIcon.show {
+  opacity: 1;
+}
+.overlay .laptopCircle .laptopMenuDiv .laptopSubMenu {
+  overflow: hidden;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  width: 0%;
+  transition: width 1s ease, opacity 1s ease;
+}
+.overlay .laptopCircle .laptopMenuDiv .laptopSubMenu a {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  padding: 10px 0;
+  letter-spacing: 0.56px;
+  cursor: pointer;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+.overlay .laptopCircle .laptopMenuDiv .laptopSubMenu.show {
+  width: 100%;
+  opacity: 1;
+}
+.overlay .laptopCircle .laptopMenuUl {
+  list-style: none;
+  padding-left: 120px;
+  max-height: 860px;
+  overflow: hidden;
+  transform-origin: left bottom;
+  opacity: 1;
+  position: relative;
+  left: 0%;
+  transition: left 2s ease, opacity 3s ease;
+}
+@media screen and (min-width: 1220px) {
+  .overlay .laptopCircle .laptopMenuUl {
+    display: none;
+    opacity: 0;
+  }
+}
+.overlay .laptopCircle .laptopMenuUl.hide {
+  left: -100%;
+}
+.overlay .laptopCircle .laptopMenuUl li:first-child {
+  padding-left: 20px;
+}
+.overlay .laptopCircle .laptopMenuUl li:nth-child(2) {
+  padding-left: 120px;
+}
+.overlay .laptopCircle .laptopMenuUl li:nth-child(3) {
+  padding-left: 220px;
+}
+.overlay .laptopCircle .laptopMenuUl li:nth-child(4) {
+  padding-left: 270px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.overlay .laptopCircle .laptopMenuUl li:nth-child(5) {
+  padding-left: 220px;
+}
+.overlay .laptopCircle .laptopMenuUl li:nth-child(6) {
+  padding-left: 120px;
+}
+.overlay .laptopCircle .laptopMenuUl li:nth-child(7) {
+  padding-left: 20px;
+}
+.overlay .laptopCircle .menuItems {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  min-width: -moz-max-content;
+  min-width: max-content;
+}
+.overlay .laptopCircle .menuItems .MenuHeading {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: clamp(14px, 5.5vw, 18px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.96px;
+  text-transform: uppercase;
+}
+.overlay .laptopCircle .menuItems .menuItemIcon {
+  background: #161B23;
+  border-radius: 50%;
+  border-bottom: 0.89px solid #F36A24;
+  margin: 10px;
+  min-width: 90px;
+  min-height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 1s ease;
+}
+.overlay .laptopCircle .lapMenu .laptopMenuDot {
+  position: absolute;
+  height: 22px;
+  width: 22px;
+  background: #F36A24;
+  bottom: 33%;
+  left: 73%;
+  border-radius: 50%;
+}
+.overlay .laptopCircle .lapMenu:first-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: width 0.3s, height 0.3s, transform 0.3s;
+  transform-origin: top left;
+  border-bottom-right-radius: 100%;
+  background: #43A047;
+  transition-delay: 0.1s, 0.1s, 0.1s;
+  transform: rotate(255deg);
+  width: 300px;
+  height: 300px;
+}
+.overlay .laptopCircle .lapMenu:first-child .laptopMenuDot {
+  transform: rotate(105deg);
+}
+.overlay .laptopCircle .lapMenu:nth-child(2) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: width 0.3s, height 0.3s, transform 0.3s;
+  transform-origin: top left;
+  border-bottom-right-radius: 100%;
+  background: #1bc624;
+  transition-delay: 0.1s, 0.1s, 0.1s;
+  transform: rotate(280deg);
+  width: 300px;
+  height: 300px;
+}
+.overlay .laptopCircle .lapMenu:nth-child(2) .laptopMenuDot {
+  transform: rotate(80deg);
+}
+.overlay .laptopCircle .lapMenu:nth-child(3) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: width 0.3s, height 0.3s, transform 0.3s;
+  transform-origin: top left;
+  border-bottom-right-radius: 100%;
+  background: #1b8020;
+  transition-delay: 0.1s, 0.1s, 0.1s;
+  transform: rotate(305deg);
+  width: 300px;
+  height: 300px;
+}
+.overlay .laptopCircle .lapMenu:nth-child(3) .laptopMenuDot {
+  transform: rotate(55deg);
+}
+.overlay .laptopCircle .lapMenu:nth-child(4) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: width 0.3s, height 0.3s, transform 0.3s;
+  transform-origin: top left;
+  border-bottom-right-radius: 100%;
+  background: #044507;
+  transition-delay: 0.1s, 0.1s, 0.1s;
+  transform: rotate(330deg);
+  width: 300px;
+  height: 300px;
+}
+.overlay .laptopCircle .lapMenu:nth-child(4) .laptopMenuDot {
+  transform: rotate(30deg);
+}
+.overlay .laptopCircle .lapMenu:nth-child(5) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: width 0.3s, height 0.3s, transform 0.3s;
+  transform-origin: top left;
+  border-bottom-right-radius: 100%;
+  background: #50ef58;
+  transition-delay: 0.1s, 0.1s, 0.1s;
+  transform: rotate(355deg);
+  width: 300px;
+  height: 300px;
+}
+.overlay .laptopCircle .lapMenu:nth-child(5) .laptopMenuDot {
+  transform: rotate(5deg);
+}
+.overlay .laptopCircle .lapMenu:nth-child(6) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: width 0.3s, height 0.3s, transform 0.3s;
+  transform-origin: top left;
+  border-bottom-right-radius: 100%;
+  background: #3acb41;
+  transition-delay: 0.1s, 0.1s, 0.1s;
+  transform: rotate(380deg);
+  width: 300px;
+  height: 300px;
+}
+.overlay .laptopCircle .lapMenu:nth-child(6) .laptopMenuDot {
+  transform: rotate(-20deg);
+}
+.overlay .laptopCircle .lapMenu:nth-child(7) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: width 0.3s, height 0.3s, transform 0.3s;
+  transform-origin: top left;
+  border-bottom-right-radius: 100%;
+  background: rgba(27, 128, 32, 0.8745098039);
+  transition-delay: 0.1s, 0.1s, 0.1s;
+  transform: rotate(405deg);
+  width: 300px;
+  height: 300px;
+}
+.overlay .laptopCircle .lapMenu:nth-child(7) .laptopMenuDot {
+  transform: rotate(-45deg);
+}
+.overlay .mobileMenuDiv {
+  position: relative;
+  left: -150px;
+  max-height: 580px;
+  overflow: hidden;
+  width: 100vw;
+}
+@media screen and (max-width: 767px) {
+  .overlay .mobileMenuDiv {
+    width: 100vw;
+    left: -90px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .overlay .mobileMenuDiv {
+    width: 110vw;
+    left: -70px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .overlay .mobileMenuDiv {
+    left: 0px;
+    width: 95vw;
+  }
+}
+.overlay .mobileMenuDiv::before {
+  content: "";
+  position: absolute;
+  width: 480px;
+  height: 480px;
+  top: 50%;
+  left: -200px;
+  border: 2px solid #F36A24;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+@media screen and (max-width: 767px) {
+  .overlay .mobileMenuDiv::before {
+    left: -260px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .overlay .mobileMenuDiv::before {
+    left: -270px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .overlay .mobileMenuDiv::before {
+    left: -340px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .overlay .mobileMenuDiv::before {
+    left: -400px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .overlay .mobileMenuDiv::before {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .overlay .mobileMenuDiv {
+    display: none;
+  }
+}
+.overlay .mobileMenuDiv .mobileMenu {
+  float: left;
+  width: 500px;
+  height: 500px;
+  margin: 20px;
+  shape-outside: circle(50% at 15%);
+  -webkit-clip-path: circle(50% at 0%);
+          clip-path: circle(50% at 0%);
+}
+@media screen and (min-width: 590px) and (max-width: 767px) {
+  .overlay .mobileMenuDiv .mobileMenu {
+    shape-outside: circle(45% at 1%);
+  }
+}
+@media screen and (max-width: 600px) {
+  .overlay .mobileMenuDiv .mobileMenu {
+    shape-outside: circle(45% at -15%);
+  }
+}
+@media screen and (max-width: 450px) {
+  .overlay .mobileMenuDiv .mobileMenu {
+    shape-outside: circle(45% at -25%);
+  }
+}
+@media screen and (max-width: 425px) {
+  .overlay .mobileMenuDiv .mobileMenu {
+    display: none;
+  }
+}
+.overlay .mobileMenuDiv .mobileMenuItems {
+  transition: width 1s ease, height 1s ease;
+  position: relative;
+  z-index: 1;
+}
+.overlay .mobileMenuDiv .mobileMenuItems a {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+@media screen and (max-width: 575px) {
+  .overlay .mobileMenuDiv .mobileMenuItems a {
+    font-size: 18px;
+  }
+}
+.overlay .mobileMenuDiv .mobileMenuItems a svg {
+  margin: 0px 15px;
+  background: #161B23;
+  border-radius: 50%;
+  border-bottom: 0.89px solid #F36A24;
+  min-width: 55px;
+  min-height: 55px;
+  padding: 15px;
+}
+.overlay .mobileMenuDiv .mobileMenuItems.hide {
+  height: 0px;
+  width: 0px;
+  overflow: hidden;
+}
+.overlay .mobileMenuDiv .mobileSubMenuItems {
+  display: none;
+}
+.overlay .mobileMenuDiv .mobileSubMenuItems.show {
+  display: initial;
+  position: relative;
+  z-index: 1;
+}
+.overlay .mobileMenuDiv .mobileSubMenuItems .menuItemBack {
+  position: absolute;
+  top: 0;
+  left: 45px;
+}
+@media screen and (max-width: 450px) {
+  .overlay .mobileMenuDiv .mobileSubMenuItems .menuItemBack {
+    top: -20px;
+    left: 15px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .overlay .mobileMenuDiv .mobileSubMenuItems .menuItemBack {
+    top: -15px;
+    left: 5px;
+  }
+}
+.overlay .mobileMenuDiv .mobileSubMenuItems .menuItemBack svg {
+  margin: 0px 15px;
+  background: #F36A24;
+  border-radius: 50%;
+  border: 0.89px solid #F36A24;
+  min-width: 55px;
+  min-height: 55px;
+  padding: 15px;
+}
+.overlay .mobileMenuDiv .mobileSubMenuItems .menuItem {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+@media screen and (max-width: 575px) {
+  .overlay .mobileMenuDiv .mobileSubMenuItems .menuItem {
+    font-size: 18px;
+  }
+}
+.overlay .mobileMenuDiv .mobileSubMenuItems .menuItem svg {
+  margin: 0px 15px;
+  background: transparent;
+  border-radius: 50%;
+  border: 0.89px solid #F36A24;
+  min-width: 55px;
+  min-height: 55px;
+  padding: 15px;
+}
+.overlay .mobileMenuDiv .mobileSubMenuItems .subMenuItems {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  padding: 10px 0;
+  letter-spacing: 0.56px;
+  cursor: pointer;
+  text-decoration: none;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+@media screen and (max-width: 450px) {
+  .overlay .mobileMenuDiv .mobileSubMenuItems .subMenuItems {
+    padding-left: 20px;
+  }
 }
 .overlay .outerCircle {
   position: relative;
@@ -598,4 +1079,14 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: 530px;
+}
+@media screen and (max-width: 1220px) {
+  .overlay .popup {
+    background-position: center left -265px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .overlay .popup {
+    background: none;
+  }
 }/*# sourceMappingURL=banner.css.map */
