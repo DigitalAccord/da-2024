@@ -100,18 +100,20 @@ const Solutions = () => {
 
               <div className='progress-div d-flex gap-3 mt-3'>
                 <div className='progress-div-box d-none d-md-block'>
+                <div className='inner-layer'>
+                    <div className='inner-layer1'>
                   <div className='text-center mt-3'>
                     <h1>2014</h1>
                     <h3>0%</h3>
                     <p>Digital Accords Beginning</p>
-                    {/* <div className='wavesbg'>
-
-                   </div> */}
+                    
+                  </div>
+                  </div>
                   </div>
                 </div>
                 <div className='progress-div-box d-none d-md-block'>
-                  <div className='inner-layer'>
-                    <div className='inner-layer1'>
+                  <div className='inner2-layer'>
+                    <div className='inner2-layer1'>
                      
                         <div className='text-center mt-3'>
                               <h1>2017</h1>
@@ -122,18 +124,27 @@ const Solutions = () => {
                   </div>
                 </div>
                 <div className='progress-div-box d-none d-md-block'>
+                <div className='inner3-layer'>
+                    <div className='inner3-layer1'>
                   <div className='text-center mt-3'>
                     <h1>2020</h1>
                     <h3>0%</h3>
-
+                    </div>
+                  </div>
                   </div>
                 </div>
                 <div className='progress-div-box'>
-                  <div className='text-center mt-3'>
-                    <h1>Present</h1>
-                    <h3>0%</h3>
+                <div className='inner4-layer'>
+                    <div className='inner4-layer1'>
+                      <div className='inner4-layer2'>
+                        <div className='text-center mt-3'>
+                          <h1>Present</h1>
+                          <h3>0%</h3>
 
-                  </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
                 </div>
               </div>
             </div>

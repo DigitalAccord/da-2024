@@ -28,11 +28,15 @@
     min-height: 210px;
   }
 }
+.solutions-wrapper .custom-container-solution .building-section .building-section-middle {
+  padding: 10px 0px;
+}
 @media only screen and (max-width: 575px) {
   .solutions-wrapper .custom-container-solution .building-section .building-section-middle {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding-top: 50px;
   }
 }
 .solutions-wrapper .custom-container-solution .building-section .building-section-middle .building-section-middle-col1 h1 {
@@ -262,38 +266,261 @@
   min-width: 135px;
   min-height: 377px;
   border-radius: 35px;
+  background: linear-gradient(156deg, #F36A24 14.61%, #9B3400 86.76%);
+  overflow: hidden;
+  position: relative;
 }
-.solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box:nth-child(1) {
-  background-image: url("../../assets/box1.png");
+.solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box .inner-layer {
+  background: url("../../assets/layer1(2).png") no-repeat;
+  width: 100%;
+  height: 117%;
+  background-position: center;
+  background-size: contain;
+  border-radius: 35px;
+  animation: innerlayer 2s linear infinite;
+  opacity: 0.9;
+}
+@keyframes innerlayer {
+  0% {
+    background-size: contain;
+    background-position: center bottom;
+  }
+  50% {
+    background-position: left bottom -17px;
+    background-size: contain;
+  }
+  100% {
+    background-size: contain;
+    background-position: center bottom;
+  }
+}
+.solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box .inner-layer .inner-layer1 {
+  background: url("../../assets/layer1.png") no-repeat;
+  width: 100%;
+  height: 100%;
+  background-blend-mode: color;
+  background-size: contain;
+  border-radius: 35px;
+  background-position: center;
+  animation: inner-layer1 2s linear infinite;
+  opacity: 0.9;
+}
+@keyframes inner-layer1 {
+  0% {
+    background-size: contain;
+    background-position: left 0px bottom 0px;
+  }
+  50% {
+    background-position: left bottom 21px;
+    background-size: contain;
+  }
+  70% {
+    background-position: left bottom 15px;
+    background-size: contain;
+  }
+  90% {
+    background-position: left bottom 10px;
+    background-size: contain;
+  }
+  100% {
+    background-size: contain;
+    background-position: left bottom;
+  }
+}
+.solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box .inner2-layer {
+  background: url("../../assets/layer2(2).png") no-repeat;
+  width: 100%;
+  height: 108%;
+  background-blend-mode: color;
+  background-size: contain;
+  background-position: bottom;
+  border-radius: 35px;
+  animation: inner2-layer 2s linear;
+  opacity: 0.9;
+}
+@keyframes inner2-layer {
+  0% {
+    background-position: bottom 0px left;
+  }
+  40% {
+    background-position: bottom 2px left 0px;
+  }
+  60% {
+    background-position: bottom -6px left;
+  }
+  100% {
+    background-position: bottom 0px left;
+  }
+}
+.solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box .inner2-layer .inner2-layer1 {
+  background: url("../../assets/layer22.png") no-repeat;
+  width: 100%;
+  height: 100%;
+  background-blend-mode: color;
+  background-size: bottom;
+  border-radius: 35px;
+  animation: inner2-layer1 2s linear infinite;
+  opacity: 0.9;
+}
+@keyframes inner2-layer1 {
+  0% {
+    background-position: bottom 0px left;
+  }
+  40% {
+    background-position: bottom 2px left 10px;
+  }
+  60% {
+    background-position: bottom -3px left;
+  }
+  100% {
+    background-position: bottom 0px left;
+  }
+}
+.solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box .inner3-layer {
+  background: url("../../assets/layer3.png") no-repeat;
+  width: 100%;
+  height: 100%;
+  background-blend-mode: color;
+  background-size: contain;
+  background-position: center;
+  border-radius: 35px;
+  animation: inner3-layer 2s infinite;
+  background-position: bottom;
+}
+@keyframes inner3-layer {
+  0% {
+    background-position: bottom 0px left;
+  }
+  40% {
+    background-position: bottom 2px left 10px;
+  }
+  60% {
+    background-position: bottom px left;
+  }
+  100% {
+    background-position: bottom 0px left;
+  }
+}
+.solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box .inner3-layer .inner3-layer1 {
+  background: url("../../assets/layer3(2).png") no-repeat;
+  width: 100%;
+  height: 100%;
+  background-position: bottom;
+  background-size: contain;
+  border-radius: 35px;
+  animation: inner3-layer1 2s infinite;
+}
+@keyframes inner3-layer1 {
+  0% {
+    background-size: contain;
+    background-position: bottom;
+  }
+  30% {
+    background-position: bottom 4px left -3px;
+  }
+  60% {
+    background-position: bottom 9px left -3px;
+  }
+  100% {
+    background-position: bottom 0px center;
+  }
+}
+.solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box .inner4-layer {
+  background: url("../../assets/layer4.png") no-repeat;
+  width: 100%;
+  height: 100%;
+  background-blend-mode: color;
   background-size: 100% 100%;
+  background-position: center;
+  border-radius: 35px;
+  animation: inner4-layer 2s infinite;
+  opacity: 0.9;
+}
+@keyframes inner4-layer {
+  0% {
+    background-size: 100% 100%;
+    background-position: center 0px top 0px;
+  }
+  15% {
+    background-position: left -5px top 5px;
+    background-size: 100% 100%;
+  }
+  30% {
+    background-position: left -10px top 10px;
+    background-size: 100% 100%;
+  }
+  45% {
+    background-position: left -15px top 15px;
+    background-size: 100% 100%;
+  }
+  70% {
+    background-position: left -10px top 10px;
+    background-size: 100% 100%;
+  }
+  85% {
+    background-position: left -5px top 5px;
+    background-size: 100% 100%;
+  }
+  100% {
+    background-size: 100% 100%;
+    background-position: center 0px top 0px;
+  }
+}
+.solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box .inner4-layer .inner4-layer1 {
+  background: url("../../assets/layer4(2).png") no-repeat;
+  width: 100%;
+  height: 100%;
+  background-blend-mode: color;
+  background-size: 100% 100%;
+  border-radius: 35px;
+  animation: inner4-layer1 2s infinite;
+  opacity: 0.9;
+  background-position: left -15px top 15px;
+}
+@keyframes inner4-layer1 {
+  15% {
+    background-position: left 0px top 5px;
+  }
+  30% {
+    background-position: left 0px top 10px;
+  }
+  45% {
+    background-position: left 0px top 10px;
+  }
+  70% {
+    background-position: left 0px top 10px;
+  }
+  85% {
+    background-position: left -13px top 10px;
+  }
+  100% {
+    background-position: center -30px top 30px;
+  }
+}
+.solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box .inner4-layer .inner4-layer2 {
+  background: url("../../assets/layer4(2).png") no-repeat;
+  width: 100%;
+  height: 100%;
+  background-blend-mode: color;
+  background-size: 100% 100%;
+  border-radius: 35px;
+  animation: inner4-layer2 2s infinite;
+  opacity: 0.9;
 }
 @media only screen and (max-width: 575px) {
   .solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box:nth-child(1) {
     display: none;
   }
 }
-.solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box:nth-child(2) {
-  background-image: url("../../assets//box2.png");
-  background-size: 100% 100%;
-}
 @media only screen and (max-width: 575px) {
   .solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box:nth-child(2) {
     display: none;
   }
 }
-.solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box:nth-child(3) {
-  background-image: url("../../assets//box3.png");
-  background-size: 100% 100%;
-}
 @media only screen and (max-width: 575px) {
   .solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box:nth-child(3) {
     display: none;
   }
-}
-.solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box:nth-child(4) {
-  background-image: url("../../assets//box4.png");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
 }
 @media only screen and (max-width: 575px) {
   .solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box:nth-child(4) {
@@ -339,18 +566,24 @@
 .scroll-width-div .slider-bg {
   background-position: center;
   background-size: cover;
-  width: 8286px;
+  width: 8262px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 100px;
   min-height: 1000px;
   background-repeat: no-repeat;
   padding: 50px 0px;
+  margin: 0 auto;
+  white-space: normal;
   /* Fix the syntax for multiple backgrounds using linear-gradient */
   background: linear-gradient(180deg, rgba(24, 29, 38, 0) 0%, #181D26 100%), linear-gradient(180deg, #181D26 0%, rgba(24, 29, 38, 0) 40%), url("../../assets/Service side scroll.png") lightgray;
   mix-blend-mode: lighten;
   background-position: top;
+}
+@media only screen and (max-width: 769px) {
+  .scroll-width-div .slider-bg {
+    width: 4700px;
+  }
 }
 .scroll-width-div .design-development-wrapper {
   display: flex;
