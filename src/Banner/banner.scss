@@ -24,6 +24,13 @@
   background-size: cover; 
   position: relative; 
   overflow: hidden;
+  @media screen and (max-width:992px) {
+    min-height: 1030px; 
+  }
+  @media screen and (max-width:767px) {
+    min-height: 100%; 
+    max-height: 930px;
+  }
   .bannerLayerSun{
     background: url("../assets/banner/Sun.png");
     height: 120vh;
@@ -33,8 +40,26 @@
     transition: background-position 3s ease;
     background-repeat: no-repeat;
     background-size: 40%;
+    @media screen and (max-width:992px) {
+      background-size: 65%; 
+      min-height: 1030px;
+    }
+    @media screen and (max-width:767px) {
+      background-size: 80%; 
+      min-height: 100%;
+      max-height: 930px;
+    }
+    @media screen and (max-width:475px) {
+      background-size: 160%; 
+    }
     &.animation{
       background-position: center bottom 40%;
+      @media screen and (max-width:767px) {
+        background-position: center bottom 15%;
+      }
+      @media screen and (max-width:475px) {
+        background-position: center bottom 30%;
+      }
     }
     .bannerLayerBuildings{
       background: url("../assets/banner/buildings.png");
@@ -44,6 +69,20 @@
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover; 
+      @media screen and (max-width:992px) {
+        background: url("../assets/banner/buildingMobile.png");
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: 100% 85%; 
+        min-height: 1030px;
+      }
+      @media screen and (max-width:767px) {
+        background-size: 100%;
+        min-height: 100%; 
+        max-height: 930px;
+        background-position: bottom;
+      }
       &::before{
         content: "";
         position: absolute;
@@ -52,6 +91,12 @@
         bottom: 0%;
         left: 0%;
         background: linear-gradient(180deg, rgba(24, 29, 38, 0.00) 29.7%, #181D26 74.93%);
+        @media screen and (max-width:992px) {
+          height: 35%;
+        }
+        @media screen and (max-width:767px) {
+          height: 30%;
+        }
       }
       .bannerLayerShadow{
         background: url("../assets/banner/shadow.png");
@@ -71,13 +116,25 @@
           background-position: center bottom -200px;
           min-height: 1140px;
         }
-        
+        @media screen and (max-width:992px) {
+          background: none;
+          min-height: 1030px;
+        }
+        @media screen and (max-width:767px) {
+          background: none; 
+          min-height: 100%;
+          max-height: 850px;
+        }
+        min-height: 1420px;
         .banner-text-container {
           display: flex;
           justify-content: space-evenly;
           align-items: center;
           flex-direction: column;
           min-height: 420px;
+          @media screen and (max-width:767px) {
+            min-height: 225px;
+          }
           span {
             filter: blur(3px);
             -webkit-filter: blur(3px);

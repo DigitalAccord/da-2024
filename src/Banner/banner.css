@@ -21,6 +21,17 @@
   position: relative;
   overflow: hidden;
 }
+@media screen and (max-width: 992px) {
+  .bannerLayerSky {
+    min-height: 1030px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .bannerLayerSky {
+    min-height: 100%;
+    max-height: 930px;
+  }
+}
 .bannerLayerSky .bannerLayerSun {
   background: url("../assets/banner/Sun.png");
   height: 120vh;
@@ -31,8 +42,36 @@
   background-repeat: no-repeat;
   background-size: 40%;
 }
+@media screen and (max-width: 992px) {
+  .bannerLayerSky .bannerLayerSun {
+    background-size: 65%;
+    min-height: 1030px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .bannerLayerSky .bannerLayerSun {
+    background-size: 80%;
+    min-height: 100%;
+    max-height: 930px;
+  }
+}
+@media screen and (max-width: 475px) {
+  .bannerLayerSky .bannerLayerSun {
+    background-size: 160%;
+  }
+}
 .bannerLayerSky .bannerLayerSun.animation {
   background-position: center bottom 40%;
+}
+@media screen and (max-width: 767px) {
+  .bannerLayerSky .bannerLayerSun.animation {
+    background-position: center bottom 15%;
+  }
+}
+@media screen and (max-width: 475px) {
+  .bannerLayerSky .bannerLayerSun.animation {
+    background-position: center bottom 30%;
+  }
 }
 .bannerLayerSky .bannerLayerSun .bannerLayerBuildings {
   background: url("../assets/banner/buildings.png");
@@ -43,6 +82,24 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+@media screen and (max-width: 992px) {
+  .bannerLayerSky .bannerLayerSun .bannerLayerBuildings {
+    background: url("../assets/banner/buildingMobile.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 100% 85%;
+    min-height: 1030px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .bannerLayerSky .bannerLayerSun .bannerLayerBuildings {
+    background-size: 100%;
+    min-height: 100%;
+    max-height: 930px;
+    background-position: bottom;
+  }
+}
 .bannerLayerSky .bannerLayerSun .bannerLayerBuildings::before {
   content: "";
   position: absolute;
@@ -51,6 +108,16 @@
   bottom: 0%;
   left: 0%;
   background: linear-gradient(180deg, rgba(24, 29, 38, 0) 29.7%, #181D26 74.93%);
+}
+@media screen and (max-width: 992px) {
+  .bannerLayerSky .bannerLayerSun .bannerLayerBuildings::before {
+    height: 35%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .bannerLayerSky .bannerLayerSun .bannerLayerBuildings::before {
+    height: 30%;
+  }
 }
 .bannerLayerSky .bannerLayerSun .bannerLayerBuildings .bannerLayerShadow {
   background: url("../assets/banner/shadow.png");
@@ -63,6 +130,7 @@
   opacity: 0;
   position: relative;
   transition: opacity 3s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+  min-height: 1420px;
 }
 .bannerLayerSky .bannerLayerSun .bannerLayerBuildings .bannerLayerShadow.animation {
   opacity: 1;
@@ -73,12 +141,30 @@
     min-height: 1140px;
   }
 }
+@media screen and (max-width: 992px) {
+  .bannerLayerSky .bannerLayerSun .bannerLayerBuildings .bannerLayerShadow {
+    background: none;
+    min-height: 1030px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .bannerLayerSky .bannerLayerSun .bannerLayerBuildings .bannerLayerShadow {
+    background: none;
+    min-height: 100%;
+    max-height: 850px;
+  }
+}
 .bannerLayerSky .bannerLayerSun .bannerLayerBuildings .bannerLayerShadow .banner-text-container {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
   min-height: 420px;
+}
+@media screen and (max-width: 767px) {
+  .bannerLayerSky .bannerLayerSun .bannerLayerBuildings .bannerLayerShadow .banner-text-container {
+    min-height: 225px;
+  }
 }
 .bannerLayerSky .bannerLayerSun .bannerLayerBuildings .bannerLayerShadow .banner-text-container span {
   filter: blur(3px);

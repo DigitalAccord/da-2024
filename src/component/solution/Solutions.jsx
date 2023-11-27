@@ -1,5 +1,6 @@
 import React,{ Component } from 'react'
 import './solutions.scss'
+import CountUp from 'react-countup';
 import arrow from "../../assets/arrow.png"
 import thumb from "../../assets/thumb.png"
 import arrow1 from '../../assets/Arrow 4.png'
@@ -22,18 +23,18 @@ const Solutions = () => {
             <div className='building-section'>
               <div className='building-section-middle text-center'>
                 <div className='building-section-middle-col1 mb-5 mt-5'>
-                  <h1 className='p-0 m-0'>0</h1>
+                  <h1 className='p-0 m-0'><CountUp enableScrollSpy={true} start={100} end={0} duration={3} /></h1>
                   <p className='p-0 m-0'>Happy<br />Cleints</p>
 
                 </div>
 
                 <div className='building-section-middle-col1 mb-5'>
-                  <h1 className='text-white'>0</h1>
+                  <h1 className='text-white'><CountUp enableScrollSpy={true} start={100} end={0} duration={5} /></h1>
                   <p className='p-0 m-0 text-center' >IT Tickets<br />Solved</p>
 
                 </div>
                 <div className='building-section-middle-col1 mb-5 '>
-                  <h1 className='text-white'>0</h1>
+                  <h1 className='text-white'><CountUp enableScrollSpy={true} start={100} end={0} duration={5} /></h1>
                   <p className='p-0 m-0'>Happy<br />Clients</p>
                 </div>
               </div>
