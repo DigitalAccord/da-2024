@@ -16,6 +16,7 @@ import waves1 from '../../assets/wave1.png'
 const Solutions = () => {
   const intialWidth = window.innerWidth - 15
   const [windowWidth, setWindowWidth] = useState(intialWidth);
+  const [windowWidth1, setWindowWidth1] = useState(intialWidth);
   // const text= '100px'
   const handleResize = () => {
     setWindowWidth(window.innerWidth - 15);
@@ -52,12 +53,24 @@ const Solutions = () => {
     };
   }, []);
 
+  
+  const handleResize1 = () => {
+      // if (intialWidth > )
+      setWindowWidth1( window.innerWidth * 80 / 100 );
+  };
+  useEffect(() => {
+    window.addEventListener('resize', handleResize1);
+    return () => {
+      window.removeEventListener('resize', handleResize1);
+    };
+  }, []);
+  console.log('----------', windowWidth1);
 
   return (
     <>
       <div className='solutions-wrapper'>
-        <div className='container custom-container-solution'>
-          <div class="d-md-flex flex-md-column flex-lg-row  gap-5">
+        <div className='container custom-container-solution' >
+          <div className="d-md-flex flex-md-column flex-lg-row  gap-5">
             <div className='building-section'>
               <div className='building-section-middle text-center'>
                 <div className='building-section-middle-col1 mb-5 mt-0 mt-sm-5'>
@@ -100,51 +113,32 @@ const Solutions = () => {
 
               <div className='progress-div d-flex gap-3 mt-3'>
                 <div className='progress-div-box d-none d-md-block'>
-                <div className='inner-layer'>
-                    <div className='inner-layer1'>
-                  <div className='text-center mt-3'>
-                    <h1>2014</h1>
-                    <h3>0%</h3>
-                    <p>Digital Accords Beginning</p>
-                    
-                  </div>
-                  </div>
-                  </div>
-                </div>
-                <div className='progress-div-box d-none d-md-block'>
-                  <div className='inner2-layer'>
-                    <div className='inner2-layer1'>
-                     
-                        <div className='text-center mt-3'>
-                              <h1>2017</h1>
-                              <h3>0%</h3>
+                      <div className='text-center mt-3'>
+                        <h1>2014</h1>
+                        <h3>0%</h3>
+                        <p>Digital Accords Beginning</p>
 
-                          </div>
-                    </div>
+                      </div>
+                </div>
+
+                <div className='progress-div-box d-none d-md-block'>
+                  <div className='text-center mt-3'>
+                        <h1>2017</h1>
+                        <h3>0%</h3>
                   </div>
                 </div>
+
                 <div className='progress-div-box d-none d-md-block'>
-                <div className='inner3-layer'>
-                    <div className='inner3-layer1'>
-                  <div className='text-center mt-3'>
-                    <h1>2020</h1>
-                    <h3>0%</h3>
-                    </div>
-                  </div>
-                  </div>
+                      <div className='text-center mt-3'>
+                        <h1>2020</h1>
+                        <h3>0%</h3>
+                      </div>
                 </div>
                 <div className='progress-div-box'>
-                <div className='inner4-layer'>
-                    <div className='inner4-layer1'>
-                      <div className='inner4-layer2'>
                         <div className='text-center mt-3'>
                           <h1>Present</h1>
                           <h3>0%</h3>
-
-                        </div>
-                      </div>
-                    </div>
-                </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -153,48 +147,52 @@ const Solutions = () => {
 
         <div className='scroll-width-div' style={{ width: windowWidth }}>
           <div className='slider-bg'>
-            <div className='solution-text-wrapper container'>
-              <div className='solution-text-heading'>
-                <div>
-                  <h1 className='text-white'>Solutions
-                    To Grow Your
-                    Business</h1>
-                </div>
-                <div className='media-query-flex'>
-                  <div className='media-query-circle'>
-                    <img src={round} className='' />
+            <div className='d-flex justify-content-center align-items-center' style={{ width: windowWidth1 }}>
+              <div className='solution-text-wrapper container' >
+                <div className='solution-text-heading'>
+                  <div>
+                    <h1 className='text-white'>Solutions
+                      To Grow Your
+                      Business</h1>
                   </div>
-                  <div className='circle-arrow'>
-                    <img src={arrow1} className='img-fluid' alt='/' />
-                    <p>Scroll</p>
-                    <br />
-
-                    <div className='overflow-blur'>
-
-
+                  <div className='media-query-flex'>
+                      <div className='media-query-circle'>
+                      <img src={round} className='' />
+                      </div>
+                    <div className='circle-arrow'>
+                      <img src={arrow1} className='img-fluid' alt='/' />
+                      <p>Scroll</p>
+                      <br />
+                    <div className='overflow-blur'></div>
                     </div>
                   </div>
                 </div>
               </div>
-
             </div>
-            <div className='container d-md-none'>
+            <div className='d-flex justify-content-center align-items-center' style={{ width: windowWidth1 }}>
+            <div className=' d-md-none'>
               <Solution_respo />
             </div>
-            <div className='design-development-wrapper container'>
-              <div className='design-development-text'>
-                <h1>Design &
-                  Development</h1>
-                <p>IT Helpdesk is a crucial element of any workflow, as it is in most businesses. Digital Accord collaborates with your company to provide business continuity and professional management across all of your company’s devices.</p><p>Digital Accord is a managed service company in Brisbane that can help you with all of your IT issues quickly and effectively. To guarantee that your business runs smoothly, our in-house personnel strikes the appropriate balance between proactive monitoring and maintenance and reactive support.</p>
-                <div className='d-flex justify-content-end pt-2' >
-                  <button>More</button>
+
+            </div>
+            <div className='d-flex justify-content-center align-items-center' style={{ width: windowWidth1 }}>
+
+              <div className='design-development-wrapper container'>
+                <div className='design-development-text'>
+                  <h1>Design &
+                    Development</h1>
+                  <p>IT Helpdesk is a crucial element of any workflow, as it is in most businesses. Digital Accord collaborates with your company to provide business continuity and professional management across all of your company’s devices.</p><p>Digital Accord is a managed service company in Brisbane that can help you with all of your IT issues quickly and effectively. To guarantee that your business runs smoothly, our in-house personnel strikes the appropriate balance between proactive monitoring and maintenance and reactive support.</p>
+                  <div className='d-flex justify-content-end pt-2' >
+                    <button>More</button>
+                  </div>
                 </div>
-              </div>
-              <div className='design-development-img'>
-                <img src={developmentImg} className='' alt='' />
+                <div className='design-development-img'>
+                  <img src={developmentImg} className='' alt='' />
+                </div>
               </div>
             </div>
 
+            <div className='d-flex justify-content-center align-items-center' style={{ width: windowWidth1 }}>
             <div className='design-development-wrapper container'>
               <div className='design-development-text'>
                 <h1>
@@ -209,7 +207,8 @@ const Solutions = () => {
                 <img src={digitalMarketingImg} className='' alt='' />
               </div>
             </div>
-
+            </div>
+            <div className='d-flex justify-content-center align-items-center' style={{ width: windowWidth1 }}>
             <div className='design-development-wrapper container'>
               <div className='design-development-text'>
                 <h1>Business<br />
@@ -222,9 +221,8 @@ const Solutions = () => {
               <div className='design-development-img'>
                 <img src={itImg} className='' alt='' />
               </div>
+            </div>  
             </div>
-
-
 
           </div>
         </div>

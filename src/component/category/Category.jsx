@@ -71,8 +71,8 @@ const Category = () => {
                                         <path d="M42.7071 32.7071C43.0976 32.3166 43.0976 31.6834 42.7071 31.2929L36.3431 24.9289C35.9526 24.5384 35.3195 24.5384 34.9289 24.9289C34.5384 25.3195 34.5384 25.9526 34.9289 26.3431L40.5858 32L34.9289 37.6569C34.5384 38.0474 34.5384 38.6805 34.9289 39.0711C35.3195 39.4616 35.9526 39.4616 36.3431 39.0711L42.7071 32.7071ZM22 33L42 33L42 31L22 31L22 33Z" fill="white" />
                                         <defs>
                                             <linearGradient id="paint0_linear_1_12322" x1="31.5" y1="-8.89881e-07" x2="61.651" y2="64.8522" gradientUnits="userSpaceOnUse">
-                                                <stop stop-color="#F36A24" />
-                                                <stop offset="1" stop-color="#8C3305" />
+                                                <stop stopColor="#F36A24" />
+                                                <stop offset="1" stopColor="#8C3305" />
                                             </linearGradient>
                                         </defs>
                                     </svg>
