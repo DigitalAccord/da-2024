@@ -16,10 +16,10 @@ const MobileMenu = () => {
             <a className='menuItems' href='/#'><HomeIcon />Home</a><br /><br />     
             <a className='menuItems' href='/#' onClick={() => addClassActive(`subMenuMobile1`)}><PeopleIcon />About us</a><br /><br />
             <a className='menuItems' href='/#' onClick={() => addClassActive(`subMenuMobile2`)}><SpeakerIcon />Services</a><br /><br />     
-            <a className='menuItems' href='/#'><WorkIcon />Our Work</a><br /><br />     
-            <a className='menuItems' href='/#'><CaseStudiesIcon />Case Studies</a><br /><br />
-            <a className='menuItems' href='/#'><BusinessIcon />Digital performance</a><br /><br />
-            <a className='menuItems' href='/#'><ExperienceIcon />Contact</a><br /><br />
+            <a className='menuItems' href='/#' onClick={() => addClassActive(`subMenuMobile3`)}><WorkIcon />Our Work</a><br /><br />     
+            <a className='menuItems' href='/#' onClick={() => addClassActive(`subMenuMobile4`)}><CaseStudiesIcon />Case Studies</a><br /><br />
+            <a className='menuItems' href='/#' onClick={() => addClassActive(`subMenuMobile5`)}><BusinessIcon />Digital performance</a><br /><br />
+            <a className='menuItems' href='/#' onClick={() => addClassActive(`subMenuMobile6`)}><ExperienceIcon />Contact</a><br /><br />
         </p>
         <p className={`mobileSubMenuItems ${activeMenu === 'subMenuMobile1' ? 'show': '' }`}>
             <a className='menuItemBack' href='/#' onClick={() => addClassActive(null)}><BackArrow /></a><br /><br />
@@ -34,6 +34,38 @@ const MobileMenu = () => {
             <a className='subMenuItems' href='/#'>Google Advertising</a><br /><br />
             <a className='subMenuItems' href='/#'>Google Advertising</a><br /><br />
             <a className='subMenuItems' href='/#'>2 Advertising</a><br />
+        </p>
+
+        <p className={`mobileSubMenuItems ${activeMenu === 'subMenuMobile3' ? 'show': '' }`}>
+            <a className='menuItemBack' href='/#' onClick={() => addClassActive(null)}><BackArrow /></a><br /><br />
+            <a className='menuItem' href='/#' ><WorkIcon />Services</a><br /><br />
+            <a className='subMenuItems' href='/#'>Google Advertising</a><br /><br />
+            <a className='subMenuItems' href='/#'>Google Advertising</a><br /><br />
+            <a className='subMenuItems' href='/#'>3 Advertising</a><br />
+        </p>
+
+        <p className={`mobileSubMenuItems ${activeMenu === 'subMenuMobile4' ? 'show': '' }`}>
+            <a className='menuItemBack' href='/#' onClick={() => addClassActive(null)}><BackArrow /></a><br /><br />
+            <a className='menuItem' href='/#' ><CaseStudiesIcon />Services</a><br /><br />
+            <a className='subMenuItems' href='/#'>Google Advertising</a><br /><br />
+            <a className='subMenuItems' href='/#'>Google Advertising</a><br /><br />
+            <a className='subMenuItems' href='/#'>4 Advertising</a><br />
+        </p>
+
+        <p className={`mobileSubMenuItems ${activeMenu === 'subMenuMobile5' ? 'show': '' }`}>
+            <a className='menuItemBack' href='/#' onClick={() => addClassActive(null)}><BackArrow /></a><br /><br />
+            <a className='menuItem' href='/#' ><BusinessIcon />Services</a><br /><br />
+            <a className='subMenuItems' href='/#'>Google Advertising</a><br /><br />
+            <a className='subMenuItems' href='/#'>Google Advertising</a><br /><br />
+            <a className='subMenuItems' href='/#'>5 Advertising</a><br />
+        </p>
+
+        <p className={`mobileSubMenuItems ${activeMenu === 'subMenuMobile6' ? 'show': '' }`}>
+            <a className='menuItemBack' href='/#' onClick={() => addClassActive(null)}><BackArrow /></a><br /><br />
+            <a className='menuItem' href='/#' ><ExperienceIcon />Services</a><br /><br />
+            <a className='subMenuItems' href='/#'>Google Advertising</a><br /><br />
+            <a className='subMenuItems' href='/#'>Google Advertising</a><br /><br />
+            <a className='subMenuItems' href='/#'>6 Advertising</a><br />
         </p>
     </>)
 }
