@@ -926,6 +926,10 @@
     margin-top: 10px;
   }
 }
+.solutions-wrapper .custom-container-solution .year-section-parent .year-section h3 {
+  max-width: calc(100% - 93px);
+  word-wrap: break-word;
+}
 .solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-left {
   position: relative;
   width: 50%;
@@ -936,55 +940,45 @@
   align-items: end;
   justify-content: space-between;
   padding: 30px 20px;
+  overflow: hidden;
 }
-.solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-left .arrow-image {
-  transition: opacity 0.3s ease-in-out;
+.solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-left::after {
+  transition: opacity 0.3s ease;
   width: 63px;
   height: 63px;
   position: absolute;
+  content: "";
   bottom: 32px;
-  right: 30px;
-}
-.solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-left .arrow-image:hover {
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
-.solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-left .hover-container {
-  display: inline-block;
-}
-.solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-left .hover-container .hover-icon {
-  transition: opacity 0.3s ease-in-out;
-  width: 63px;
-  height: 63px;
-  position: absolute;
-  bottom: 32px;
-  right: 30px;
-}
-.solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-left .hover-container .hover-icon {
-  font-size: 35px;
-  color: #F36A24;
-  position: absolute;
-  right: 0px;
-  bottom: 0px;
-  opacity: 0;
-  display: none;
-  background-image: url("../../assets/img-hover.png");
-  transition: opacity 0.3s ease-in-out;
-  height: 377px;
-  width: 100%;
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  border-radius: 35px;
-}
-.solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-left .hover-container .hover-icon:hover {
+  right: 37px;
+  background: url("../../assets/arrow.png");
   opacity: 1;
-  height: 100%;
+}
+.solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-left::before {
   width: 100%;
-  color: #C74300 !important;
-  display: block;
+  height: 100%;
+  position: absolute;
+  content: "";
+  bottom: 0px;
+  right: 0px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-left:hover::after {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  content: "";
+  bottom: 0px;
+  right: 0px;
+  transition: opacity 0.3s ease;
+  background: url("../../assets/solution/personBg.png");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  border: 1px solid #F36A24;
+}
+.solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-left:hover::before {
+  opacity: 1;
+  background: linear-gradient(130deg, rgba(0, 0, 0, 0) 0%, #F36A24 98.82%);
 }
 .solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-left h3 {
   color: #FFF;
@@ -1004,14 +998,6 @@
     font-size: 20px;
   }
 }
-@media only screen and (max-width: 575px) {
-  .solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-left img {
-    position: absolute;
-    right: 10px;
-    width: 40px;
-    height: 40px;
-  }
-}
 .solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-right {
   position: relative;
   width: 50%;
@@ -1022,57 +1008,49 @@
   align-items: end;
   justify-content: space-between;
   padding: 30px 20px;
+  overflow: hidden;
 }
-.solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-right .arrow-image {
-  transition: opacity 0.3s ease-in-out;
+.solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-right::after {
+  transition: opacity 0.3s ease;
   width: 63px;
   height: 63px;
   position: absolute;
+  content: "";
   bottom: 32px;
-  right: 30px;
-  display: block;
+  right: 36px;
+  background: url("../../assets/thumb.png");
+  background-repeat: no-repeat;
+  background-position: bottom right;
 }
-.solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-right .arrow-image:hover {
+.solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-right::before {
   opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-  display: none;
-}
-.solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-right .hover-container {
-  display: inline-block;
-}
-.solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-right .hover-container .hover-icon {
-  transition: opacity 0.3s ease-in-out;
-  width: 63px;
-  height: 63px;
-  position: absolute;
-  bottom: 32px;
-  right: 30px;
-}
-.solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-right .hover-container .hover-icon {
-  font-size: 35px;
-  color: #F36A24;
-  position: absolute;
-  right: 0px;
-  bottom: 0px;
-  opacity: 0;
-  display: none;
-  background-image: url("../../assets/thumb-hover.png");
-  transition: opacity 0.3s ease-in-out;
-  height: 377px;
   width: 100%;
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  border-radius: 35px;
-}
-.solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-right .hover-container .hover-icon:hover {
-  opacity: 1;
   height: 100%;
+  position: absolute;
+  content: "";
+  bottom: 0px;
+  right: 0px;
+  background: url("../../assets/solution/thumbBg.png");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  transition: opacity 0.3s ease;
+}
+.solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-right:hover::after {
+  opacity: 1;
   width: 100%;
-  color: #C74300 !important;
-  display: block;
+  height: 100%;
+  position: absolute;
+  content: "";
+  bottom: 0px;
+  right: 0px;
+  background: url("../../assets/solution/thumbBg.png");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  transition: opacity 0.3s ease;
+}
+.solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-right:hover::before {
+  opacity: 1;
+  background: linear-gradient(130deg, rgba(0, 0, 0, 0) 0%, #F36A24 98.82%);
 }
 .solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-right h3 {
   color: #FFF;
@@ -1090,14 +1068,6 @@
     position: absolute;
     top: 0;
     font-size: 20px;
-  }
-}
-@media only screen and (max-width: 575px) {
-  .solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-right img {
-    position: absolute;
-    right: 10px;
-    width: 40px;
-    height: 40px;
   }
 }
 .solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box {

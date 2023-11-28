@@ -107,22 +107,22 @@ const Solutions = () => {
             </div>
             <div className='year-section-parent mt-2'>
               <div className='year-section'>
-                <div className='year-section-left'>
+                <div className='year-section-left year-section-box'>
                   <h3>About Us</h3>
-                  <div className='hover-container'>
-                  <img src={arrow} alt='Arrow' className='arrow-image'/>
+                  {/* <div className='hover-container'>
+                    <img src={arrow} alt='Arrow' className='arrow-image'/>
                     <div className='hover-icon'>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
-                <div className='year-section-right'>
+                <div className='year-section-right year-section-box'>
                   <h3>IT Solutions</h3>
 
-                  <div className='hover-container'>
+                  {/* <div className='hover-container'>
                     <img src={thumb} alt='thumb' className='arrow-image' />
                     <div className='hover-icon'>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
 
