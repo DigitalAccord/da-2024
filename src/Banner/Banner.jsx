@@ -203,9 +203,9 @@ export const Banner = () => {
                         </div>
                     </div>
                     <NavMenu isOpen={isPopup} className={isPopup ? 'slideIn' : 'slideOut'}>
-                        <div className='laptopCircle'>
+                        {/* <div className='laptopCircle'>
                             <LaptopMenu />
-                        </div>
+                        </div> */}
                         <div className='outerCircle'>
                             <div className='topLeft'>
                                 <div className={`subMenuDot1 ${activeMenu === null ? 'active' : ''}`}>
