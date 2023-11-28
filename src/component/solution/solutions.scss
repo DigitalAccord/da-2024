@@ -318,6 +318,38 @@
             }
 
             .progress-div {
+                &.mobile{
+                    .slick-dots{
+                        bottom: 45px;
+                        button{
+                            font-size: 50px !important;
+                            &::before{
+                                content: "";
+                                width: 10px;
+                                height: 5px;
+                                background: #fff;
+                                font-size: 50px !important;
+                                opacity: 1;
+                                left: 50%;
+                                transform: translateX(-50%);
+                            }
+                        }
+                        .slick-active{
+                            button{
+                                font-size: 50px !important;
+                                &::before{
+                                    content: "";
+                                    width: 20px;
+                                    height: 5px;
+                                    background: #fff;
+                                    font-size: 50px !important;
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                        
+                    }
+                }
                 .progress-div-box {
                     width: 197px;
                     min-width: 135px;
@@ -326,11 +358,62 @@
                     position: relative;
                     overflow: hidden;
                     background: linear-gradient(156deg, #F36A24 14.61%, #9B3400 86.76%);
-
-                    &:nth-child(1) {
-
-                        // background-image: url("../../assets/box1.png");
-                        // background-size: 100% 100%;
+                    @media screen and (min-width:768px) {                        
+                        &:nth-child(1) {
+    
+                            // background-image: url("../../assets/box1.png");
+                            // background-size: 100% 100%;
+                            &::before{
+                                width: 100%;
+                                height: 100%;
+                                content: '';
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                background-image: url('../../assets//solution/progresBg.png');
+                                mix-blend-mode: color-dodge;
+                                background-repeat: no-repeat;
+                                background-size: 450%;
+                                background-position: left 3% bottom 0px;
+                                animation: progressFirst 3s linear infinite;
+                                @keyframes progressFirst {
+                                    0%   {background-position: left 3% bottom 0px}
+                                    25%  {background-position: left 1.5% bottom -5px}
+                                    50%  {background-position: left 0% bottom -10px}
+                                    75%  {background-position: left -1.5% bottom -5px}
+                                    100% {background-position: left 3% bottom 0px}
+                                }
+                            }
+                            &::after{
+                                width: 100%;
+                                height: 100%;
+                                content: '';
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                background-image: url('../../assets//solution/progresBg.png');
+                                mix-blend-mode: color-dodge;
+                                background-repeat: no-repeat;
+                                background-size: 450%;
+                                background-position: left -3% bottom 0px;
+                                animation: progressFirst2 3s linear infinite;
+                                @keyframes progressFirst2 {
+                                    0%   {background-position: left -3% bottom 0px}
+                                    25%  {background-position: left 0% bottom -5px}
+                                    50%  {background-position: left 3% bottom -10px}
+                                    75%  {background-position: left 0 bottom -5px}
+                                    100% {background-position: left -3% bottom 0px}
+                                   
+                                }
+                            }
+    
+                            @media only screen and (max-width: 575px) {
+                                display: none;
+                            }
+    
+                        }
+                    }
+                    &.first{
                         &::before{
                             width: 100%;
                             height: 100%;
@@ -341,15 +424,15 @@
                             background-image: url('../../assets//solution/progresBg.png');
                             mix-blend-mode: color-dodge;
                             background-repeat: no-repeat;
-                            background-size: 450%;
-                            background-position: left 3% bottom 0px;
-                            animation: progressFirst 3s linear infinite;
-                            @keyframes progressFirst {
-                                0%   {background-position: left 3% bottom 0px}
-                                25%  {background-position: left 1.5% bottom -5px}
-                                50%  {background-position: left 0% bottom -10px}
-                                75%  {background-position: left -1.5% bottom -5px}
-                                100% {background-position: left 3% bottom 0px}
+                            background-size: 150%;
+                            background-position: left -33% bottom 0px;
+                            animation: progressFirstM 3s linear infinite;
+                            @keyframes progressFirstM {
+                                0%   {background-position: left -33% bottom 0px}
+                                25%  {background-position: left -15% bottom -5px}
+                                50%  {background-position: left -10% bottom -10px}
+                                75%  {background-position: left -15% bottom -5px}
+                                100% {background-position: left -33% bottom 0px}
                             }
                         }
                         &::after{
@@ -362,21 +445,17 @@
                             background-image: url('../../assets//solution/progresBg.png');
                             mix-blend-mode: color-dodge;
                             background-repeat: no-repeat;
-                            background-size: 450%;
-                            background-position: left -3% bottom 0px;
-                            animation: progressFirst2 3s linear infinite;
-                            @keyframes progressFirst2 {
-                                0%   {background-position: left -3% bottom 0px}
-                                25%  {background-position: left 0% bottom -5px}
-                                50%  {background-position: left 3% bottom -10px}
-                                75%  {background-position: left 0 bottom -5px}
-                                100% {background-position: left -3% bottom 0px}
+                            background-size: 150%;
+                            background-position: left -30% bottom 0px;
+                            animation: progressFirst2M 3s linear infinite;
+                            @keyframes progressFirst2M {
+                                0%   {background-position: left -30% bottom 0px}
+                                25%  {background-position: left -20% bottom -5px}
+                                50%  {background-position: left -15% bottom -10px}
+                                75%  {background-position: left -20 bottom -5px}
+                                100% {background-position: left -30% bottom 0px}
                                
                             }
-                        }
-
-                        @media only screen and (max-width: 575px) {
-                            display: none;
                         }
 
                     }
@@ -434,6 +513,51 @@
                             display: none;
                         }
                     }
+                    &.second{
+                        &::before{
+                            width: 100%;
+                            height: 100%;
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            background-image: url('../../assets//solution/progresBg.png');
+                            mix-blend-mode: color-dodge;
+                            background-repeat: no-repeat;
+                            background-size: 250%;
+                            background-position: left 18% bottom 0px;
+                            animation: progressSecondM 3s linear infinite;
+                            @keyframes progressSecondM {
+                                0%   {background-position: left 18% bottom 0px}
+                                25%  {background-position: left 17% bottom -5px}
+                                50%  {background-position: left 15% bottom -15px}
+                                75%  {background-position: left 17% bottom -5px}
+                                100% {background-position: left 18% bottom 0px}
+                            }
+                        }
+                        &::after{
+                            width: 100%;
+                            height: 100%;
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            background-image: url('../../assets//solution/progresBg.png');
+                            mix-blend-mode: color-dodge;
+                            background-repeat: no-repeat;
+                            background-size: 250%;
+                            background-position: left 15% bottom -5px;
+                            animation: progressSecond2M 3s linear infinite;
+                            @keyframes progressSecond2M {
+                                0%   {background-position: left 15% bottom -5px}
+                                25%  {background-position: left 16% bottom -10px}
+                                50%  {background-position: left 18% bottom -15px}
+                                75%  {background-position: left 16% bottom -10px}
+                                100% {background-position: left 15% bottom -5px}
+                                
+                            }
+                        }
+                    }
 
                     &:nth-child(3) {
 
@@ -484,6 +608,50 @@
 
                         @media only screen and (max-width: 575px) {
                             display: none;
+                        }
+                    }
+                    &.third{
+                        &::before{
+                            width: 100%;
+                            height: 100%;
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            background-image: url('../../assets//solution/progresBg.png');
+                            mix-blend-mode: color-dodge;
+                            background-repeat: no-repeat;
+                            background-size: 250%;
+                            background-position: right 66% bottom -10px;
+                            animation: progressBgThirdM 3s linear infinite;
+                            @keyframes progressBgThirdM {
+                                0%   {background-position: right 66% bottom -10px}
+                                25%  {background-position: right 63% bottom -5px}
+                                50%  {background-position: right 60% bottom 0px}
+                                75%  {background-position: right 63% bottom -5px}
+                                100% {background-position: right 66% bottom -10px}
+                            }
+                        }
+                        &::after{
+                            width: 100%;
+                            height: 100%;
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            background-image: url('../../assets//solution/progresBg.png');
+                            mix-blend-mode: color-dodge;
+                            background-repeat: no-repeat;
+                            background-size: 250%;
+                            background-position: right 69% bottom 0px;
+                            animation: progressBgThird2M 3s linear infinite;
+                            @keyframes progressBgThird2M {
+                                0%   {background-position: right 69% bottom 0px}
+                                25%  {background-position: right 66% bottom -5px}
+                                50%  {background-position: right 62% bottom -15px}
+                                75%  {background-position: right 66% bottom -5px}
+                                100% {background-position: right 69% bottom 0px}
+                            }
                         }
                     }
 
@@ -538,6 +706,50 @@
                             width: 100%;
                         }
 
+                    }
+                    &.fourth{
+                        &::before{
+                            width: 100%;
+                            height: 100%;
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            background-image: url('../../assets//solution/progresBg.png');
+                            mix-blend-mode: color-dodge;
+                            background-repeat: no-repeat;
+                            background-size: 150%;
+                            background-position: right 0px bottom;
+                            animation: progressBgM 3s linear infinite;
+                            @keyframes progressBgM {
+                                0%   {background-position: right 0px bottom 0}
+                                25%  {background-position: right -5px bottom 0}
+                                50%  {background-position: right -10px bottom 0}
+                                75%  {background-position: right -5px bottom 0}
+                                100% {background-position: right 0px bottom 0}
+                            }
+                        }
+                        &::after{
+                            width: 100%;
+                            height: 100%;
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            background-image: url('../../assets//solution/progresBg.png');
+                            mix-blend-mode: color-dodge;
+                            background-repeat: no-repeat;
+                            background-size: 125%;
+                            background-position: right 0% bottom;
+                            animation: progressBg2M 3s linear infinite;
+                            @keyframes progressBg2M {
+                                0%   {background-position: right 0px bottom 0px}
+                                25%  {background-position: right 0px bottom -5px}
+                                50%  {background-position: right 0px bottom -10px}
+                                75%  {background-position: right 0px bottom -5px}
+                                100% {background-position: right 0px bottom 0px}
+                            }
+                        }
                     }
 
                     h1 {
@@ -695,89 +907,61 @@
                     @media only screen and (max-width: 575px) {
                         margin-top: 10px;
                     }
-
+                    h3{
+                        max-width: calc(100% - 93px);
+                        word-wrap: break-word;
+                    }
                     .year-section-left {
                         position: relative;
-                        // width: 409px;
                         width: 50%;
                         min-height: 377px;
-                        // background-image: url("../../assets/Aboutimg.png");
-                        // background-repeat: no-repeat;
                         border-radius: 35px;
                         background: linear-gradient(0deg, rgba(39, 48, 63, 0.80) 0%, rgba(39, 48, 63, 0.80) 100%), url("../../assets/Aboutimg.png"), lightgray -7.633px 0px / 138.298% 100% no-repeat;
                         display: flex;
                         align-items: end;
                         justify-content: space-between;
                         padding: 30px 20px;
-
-                        .arrow-image {
-                            transition: opacity 0.3s ease-in-out;
+                        overflow: hidden;
+                        &::after{
+                            transition: opacity 0.3s ease;
                             width: 63px;
                             height: 63px;
                             position: absolute;
+                            content: "";
                             bottom: 32px;
-                            right: 30px;
-
-                            &:hover {
-                                opacity: 0;
-                                transition: opacity 0.3s ease-in-out;
-                            }
+                            right: 37px;
+                            background: url('../../assets/arrow.png');
+                            opacity: 1;
                         }
-
-                        .hover-container {
-                            display: inline-block;
-
-
-                            .hover-icon {
-                                transition: opacity 0.3s ease-in-out;
-                                width: 63px;
-                                height: 63px;
-                                position: absolute;
-                                bottom: 32px;
-                                right: 30px;
-                            }
-
-                            .hover-icon {
-                                font-size: 35px;
-                                color: #F36A24;
-                                position: absolute;
-                                right: 0px;
-                                bottom: 0px;
-                                opacity: 0;
-                                display: none;
-                                background-image: url("../../assets/img-hover.png");
-                                transition: opacity 0.3s ease-in-out;
-                                height: 377px;
+                        &::before{
+                            width: 100%;
+                            height: 100%;
+                            position: absolute;
+                            content: "";
+                            bottom: 0px;
+                            right: 0px;
+                            opacity: 0;
+                            transition: opacity 0.3s ease;
+                        }
+                        &:hover{
+                            &::after{
                                 width: 100%;
-                                background-position: center;
-                                background-size: cover;
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: end;
-                                border-radius: 35px;
-
-                                &:hover {
-                                    opacity: 1;
-                                    height: 100%;
-                                    width: 100%;
-                                    color: #C74300 !important;
-                                    display: block;
-                                }
-
+                                height: 100%;
+                                position: absolute;
+                                content: "";
+                                bottom: 0px;
+                                right: 0px;
+                                transition: opacity 0.3s ease;
+                                background: url('../../assets/solution/personBg.png');
+                                background-repeat: no-repeat;
+                                background-position: bottom right;
+                                border: 1px solid #F36A24;
                             }
-
-                            // &:hover {
-                            //     .arrow-image {
-
-                            //     }
-
-                            //     .hover-icon {
-
-
-                            //     }
-                            // }
+                            &::before{
+                                opacity: 1;
+                                background: linear-gradient(130deg, rgba(0, 0, 0, 0.00) 0%, #F36A24 98.82%);
+                            }
                         }
-
 
                         h3 {
                             @media only screen and (max-width: 575px) {
@@ -796,16 +980,6 @@
                             /* 143.59% */
                             text-transform: capitalize;
                             z-index: 2;
-                        }
-
-                        img {
-
-                            @media only screen and (max-width: 575px) {
-                                position: absolute;
-                                right: 10px;
-                                width: 40px;
-                                height: 40px;
-                            }
                         }
 
                     }
@@ -820,77 +994,51 @@
                         align-items: end;
                         justify-content: space-between;
                         padding: 30px 20px;
-
-                        .arrow-image {
-                            transition: opacity 0.3s ease-in-out;
+                        overflow: hidden;
+                        &::after{
+                            transition: opacity 0.3s ease;
                             width: 63px;
                             height: 63px;
                             position: absolute;
+                            content: "";
                             bottom: 32px;
-                            right: 30px;
-                            display: block;
-
-                            &:hover {
-                                opacity: 0;
-                                transition: opacity 0.3s ease-in-out;
-                                display: none;
-                            }
+                            right: 36px;
+                            background: url('../../assets/thumb.png');
+                            background-repeat: no-repeat;
+                            background-position: bottom right;
                         }
-
-                        .hover-container {
-                            display: inline-block;
-
-
-                            .hover-icon {
-                                transition: opacity 0.3s ease-in-out;
-                                width: 63px;
-                                height: 63px;
-                                position: absolute;
-                                bottom: 32px;
-                                right: 30px;
-                            }
-
-                            .hover-icon {
-                                font-size: 35px;
-                                color: #F36A24;
-                                position: absolute;
-                                right: 0px;
-                                bottom: 0px;
-                                opacity: 0;
-                                display: none;
-                                background-image: url("../../assets/thumb-hover.png");
-                                transition: opacity 0.3s ease-in-out;
-                                height: 377px;
+                        &::before{
+                            opacity: 0;
+                            width: 100%;
+                            height: 100%;
+                            position: absolute;
+                            content: "";
+                            bottom: 0px;
+                            right: 0px;
+                            background: url('../../assets/solution/thumbBg.png');
+                            background-repeat: no-repeat;
+                            background-position: bottom right;
+                            transition: opacity 0.3s ease;
+                        }
+                        &:hover{
+                            &::after{
+                                opacity: 1;
                                 width: 100%;
-                                background-position: center;
-                                background-size: cover;
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: end;
-                                border-radius: 35px;
-
-                                &:hover {
-                                    opacity: 1;
-                                    height: 100%;
-                                    width: 100%;
-                                    color: #C74300 !important;
-                                    display: block;
-                                }
-
+                                height: 100%;
+                                position: absolute;
+                                content: "";
+                                bottom: 0px;
+                                right: 0px;
+                                background: url('../../assets/solution/thumbBg.png');
+                                background-repeat: no-repeat;
+                                background-position: bottom right;
+                                transition: opacity 0.3s ease;
                             }
-
-                            // &:hover {
-                            //     .arrow-image {
-
-                            //     }
-
-                            //     .hover-icon {
-
-
-                            //     }
-                            // }
+                            &::before{
+                                opacity: 1;
+                                background: linear-gradient(130deg, rgba(0, 0, 0, 0.00) 0%, #F36A24 98.82%);
+                            }
                         }
-
                         h3 {
                             color: #FFF;
                             font-family: Poppins;
@@ -906,16 +1054,6 @@
                                 position: absolute;
                                 top: 0;
                                 font-size: 20px;
-                            }
-                        }
-
-                        img {
-
-                            @media only screen and (max-width: 575px) {
-                                position: absolute;
-                                right: 10px;
-                                width: 40px;
-                                height: 40px;
                             }
                         }
                     }
@@ -933,90 +1071,92 @@
                         position: relative;
                         overflow: hidden;
                         background: linear-gradient(156deg, #F36A24 14.61%, #9B3400 86.76%);
-
-                        &:nth-child(1) {
-
-                            // background-image: url("../../assets/box1.png");
-                            // background-size: 100% 100%;
-                            &::before {
-                                width: 100%;
-                                height: 100%;
-                                content: '';
-                                position: absolute;
-                                top: 0;
-                                left: 0;
-                                background-image: url('../../assets//solution/progresBg.png');
-                                mix-blend-mode: color-dodge;
-                                background-repeat: no-repeat;
-                                background-size: 450%;
-                                background-position: left 3% bottom 0px;
-                                animation: progressFirst 3s linear infinite;
-
-                                @keyframes progressFirst {
-                                    0% {
-                                        background-position: left 3% bottom 0px
-                                    }
-
-                                    25% {
-                                        background-position: left 1.5% bottom -5px
-                                    }
-
-                                    50% {
-                                        background-position: left 0% bottom -10px
-                                    }
-
-                                    75% {
-                                        background-position: left -1.5% bottom -5px
-                                    }
-
-                                    100% {
-                                        background-position: left 3% bottom 0px
+                        @media screen and (min-width:768px) {
+                            
+                            &:nth-child(1) {
+    
+                                // background-image: url("../../assets/box1.png");
+                                // background-size: 100% 100%;
+                                &::before {
+                                    width: 100%;
+                                    height: 100%;
+                                    content: '';
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    background-image: url('../../assets//solution/progresBg.png');
+                                    mix-blend-mode: color-dodge;
+                                    background-repeat: no-repeat;
+                                    background-size: 450%;
+                                    background-position: left 3% bottom 0px;
+                                    animation: progressFirst 3s linear infinite;
+    
+                                    @keyframes progressFirst {
+                                        0% {
+                                            background-position: left 3% bottom 0px
+                                        }
+    
+                                        25% {
+                                            background-position: left 1.5% bottom -5px
+                                        }
+    
+                                        50% {
+                                            background-position: left 0% bottom -10px
+                                        }
+    
+                                        75% {
+                                            background-position: left -1.5% bottom -5px
+                                        }
+    
+                                        100% {
+                                            background-position: left 3% bottom 0px
+                                        }
                                     }
                                 }
-                            }
-
-                            &::after {
-                                width: 100%;
-                                height: 100%;
-                                content: '';
-                                position: absolute;
-                                top: 0;
-                                left: 0;
-                                background-image: url('../../assets//solution/progresBg.png');
-                                mix-blend-mode: color-dodge;
-                                background-repeat: no-repeat;
-                                background-size: 450%;
-                                background-position: left -3% bottom 0px;
-                                animation: progressFirst2 3s linear infinite;
-
-                                @keyframes progressFirst2 {
-                                    0% {
-                                        background-position: left -3% bottom 0px
+    
+                                &::after {
+                                    width: 100%;
+                                    height: 100%;
+                                    content: '';
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    background-image: url('../../assets//solution/progresBg.png');
+                                    mix-blend-mode: color-dodge;
+                                    background-repeat: no-repeat;
+                                    background-size: 450%;
+                                    background-position: left -3% bottom 0px;
+                                    animation: progressFirst2 3s linear infinite;
+    
+                                    @keyframes progressFirst2 {
+                                        0% {
+                                            background-position: left -3% bottom 0px
+                                        }
+    
+                                        25% {
+                                            background-position: left 0% bottom -5px
+                                        }
+    
+                                        50% {
+                                            background-position: left 3% bottom -10px
+                                        }
+    
+                                        75% {
+                                            background-position: left 0 bottom -5px
+                                        }
+    
+                                        100% {
+                                            background-position: left -3% bottom 0px
+                                        }
+    
                                     }
-
-                                    25% {
-                                        background-position: left 0% bottom -5px
-                                    }
-
-                                    50% {
-                                        background-position: left 3% bottom -10px
-                                    }
-
-                                    75% {
-                                        background-position: left 0 bottom -5px
-                                    }
-
-                                    100% {
-                                        background-position: left -3% bottom 0px
-                                    }
-
                                 }
+    
+                                @media only screen and (max-width: 575px) {
+                                    display: none;
+                                }
+    
                             }
-
-                            @media only screen and (max-width: 575px) {
-                                display: none;
-                            }
-
                         }
 
                         &:nth-child(2) {

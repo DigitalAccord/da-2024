@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './solutions.scss'
 import CountUp from 'react-countup';
 import arrow from "../../assets/arrow.png"
+import Slider from "react-slick";
 import thumb from "../../assets/thumb.png"
 import arrow1 from '../../assets/Arrow 4.png'
 import overflow from '../../assets/overflow.png'
@@ -11,6 +12,8 @@ import { FiArrowUpRight } from 'react-icons/fi';
 import developmentImg from '../../assets/developImg.png'
 import digitalMarketingImg from '../../assets/digitalMarketingImg.png'
 import itImg from '../../assets/ItImg.png'
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
 import $ from 'jquery';
 import Solution_respo from '../Sulution_respo/Solution_respo'
 import waves1 from '../../assets/wave1.png'
@@ -65,6 +68,17 @@ const Solutions = () => {
       window.removeEventListener('resize', handleResize1);
     };
   }, []);
+
+  const settings = {
+    dots: true,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    autoplay: false,
+    autoplaySpeed: 2000,
+  };
  
 
   return (
@@ -93,27 +107,27 @@ const Solutions = () => {
             </div>
             <div className='year-section-parent mt-2'>
               <div className='year-section'>
-                <div className='year-section-left'>
+                <div className='year-section-left year-section-box'>
                   <h3>About Us</h3>
-                  <div className='hover-container'>
-                  <img src={arrow} alt='Arrow' className='arrow-image'/>
+                  {/* <div className='hover-container'>
+                    <img src={arrow} alt='Arrow' className='arrow-image'/>
                     <div className='hover-icon'>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
-                <div className='year-section-right'>
+                <div className='year-section-right year-section-box'>
                   <h3>IT Solutions</h3>
 
-                  <div className='hover-container'>
+                  {/* <div className='hover-container'>
                     <img src={thumb} alt='thumb' className='arrow-image' />
                     <div className='hover-icon'>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
 
-              <div className='progress-div d-flex gap-3 mt-3'>
-                <div className='progress-div-box d-none d-md-block'>
+              <div className='progress-div d-none d-md-flex gap-3 mt-3'>
+                <div className='progress-div-box'>
                       <div className='text-center mt-3'>
                         <h1>2014</h1>
                         <h3>0%</h3>
@@ -122,14 +136,14 @@ const Solutions = () => {
                       </div>
                 </div>
 
-                <div className='progress-div-box d-none d-md-block'>
+                <div className='progress-div-box'>
                   <div className='text-center mt-3'>
                         <h1>2017</h1>
                         <h3>0%</h3>
                   </div>
                 </div>
 
-                <div className='progress-div-box d-none d-md-block'>
+                <div className='progress-div-box'>
                       <div className='text-center mt-3'>
                         <h1>2020</h1>
                         <h3>0%</h3>
@@ -141,6 +155,36 @@ const Solutions = () => {
                           <h3>0%</h3>
                   </div>
                 </div>
+              </div>
+              <div className='progress-div mobile gap-1 d-md-none mt-3'>
+                <Slider {...settings}>
+                    <div className='progress-div-box first'>
+                          <div className='text-center mt-3'>
+                            <h1>2014</h1>
+                            <h3>0%</h3>
+                            <p>Digital Accords Beginning</p>
+
+                          </div>
+                    </div>
+                    <div className='progress-div-box second'>
+                      <div className='text-center mt-3'>
+                            <h1>2017</h1>
+                            <h3>0%</h3>
+                      </div>
+                    </div>
+                    <div className='progress-div-box third'>
+                          <div className='text-center mt-3'>
+                            <h1>2020</h1>
+                            <h3>0%</h3>
+                          </div>
+                    </div>
+                    <div className='progress-div-box fourth'>
+                            <div className='text-center mt-3'>
+                              <h1>Present</h1>
+                              <h3>0%</h3>
+                      </div>
+                    </div>
+                </Slider>
               </div>
             </div>
           </div>

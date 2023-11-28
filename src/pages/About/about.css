@@ -1,16 +1,61 @@
 .about-container {
-  background: url("../../assets/about/Office.png"), no-repeat;
+  background: url("../../assets/about/Office.png") no-repeat;
   width: 100%;
-  max-width: 1587px;
+  max-width: 1587px !important;
   height: 100vh;
   min-height: 1058px;
+  display: block;
   margin: 0 auto;
+  background-position: right;
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100% 100%;
 }
-.about-container h1 {
-  width: 100%;
-  height: 500px;
-  background: #F26B25;
+.about-container .about-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+.about-container .about-text-wrapper h1 {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 120px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 60px;
+  margin-bottom: 60px;
+  margin-left: 70px;
+}
+.about-container .about-text-wrapper .bg-about-text {
+  mix-blend-mode: screen;
+  background: #f85906 -295.246px -0.095px/118.615% 100.018%;
+  padding: 90px;
+  border-radius: 40px;
+  max-width: 1520px;
+}
+.about-container .about-text-wrapper .bg-about-text .bg-about-text-inner {
+  width: 36%;
+}
+.about-container .about-text-wrapper .bg-about-text .bg-about-text-inner p {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 25px;
+  /* 156.25% */
+}
+.about-container .about-text-wrapper .bg-about-text .bg-about-text-inner button {
+  border-radius: 62px;
+  border: 1px solid #FFF;
+  color: #FFF;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  background: transparent;
+  padding: 10px 50px;
+  margin-top: 20px;
 }/*# sourceMappingURL=about.css.map */
