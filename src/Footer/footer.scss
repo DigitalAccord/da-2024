@@ -186,6 +186,7 @@
                 @media only screen and (max-width: 767px) {
                     justify-content: center !important;
                     width: 100%;
+                    gap: 20px;
 
                 }
 
@@ -219,9 +220,11 @@
         border-radius: 62px;
         border: 1px solid #FFF;
         padding: 18px 42px;
+        cursor: pointer;
 
         @media only screen and (max-width: 576px) {
             width: 100%;
+            padding: 4px 20px;
         }
 
         p {
@@ -264,13 +267,90 @@
             }
 
             li {
-                color: #FFF;
-                font-size: 16px;
-                font-weight: 300;
-                line-height: 25px;
-                padding: 10px 0px;
+               
+                margin: 15px 0px;
+                cursor: pointer;
+                a{
+                    color: #FFF;
+                    font-size: 16px;
+                    font-weight: 300;
+                    line-height: 25px;
+                    text-decoration: none;
+                }
             }
         }
     }
 
 }
+.copyright-row{
+margin-top: 100px;
+@media only screen and (max-width: 576px) {
+    margin-top: 20px;
+}
+    .copyright-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    @media only screen and (max-width: 830px) {
+       flex-direction: column-reverse;
+       text-align: center;
+    }
+
+   
+    
+    
+        .copyrightLeft {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        
+            p {
+                color: #FFF;
+                font-family: Poppins;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                margin: 0;
+                padding: 0;
+            }
+            @media only screen and (max-width: 576px) {
+                margin-top: 20px;
+            }
+        }
+        
+        .corightRight {
+            p {
+                text-align: end;
+                color: #FFF;
+                text-align: right;
+                font-family: Poppins;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                margin: 0;
+                padding: 0;
+                @media only screen and (max-width: 830px) {
+                  
+                    text-align: center;
+                 }
+                
+            }
+        }
+    }
+}
+@keyframes rotateAnimation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .rotate {
+    animation: rotateAnimation 5s linear infinite; 
+  }

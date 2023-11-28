@@ -84,6 +84,11 @@
 .category-wrapper .category-inner-section2 {
   margin-left: 20px;
 }
+@media only screen and (max-width: 575px) {
+  .category-wrapper .category-inner-section2 {
+    margin-left: 0px;
+  }
+}
 .category-wrapper .category-inner-section2 h1 {
   color: #FFF;
   font-family: Poppins;
@@ -96,6 +101,13 @@
 @media only screen and (max-width: 992px) {
   .category-wrapper .category-inner-section2 h1 {
     font-size: 50px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .category-wrapper .category-inner-section2 h1 {
+    font-size: 46px;
+    text-align: center;
+    line-height: 54px;
   }
 }
 .category-wrapper .category-inner-section2 p {

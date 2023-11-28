@@ -1,24 +1,5 @@
 .solutions-wrapper {
-  background: linear-gradient(180deg, rgb(24, 29, 38) 0%, rgb(56, 68, 90) 27%, rgb(24, 29, 38) 100%);
   position: relative;
-}
-.solutions-wrapper::after {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url("../../assets/solutionbg.png");
-  background-size: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: 0;
-}
-@media only screen and (max-width: 992px) {
-  .solutions-wrapper::after {
-    z-index: -1;
-  }
 }
 .solutions-wrapper .custom-container-solution {
   max-width: 1420px !important;
@@ -274,6 +255,33 @@
     height: 40px;
   }
 }
+.solutions-wrapper .custom-container-solution .year-section-parent .progress-div.mobile .slick-dots {
+  bottom: 45px;
+}
+.solutions-wrapper .custom-container-solution .year-section-parent .progress-div.mobile .slick-dots button {
+  font-size: 50px !important;
+}
+.solutions-wrapper .custom-container-solution .year-section-parent .progress-div.mobile .slick-dots button::before {
+  content: "";
+  width: 10px;
+  height: 5px;
+  background: #fff;
+  font-size: 50px !important;
+  opacity: 1;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.solutions-wrapper .custom-container-solution .year-section-parent .progress-div.mobile .slick-dots .slick-active button {
+  font-size: 50px !important;
+}
+.solutions-wrapper .custom-container-solution .year-section-parent .progress-div.mobile .slick-dots .slick-active button::before {
+  content: "";
+  width: 20px;
+  height: 5px;
+  background: #fff;
+  font-size: 50px !important;
+  opacity: 1;
+}
 .solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box {
   width: 197px;
   min-width: 135px;
@@ -283,7 +291,138 @@
   overflow: hidden;
   background: linear-gradient(156deg, #F36A24 14.61%, #9B3400 86.76%);
 }
-.solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box:nth-child(1)::before {
+@media screen and (min-width: 768px) {
+  .solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box:nth-child(1)::before {
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("../../assets//solution/progresBg.png");
+    mix-blend-mode: color-dodge;
+    background-repeat: no-repeat;
+    background-size: 450%;
+    background-position: left 3% bottom 0px;
+    animation: progressFirst 3s linear infinite;
+  }
+  @keyframes progressFirst {
+    0% {
+      background-position: left 3% bottom 0px;
+    }
+    25% {
+      background-position: left 1.5% bottom -5px;
+    }
+    50% {
+      background-position: left 0% bottom -10px;
+    }
+    75% {
+      background-position: left -1.5% bottom -5px;
+    }
+    100% {
+      background-position: left 3% bottom 0px;
+    }
+  }
+  .solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box:nth-child(1)::after {
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("../../assets//solution/progresBg.png");
+    mix-blend-mode: color-dodge;
+    background-repeat: no-repeat;
+    background-size: 450%;
+    background-position: left -3% bottom 0px;
+    animation: progressFirst2 3s linear infinite;
+  }
+  @keyframes progressFirst2 {
+    0% {
+      background-position: left -3% bottom 0px;
+    }
+    25% {
+      background-position: left 0% bottom -5px;
+    }
+    50% {
+      background-position: left 3% bottom -10px;
+    }
+    75% {
+      background-position: left 0 bottom -5px;
+    }
+    100% {
+      background-position: left -3% bottom 0px;
+    }
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 575px) {
+  .solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box:nth-child(1) {
+    display: none;
+  }
+}
+.solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box.first::before {
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../../assets//solution/progresBg.png");
+  mix-blend-mode: color-dodge;
+  background-repeat: no-repeat;
+  background-size: 150%;
+  background-position: left -33% bottom 0px;
+  animation: progressFirstM 3s linear infinite;
+}
+@keyframes progressFirstM {
+  0% {
+    background-position: left -33% bottom 0px;
+  }
+  25% {
+    background-position: left -15% bottom -5px;
+  }
+  50% {
+    background-position: left -10% bottom -10px;
+  }
+  75% {
+    background-position: left -15% bottom -5px;
+  }
+  100% {
+    background-position: left -33% bottom 0px;
+  }
+}
+.solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box.first::after {
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../../assets//solution/progresBg.png");
+  mix-blend-mode: color-dodge;
+  background-repeat: no-repeat;
+  background-size: 150%;
+  background-position: left -30% bottom 0px;
+  animation: progressFirst2M 3s linear infinite;
+}
+@keyframes progressFirst2M {
+  0% {
+    background-position: left -30% bottom 0px;
+  }
+  25% {
+    background-position: left -20% bottom -5px;
+  }
+  50% {
+    background-position: left -15% bottom -10px;
+  }
+  75% {
+    background-position: left -20 bottom -5px;
+  }
+  100% {
+    background-position: left -30% bottom 0px;
+  }
+}
+.solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box:nth-child(2)::before {
   width: 100%;
   height: 100%;
   content: "";
@@ -294,27 +433,27 @@
   mix-blend-mode: color-dodge;
   background-repeat: no-repeat;
   background-size: 450%;
-  background-position: left 3% bottom 0px;
-  animation: progressFirst 3s linear infinite;
+  background-position: left 38% bottom 0px;
+  animation: progressSecond 3s linear infinite;
 }
-@keyframes progressFirst {
+@keyframes progressSecond {
   0% {
-    background-position: left 3% bottom 0px;
+    background-position: left 38% bottom 0px;
   }
   25% {
-    background-position: left 1.5% bottom -5px;
+    background-position: left 37% bottom -5px;
   }
   50% {
-    background-position: left 0% bottom -10px;
+    background-position: left 35% bottom -15px;
   }
   75% {
-    background-position: left -1.5% bottom -5px;
+    background-position: left 37% bottom -5px;
   }
   100% {
-    background-position: left 3% bottom 0px;
+    background-position: left 38% bottom 0px;
   }
 }
-.solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box:nth-child(1)::after {
+.solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box:nth-child(2)::after {
   width: 100%;
   height: 100%;
   content: "";
@@ -325,27 +464,716 @@
   mix-blend-mode: color-dodge;
   background-repeat: no-repeat;
   background-size: 450%;
-  background-position: left -3% bottom 0px;
-  animation: progressFirst2 3s linear infinite;
+  background-position: left 35% bottom -5px;
+  animation: progressSecond2 3s linear infinite;
 }
-@keyframes progressFirst2 {
+@keyframes progressSecond2 {
   0% {
-    background-position: left -3% bottom 0px;
+    background-position: left 35% bottom -5px;
   }
   25% {
-    background-position: left 0% bottom -5px;
+    background-position: left 36% bottom -10px;
   }
   50% {
-    background-position: left 3% bottom -10px;
+    background-position: left 38% bottom -15px;
   }
   75% {
-    background-position: left 0 bottom -5px;
+    background-position: left 36% bottom -10px;
   }
   100% {
-    background-position: left -3% bottom 0px;
+    background-position: left 35% bottom -5px;
   }
 }
 @media only screen and (max-width: 575px) {
+  .solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box:nth-child(2) {
+    display: none;
+  }
+}
+.solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box.second::before {
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../../assets//solution/progresBg.png");
+  mix-blend-mode: color-dodge;
+  background-repeat: no-repeat;
+  background-size: 250%;
+  background-position: left 18% bottom 0px;
+  animation: progressSecondM 3s linear infinite;
+}
+@keyframes progressSecondM {
+  0% {
+    background-position: left 18% bottom 0px;
+  }
+  25% {
+    background-position: left 17% bottom -5px;
+  }
+  50% {
+    background-position: left 15% bottom -15px;
+  }
+  75% {
+    background-position: left 17% bottom -5px;
+  }
+  100% {
+    background-position: left 18% bottom 0px;
+  }
+}
+.solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box.second::after {
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../../assets//solution/progresBg.png");
+  mix-blend-mode: color-dodge;
+  background-repeat: no-repeat;
+  background-size: 250%;
+  background-position: left 15% bottom -5px;
+  animation: progressSecond2M 3s linear infinite;
+}
+@keyframes progressSecond2M {
+  0% {
+    background-position: left 15% bottom -5px;
+  }
+  25% {
+    background-position: left 16% bottom -10px;
+  }
+  50% {
+    background-position: left 18% bottom -15px;
+  }
+  75% {
+    background-position: left 16% bottom -10px;
+  }
+  100% {
+    background-position: left 15% bottom -5px;
+  }
+}
+.solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box:nth-child(3)::before {
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../../assets//solution/progresBg.png");
+  mix-blend-mode: color-dodge;
+  background-repeat: no-repeat;
+  background-size: 450%;
+  background-position: right 33% bottom -10px;
+  animation: progressBgThird 3s linear infinite;
+}
+@keyframes progressBgThird {
+  0% {
+    background-position: right 33% bottom -10px;
+  }
+  25% {
+    background-position: right 31% bottom -5px;
+  }
+  50% {
+    background-position: right 30% bottom 0px;
+  }
+  75% {
+    background-position: right 31% bottom -5px;
+  }
+  100% {
+    background-position: right 33% bottom -10px;
+  }
+}
+.solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box:nth-child(3)::after {
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../../assets//solution/progresBg.png");
+  mix-blend-mode: color-dodge;
+  background-repeat: no-repeat;
+  background-size: 450%;
+  background-position: right 33% bottom 0px;
+  animation: progressBgThird2 3s linear infinite;
+}
+@keyframes progressBgThird2 {
+  0% {
+    background-position: right 33% bottom 0px;
+  }
+  25% {
+    background-position: right 32% bottom -5px;
+  }
+  50% {
+    background-position: right 30% bottom -15px;
+  }
+  75% {
+    background-position: right 32% bottom -5px;
+  }
+  100% {
+    background-position: right 33% bottom 0px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box:nth-child(3) {
+    display: none;
+  }
+}
+.solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box.third::before {
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../../assets//solution/progresBg.png");
+  mix-blend-mode: color-dodge;
+  background-repeat: no-repeat;
+  background-size: 250%;
+  background-position: right 66% bottom -10px;
+  animation: progressBgThirdM 3s linear infinite;
+}
+@keyframes progressBgThirdM {
+  0% {
+    background-position: right 66% bottom -10px;
+  }
+  25% {
+    background-position: right 63% bottom -5px;
+  }
+  50% {
+    background-position: right 60% bottom 0px;
+  }
+  75% {
+    background-position: right 63% bottom -5px;
+  }
+  100% {
+    background-position: right 66% bottom -10px;
+  }
+}
+.solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box.third::after {
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../../assets//solution/progresBg.png");
+  mix-blend-mode: color-dodge;
+  background-repeat: no-repeat;
+  background-size: 250%;
+  background-position: right 69% bottom 0px;
+  animation: progressBgThird2M 3s linear infinite;
+}
+@keyframes progressBgThird2M {
+  0% {
+    background-position: right 69% bottom 0px;
+  }
+  25% {
+    background-position: right 66% bottom -5px;
+  }
+  50% {
+    background-position: right 62% bottom -15px;
+  }
+  75% {
+    background-position: right 66% bottom -5px;
+  }
+  100% {
+    background-position: right 69% bottom 0px;
+  }
+}
+.solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box:nth-child(4)::before {
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../../assets//solution/progresBg.png");
+  mix-blend-mode: color-dodge;
+  background-repeat: no-repeat;
+  background-size: 450%;
+  background-position: right 0px bottom;
+  animation: progressBg 3s linear infinite;
+}
+@keyframes progressBg {
+  0% {
+    background-position: right 0px bottom;
+  }
+  25% {
+    background-position: right -5px bottom;
+  }
+  50% {
+    background-position: right -10px bottom;
+  }
+  75% {
+    background-position: right -5px bottom;
+  }
+  100% {
+    background-position: right 0px bottom;
+  }
+}
+.solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box:nth-child(4)::after {
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../../assets//solution/progresBg.png");
+  mix-blend-mode: color-dodge;
+  background-repeat: no-repeat;
+  background-size: 425%;
+  background-position: right 0% bottom;
+  animation: progressBg2 3s linear infinite;
+}
+@keyframes progressBg2 {
+  0% {
+    background-position: right 0px bottom 0px;
+  }
+  25% {
+    background-position: right 0px bottom 5px;
+  }
+  50% {
+    background-position: right 0px bottom 10px;
+  }
+  75% {
+    background-position: right 0px bottom 5px;
+  }
+  100% {
+    background-position: right 0px bottom 0px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box:nth-child(4) {
+    width: 100%;
+  }
+}
+.solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box.fourth::before {
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../../assets//solution/progresBg.png");
+  mix-blend-mode: color-dodge;
+  background-repeat: no-repeat;
+  background-size: 150%;
+  background-position: right 0px bottom;
+  animation: progressBgM 3s linear infinite;
+}
+@keyframes progressBgM {
+  0% {
+    background-position: right 0px bottom 0;
+  }
+  25% {
+    background-position: right -5px bottom 0;
+  }
+  50% {
+    background-position: right -10px bottom 0;
+  }
+  75% {
+    background-position: right -5px bottom 0;
+  }
+  100% {
+    background-position: right 0px bottom 0;
+  }
+}
+.solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box.fourth::after {
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../../assets//solution/progresBg.png");
+  mix-blend-mode: color-dodge;
+  background-repeat: no-repeat;
+  background-size: 125%;
+  background-position: right 0% bottom;
+  animation: progressBg2M 3s linear infinite;
+}
+@keyframes progressBg2M {
+  0% {
+    background-position: right 0px bottom 0px;
+  }
+  25% {
+    background-position: right 0px bottom -5px;
+  }
+  50% {
+    background-position: right 0px bottom -10px;
+  }
+  75% {
+    background-position: right 0px bottom -5px;
+  }
+  100% {
+    background-position: right 0px bottom 0px;
+  }
+}
+.solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box h1 {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box h3 {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box p {
+  width: 60%;
+  margin: auto;
+  color: #FFF;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 275;
+  line-height: normal;
+}
+.solutions-wrapper .solution-text-wrapper {
+  max-width: 1046px;
+  background: rgba(255, 255, 255, 0);
+  position: relative;
+}
+.solutions-wrapper .custom-container-solution {
+  max-width: 1420px !important;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.solutions-wrapper .custom-container-solution .building-section {
+  background-image: url("../../assets/buildinbg.png");
+  background-repeat: no-repeat;
+  z-index: 999;
+  width: 100%;
+  border-radius: 35px;
+  max-height: 769px;
+  background-position: center;
+  background-size: 100% 100%;
+}
+@media only screen and (max-width: 992px) {
+  .solutions-wrapper .custom-container-solution .building-section {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .solutions-wrapper .custom-container-solution .building-section {
+    min-height: 210px;
+  }
+}
+.solutions-wrapper .custom-container-solution .building-section .building-section-middle {
+  padding: 10px 0px;
+}
+@media only screen and (max-width: 575px) {
+  .solutions-wrapper .custom-container-solution .building-section .building-section-middle {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 50px;
+  }
+}
+.solutions-wrapper .custom-container-solution .building-section .building-section-middle .building-section-middle-col1 h1 {
+  color: #FFF;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 65px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+@media only screen and (max-width: 575px) {
+  .solutions-wrapper .custom-container-solution .building-section .building-section-middle .building-section-middle-col1 h1 {
+    font-size: 45px;
+  }
+}
+.solutions-wrapper .custom-container-solution .building-section .building-section-middle .building-section-middle-col1 p {
+  color: #FFF;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 26.176px;
+  font-style: normal;
+  font-weight: 275;
+  line-height: 117.6%;
+  text-transform: capitalize;
+}
+@media only screen and (max-width: 575px) {
+  .solutions-wrapper .custom-container-solution .building-section .building-section-middle .building-section-middle-col1 p {
+    font-size: 20px;
+  }
+}
+.solutions-wrapper .custom-container-solution .year-section-parent {
+  z-index: 999;
+  width: 60%;
+}
+@media only screen and (max-width: 992px) {
+  .solutions-wrapper .custom-container-solution .year-section-parent {
+    width: 100%;
+  }
+}
+.solutions-wrapper .custom-container-solution .year-section-parent .year-section {
+  height: 377px;
+  display: flex;
+  gap: 15px;
+}
+@media only screen and (max-width: 575px) {
+  .solutions-wrapper .custom-container-solution .year-section-parent .year-section {
+    margin-top: 10px;
+  }
+}
+.solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-left {
+  position: relative;
+  width: 50%;
+  min-height: 377px;
+  border-radius: 35px;
+  background: linear-gradient(0deg, rgba(39, 48, 63, 0.8) 0%, rgba(39, 48, 63, 0.8) 100%), url("../../assets/Aboutimg.png"), lightgray -7.633px 0px/138.298% 100% no-repeat;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  padding: 30px 20px;
+}
+.solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-left .arrow-image {
+  transition: opacity 0.3s ease-in-out;
+  width: 63px;
+  height: 63px;
+  position: absolute;
+  bottom: 32px;
+  right: 30px;
+}
+.solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-left .arrow-image:hover {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-left .hover-container {
+  display: inline-block;
+}
+.solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-left .hover-container .hover-icon {
+  transition: opacity 0.3s ease-in-out;
+  width: 63px;
+  height: 63px;
+  position: absolute;
+  bottom: 32px;
+  right: 30px;
+}
+.solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-left .hover-container .hover-icon {
+  font-size: 35px;
+  color: #F36A24;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  opacity: 0;
+  display: none;
+  background-image: url("../../assets/img-hover.png");
+  transition: opacity 0.3s ease-in-out;
+  height: 377px;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  border-radius: 35px;
+}
+.solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-left .hover-container .hover-icon:hover {
+  opacity: 1;
+  height: 100%;
+  width: 100%;
+  color: #C74300 !important;
+  display: block;
+}
+.solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-left h3 {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 39px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 56px;
+  /* 143.59% */
+  text-transform: capitalize;
+  z-index: 2;
+}
+@media only screen and (max-width: 575px) {
+  .solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-left h3 {
+    position: absolute;
+    top: 0;
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-left img {
+    position: absolute;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+  }
+}
+.solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-right {
+  position: relative;
+  width: 50%;
+  min-height: 377px;
+  border-radius: 35px;
+  background: linear-gradient(0deg, rgba(39, 48, 63, 0.8) 0%, rgba(39, 48, 63, 0.8) 100%), url("../../assets/itImage.png"), lightgray -7.633px 0px/138.298% 100% no-repeat;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  padding: 30px 20px;
+}
+.solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-right .arrow-image {
+  transition: opacity 0.3s ease-in-out;
+  width: 63px;
+  height: 63px;
+  position: absolute;
+  bottom: 32px;
+  right: 30px;
+  display: block;
+}
+.solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-right .arrow-image:hover {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  display: none;
+}
+.solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-right .hover-container {
+  display: inline-block;
+}
+.solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-right .hover-container .hover-icon {
+  transition: opacity 0.3s ease-in-out;
+  width: 63px;
+  height: 63px;
+  position: absolute;
+  bottom: 32px;
+  right: 30px;
+}
+.solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-right .hover-container .hover-icon {
+  font-size: 35px;
+  color: #F36A24;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  opacity: 0;
+  display: none;
+  background-image: url("../../assets/thumb-hover.png");
+  transition: opacity 0.3s ease-in-out;
+  height: 377px;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  border-radius: 35px;
+}
+.solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-right .hover-container .hover-icon:hover {
+  opacity: 1;
+  height: 100%;
+  width: 100%;
+  color: #C74300 !important;
+  display: block;
+}
+.solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-right h3 {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 39px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 56px;
+  /* 143.59% */
+  text-transform: capitalize;
+  z-index: 2;
+}
+@media only screen and (max-width: 575px) {
+  .solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-right h3 {
+    position: absolute;
+    top: 0;
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-right img {
+    position: absolute;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+  }
+}
+.solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box {
+  width: 197px;
+  min-width: 135px;
+  min-height: 377px;
+  border-radius: 35px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(156deg, #F36A24 14.61%, #9B3400 86.76%);
+}
+@media screen and (min-width: 768px) {
+  .solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box:nth-child(1)::before {
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("../../assets//solution/progresBg.png");
+    mix-blend-mode: color-dodge;
+    background-repeat: no-repeat;
+    background-size: 450%;
+    background-position: left 3% bottom 0px;
+    animation: progressFirst 3s linear infinite;
+  }
+  @keyframes progressFirst {
+    0% {
+      background-position: left 3% bottom 0px;
+    }
+    25% {
+      background-position: left 1.5% bottom -5px;
+    }
+    50% {
+      background-position: left 0% bottom -10px;
+    }
+    75% {
+      background-position: left -1.5% bottom -5px;
+    }
+    100% {
+      background-position: left 3% bottom 0px;
+    }
+  }
+  .solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box:nth-child(1)::after {
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("../../assets//solution/progresBg.png");
+    mix-blend-mode: color-dodge;
+    background-repeat: no-repeat;
+    background-size: 450%;
+    background-position: left -3% bottom 0px;
+    animation: progressFirst2 3s linear infinite;
+  }
+  @keyframes progressFirst2 {
+    0% {
+      background-position: left -3% bottom 0px;
+    }
+    25% {
+      background-position: left 0% bottom -5px;
+    }
+    50% {
+      background-position: left 3% bottom -10px;
+    }
+    75% {
+      background-position: left 0 bottom -5px;
+    }
+    100% {
+      background-position: left -3% bottom 0px;
+    }
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 575px) {
   .solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box:nth-child(1) {
     display: none;
   }
@@ -578,19 +1406,96 @@
   font-weight: 275;
   line-height: normal;
 }
-.solutions-wrapper .solution-text-wrapper {
-  max-width: 1046px;
-  position: relative;
-  margin: auto;
+
+.scroll-width-div {
+  overflow-x: scroll;
+}
+.scroll-width-div::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+  opacity: 0;
+}
+.scroll-width-div .slider-bg {
+  background-position: center;
+  background-size: cover;
+  width: 8262px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 1000px;
+  background-repeat: no-repeat;
+  padding: 50px 0px;
+  margin: 0 auto;
+  background: linear-gradient(180deg, rgba(24, 29, 38, 0) 0%, #181D26 100%), linear-gradient(180deg, #181D26 0%, rgba(24, 29, 38, 0) 40%), url("../../assets/Service side scroll.png") lightgray;
+  mix-blend-mode: lighten;
+  background-position: top;
+}
+@media only screen and (max-width: 769px) {
+  .scroll-width-div .slider-bg {
+    width: 4700px;
+  }
+}
+.scroll-width-div .design-development-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+.scroll-width-div .design-development-wrapper .design-development-text h1 {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 112.375%;
+  /* 71.92px */
+}
+.scroll-width-div .design-development-wrapper .design-development-text p {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 30px;
+  /* 150% */
+}
+.scroll-width-div .design-development-wrapper .design-development-text button {
+  display: flex;
+  width: 173px;
+  height: 60px;
+  padding: 19px 27px;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-shrink: 0;
+  border-radius: 62px;
+  background: var(--Classic-Orange-Fill, linear-gradient(155deg, #F36A24 15.87%, #8C3305 101.33%));
+  outline: none;
+  border: none;
+  text-align: right;
+  color: #FFF;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.scroll-width-div .design-development-wrapper .design-development-img img {
+  max-width: 632px;
+  min-height: 601px;
+}
+.scroll-width-div .solution-text-wrapper {
   position: relative;
   z-index: 1;
+  width: 1060px;
 }
 @media only screen and (max-width: 768px) {
-  .solutions-wrapper .solution-text-wrapper {
+  .scroll-width-div .solution-text-wrapper {
     display: none;
   }
 }
-.solutions-wrapper .solution-text-wrapper .solution-text-heading {
+.scroll-width-div .solution-text-wrapper .solution-text-heading {
   display: flex;
   justify-content: center;
   overflow: visible;
@@ -600,47 +1505,46 @@
   background-size: contain;
   background-repeat: no-repeat;
   right: 0;
-  width: 500px;
   height: 400px;
   position: relative;
   margin: auto;
 }
 @media only screen and (max-width: 767px) {
-  .solutions-wrapper .solution-text-wrapper .solution-text-heading {
+  .scroll-width-div .solution-text-wrapper .solution-text-heading {
     width: 100%;
     height: 100%;
     justify-content: center;
   }
 }
 @media only screen and (max-width: 500px) {
-  .solutions-wrapper .solution-text-wrapper .solution-text-heading {
+  .scroll-width-div .solution-text-wrapper .solution-text-heading {
     padding: 0px 0px;
   }
 }
-.solutions-wrapper .solution-text-wrapper .solution-text-heading .media-query-flex {
+.scroll-width-div .solution-text-wrapper .solution-text-heading .media-query-flex {
   display: flex;
   justify-content: start;
   position: relative;
 }
-.solutions-wrapper .solution-text-wrapper .solution-text-heading .media-query-circle {
+.scroll-width-div .solution-text-wrapper .solution-text-heading .media-query-circle {
   display: none;
 }
 @media only screen and (max-width: 768px) {
-  .solutions-wrapper .solution-text-wrapper .solution-text-heading .media-query-circle {
+  .scroll-width-div .solution-text-wrapper .solution-text-heading .media-query-circle {
     display: block;
   }
-  .solutions-wrapper .solution-text-wrapper .solution-text-heading .media-query-circle img {
+  .scroll-width-div .solution-text-wrapper .solution-text-heading .media-query-circle img {
     width: 202px;
     height: 202px;
   }
 }
 @media only screen and (max-width: 768px) {
-  .solutions-wrapper .solution-text-wrapper .solution-text-heading {
+  .scroll-width-div .solution-text-wrapper .solution-text-heading {
     display: block;
     background-image: none;
   }
 }
-.solutions-wrapper .solution-text-wrapper .solution-text-heading h1 {
+.scroll-width-div .solution-text-wrapper .solution-text-heading h1 {
   color: #FFF;
   font-family: Poppins;
   font-size: 118px;
@@ -651,19 +1555,12 @@
   text-align: center;
   overflow: visible;
 }
-@media only screen and (max-width: 992px) {
-  .solutions-wrapper .solution-text-wrapper .solution-text-heading h1 {
-    font-size: 65px;
-    line-height: 70.5px;
-    margin-top: 30px;
-  }
-}
 @media only screen and (max-width: 768px) {
-  .solutions-wrapper .solution-text-wrapper .solution-text-heading h1 {
+  .scroll-width-div .solution-text-wrapper .solution-text-heading h1 {
     margin-top: 0px;
   }
 }
-.solutions-wrapper .solution-text-wrapper .solution-text-heading .circle-arrow {
+.scroll-width-div .solution-text-wrapper .solution-text-heading .circle-arrow {
   position: relative;
   min-width: 359px;
   height: 359px;
@@ -677,13 +1574,13 @@
   overflow: display;
 }
 @media only screen and (max-width: 768px) {
-  .solutions-wrapper .solution-text-wrapper .solution-text-heading .circle-arrow {
+  .scroll-width-div .solution-text-wrapper .solution-text-heading .circle-arrow {
     min-width: 169px;
     height: 169px;
     margin-left: -69px;
   }
 }
-.solutions-wrapper .solution-text-wrapper .solution-text-heading .circle-arrow p {
+.scroll-width-div .solution-text-wrapper .solution-text-heading .circle-arrow p {
   color: #FFF;
   font-family: Avenir Next Condensed;
   font-size: 10px;
@@ -696,11 +1593,11 @@
   margin-left: 70px;
 }
 @media only screen and (max-width: 769px) {
-  .solutions-wrapper .solution-text-wrapper .solution-text-heading .circle-arrow p {
+  .scroll-width-div .solution-text-wrapper .solution-text-heading .circle-arrow p {
     margin-left: -20px;
   }
 }
-.solutions-wrapper .solution-text-wrapper .solution-text-heading .circle-arrow .overflow-blur {
+.scroll-width-div .solution-text-wrapper .solution-text-heading .circle-arrow .overflow-blur {
   border-radius: 0px 0px 700px 700px;
   background: rgba(217, 217, 217, 0.02);
   -webkit-backdrop-filter: blur(14.5px);
@@ -713,21 +1610,26 @@
   overflow: hidden;
 }
 @media only screen and (max-width: 769px) {
-  .solutions-wrapper .solution-text-wrapper .solution-text-heading .circle-arrow .overflow-blur {
+  .scroll-width-div .solution-text-wrapper .solution-text-heading .circle-arrow .overflow-blur {
     width: 202px;
     height: 103px;
   }
 }
-.solutions-wrapper .solution-text-wrapper .solution-text-heading .circle-arrow img {
+.scroll-width-div .solution-text-wrapper .solution-text-heading .circle-arrow img {
   max-width: 223px;
   z-index: 1;
   margin: 0 auto;
   padding-top: 60px;
 }
 @media only screen and (max-width: 768px) {
-  .solutions-wrapper .solution-text-wrapper .solution-text-heading .circle-arrow img {
+  .scroll-width-div .solution-text-wrapper .solution-text-heading .circle-arrow img {
     max-width: 90px;
     padding-top: 116px;
     margin-left: -20px;
   }
+}
+
+::-webkit-scrollbar-track {
+  /* background: #f9f9f9; */
+  background: none !important;
 }/*# sourceMappingURL=solutions.css.map */

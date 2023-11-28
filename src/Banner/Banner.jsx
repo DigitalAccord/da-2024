@@ -14,71 +14,110 @@ const MobileMenu = () => {
         </div>
         <p className={`mobileMenuItems ${activeMenu === null ? '': 'hide' }`}>
             <a className='menuItems' href='/#'><HomeIcon />Home</a><br /><br />     
-            <a className='menuItems' href='/#' onClick={() => addClassActive(`subMenuMobile`)}><PeopleIcon />About us</a><br /><br />
-            <a className='menuItems' href='/#'><SpeakerIcon />Services</a><br /><br />     
-            <a className='menuItems' href='/#'><WorkIcon />Our Work</a><br /><br />     
-            <a className='menuItems' href='/#'><CaseStudiesIcon />Case Studies</a><br /><br />
-            <a className='menuItems' href='/#'><BusinessIcon />Digital performance</a><br /><br />
-            <a className='menuItems' href='/#'><ExperienceIcon />Contact</a><br /><br />
+            <a className='menuItems' href='/#' onClick={() => addClassActive(`subMenuMobile1`)}><PeopleIcon />About us</a><br /><br />
+            <a className='menuItems' href='/#' onClick={() => addClassActive(`subMenuMobile2`)}><SpeakerIcon />Services</a><br /><br />     
+            <a className='menuItems' href='/#' onClick={() => addClassActive(`subMenuMobile3`)}><WorkIcon />Our Work</a><br /><br />     
+            <a className='menuItems' href='/#' onClick={() => addClassActive(`subMenuMobile4`)}><CaseStudiesIcon />Case Studies</a><br /><br />
+            <a className='menuItems' href='/#' onClick={() => addClassActive(`subMenuMobile5`)}><BusinessIcon />Digital performance</a><br /><br />
+            <a className='menuItems' href='/#' onClick={() => addClassActive(`subMenuMobile6`)}><ExperienceIcon />Contact</a><br /><br />
         </p>
-        <p className={`mobileSubMenuItems ${activeMenu !== null ? 'show': '' }`}>
+        <p className={`mobileSubMenuItems ${activeMenu === 'subMenuMobile1' ? 'show': '' }`}>
             <a className='menuItemBack' href='/#' onClick={() => addClassActive(null)}><BackArrow /></a><br /><br />
-            <a className='menuItem' href='/#' ><WorkIcon />Our Work</a><br /><br />
+            <a className='menuItem' href='/#' ><PeopleIcon />Our Work</a><br /><br />
             <a className='subMenuItems' href='/#'>Google Advertising</a><br /><br />
             <a className='subMenuItems' href='/#'>Google Advertising</a><br /><br />
             <a className='subMenuItems' href='/#'>Google Advertising</a><br />
         </p>
+        <p className={`mobileSubMenuItems ${activeMenu === 'subMenuMobile2' ? 'show': '' }`}>
+            <a className='menuItemBack' href='/#' onClick={() => addClassActive(null)}><BackArrow /></a><br /><br />
+            <a className='menuItem' href='/#' ><SpeakerIcon />Services</a><br /><br />
+            <a className='subMenuItems' href='/#'>Google Advertising</a><br /><br />
+            <a className='subMenuItems' href='/#'>Google Advertising</a><br /><br />
+            <a className='subMenuItems' href='/#'>2 Advertising</a><br />
+        </p>
+
+        <p className={`mobileSubMenuItems ${activeMenu === 'subMenuMobile3' ? 'show': '' }`}>
+            <a className='menuItemBack' href='/#' onClick={() => addClassActive(null)}><BackArrow /></a><br /><br />
+            <a className='menuItem' href='/#' ><WorkIcon />Services</a><br /><br />
+            <a className='subMenuItems' href='/#'>Google Advertising</a><br /><br />
+            <a className='subMenuItems' href='/#'>Google Advertising</a><br /><br />
+            <a className='subMenuItems' href='/#'>3 Advertising</a><br />
+        </p>
+
+        <p className={`mobileSubMenuItems ${activeMenu === 'subMenuMobile4' ? 'show': '' }`}>
+            <a className='menuItemBack' href='/#' onClick={() => addClassActive(null)}><BackArrow /></a><br /><br />
+            <a className='menuItem' href='/#' ><CaseStudiesIcon />Services</a><br /><br />
+            <a className='subMenuItems' href='/#'>Google Advertising</a><br /><br />
+            <a className='subMenuItems' href='/#'>Google Advertising</a><br /><br />
+            <a className='subMenuItems' href='/#'>4 Advertising</a><br />
+        </p>
+
+        <p className={`mobileSubMenuItems ${activeMenu === 'subMenuMobile5' ? 'show': '' }`}>
+            <a className='menuItemBack' href='/#' onClick={() => addClassActive(null)}><BackArrow /></a><br /><br />
+            <a className='menuItem' href='/#' ><BusinessIcon />Services</a><br /><br />
+            <a className='subMenuItems' href='/#'>Google Advertising</a><br /><br />
+            <a className='subMenuItems' href='/#'>Google Advertising</a><br /><br />
+            <a className='subMenuItems' href='/#'>5 Advertising</a><br />
+        </p>
+
+        <p className={`mobileSubMenuItems ${activeMenu === 'subMenuMobile6' ? 'show': '' }`}>
+            <a className='menuItemBack' href='/#' onClick={() => addClassActive(null)}><BackArrow /></a><br /><br />
+            <a className='menuItem' href='/#' ><ExperienceIcon />Services</a><br /><br />
+            <a className='subMenuItems' href='/#'>Google Advertising</a><br /><br />
+            <a className='subMenuItems' href='/#'>Google Advertising</a><br /><br />
+            <a className='subMenuItems' href='/#'>6 Advertising</a><br />
+        </p>
     </>)
 }
 
-const LaptopMenu = () => {
-    const [activeMenu, setActiveMenu] = useState(null);
-    const menuItems = [
-      'Home',
-      'About us',
-      'Services',
-      'Our Work',
-      'Case Studies',
-      'Digital performance',
-      'Contact',
-    ];
+// const LaptopMenu = () => {
+//     const [activeMenu, setActiveMenu] = useState(null);
+//     const menuItems = [
+//       'Home',
+//       'About us',
+//       'Services',
+//       'Our Work',
+//       'Case Studies',
+//       'Digital performance',
+//       'Contact',
+//     ];
 
-    const addClassActive = (menu) => {
-        setActiveMenu(menu)
-    };
+//     const addClassActive = (menu) => {
+//         setActiveMenu(menu)
+//     };
   
-    return (
-        <div className='laptopMenuDiv'>
-            <div className={`menuBackIcon ${activeMenu === null ? '' : 'show'}`} onClick={() => addClassActive(null)}>
-                <BackArrow />
-            </div>
-            <ul className={`laptopMenuUl ${activeMenu !== null ? 'hide' : ''}`}>
-                {menuItems.map((item, index) => (
-                <li key={index}>
-                        <div className='menuItems' onClick={() => addClassActive(`subMenuLaptop${index}`)}>
-                            <div className='menuItemIcon'>
-                                {index === 0 && <HomeIcon /> }
-                                {index === 1 && <PeopleIcon /> }
-                                {index === 2 && <SpeakerIcon /> }
-                                {index === 3 && <WorkIcon /> }
-                                {index === 4 && <CaseStudiesIcon /> }
-                                {index === 5 && <BusinessIcon /> }
-                                {index === 6 && <ExperienceIcon /> }
-                            </div>
-                            <h2 className='MenuHeading'>{item}</h2>
-                        </div>
-                </li>
-                ))}
-            </ul>
-                <div className={`laptopSubMenu ${activeMenu === 'subMenuLaptop2' ? 'show' : ''}`}>
-                    <PerformanceSubMenu/>
-                </div>
-                <div className={`laptopSubMenu ${activeMenu === 'subMenuLaptop3' ? 'show' : ''}`}>
-                    <PerformanceSubMenu/>
-                </div>
-        </div>
-    );
-};
+//     return (
+//         <div className='laptopMenuDiv'>
+//             <div className={`menuBackIcon ${activeMenu === null ? '' : 'show'}`} onClick={() => addClassActive(null)}>
+//                 <BackArrow />
+//             </div>
+//             <ul className={`laptopMenuUl ${activeMenu !== null ? 'hide' : ''}`}>
+//                 {menuItems.map((item, index) => (
+//                 <li key={index}>
+//                         <div className='menuItems' onClick={() => addClassActive(`subMenuLaptop${index}`)}>
+//                             <div className='menuItemIcon'>
+//                                 {index === 0 && <HomeIcon /> }
+//                                 {index === 1 && <PeopleIcon /> }
+//                                 {index === 2 && <SpeakerIcon /> }
+//                                 {index === 3 && <WorkIcon /> }
+//                                 {index === 4 && <CaseStudiesIcon /> }
+//                                 {index === 5 && <BusinessIcon /> }
+//                                 {index === 6 && <ExperienceIcon /> }
+//                             </div>
+//                             <h2 className='MenuHeading'>{item}</h2>
+//                         </div>
+//                 </li>
+//                 ))}
+//             </ul>
+//                 <div className={`laptopSubMenu ${activeMenu === 'subMenuLaptop2' ? 'show' : ''}`}>
+//                     <PerformanceSubMenu/>
+//                 </div>
+//                 <div className={`laptopSubMenu ${activeMenu === 'subMenuLaptop3' ? 'show' : ''}`}>
+//                     <PerformanceSubMenu/>
+//                 </div>
+//         </div>
+//     );
+// };
   
 const PerformanceSubMenu = () => {
   
@@ -142,7 +181,7 @@ export const Banner = () => {
     const [isPopup, setPopup] = useState(false);
     const [activeMenu, setActiveMenu] = useState(null);
     const [startAnimation, setAnimation] = useState(false);
-
+    const logoStyle = { height: '31px', width: '30px' };
     const handlePopup = () => {
         setPopup(!isPopup);
     };
@@ -172,7 +211,7 @@ export const Banner = () => {
                                 <div className={isPopup ? 'navbar dark' : ' navbar'}>
                                     <div className='nav'>
                                         <span className='mobileLogo me-auto'>
-                                            <MainLogo />
+                                            <MainLogo height={logoStyle.height} width={logoStyle.width}/>
                                         </span>
                                         <ul>
                                             <li onClick={(e) => {
