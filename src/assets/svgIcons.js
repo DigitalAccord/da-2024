@@ -112,7 +112,7 @@ export function BackArrow () {
 
 export function MainLogo ({ height, width }) {
     return(
-        <svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} viewBox="0 0 48 43" fill="none">
+        <svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} viewBox="0 0 48 43" fill="none" className="rotate">
             <path d="M21.0199 8.95342L8.22009 6.95068L0 16.4931L4.69719 27.9205L17.497 29.9233L25.7171 20.3808L21.0199 8.95342Z" fill="#F36A24"/>
             <path d="M39.1042 21.6767L27.009 19.7918L22.5466 8.95342L30.297 0L42.5097 1.76712L46.972 12.6055L39.1042 21.6767ZM27.831 18.7315L38.5171 20.3808L45.328 12.4877L41.4528 2.94521L30.7667 1.29589L23.9558 9.18904L27.831 18.7315Z" fill="white"/>
             <path d="M35.5813 43L23.3686 41.1151L18.9062 30.2767L26.6566 21.3233L38.8693 23.2082L43.3317 34.0466L35.5813 43ZM24.308 40.0548L34.9941 41.7041L41.8051 33.811L37.9299 24.2685L27.1263 22.6192L20.3154 30.5123L24.308 40.0548Z" fill="white"/>

@@ -81,7 +81,7 @@ const Footer = () => {
             
                 <div className='col-md-12 col-lg-5 '>
                  <div className='mb-4'>
-                  <MainLogo height={logoStyle.height} width={logoStyle.width}/>
+                  <MainLogo height={logoStyle.height} width={logoStyle.width} className="rotate"/>
                  </div>
                   <div className='d-flex pb-5'>
                     <svg xmlns="http://www.w3.org/2000/svg" width="208" height="64" viewBox="0 0 208 64" fill="none">
@@ -128,23 +128,18 @@ const Footer = () => {
         </div>
        
       </div>
-      <div className='container custom-container'>
-       <div className='row' style={{marginTop:"100px"}}>
-       
-         <div className='col-lg-6'>
-          <div className='copyrightLeft'>
+      <div className='container custom-container py-4'>
+       <div className='row copyright-row' >
+        <hr style={{color:'white'}} className='d-sm-block d-md-none'></hr>
+       <div className='copyright-wrapper'>
+       <div className='copyrightLeft'>
             <p className='text-white'>Privacy</p>
             <p className='text-white'>Terms & Conditions</p>
            </div>
-         </div>
-
-
-         <div className='col-lg-6 '>
            <div className='corightRight'>
             <p className='text-white'>Copyright © Digital Agency Pty Ltd ACN: 166 737 819 | ABN: 63 166 737 </p>
            </div>
-        </div>
-    
+       </div>
         </div>
        </div>
     </>
