@@ -95,14 +95,14 @@ const Solutions = () => {
               <div className='year-section'>
                 <div className='year-section-left'>
                   <h3>About Us</h3>
-                  <img src={arrow} alt='Arrow' className='arrow-image' />
                   <div className='hover-container'>
+                  <img src={arrow} alt='Arrow' className='arrow-image'/>
                     <div className='hover-icon'>
                     </div>
                   </div>
                 </div>
                 <div className='year-section-right'>
-                  <h3>About Us</h3>
+                  <h3>IT Solutions</h3>
 
                   <div className='hover-container'>
                     <img src={thumb} alt='thumb' className='arrow-image' />
