@@ -172,6 +172,7 @@
   .form-section .left-section-wraper .form-wrapper .submit-btn {
     justify-content: center !important;
     width: 100%;
+    gap: 20px;
   }
 }
 @media only screen and (max-width: 1200px) {
@@ -242,4 +243,31 @@
   font-weight: 300;
   line-height: 25px;
   padding: 10px 0px;
+}
+
+.copyrightLeft {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.copyrightLeft p {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+  padding: 0;
+}
+
+.corightRight p {
+  text-align: end;
+  color: #FFF;
+  text-align: right;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }/*# sourceMappingURL=footer.css.map */

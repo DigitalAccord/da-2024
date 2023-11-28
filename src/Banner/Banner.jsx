@@ -181,7 +181,7 @@ export const Banner = () => {
     const [isPopup, setPopup] = useState(false);
     const [activeMenu, setActiveMenu] = useState(null);
     const [startAnimation, setAnimation] = useState(false);
-
+    const logoStyle = { height: '31px', width: '30px' };
     const handlePopup = () => {
         setPopup(!isPopup);
     };
@@ -211,7 +211,7 @@ export const Banner = () => {
                                 <div className={isPopup ? 'navbar dark' : ' navbar'}>
                                     <div className='nav'>
                                         <span className='mobileLogo me-auto'>
-                                            <MainLogo />
+                                            <MainLogo height={logoStyle.height} width={logoStyle.width}/>
                                         </span>
                                         <ul>
                                             <li onClick={(e) => {
