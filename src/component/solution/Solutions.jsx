@@ -65,7 +65,7 @@ const Solutions = () => {
       window.removeEventListener('resize', handleResize1);
     };
   }, []);
-  console.log('----------', windowWidth1);
+ 
 
   return (
     <>
@@ -148,7 +148,7 @@ const Solutions = () => {
 
         <div className='scroll-width-div' style={{ width: windowWidth }}>
           <div className='slider-bg'>
-            <div className='d-flex justify-content-center align-items-center' style={{ width: windowWidth1 }}>
+            <div className='d-flex justify-content-center align-items-center d-none d-md-block' style={{ width: windowWidth1 }}>
               <div className='solution-text-wrapper container' >
                 <div className='solution-text-heading'>
                   <div>
@@ -170,8 +170,8 @@ const Solutions = () => {
                 </div>
               </div>
             </div>
-            <div className='d-flex justify-content-center align-items-center' style={{ width: windowWidth1 }}>
-            <div className=' d-md-none'>
+            <div className='d-flex justify-content-center align-items-center d-md-none' style={{ width: windowWidth1 }}>
+            <div className=''>
               <Solution_respo />
             </div>
 
