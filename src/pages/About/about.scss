@@ -1,72 +1,155 @@
-.about-container {
+.about-section {
+    position: relative;
+
+    &::after {
+        content: "";
+        border-radius: 790px;
+        background: linear-gradient(0deg, rgba(86, 96, 112, 0.50) 0%, rgba(86, 96, 112, 0.00) 100%);
+        filter: blur(100px);
+        width: 200px;
+        height: 646px;
+        // background: red;
+        position: absolute;
+        top: 10px;
+        right: 0;
+
+    }
+    &::before {
+        content: "";
+        border-radius: 790px;
+        background: linear-gradient(0deg, rgba(86, 96, 112, 0.50) 0%, rgba(86, 96, 112, 0.00) 100%);
+        filter: blur(100px);
+        width: 200px;
+        height: 646px;
+        // background: red;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+    }
+
+    .about-container {
 
 
-    background: url('../../assets/about/Office.png') no-repeat;
-    width: 100%;
-    max-width: 1587px !important;
-    height: 100vh;
-    min-height: 1058px;
-    display: block;
-    margin: 0 auto;
-    background-position: right;
-    background-size: contain;
-    background-repeat: no-repeat;
-
-    .about-text-wrapper {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: 100%;
-
-        h1 {
-            color: #FFF;
-            font-family: Poppins;
-            font-size: 120px;
-            font-style: normal;
-            font-weight: 800;
-            line-height: 60px;
-            margin-bottom: 60px;
-            margin-left: 70px;
-
+        background: url('../../assets/about/Office.png') no-repeat;
+        width: 100%;
+        max-width: 1587px !important;
+        height: 100vh;
+        min-height: 1058px;
+        display: block;
+        margin: 0 auto;
+        background-position: right;
+        background-size: contain;
+        background-repeat: no-repeat;
+        @media only screen and (max-width: 992px) {
+              background-position: bottom right;
+         
         }
+        @media only screen and (max-width: 768px) {
+            background-position: bottom right;
+       
+      }
 
-        .bg-about-text {
-            // background: #F26B25;
-            mix-blend-mode: screen;
-            background: #f85906 -295.246px -0.095px/118.615% 100.018%;
-            padding: 90px;
-            border-radius: 40px;
-            max-width: 1520px;
+        .about-text-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
 
-            .bg-about-text-inner {
-                width: 36%;
+            h1 {
+                color: #FFF;
+                font-family: Poppins;
+                font-size: 120px;
+                font-style: normal;
+                font-weight: 800;
+                line-height: 60px;
+                margin-bottom: 60px;
+                margin-left: 70px;
+                @media only screen and (max-width: 992px) {
+                   font-size: 100px; 
+                   line-height: 50px;
+                   margin-left: 0px;
+                 
+              }
+              @media only screen and (max-width: 768px) {
+                font-size: 80px; 
+                line-height: 40px;
+                margin-left: 0px;
+           }
+           @media only screen and (max-width: 575px) {
+            font-size: 58px; 
+            line-height: 40px;
+            margin-left: 0px;
+            text-align: center;
+       }
 
-                p {
-                    color: #FFF;
-                    font-family: Poppins;
-                    font-size: 16px;
-                    font-style: normal;
-                    font-weight: 300;
-                    line-height: 25px;
-                    /* 156.25% */
-                }
+            }
 
-                button {
-                    border-radius: 62px;
-                    border: 1px solid #FFF;
-                    color: #FFF;
-                    text-align: center;
-                    font-family: Poppins;
-                    font-size: 16px;
-                    font-style: normal;
-                    font-weight: 700;
-                    line-height: normal;
-                    background:transparent;
-                    padding: 10px 50px;
-                    margin-top: 20px;
+            .bg-about-text {
+                // background: #F26B25;
+                mix-blend-mode: screen;
+                background: #f85906 -295.246px -0.095px/118.615% 100.018%;
+                padding: 90px;
+                border-radius: 40px;
+                max-width: 1520px;
+                @media only screen and (max-width: 992px) {
+                    padding: 50px; 
+                    min-height: 70%;  
+              }
+                @media only screen and (max-width: 768px) {
+                    padding: 40px; 
+                    min-height: 70%;  
+              }
+                @media only screen and (max-width: 575px) {
+                    padding: 30px; 
+                    min-height: 70%;  
+              }
+
+                .bg-about-text-inner {
+                    width: 36%;
+                    @media only screen and (max-width: 992px) {
+                        width: 100%;  
+                       
+                  }
+                 
+                    p {
+                        color: #FFF;
+                        font-family: Poppins;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 300;
+                        line-height: 25px;
+                        @media only screen and (max-width: 575px) {
+                           font-size: 14px;
+                          
+                      }
+                      
+                    }
+
+                    button {
+                        border-radius: 62px;
+                        border: 1px solid #FFF;
+                        color: #FFF;
+                        text-align: center;
+                        font-family: Poppins;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: normal;
+                        background: transparent;
+                        padding: 10px 50px;
+                        margin-top: 20px;
+                        @media only screen and (max-width: 575px) {
+                           text-align: center;
+                           display: flex;
+                           justify-content: center;
+                           align-items: center;
+                           margin: auto;
+                      }
+                    }
                 }
             }
         }
-    }
 
+    }
 }

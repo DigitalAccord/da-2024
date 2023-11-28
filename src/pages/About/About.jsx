@@ -1,8 +1,11 @@
 import React from 'react'
 import './about.scss'
+import Values from './component/Values/Values'
 const About = () => {
   return (
    <>
+   <div className='about-section'>
+
    <div className='about-container container'>
   <div className='about-text-wrapper'>
     <h1>About Us</h1>
@@ -15,6 +18,8 @@ const About = () => {
     </div>
   </div>
    </div>
+   </div>
+   <Values/>
    </>
   )
 }
