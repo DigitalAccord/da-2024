@@ -289,9 +289,9 @@
   line-height: normal;
   letter-spacing: 3.136px;
 }
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 768px) {
   .banner-bg .banner-text-container h1 {
-    font-size: 40px;
+    font-size: 45px;
   }
 }
 .banner-bg .banner-text-container p {
@@ -303,9 +303,9 @@
   line-height: 90.5%;
   letter-spacing: 2.646px;
 }
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 768px) {
   .banner-bg .banner-text-container p {
-    font-size: 80px;
+    font-size: 90px;
   }
 }
 

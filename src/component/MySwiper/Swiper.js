@@ -63,7 +63,7 @@ const CenterMode = () => {
     CenterMode: true,
     slidesToScroll: 1,
     initialSlide: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 2000,
     responsive: [
       {

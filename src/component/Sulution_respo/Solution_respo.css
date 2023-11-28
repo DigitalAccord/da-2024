@@ -1,11 +1,12 @@
 .solution_wrapper {
   max-width: 1420px !important;
-  margin: auto;
+  margin: 0 auto;
   padding: 0px 10px;
   position: relative;
   margin-top: 181px;
+  width: 100%;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 769px) {
   .solution_wrapper {
     display: none;
   }
