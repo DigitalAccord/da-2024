@@ -11,24 +11,22 @@ import CenterMode from './component/MySwiper/Swiper';
 import Category from './component/category/Category';
 import Solutions from './component/solution/Solutions';
 import { Banner } from './Banner/Banner';
-import Test from './Test/Test';
+
+import About from './pages/About/About';
 
 function App() {
   return (
    <>
-   {/* <Test/> */}
-   <Banner/>
+  
+   {/* <Banner/>
    <Solutions/>
-   
    <CenterMode/>
    <Category/>
-   <Footer/>
-
-   {/* <Solution_respo/> */}
-   {/* <Craousel/> */}
-   {/* <Craousel/> */}
-   {/* <Category/>
    <Footer/> */}
+   <About/>
+
+
+   
 
    </>
   );
