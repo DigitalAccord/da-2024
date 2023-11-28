@@ -3,6 +3,8 @@
 import './App.css';
 import Footer from './Footer/Footer';
 import Craousel from './component/Craousel/Craousel';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 import Solution_respo from './component/Sulution_respo/Solution_respo';
 
