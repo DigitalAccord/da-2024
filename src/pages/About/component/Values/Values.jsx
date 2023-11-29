@@ -1,7 +1,9 @@
 import React from 'react'
 import './values.scss'
 import leftImg from '../../../../assets/about/mainImg.png'
+import accord from '../../../../assets/about/accord.png'
 import Buttons from '../Buttons/Buttons'
+
 
 const Values = () => {
   return (
@@ -15,11 +17,25 @@ const Values = () => {
         <div className='values-section-right'>
             <div className='values-topleft'>
                 <h1>Our Values</h1>
+                <div className='d-flex flex-column align-items-center gap-4'>
                 <Buttons>
                 Marketing Tactics
                 </Buttons>
+                <Buttons>
+                Marketing Tactics
+                </Buttons>
+                <Buttons>
+                Marketing Tactics
+                </Buttons>
+                <Buttons>
+                Marketing Tactics
+                </Buttons>
+                </div>
+                
             </div>
-            <div className='values-topright'></div>
+            <div className='values-topright'>
+                <img src={accord} alt='////'/>
+            </div>
         </div>
         </div> 
     </>
