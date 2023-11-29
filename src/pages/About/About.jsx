@@ -1,6 +1,7 @@
 import React from 'react'
 import './about.scss'
 import Values from './component/Values/Values'
+import Clients from './component/Clients/Clients'
 const About = () => {
   return (
    <>
@@ -19,6 +20,7 @@ const About = () => {
   </div>
    </div>
    </div>
+   <Clients/>
    <Values/>
    </>
   )

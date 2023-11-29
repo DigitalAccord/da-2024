@@ -3,11 +3,13 @@
 
     &::after {
         content: "";
-        border-radius: 790px;
-        background: linear-gradient(0deg, rgba(86, 96, 112, 0.50) 0%, rgba(86, 96, 112, 0.00) 100%);
-        filter: blur(100px);
-        width: 200px;
-        height: 646px;
+        background: linear-gradient(0deg,#56607080,#56607000);
+    border-radius: 790px;
+    filter: blur(100px);
+    height: 400px;
+    position: absolute;
+    top: 45px;
+    width: 300px;
         // background: red;
         position: absolute;
         top: 10px;
@@ -16,11 +18,13 @@
     }
     &::before {
         content: "";
-        border-radius: 790px;
-        background: linear-gradient(0deg, rgba(86, 96, 112, 0.50) 0%, rgba(86, 96, 112, 0.00) 100%);
-        filter: blur(100px);
-        width: 200px;
-        height: 646px;
+        background: linear-gradient(0deg,#56607080,#56607000);
+    border-radius: 790px;
+    filter: blur(100px);
+    height: 400px;
+    position: absolute;
+   
+    width: 300px;
         // background: red;
         position: absolute;
         bottom: 0;

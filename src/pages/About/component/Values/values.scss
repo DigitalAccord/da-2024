@@ -5,12 +5,25 @@
     justify-content: center;
     align-items: center;
 
+    @media only screen and (max-width: 992px) {
+        flex-direction: column;
+
+    }
+
     .values-section-left {
         width: 40%;
-        min-height: 1072px;
+        height: 1072px;
+
+        @media only screen and (max-width: 992px) {
+            width: 100%;
+
+        }
 
         .values-section-left-img {
             border-radius: 20px;
+            width: 100%;
+            min-height: 1072px;
+            height: 100%;
 
             img {
                 width: 100%;
@@ -23,49 +36,110 @@
     .values-section-right {
         width: 60%;
         display: flex;
-
+        flex-direction: column;
         justify-content: center;
-        background: rebeccapurple;
-        min-height: 1072px;
+        height: 1072px;
         gap: 10px;
-
-        .values-topleft {
-            border-radius: 12px;
-            background: var(--Classic-Orange-Fill, linear-gradient(155deg, #F36A24 15.87%, #8C3305 101.33%));
-            max-width: 528px;
-            height: 100%;
-            width: 50%;
-            padding: 40px 0px;
-            
-            
-            text-align: center;
-
-            h1 {
-                color: #FFF;
-                text-align: center;
-                font-family: Poppins;
-                font-size: 54px;
-                font-style: normal;
-                font-weight: 700;
-                line-height: 64px;
-               
-            }
-
+        
+        @media only screen and (max-width: 992px) {
+            width: 100%;
 
         }
-
-        .values-topright {
-            border-radius: 12px;
+        @media only screen and (max-width: 768px) {
+           height: 100%;
+        }
+        @media only screen and (max-width: 575px) {
+            flex-direction: column-reverse;
            
-            max-width: 528px;
-            height: 100%;
-            width: 50%;
-            img{
-                width: 100%;
-                height: 100%;
+ 
+         }
+        .values-wrapper {
+            width: 100%;
+            display: flex;
+            max-height: 528px;
+            gap: 10px;
+            @media only screen and (max-width: 575px) {
+               flex-direction: column-reverse;
+               max-height: 100%;
+    
             }
 
+            .values-topleft {
+                border-radius: 12px;
+                background: var(--Classic-Orange-Fill, linear-gradient(155deg, #F36A24 15.87%, #8C3305 101.33%));
+                min-height: 528px;
+                height: 100%;
+                width: 50%;
+                padding: 40px 0px;
+                text-align: center;
+
+                h1 {
+                    color: #FFF;
+                    text-align: center;
+                    font-family: Poppins;
+                    font-size: 54px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 64px;
+                    margin-bottom: 40px;
+                    @media only screen and (max-width: 575px) {
+                        font-size: 44px;
+             
+                     }
+
+                }
+                @media only screen and (max-width: 768px) {
+                    height: 100%;
+                   
+                 }
+                @media only screen and (max-width: 575px) {
+                    width: 100%;
+         
+                 }
+
+
+            }
+
+            .values-topright {
+                border-radius: 12px;
+                min-height: 528px;
+
+                height: 100%;
+                width: 50%;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+                @media only screen and (max-width: 575px) {
+                    width: 100%;
+                    min-height: 100%;
+         
+                 }
+
+            }
         }
+
+        .values-wrapper-bottom {
+            width: 100%;
+            max-height: 526px;
+
+            .values-wrapper-bottom-img {
+                img {
+                    width: 100%;
+                    min-height: 526px;
+                    height: 100%;
+                    @media only screen and (max-width: 575px) {
+                        width: 100%;
+                      height: 100%;
+                      min-height: 0px;
+             
+                     }
+    
+                }
+            }
+        }
+
 
     }
 }
