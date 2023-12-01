@@ -24,8 +24,50 @@ const Cards = () => {
     initialSlide: 0,
     autoplay: false,
     autoplaySpeed: 2000,
-    centerPadding: '80',
+    centerPadding: '20%',
     centerMode: true,
+    // variableWidth: true,
+    responsive: [
+      {
+        breakpoint: 550, 
+        settings: {
+          centerPadding: '60', 
+        },
+      },
+     
+    ],
+
+    responsive: [
+      {
+        breakpoint: 480, 
+        settings: {
+          centerPadding: '55', 
+        },
+      },
+     
+    ],
+
+    responsive: [
+      {
+        breakpoint: 430, 
+        settings: {
+           centerMode: true,
+          centerPadding: '40', 
+        },
+      },
+     
+    ],
+
+    responsive: [
+      {
+        breakpoint: 400, 
+        settings: {
+          centerPadding: '30', 
+        },
+      },
+     
+    ],
+    
   };
   return (
     <>
