@@ -1,16 +1,21 @@
 .card-section {
     background: url('../../../../assets/about/bridge.png');
     width: 100%;
-    min-height: 1100px;
+    min-height: 1200px;
     background-position: bottom;
     background-size: contain;
     background-repeat: no-repeat;
+
     @media only screen and (max-width: 575px) {
-        min-height: 485px;
+        min-height: 560px;
+        background-position: left -98px bottom -53px;
+        background-size: 294% 68%;
+        background-repeat: no-repeat;
+
     }
 
-    
-    #desktop{
+
+    #desktop {
         display: block;
 
         @media only screen and (max-width: 575px) {
@@ -18,64 +23,194 @@
         }
     }
 
-    #mobile{
+    #mobile {
         display: none !important;
 
         @media only screen and (max-width: 575px) {
             display: block !important;
         }
     }
-       .card-wrapper{
+
+    .card-wrapper {
         max-width: 1587px !important;
-        display: flex !important ;
+        display: flex !important;
         flex-wrap: wrap;
-        gap: 30px;
-        
-      
-           .box {
-               width: 282px;
-               height: 480px;
-       
-               .box-content {
-                   width: 282px;
-                   height: 480px;
-                   transform-style: preserve-3d;
-                   transition: transform 5s;
-                   @media only screen and (max-width: 575px) {
-                   margin: 0 auto;
+        // justify-content: center;
+        gap: 35px;
+        .slick-slide{
+            // margin-left: -3.5%;
+        }
+        .slick-dots{
+            bottom: 20px !important;
+        }
+
+        @media only screen and (max-width: 992px) {
+            justify-content: center;
+            button{
+                &::before {
+                    opacity: 1;
                 }
-       
-                   .box-front,
-                   .box-back {
-                       width: 282px;
-                       height: 480px;
-                       position: absolute;
-                       border-radius: 35px;
-                       backface-visibility: hidden; 
-                   }
-       
-                   .box-front {
-                       img {
-                           border-radius: 35px;
-                       }
-                   }
-       
-                   .box-back {
-                       background: #2F2F2F;
-                       transform: rotateY(180deg); 
-       
-                       p {
-                           color: white;
-                           padding: 20px;
-                       }
-                   }
-               }
-       
-               &:hover {
-                   .box-content {
-                       transform: rotateY(-180deg); 
-                   }
-               }
-           }
-       }
+            }
+        }
+
+        .box {
+            width: 282px;
+            height: 480px;
+            // margin: auto;
+            margin-bottom: 60px;
+
+            .box-content {
+                width: 282px;
+                height: 480px;
+                transform-style: preserve-3d;
+                transition: transform 0.5s;
+                transform: translate3d(0, 0, 0);
+                perspective: 1000px;
+
+                @media only screen and (max-width: 575px) {
+                    // margin:auto;
+                    margin-left: auto;
+                }
+
+                .box-front,
+                .box-back {
+                    width: 282px;
+                    height: 480px;
+                    position: absolute;
+                    border-radius: 35px;
+                    backface-visibility: hidden;
+                }
+
+                .box-front {
+                    img {
+                        border-radius: 35px;
+                    }
+                }
+
+                .box-back {
+                    background: #2F2F2F;
+                    transform: rotateY(180deg);
+
+                    .userInfo {
+                        padding: 30px 30px;
+                        .userName {
+                            color: #FFF;
+
+                            h3 {
+
+                                font-family: Poppins;
+                                font-size: 34.095px;
+                                font-style: normal;
+                                font-weight: 700;
+                                line-height: 35.069px;
+
+                            }
+
+                            p {
+
+                                font-family: Poppins;
+                                font-size: 14px;
+                                font-style: normal;
+                                font-weight: 275;
+                                line-height: 28.25px;
+                                margin: 0 !important;
+
+                            }
+                        }
+
+                        .userBottomLine {
+                            background: #FFF;
+                            height: 1px;
+                            width: 100%;
+                            margin: 5px 0px;
+                        }
+
+                        .userQualification {
+                            h4 {
+                                color: #FFF;
+                                font-family: Poppins;
+                                font-size: 16px;
+                                font-style: normal;
+                                font-weight: 700;
+                                line-height: 28.25px;
+                                margin: 0 !important;
+                                padding: 0;
+
+                            }
+
+                            p {
+                                color: #FFF;
+                                font-family: Poppins;
+                                font-size: 14px;
+                                font-style: normal;
+                                font-weight: 275;
+                                line-height: 28.25px;
+                                margin: 0 !important;
+                                padding: 0;
+
+                            }
+                        }
+
+                        .userExp {
+                            p {
+                                color: #FFF;
+                                font-family: Poppins;
+                                font-size: 16px;
+                                font-style: normal;
+                                font-weight: 700;
+                                line-height: 28.25px;
+                                margin: 0 !important;
+                                padding: 0;
+
+                            }
+                        }
+
+                        .userAbout {
+                            h3 {
+                                color: #FFF;
+                                font-family: Poppins;
+                                font-size: 16px;
+                                font-style: normal;
+                                font-weight: 700;
+                                line-height: 28.25px;
+                                margin: 0;
+                                padding: 0;
+                            }
+
+                            p {
+                                color: #FFF;
+                                font-family: Poppins;
+                                font-size: 14.816px;
+                                font-style: normal;
+                                font-weight: 275;
+                                line-height: 25.928px;
+                                margin: 0;
+                                padding: 0;
+                                
+                            }
+                            ul{
+                                padding-left: 0;
+                                li{
+                                    color: #FFF;
+                                font-family: Poppins;
+                                font-size: 14.816px;
+                                font-style: normal;
+                                font-weight: 275;
+                                line-height: 25.928px;
+                                list-style: none;
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            &:hover {
+                .box-content {
+                    transform: rotateY(-180deg);
+                }
+            }
+        }
+    }
 }
