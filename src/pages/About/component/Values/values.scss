@@ -72,6 +72,11 @@
                 width: 50%;
                 padding: 40px 0px;
                 text-align: center;
+                @media only screen and (max-width: 575px) {
+                  
+                    min-height: 439px;
+         
+                 }
 
                 h1 {
                     color: #FFF;
@@ -84,6 +89,7 @@
                     margin-bottom: 40px;
                     @media only screen and (max-width: 575px) {
                         font-size: 44px;
+                        
              
                      }
 
@@ -125,6 +131,8 @@
             max-height: 526px;
 
             .values-wrapper-bottom-img {
+                height: 100%;
+    width: 100%;
                 img {
                     width: 100%;
                     min-height: 526px;

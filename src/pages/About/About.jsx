@@ -2,6 +2,8 @@ import React from 'react'
 import './about.scss'
 import Values from './component/Values/Values'
 import Clients from './component/Clients/Clients'
+import Team from './component/Team/Team'
+import Cards from './component/Cards/Cards'
 const About = () => {
   return (
    <>
@@ -22,6 +24,8 @@ const About = () => {
    </div>
    <Clients/>
    <Values/>
+   <Team/>
+   <Cards/>
    </>
   )
 }

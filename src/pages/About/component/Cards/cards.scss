@@ -1,0 +1,81 @@
+.card-section {
+    background: url('../../../../assets/about/bridge.png');
+    width: 100%;
+    min-height: 1100px;
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+    @media only screen and (max-width: 575px) {
+        min-height: 485px;
+    }
+
+    
+    #desktop{
+        display: block;
+
+        @media only screen and (max-width: 575px) {
+            display: none !important;
+        }
+    }
+
+    #mobile{
+        display: none !important;
+
+        @media only screen and (max-width: 575px) {
+            display: block !important;
+        }
+    }
+       .card-wrapper{
+        max-width: 1587px !important;
+        display: flex !important ;
+        flex-wrap: wrap;
+        gap: 30px;
+        
+      
+           .box {
+               width: 282px;
+               height: 480px;
+       
+               .box-content {
+                   width: 282px;
+                   height: 480px;
+                   transform-style: preserve-3d;
+                   transition: transform 5s;
+                   @media only screen and (max-width: 575px) {
+                   margin: 0 auto;
+                }
+       
+                   .box-front,
+                   .box-back {
+                       width: 282px;
+                       height: 480px;
+                       position: absolute;
+                       border-radius: 35px;
+                       backface-visibility: hidden; 
+                   }
+       
+                   .box-front {
+                       img {
+                           border-radius: 35px;
+                       }
+                   }
+       
+                   .box-back {
+                       background: #2F2F2F;
+                       transform: rotateY(180deg); 
+       
+                       p {
+                           color: white;
+                           padding: 20px;
+                       }
+                   }
+               }
+       
+               &:hover {
+                   .box-content {
+                       transform: rotateY(-180deg); 
+                   }
+               }
+           }
+       }
+}

@@ -21,7 +21,7 @@ const Solutions = () => {
   const intialWidth = window.innerWidth - 15
   const [windowWidth, setWindowWidth] = useState(intialWidth);
   const [windowWidth1, setWindowWidth1] = useState(intialWidth);
-  // const text= '100px'
+
   const handleResize = () => {
     setWindowWidth(window.innerWidth - 15);
   };
