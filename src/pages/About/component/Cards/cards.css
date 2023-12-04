@@ -1,0 +1,174 @@
+.card-section {
+  background: url("../../../../assets/about/bridge.png");
+  width: 100%;
+  min-height: 1200px;
+  background-position: bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media only screen and (max-width: 575px) {
+  .card-section {
+    min-height: 560px;
+    background-position: left -98px bottom -53px;
+    background-size: 294% 68%;
+    background-repeat: no-repeat;
+  }
+}
+.card-section #desktop {
+  display: block;
+}
+@media only screen and (max-width: 575px) {
+  .card-section #desktop {
+    display: none !important;
+  }
+}
+.card-section #mobile {
+  display: none !important;
+}
+@media only screen and (max-width: 575px) {
+  .card-section #mobile {
+    display: block !important;
+  }
+}
+.card-section .card-wrapper {
+  max-width: 1587px !important;
+  display: flex !important;
+  flex-wrap: wrap;
+  gap: 35px;
+}
+.card-section .card-wrapper .slick-dots {
+  bottom: 20px !important;
+}
+@media only screen and (max-width: 992px) {
+  .card-section .card-wrapper {
+    justify-content: center;
+  }
+  .card-section .card-wrapper button::before {
+    opacity: 1;
+  }
+}
+.card-section .card-wrapper .box {
+  width: 282px;
+  height: 480px;
+  margin-bottom: 60px;
+}
+.card-section .card-wrapper .box .box-content {
+  width: 282px;
+  height: 480px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  transform: translate3d(0, 0, 0);
+  perspective: 1000px;
+}
+@media only screen and (max-width: 575px) {
+  .card-section .card-wrapper .box .box-content {
+    margin: auto;
+  }
+}
+.card-section .card-wrapper .box .box-content .box-front,
+.card-section .card-wrapper .box .box-content .box-back {
+  width: 282px;
+  height: 480px;
+  position: absolute;
+  border-radius: 35px;
+  backface-visibility: hidden;
+}
+.card-section .card-wrapper .box .box-content .box-front img {
+  border-radius: 35px;
+}
+.card-section .card-wrapper .box .box-content .box-back {
+  background: #2F2F2F;
+  transform: rotateY(180deg);
+}
+.card-section .card-wrapper .box .box-content .box-back .userInfo {
+  padding: 30px 30px;
+}
+.card-section .card-wrapper .box .box-content .box-back .userInfo .userName {
+  color: #FFF;
+}
+.card-section .card-wrapper .box .box-content .box-back .userInfo .userName h3 {
+  font-family: Poppins;
+  font-size: 34.095px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 35.069px;
+}
+.card-section .card-wrapper .box .box-content .box-back .userInfo .userName p {
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 275;
+  line-height: 28.25px;
+  margin: 0 !important;
+}
+.card-section .card-wrapper .box .box-content .box-back .userInfo .userBottomLine {
+  background: #FFF;
+  height: 1px;
+  width: 100%;
+  margin: 5px 0px;
+}
+.card-section .card-wrapper .box .box-content .box-back .userInfo .userQualification h4 {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28.25px;
+  margin: 0 !important;
+  padding: 0;
+}
+.card-section .card-wrapper .box .box-content .box-back .userInfo .userQualification p {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 275;
+  line-height: 28.25px;
+  margin: 0 !important;
+  padding: 0;
+}
+.card-section .card-wrapper .box .box-content .box-back .userInfo .userExp p {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28.25px;
+  margin: 0 !important;
+  padding: 0;
+}
+.card-section .card-wrapper .box .box-content .box-back .userInfo .userAbout h3 {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28.25px;
+  margin: 0;
+  padding: 0;
+}
+.card-section .card-wrapper .box .box-content .box-back .userInfo .userAbout p {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 14.816px;
+  font-style: normal;
+  font-weight: 275;
+  line-height: 25.928px;
+  margin: 0;
+  padding: 0;
+}
+.card-section .card-wrapper .box .box-content .box-back .userInfo .userAbout ul {
+  padding-left: 0;
+}
+.card-section .card-wrapper .box .box-content .box-back .userInfo .userAbout ul li {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 14.816px;
+  font-style: normal;
+  font-weight: 275;
+  line-height: 25.928px;
+  list-style: none;
+}
+.card-section .card-wrapper .box:hover .box-content {
+  transform: rotateY(-180deg);
+}/*# sourceMappingURL=cards.css.map */

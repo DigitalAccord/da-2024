@@ -1,0 +1,240 @@
+.client-section {
+  position: relative;
+}
+.client-section::after {
+  content: "";
+  background: linear-gradient(0deg, rgba(86, 96, 112, 0.5019607843), rgba(86, 96, 112, 0));
+  border-radius: 790px;
+  filter: blur(100px);
+  height: 400px;
+  position: absolute;
+  top: 100px;
+  width: 300px;
+  position: absolute;
+  top: 10px;
+  right: 0;
+}
+.client-section .div-client-wrapper {
+  max-width: 1587px !important;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 10px;
+  gap: 50px;
+}
+@media only screen and (max-width: 1024px) {
+  .client-section .div-client-wrapper {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .client-section .div-client-wrapper {
+    gap: 0px;
+  }
+}
+.client-section .div-client-wrapper .client-section-left {
+  max-width: 717px;
+  width: 70%;
+}
+@media only screen and (max-width: 1300px) {
+  .client-section .div-client-wrapper .client-section-left {
+    width: 50%;
+    max-width: 400px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .client-section .div-client-wrapper .client-section-left {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+.client-section .div-client-wrapper .client-section-left .client-relation-text h1 {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 90.5%;
+  letter-spacing: 1.2px;
+}
+@media only screen and (max-width: 1300px) {
+  .client-section .div-client-wrapper .client-section-left .client-relation-text h1 {
+    font-size: 50px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .client-section .div-client-wrapper .client-section-left .client-relation-text h1 {
+    font-size: 42px;
+    text-align: center;
+  }
+}
+.client-section .div-client-wrapper .client-section-left .client-relation-text p {
+  margin-top: 30px;
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 25.928px;
+}
+@media only screen and (max-width: 575px) {
+  .client-section .div-client-wrapper .client-section-left .client-relation-text p {
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
+.client-section .div-client-wrapper .client-section-right {
+  max-width: 1060px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("../../../../assets//about//hoverbg.png");
+  background-position: center;
+  background-size: cover;
+  min-height: 593px;
+}
+@media only screen and (max-width: 1300px) {
+  .client-section .div-client-wrapper .client-section-right {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 1300px) and (max-width: 768px) {
+  .client-section .div-client-wrapper .client-section-right {
+    background: url("../../../../assets//about//mobileAboutbg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: inherit;
+    min-height: 460px;
+  }
+}
+.client-section .div-client-wrapper .client-section-right .text-boxes {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
+  position: relative;
+}
+.client-section .div-client-wrapper .client-section-right .text-boxes .text-box1 {
+  position: absolute;
+  right: 91px;
+  top: -131px;
+  transition: opacity 0.3s ease;
+  width: 211px;
+  height: 185px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+  border-radius: 90px;
+  padding-top: 35px;
+}
+@media only screen and (max-width: 768px) {
+  .client-section .div-client-wrapper .client-section-right .text-boxes .text-box1 {
+    right: 19px;
+    top: -91px;
+    width: 137px;
+    height: 134px;
+  }
+}
+.client-section .div-client-wrapper .client-section-right .text-boxes .text-box1:hover {
+  opacity: 0.8;
+}
+.client-section .div-client-wrapper .client-section-right .text-boxes .text-box1 p {
+  color: #FFF;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 22.157px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 25.85px;
+}
+@media only screen and (max-width: 768px) {
+  .client-section .div-client-wrapper .client-section-right .text-boxes .text-box1 p {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .client-section .div-client-wrapper .client-section-right .text-boxes .text-box1 p {
+    font-size: 12px;
+  }
+}
+.client-section .div-client-wrapper .client-section-right .text-boxes .text-box2 {
+  position: absolute;
+  right: -112px;
+  top: -172px;
+  transition: 0.3s ease;
+  width: 194px;
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+}
+@media only screen and (max-width: 768px) {
+  .client-section .div-client-wrapper .client-section-right .text-boxes .text-box2 {
+    width: 132px;
+    height: 140px;
+    right: -114px;
+    top: -148px;
+  }
+}
+.client-section .div-client-wrapper .client-section-right .text-boxes .text-box2 p {
+  color: #FFF;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 22.157px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 25.85px;
+}
+@media only screen and (max-width: 768px) {
+  .client-section .div-client-wrapper .client-section-right .text-boxes .text-box2 p {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .client-section .div-client-wrapper .client-section-right .text-boxes .text-box2 p {
+    font-size: 12px;
+  }
+}
+.client-section .div-client-wrapper .client-section-right .text-boxes .text-box3 {
+  position: absolute;
+  top: 79px;
+  right: -75px;
+}
+@media only screen and (max-width: 768px) {
+  .client-section .div-client-wrapper .client-section-right .text-boxes .text-box3 {
+    top: 32px;
+    right: -125px;
+  }
+}
+.client-section .div-client-wrapper .client-section-right .text-boxes .text-box3 p {
+  color: #FFF;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 22.157px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 25.85px;
+}
+@media only screen and (max-width: 768px) {
+  .client-section .div-client-wrapper .client-section-right .text-boxes .text-box3 p {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .client-section .div-client-wrapper .client-section-right .text-boxes .text-box3 p {
+    font-size: 12px;
+  }
+}
+.client-section .div-client-wrapper .right1 {
+  max-width: 1060px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("../../../../assets//about//mainImg.png");
+  background-position: center;
+  background-size: cover;
+  min-height: 593px;
+}/*# sourceMappingURL=clients.css.map */

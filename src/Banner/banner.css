@@ -201,12 +201,16 @@
           backdrop-filter: blur(22.5px);
   width: 100%;
   transition: background 1s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
 }
 .navbar.dark {
   background: rgba(39, 48, 63, 0.65);
   -webkit-backdrop-filter: blur(22.5px);
           backdrop-filter: blur(22.5px);
-  position: relative;
+  position: absolute;
   z-index: 999;
 }
 .navbar .nav {
@@ -218,6 +222,9 @@
   padding-top: 10px;
   padding-left: 50px;
   padding-right: 50px;
+}
+.navbar .nav .mobileLogo {
+  margin-bottom: 10px;
 }
 .navbar .nav ul {
   display: flex;

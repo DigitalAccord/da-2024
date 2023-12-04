@@ -4,6 +4,7 @@
     &::after {
         content: "";
         background: linear-gradient(0deg,#56607080,#56607000);
+       
     border-radius: 790px;
     filter: blur(100px);
     height: 400px;
@@ -63,7 +64,7 @@
             h1 {
                 color: #FFF;
                 font-family: Poppins;
-                font-size: 120px;
+                font-size: 120mipx;
                 font-style: normal;
                 font-weight: 800;
                 line-height: 60px;

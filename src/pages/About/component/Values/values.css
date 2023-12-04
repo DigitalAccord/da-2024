@@ -1,0 +1,140 @@
+.values-section {
+  width: 100%;
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 992px) {
+  .values-section {
+    flex-direction: column;
+  }
+}
+.values-section .values-section-left {
+  width: 40%;
+  height: 1072px;
+}
+@media only screen and (max-width: 992px) {
+  .values-section .values-section-left {
+    width: 100%;
+  }
+}
+.values-section .values-section-left .values-section-left-img {
+  border-radius: 20px;
+  width: 100%;
+  min-height: 1072px;
+  height: 100%;
+}
+.values-section .values-section-left .values-section-left-img img {
+  width: 100%;
+  height: 100%;
+}
+.values-section .values-section-right {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 1072px;
+  gap: 10px;
+}
+@media only screen and (max-width: 992px) {
+  .values-section .values-section-right {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .values-section .values-section-right {
+    height: 100%;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .values-section .values-section-right {
+    flex-direction: column-reverse;
+  }
+}
+.values-section .values-section-right .values-wrapper {
+  width: 100%;
+  display: flex;
+  max-height: 528px;
+  gap: 10px;
+}
+@media only screen and (max-width: 575px) {
+  .values-section .values-section-right .values-wrapper {
+    flex-direction: column-reverse;
+    max-height: 100%;
+  }
+}
+.values-section .values-section-right .values-wrapper .values-topleft {
+  border-radius: 12px;
+  background: var(--Classic-Orange-Fill, linear-gradient(155deg, #F36A24 15.87%, #8C3305 101.33%));
+  min-height: 528px;
+  height: 100%;
+  width: 50%;
+  padding: 40px 0px;
+  text-align: center;
+}
+@media only screen and (max-width: 575px) {
+  .values-section .values-section-right .values-wrapper .values-topleft {
+    min-height: 439px;
+  }
+}
+.values-section .values-section-right .values-wrapper .values-topleft h1 {
+  color: #FFF;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 54px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 64px;
+  margin-bottom: 40px;
+}
+@media only screen and (max-width: 575px) {
+  .values-section .values-section-right .values-wrapper .values-topleft h1 {
+    font-size: 44px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .values-section .values-section-right .values-wrapper .values-topleft {
+    height: 100%;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .values-section .values-section-right .values-wrapper .values-topleft {
+    width: 100%;
+  }
+}
+.values-section .values-section-right .values-wrapper .values-topright {
+  border-radius: 12px;
+  min-height: 528px;
+  width: 50%;
+}
+.values-section .values-section-right .values-wrapper .values-topright img {
+  width: 100%;
+  height: 100%;
+}
+@media only screen and (max-width: 575px) {
+  .values-section .values-section-right .values-wrapper .values-topright {
+    width: 100%;
+    min-height: 100%;
+  }
+}
+.values-section .values-section-right .values-wrapper-bottom {
+  width: 100%;
+  max-height: 526px;
+}
+.values-section .values-section-right .values-wrapper-bottom .values-wrapper-bottom-img {
+  height: 100%;
+  width: 100%;
+}
+.values-section .values-section-right .values-wrapper-bottom .values-wrapper-bottom-img img {
+  width: 100%;
+  min-height: 526px;
+  height: 100%;
+}
+@media only screen and (max-width: 575px) {
+  .values-section .values-section-right .values-wrapper-bottom .values-wrapper-bottom-img img {
+    width: 100%;
+    height: 100%;
+    min-height: 0px;
+  }
+}/*# sourceMappingURL=values.css.map */

@@ -37,9 +37,28 @@
         flex-wrap: wrap;
         // justify-content: center;
         gap: 35px;
-        .slick-slide{
-            // margin-left: -3.5%;
-        }
+        // .slick-slider{
+        //     display: flex;
+        //     align-items: center;
+        // }
+        // .slick-track {
+        //     display: flex !important;
+        //     left:'30px'
+        //   }
+        //   .slick-slide {
+        //     flex: 0 0 auto;
+        //     // margin: 0 ${(props) => props.slideWidth / 20}px; /* Adjust the spacing between the cards */
+        //     transition: transform 0.5s;
+        //     max-width: 370px;
+        //     margin-left: 10px !important;
+        //     // margin-right: 20px;
+            
+        //   }
+        //   .slick-center {
+        //     transform: scale(1.2); /* Adjust the scaling factor as needed */
+        //     z-index: 1;
+        //   }
+       
         .slick-dots{
             bottom: 20px !important;
         }
@@ -56,8 +75,8 @@
         .box {
             width: 282px;
             height: 480px;
-            // margin: auto;
-            margin-bottom: 60px;
+            margin-bottom: 60px;    
+
 
             .box-content {
                 width: 282px;
@@ -68,8 +87,8 @@
                 perspective: 1000px;
 
                 @media only screen and (max-width: 575px) {
-                    // margin:auto;
-                    margin-left: auto;
+                    margin:auto;
+                    // margin-left: auto;
                 }
 
                 .box-front,
@@ -92,7 +111,7 @@
                     transform: rotateY(180deg);
 
                     .userInfo {
-                        padding: 30px 30px;
+                        padding: 30px 30px; 
                         .userName {
                             color: #FFF;
 

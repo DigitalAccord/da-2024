@@ -1,4 +1,32 @@
-.about-container {
+.about-section {
+  position: relative;
+}
+.about-section::after {
+  content: "";
+  background: linear-gradient(0deg, rgba(86, 96, 112, 0.5019607843), rgba(86, 96, 112, 0));
+  border-radius: 790px;
+  filter: blur(100px);
+  height: 400px;
+  position: absolute;
+  top: 45px;
+  width: 300px;
+  position: absolute;
+  top: 10px;
+  right: 0;
+}
+.about-section::before {
+  content: "";
+  background: linear-gradient(0deg, rgba(86, 96, 112, 0.5019607843), rgba(86, 96, 112, 0));
+  border-radius: 790px;
+  filter: blur(100px);
+  height: 400px;
+  position: absolute;
+  width: 300px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.about-section .about-container {
   background: url("../../assets/about/Office.png") no-repeat;
   width: 100%;
   max-width: 1587px !important;
@@ -10,42 +38,101 @@
   background-size: contain;
   background-repeat: no-repeat;
 }
-.about-container .about-text-wrapper {
+@media only screen and (max-width: 992px) {
+  .about-section .about-container {
+    background-position: bottom right;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .about-section .about-container {
+    background-position: bottom right;
+  }
+}
+.about-section .about-container .about-text-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 100%;
 }
-.about-container .about-text-wrapper h1 {
+.about-section .about-container .about-text-wrapper h1 {
   color: #FFF;
   font-family: Poppins;
-  font-size: 120px;
+  font-size: 120mipx;
   font-style: normal;
   font-weight: 800;
   line-height: 60px;
   margin-bottom: 60px;
   margin-left: 70px;
 }
-.about-container .about-text-wrapper .bg-about-text {
+@media only screen and (max-width: 992px) {
+  .about-section .about-container .about-text-wrapper h1 {
+    font-size: 100px;
+    line-height: 50px;
+    margin-left: 0px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .about-section .about-container .about-text-wrapper h1 {
+    font-size: 80px;
+    line-height: 40px;
+    margin-left: 0px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .about-section .about-container .about-text-wrapper h1 {
+    font-size: 58px;
+    line-height: 40px;
+    margin-left: 0px;
+    text-align: center;
+  }
+}
+.about-section .about-container .about-text-wrapper .bg-about-text {
   mix-blend-mode: screen;
   background: #f85906 -295.246px -0.095px/118.615% 100.018%;
   padding: 90px;
   border-radius: 40px;
   max-width: 1520px;
 }
-.about-container .about-text-wrapper .bg-about-text .bg-about-text-inner {
+@media only screen and (max-width: 992px) {
+  .about-section .about-container .about-text-wrapper .bg-about-text {
+    padding: 50px;
+    min-height: 70%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .about-section .about-container .about-text-wrapper .bg-about-text {
+    padding: 40px;
+    min-height: 70%;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .about-section .about-container .about-text-wrapper .bg-about-text {
+    padding: 30px;
+    min-height: 70%;
+  }
+}
+.about-section .about-container .about-text-wrapper .bg-about-text .bg-about-text-inner {
   width: 36%;
 }
-.about-container .about-text-wrapper .bg-about-text .bg-about-text-inner p {
+@media only screen and (max-width: 992px) {
+  .about-section .about-container .about-text-wrapper .bg-about-text .bg-about-text-inner {
+    width: 100%;
+  }
+}
+.about-section .about-container .about-text-wrapper .bg-about-text .bg-about-text-inner p {
   color: #FFF;
   font-family: Poppins;
   font-size: 16px;
   font-style: normal;
   font-weight: 300;
   line-height: 25px;
-  /* 156.25% */
 }
-.about-container .about-text-wrapper .bg-about-text .bg-about-text-inner button {
+@media only screen and (max-width: 575px) {
+  .about-section .about-container .about-text-wrapper .bg-about-text .bg-about-text-inner p {
+    font-size: 14px;
+  }
+}
+.about-section .about-container .about-text-wrapper .bg-about-text .bg-about-text-inner button {
   border-radius: 62px;
   border: 1px solid #FFF;
   color: #FFF;
@@ -58,4 +145,13 @@
   background: transparent;
   padding: 10px 50px;
   margin-top: 20px;
+}
+@media only screen and (max-width: 575px) {
+  .about-section .about-container .about-text-wrapper .bg-about-text .bg-about-text-inner button {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
 }/*# sourceMappingURL=about.css.map */
