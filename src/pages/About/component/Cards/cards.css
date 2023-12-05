@@ -62,7 +62,12 @@
 }
 @media only screen and (max-width: 575px) {
   .card-section .card-wrapper .box .box-content {
-    margin: auto;
+    margin-left: auto;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .card-section .card-wrapper .box .box-content {
+    margin: 0 auto;
   }
 }
 .card-section .card-wrapper .box .box-content .box-front,

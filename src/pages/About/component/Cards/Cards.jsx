@@ -26,93 +26,76 @@ const Cards = () => {
     dots: true,
     infinite: false,
     speed: 500,
-    slidesToShow: 1,
+    slidesToShow: 1.5,
     slidesToScroll: 1,
     initialSlide: 0,
     autoplay: false,
     autoplaySpeed: 2000,
    
-    // centerPadding: '80',
-    // centerMode: true,
-    // variableWidth: true,
-    // responsive: [
-    //   {
-    //     breakpoint: 550, 
-    //     settings: {
-    //       centerPadding: '60', 
-    //     },
-    //   },
+    centerPadding: '-5%',
+    centerMode: true,
+    
+    responsive: [
+      {
+        breakpoint: 525, 
+        settings: {
+          slidesToShow: 1.5,
+          centerPadding: '-7%',
+          centerMode: true,
+        },
+      },
 
-    // ],
+    ],
+    responsive: [
+      {
+        breakpoint: 455, 
+        settings: {
+          slidesToShow: 1.5,
+          centerPadding: '-7%',
+          centerMode: true,
+        },
+      },
 
-    // responsive: [
-    //   {
-    //     breakpoint: 480, 
-    //     settings: {
-    //       centerPadding: '55', 
-    //     },
-    //   },
+    ],
+    responsive: [
+      {
+        breakpoint: 445, 
+        settings: {
+          slidesToShow: 1.5,
+          centerPadding: '-60px',
+          centerMode: true,
+        },
+      },
 
-    // ],
+    ],
+    responsive: [
+      {
+        breakpoint: 430, 
+        settings: {
+          slidesToShow: 1.5,
+          centerPadding: '-9%',
+          centerMode: true,
+        },
+      },
 
-    // responsive: [
-    //   {
-    //     breakpoint: 430, 
-    //     settings: {
-    //        centerMode: true,
-    //       centerPadding: '40', 
-    //     },
-    //   },
+    ],
 
-    // ],
+    responsive: [
+      {
+        breakpoint: 400, 
+        settings: {
+          slidesToShow: 1,
+          centerPadding: '0',
+         
+        },
+      },
 
-    // responsive: [
-    //   {
-    //     breakpoint: 400, 
-    //     settings: {
-    //       centerPadding: '30', 
-    //     },
-    //   },
+    ],
 
-    // ],
+  
 
   };
-    // useEffect(() => {
-    //   const updateSlideWidth = () => {
-    //     const slickList = document.querySelector('.slick-list');
-    //     if (slickList) {
-    //       const slides = slickList.querySelectorAll('.slick-slide');
-    //       const slide = slides[0];
-    //       if (slide) {
-    //         setSlideWidth(slide.offsetWidth);
-    //       }
-    //     }
-    //   };
-
-    //   // Initial width update
-    //   updateSlideWidth();
-
-    //   // Listen for window resize to update the width dynamically
-    //   window.addEventListener('resize', updateSlideWidth);
-
-    //   // Cleanup event listener on component unmount
-    //   return () => {
-    //     window.removeEventListener('resize', updateSlideWidth);
-    //   };
-    // }, []);
-
-    //   useEffect(() => {
-    //     const updateSlideStyles = () => {
-    //       const slickSlides = document.querySelectorAll('.slick-slide');
-    //       slickSlides.forEach((slide) => {
-    //         slide.style.margin = `0 ${slideWidth /-15}px`;
-    //       });
-    //     };
-
-    //     // Update slide styles whenever slideWidth changes
-    //     updateSlideStyles();
-    //   }, [slideWidth]);
-
+   
 
   return (
     <>

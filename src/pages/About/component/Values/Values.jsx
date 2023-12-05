@@ -45,7 +45,6 @@ const Values = () => {
             <img src={menGroup} alt='groupMen' className=''/>
            </div>
          </div>
-
         </div>
         </div> 
     </>

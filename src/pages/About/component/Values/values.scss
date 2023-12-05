@@ -18,16 +18,32 @@
             width: 100%;
 
         }
+        @media only screen and (max-width: 575px) {
+            height: 641px;
+
+        }
 
         .values-section-left-img {
             border-radius: 20px;
             width: 100%;
             min-height: 1072px;
             height: 100%;
-
+            @media only screen and (max-width: 575px) {
+                min-height: 641px;
+                object-fit: contain;
+    
+            }
+               
             img {
                 width: 100%;
                 height: 100%;
+              
+                @media only screen and (max-width: 575px) {
+              
+                    object-fit: cover;
+        
+                }
+
 
             }
         }

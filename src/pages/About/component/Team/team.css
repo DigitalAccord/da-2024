@@ -22,6 +22,11 @@
 .team-section .team-container {
   max-width: 1587px !important;
 }
+@media only screen and (max-width: 1617px) {
+  .team-section .team-container {
+    padding-right: 28px;
+  }
+}
 .team-section .team-container .team-wrapper {
   width: 100%;
   display: flex;
@@ -154,7 +159,7 @@
   background: rgba(217, 217, 217, 0.02);
   -webkit-backdrop-filter: blur(14.5px);
           backdrop-filter: blur(14.5px);
-  right: -100px;
+  right: -111px;
   top: 80px;
 }
 @media only screen and (max-width: 992px) {
@@ -162,6 +167,6 @@
     width: 328px;
     height: 153px;
     top: 75px;
-    right: -90px;
+    right: -106px;
   }
 }/*# sourceMappingURL=team.css.map */

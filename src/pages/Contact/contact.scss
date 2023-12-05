@@ -1,0 +1,27 @@
+#mapContainer{
+   .leaflet-popup-content-wrapper{
+    border-radius: 35px;
+border: 0.5px solid rgba(255, 255, 255, 0.26);
+background: rgba(217, 217, 217, 0.03);
+backdrop-filter: blur(23.5px);
+width: 551px;
+height: 188px;
+
+   }
+   .leaflet-popup-content{
+    // display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100% !important;
+    height: 100%;
+    font-size: 20px;
+    margin: 0;
+    padding:20px 40px;
+   }
+   .leaflet-pane {
+      position: absolute;
+      left: -180px;
+      width: 100% !important;
+   }
+}

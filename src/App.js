@@ -18,6 +18,7 @@ import { Banner } from './Banner/Banner';
 import About from './pages/About/About';
 import { useState } from 'react';
 import Navbar from './Navbar/Navbar';
+import Contact from './pages/Contact/Contact'
 
 
 
@@ -26,15 +27,17 @@ function App() {
 
   return (
    <>
-   <BrowserRouter>
+   {/* <BrowserRouter>
       <Navbar/>
       <Routes>
-        <Route path="/" element={<Banner />}/>
+        <Route path="/"  element={<Banner />}/>
           <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
        
       </Routes>
         <Footer/>
-    </BrowserRouter>
+    </BrowserRouter> */}
+    <Contact/>
   
 
 

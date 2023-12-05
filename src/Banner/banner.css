@@ -223,6 +223,12 @@
   padding-left: 50px;
   padding-right: 50px;
 }
+@media screen and (max-width: 768px) {
+  .navbar .nav {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
 .navbar .nav .mobileLogo {
   margin-bottom: 10px;
 }

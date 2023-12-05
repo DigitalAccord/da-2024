@@ -23,6 +23,9 @@
 
     .team-container {
         max-width: 1587px !important;
+        @media only screen and (max-width: 1617px) {
+          padding-right: 28px;
+        }
 
         .team-wrapper {
             width: 100%;
@@ -166,13 +169,13 @@
                         border-radius: 0px 0px 700px 700px;
                         background: rgba(217, 217, 217, 0.02);
                         backdrop-filter: blur(14.5px);
-                        right: -100px;
+                        right: -111px;
                         top: 80px;
                         @media only screen and (max-width: 992px) {
                             width: 328px;
                             height: 153px;
                             top: 75px;
-                            right: -90px;
+                            right: -106px;
                         }
     
                       
