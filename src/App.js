@@ -20,6 +20,7 @@ import { useState } from 'react';
 import Navbar from './Navbar/Navbar';
 import Contact from './pages/Contact/Contact'
 import OurWork from './pages/OurWorks/OurWork';
+import Seo from './pages/Seo/Seo';
 
 
 
@@ -35,6 +36,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/work" element={<OurWork />} />
+          <Route path="/seo" element={<Seo />} />
        
       </Routes>
         <Footer/>
