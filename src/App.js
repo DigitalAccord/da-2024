@@ -37,18 +37,10 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/work" element={<OurWork />} />
           <Route path="/seo" element={<Seo />} />
-       
       </Routes>
         <Footer/>
     </BrowserRouter>
-    {/* <Contact/> */}
-  
-
-
-{/* <Banner/> */}
-
-   {/* <About/> */}
-{/* <Footer/> */}
+   
 
    
 

@@ -73,9 +73,9 @@ const AboutMenu = ({handleClosePopup}) => {
     
     return (
       <>
-        <a href='/#'>Google Advertising</a>
-        <a href='/#'>Social Media Management</a>
-        <a href='/#'>Social Media advertising</a>
+        <NavLink to='/work' onClick={handleClosePopup}>Google Advertising</NavLink>
+        <NavLink to='/contact' onClick={handleClosePopup}>Social Media Management</NavLink>
+        <NavLink to='/seo' onClick={handleClosePopup}>Social Media advertising</NavLink>
         <NavLink to='/about' className="about-link" onClick={handleClosePopup}>
           About Us
         </NavLink>
