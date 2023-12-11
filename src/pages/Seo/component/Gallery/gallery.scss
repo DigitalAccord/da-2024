@@ -1,0 +1,299 @@
+.Gallery-section {
+    max-width: 1920px;
+    width: 100%;
+    background-color: bisque;
+    min-height: 1097px;
+margin: 0 auto;
+    .gallery-wrapper {
+        display: flex;
+        gap: 15px;
+
+        .galllery-section-left {
+            max-width: 1174px;
+            width: 100%;
+            min-height: 528px;
+            height: 100%;
+            background-color: aqua;
+
+            .gallery-sectionLeft-wrapper {
+                display: flex;
+                gap: 16px;
+
+                .gallery-inner-left {
+                    max-width: 670px;
+                    width: 100%;
+                    height: 100%;
+                    background-color: blue;
+                    min-height: 528px;
+                    display: flex;
+
+
+
+                    .gallery-inner-left-content {
+                        display: flex;
+                        gap: 14px;
+                        flex-wrap: wrap;
+
+
+                        .gallery-content-box1 {
+                            max-width: 328px;
+                            width: 100%;
+                            height: 256px;
+                            border-radius: 12px;
+                            background: url('../../../../assets//seo/galleyimg1.png'), no-repeat;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            padding: 10px 15px;
+
+
+                            h1 {
+                                color: #FFF;
+                                text-align: center;
+                                font-family: Poppins;
+                                font-size: 24px;
+                                font-style: normal;
+                                font-weight: 700;
+                                line-height: 24px;
+
+                            }
+
+                            p {
+                                color: #FFF;
+                                text-align: center;
+                                font-family: Poppins;
+                                font-size: 16px;
+                                font-style: normal;
+                                font-weight: 275;
+                                line-height: 28.25px;
+                            }
+
+                            button {
+                                border-radius: 62px;
+                                border: 1px solid #FFF;
+                                padding: 16px 50px;
+                                color: #FFF;
+                                background: transparent;
+                                text-align: center;
+                                font-family: Poppins;
+                                font-size: 16px;
+                                font-style: normal;
+                                font-weight: 700;
+                                line-height: normal;
+                            }
+
+
+                        }
+                    }
+                }
+
+                .gallery-inner-right {
+                    max-width: 490px;
+                    width: 100%;
+                    height: 100%;
+                    background: url('../../../../assets/seo/galleryimg5.png') center/cover;
+                    min-height: 528px;
+                    border-radius: 12px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: start;
+                    padding: 40px 48px;
+
+                    .gallery-inner-right-top {
+                        h1 {
+                            color: #FFF;
+                            font-family: Poppins;
+                            font-size: 36px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: 35.069px;
+                        }
+
+                        p {
+                            color: #FFF;
+                            font-family: Poppins;
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 275;
+                            line-height: 28.25px;
+                        }
+
+                    }
+
+                    .gallery-inner-right-bottom {
+                        width: 100%;
+                        h1 {
+                            color: #FFF;
+                            font-family: Poppins;
+                            font-size: 36px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: 36px;
+
+                            span {
+                                color: #F36A24;
+                            }
+                        }
+
+                        button {
+                            border-radius: 62px;
+                            border: 1px solid #FFF;
+                            background: transparent;
+                            outline: none;
+                            padding: 19px 60px;
+
+                            color: #FFF;
+                            text-align: center;
+                            font-family: Poppins;
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: normal;
+                        }
+                    }
+                }
+
+            }
+
+            .gallery-inner-left-bottom {
+                margin-top: 16px;
+                width: 100%;
+                height: 100%;
+                background: url('../../../../assets/seo/galleryimg5.png') center/cover;
+                min-height: 528px;
+                border-radius: 12px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: start;
+                padding: 40px 48px;
+
+                .gallery-inner-right-top {
+                    h1 {
+                        color: #FFF;
+                        font-family: Poppins;
+                        font-size: 36px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 35.069px;
+                    }
+
+                    p {
+                        color: #FFF;
+                        font-family: Poppins;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 275;
+                        line-height: 28.25px;
+                    }
+
+                }
+                 .gallery-inner-right-bottom {
+                    width: 100%;
+                    h1 {
+                        color: #FFF;
+                        font-family: Poppins;
+                        font-size: 36px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 36px;
+
+                        span {
+                            color: #F36A24;
+                        }
+                    }
+
+                    button {
+                        border-radius: 62px;
+                        border: 1px solid #FFF;
+                        background: transparent;
+                        outline: none;
+                        padding: 19px 60px;
+
+                        color: #FFF;
+                        text-align: center;
+                        font-family: Poppins;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: normal;
+                    }
+                }
+
+            }
+        }
+
+        .galllery-section-right {
+            max-width: 732px;
+            width: 100%;
+            background-color: rgb(15, 91, 91);
+            min-height: 1075px;
+         
+            width: 100%;
+            height: 100%;
+            background: url('../../../../assets/seo/galleryimg5.png') center/cover;
+        
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: start;
+            padding: 40px 48px;
+
+            .gallery-inner-right-top {
+                h1 {
+                    color: #FFF;
+                    font-family: Poppins;
+                    font-size: 36px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 35.069px;
+                }
+
+                p {
+                    color: #FFF;
+                    font-family: Poppins;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 275;
+                    line-height: 28.25px;
+                }
+
+            }
+             .gallery-inner-right-bottom {
+                width: 100%;
+                h1 {
+                    color: #FFF;
+                    font-family: Poppins;
+                    font-size: 36px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 36px;
+
+                    span {
+                        color: #F36A24;
+                    }
+                }
+
+                button {
+                    border-radius: 62px;
+                    border: 1px solid #FFF;
+                    background: transparent;
+                    outline: none;
+                    padding: 19px 60px;
+
+                    color: #FFF;
+                    text-align: center;
+                    font-family: Poppins;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                }
+            }
+
+        }
+    }
+}

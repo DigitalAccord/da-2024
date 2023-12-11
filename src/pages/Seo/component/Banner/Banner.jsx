@@ -1,6 +1,6 @@
 import React from 'react'
 import './banner.scss'
-import RocketImage from '../../../assets/seo/rocket.png';
+import RocketImage from '../../../../assets/seo/rocket.png';
 export const Banner = () => {
   return (
    <>
@@ -20,8 +20,6 @@ export const Banner = () => {
 SEO is a long-term digital strategy that gradually builds the relevance of your website through on page optimisation and off page optimisation to create a large visibility of Google search queries to your audience. Your website visibility is a crucial aspect of your digital marketing and growing your overall presence online.</p>
    </div>
    <div className='cloud-bottom-bg'></div>
-   </div>
-
    <div className='seo-works-btn-section'>
     <div className='seo-btn-section'>
         <h3>How Does</h3>
@@ -35,6 +33,8 @@ SEO is a long-term digital strategy that gradually builds the relevance of your 
         </div>
     </div>
    </div>
+   </div>
+
 
    
    </>
