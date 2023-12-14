@@ -1,31 +1,52 @@
 .Gallery-section {
     max-width: 1920px;
     width: 100%;
-    background-color: bisque;
+    display: block;
     min-height: 1097px;
-margin: 0 auto;
+    margin: 0 auto;
+
+    @media only screen and (max-width: 575px) {
+        display: none;
+
+    }
+
     .gallery-wrapper {
         display: flex;
         gap: 15px;
+
+        @media only screen and (max-width: 1200px) {
+            flex-direction: column;
+
+        }
 
         .galllery-section-left {
             max-width: 1174px;
             width: 100%;
             min-height: 528px;
             height: 100%;
-            background-color: aqua;
+
 
             .gallery-sectionLeft-wrapper {
                 display: flex;
                 gap: 16px;
 
+                @media only screen and (max-width: 768px) {
+                    flex-direction: column;
+
+                }
+
                 .gallery-inner-left {
                     max-width: 670px;
                     width: 100%;
                     height: 100%;
-                    background-color: blue;
+
                     min-height: 528px;
                     display: flex;
+
+                    @media only screen and (max-width: 768px) {
+                        max-width: 100%;
+
+                    }
 
 
 
@@ -33,6 +54,7 @@ margin: 0 auto;
                         display: flex;
                         gap: 14px;
                         flex-wrap: wrap;
+                        justify-content: center;
 
 
                         .gallery-content-box1 {
@@ -46,6 +68,14 @@ margin: 0 auto;
                             justify-content: center;
                             align-items: center;
                             padding: 10px 15px;
+                            background-repeat: no-repeat;
+                            background-size: cover;
+
+                            @media only screen and (max-width: 768px) {
+                                max-width: 100%;
+
+
+                            }
 
 
                             h1 {
@@ -72,7 +102,9 @@ margin: 0 auto;
                             button {
                                 border-radius: 62px;
                                 border: 1px solid #FFF;
-                                padding: 16px 50px;
+                                padding: 19px 0px;
+                                max-width: 234px;
+                                width: 100%;
                                 color: #FFF;
                                 background: transparent;
                                 text-align: center;
@@ -81,6 +113,13 @@ margin: 0 auto;
                                 font-style: normal;
                                 font-weight: 700;
                                 line-height: normal;
+
+                                @media only screen and (max-width: 1572px) {
+                                    padding: 16px 0px;
+                                    max-width: 170px;
+                                    font-size: 12px;
+
+                                }
                             }
 
 
@@ -100,6 +139,11 @@ margin: 0 auto;
                     justify-content: space-between;
                     align-items: start;
                     padding: 40px 48px;
+
+                    @media only screen and (max-width: 768px) {
+                        max-width: 100%;
+
+                    }
 
                     .gallery-inner-right-top {
                         h1 {
@@ -124,6 +168,7 @@ margin: 0 auto;
 
                     .gallery-inner-right-bottom {
                         width: 100%;
+
                         h1 {
                             color: #FFF;
                             font-family: Poppins;
@@ -142,8 +187,9 @@ margin: 0 auto;
                             border: 1px solid #FFF;
                             background: transparent;
                             outline: none;
-                            padding: 19px 60px;
-
+                            padding: 19px 0px;
+                            max-width: 234px;
+                            width: 100%;
                             color: #FFF;
                             text-align: center;
                             font-family: Poppins;
@@ -151,6 +197,20 @@ margin: 0 auto;
                             font-style: normal;
                             font-weight: 700;
                             line-height: normal;
+
+                            @media only screen and (max-width: 1572px) {
+                                padding: 16px 0px;
+                                max-width: 170px;
+                                font-size: 12px;
+
+                            }
+                        }
+
+                        svg {
+                            @media only screen and (max-width: 1572px) {
+                                display: none;
+
+                            }
                         }
                     }
                 }
@@ -190,8 +250,10 @@ margin: 0 auto;
                     }
 
                 }
-                 .gallery-inner-right-bottom {
+
+                .gallery-inner-right-bottom {
                     width: 100%;
+
                     h1 {
                         color: #FFF;
                         font-family: Poppins;
@@ -210,8 +272,9 @@ margin: 0 auto;
                         border: 1px solid #FFF;
                         background: transparent;
                         outline: none;
-                        padding: 19px 60px;
-
+                        padding: 19px 0px;
+                        max-width: 234px;
+                        width: 100%;
                         color: #FFF;
                         text-align: center;
                         font-family: Poppins;
@@ -219,6 +282,20 @@ margin: 0 auto;
                         font-style: normal;
                         font-weight: 700;
                         line-height: normal;
+
+                        @media only screen and (max-width: 1572px) {
+                            padding: 16px 0px;
+                            max-width: 170px;
+                            font-size: 12px;
+
+                        }
+                    }
+
+                    svg {
+                        @media only screen and (max-width: 1572px) {
+                            display: none;
+
+                        }
                     }
                 }
 
@@ -230,17 +307,22 @@ margin: 0 auto;
             width: 100%;
             background-color: rgb(15, 91, 91);
             min-height: 1075px;
-         
+
             width: 100%;
             height: 100%;
             background: url('../../../../assets/seo/galleryimg5.png') center/cover;
-        
+
             border-radius: 12px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             align-items: start;
             padding: 40px 48px;
+
+            @media only screen and (max-width: 1200px) {
+                max-width: 100%;
+
+            }
 
             .gallery-inner-right-top {
                 h1 {
@@ -262,8 +344,10 @@ margin: 0 auto;
                 }
 
             }
-             .gallery-inner-right-bottom {
+
+            .gallery-inner-right-bottom {
                 width: 100%;
+
                 h1 {
                     color: #FFF;
                     font-family: Poppins;
@@ -282,8 +366,9 @@ margin: 0 auto;
                     border: 1px solid #FFF;
                     background: transparent;
                     outline: none;
-                    padding: 19px 60px;
-
+                    padding: 19px 0px;
+                    max-width: 234px;
+                    width: 100%;
                     color: #FFF;
                     text-align: center;
                     font-family: Poppins;
@@ -291,9 +376,129 @@ margin: 0 auto;
                     font-style: normal;
                     font-weight: 700;
                     line-height: normal;
+
+                    @media only screen and (max-width: 1572px) {
+                        padding: 16px 0px;
+                        max-width: 170px;
+                        font-size: 12px;
+
+                    }
+                }
+
+                svg {
+                    @media only screen and (max-width: 1572px) {
+                        display: none;
+
+                    }
                 }
             }
 
         }
+    }
+}
+
+.mobile-gallery-section {
+    // padding-top: 140px;
+    display: none;
+    padding-bottom: 100px;
+
+    @media only screen and (max-width: 575px) {
+        display: block;
+
+    }
+
+    @media only screen and (max-width: 347px) {
+        padding-top: 90px;
+
+    }
+
+    @media only screen and (max-width: 333px) {
+        padding-top: 140px;
+
+    }
+
+    .mabile-gallery-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-bottom: 44px;
+
+
+        p {
+            color: #FFF;
+            text-align: center;
+            font-family: Poppins;
+            font-size: 14.816px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 25.928px;
+            margin-bottom: 0;
+           
+        }
+    }
+
+    .gallery-content-box1 {
+        // max-width: 328px;
+        width: 90%;
+        height: 256px;
+        border-radius: 12px;
+        background: url('../../../../assets//seo/galleyimg1.png'), no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 15px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0 auto;
+
+
+
+
+        h1 {
+            color: #FFF;
+            text-align: center;
+            font-family: Poppins;
+            font-size: 34.095px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 35.069px;
+
+            @media only screen and (max-width: 428px) {
+                font-size: 24.095px;
+                line-height: 30.069px;
+            }
+
+        }
+
+        p {
+            color: #FFF;
+            text-align: center;
+            font-family: Poppins;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 275;
+            line-height: 28.25px;
+        }
+
+        button {
+            border-radius: 62px;
+            border: 1px solid #FFF;
+            padding: 19px 0px;
+            max-width: 234px;
+            width: 100%;
+            color: #FFF;
+            background: transparent;
+            text-align: center;
+            font-family: Poppins;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+
+        }
+
+
     }
 }

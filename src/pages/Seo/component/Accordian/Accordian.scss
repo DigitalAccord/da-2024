@@ -1,0 +1,98 @@
+.acccrodian-section {
+    max-width: 1510px;
+    width: 100%;
+    padding: 190px 0px;
+    @media only screen and (max-width: 575px) {
+    padding: 67px 0px;
+    }
+
+    h1 {
+        color: #FFF;
+        font-family: Poppins;
+        font-size: 80px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 89.177%;
+        padding-bottom: 74px;
+        @media only screen and (max-width: 575px) {
+            padding-bottom: 48px;
+            text-align: center;
+        }
+    }
+
+    .accordion {
+        --bs-accordion-bg: transparent;
+        --bs-accordion-border-radius: none;
+        --bs-accordion-btn-padding-y: 2rem;
+    }
+
+    .accordion-button:not(.collapsed) {
+        background-color: transparent;
+        color: #ffffff;
+        color: #FFF;
+        font-family: Poppins;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 35.069px;
+        @media only screen and (max-width: 575px) {
+            font-size: 18px;
+             
+         }
+       
+
+        &::after {
+            background-image: url('../../../../assets//seo/cross.png');
+
+        }
+
+    }
+
+    .accordion-body {
+        p {
+            color: #FFF;
+            font-family: Poppins;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 275;
+            line-height: 25px;
+            @media only screen and (max-width: 575px) {
+                font-size: 14px;
+                 
+             }
+
+        }
+    }
+
+    .accordion-button {
+        background-color: transparent;
+        color: #ffffff;
+        color: #FFF;
+        font-family: Poppins;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 35.069px;
+        @media only screen and (max-width: 575px) {
+           font-size: 18px;
+            
+        }
+
+        &::after {
+            background-image: url('../../../../assets//seo/plus.png');
+
+        }
+
+        &:focus {
+            border-color: transparent !important;
+            box-shadow: none !important;
+        }
+    }
+
+    .accordion-item {
+        border-left: none;
+        border-right: none;
+        border-radius: none;
+    }
+
+}

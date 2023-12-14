@@ -1,0 +1,88 @@
+.acccrodian-section {
+  max-width: 1510px;
+  width: 100%;
+  padding: 190px 0px;
+}
+@media only screen and (max-width: 575px) {
+  .acccrodian-section {
+    padding: 67px 0px;
+  }
+}
+.acccrodian-section h1 {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 89.177%;
+  padding-bottom: 74px;
+}
+@media only screen and (max-width: 575px) {
+  .acccrodian-section h1 {
+    padding-bottom: 48px;
+    text-align: center;
+  }
+}
+.acccrodian-section .accordion {
+  --bs-accordion-bg: transparent;
+  --bs-accordion-border-radius: none;
+  --bs-accordion-btn-padding-y: 2rem;
+}
+.acccrodian-section .accordion-button:not(.collapsed) {
+  background-color: transparent;
+  color: #ffffff;
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 35.069px;
+}
+@media only screen and (max-width: 575px) {
+  .acccrodian-section .accordion-button:not(.collapsed) {
+    font-size: 18px;
+  }
+}
+.acccrodian-section .accordion-button:not(.collapsed)::after {
+  background-image: url("../../../../assets//seo/cross.png");
+}
+.acccrodian-section .accordion-body p {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 275;
+  line-height: 25px;
+}
+@media only screen and (max-width: 575px) {
+  .acccrodian-section .accordion-body p {
+    font-size: 14px;
+  }
+}
+.acccrodian-section .accordion-button {
+  background-color: transparent;
+  color: #ffffff;
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 35.069px;
+}
+@media only screen and (max-width: 575px) {
+  .acccrodian-section .accordion-button {
+    font-size: 18px;
+  }
+}
+.acccrodian-section .accordion-button::after {
+  background-image: url("../../../../assets//seo/plus.png");
+}
+.acccrodian-section .accordion-button:focus {
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+.acccrodian-section .accordion-item {
+  border-left: none;
+  border-right: none;
+  border-radius: none;
+}/*# sourceMappingURL=Accordian.css.map */

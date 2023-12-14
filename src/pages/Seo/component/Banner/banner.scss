@@ -37,6 +37,16 @@
         background: url('../../../../assets/seo/cloud.png') bottom/120% 90% no-repeat;
         width: 100%;
         height: 100%;
+
+        @media screen and (max-width:575px) {
+            background-position: center left 38%;
+            background-size: 607% 131%;
+        }
+
+        @media screen and (max-width:575px) {
+            top: 70px;
+        }
+
     }
 
     .seo-banner-rocket {
@@ -45,7 +55,11 @@
         left: 31%;
         transform: translateX(-50%);
         animation: rocketAnimation 10s linear infinite;
-        z-index: 2;
+        z-index: -1;
+
+        @media screen and (max-width:575px) {
+            left: 49%;
+        }
     }
 
     @keyframes rocketAnimation {
@@ -59,9 +73,14 @@
     }
 
     .seo-banner-text {
-        max-width: 780px;
-        margin-right: auto;
+
+        padding-left: 21%;
         padding-top: 150px;
+
+        @media only screen and (max-width: 768px) {
+            padding-left: 0;
+
+        }
 
         h1 {
             text-align: center;
@@ -74,7 +93,26 @@
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            text-align: end;
+            text-align: left;
+
+            @media only screen and (max-width: 992px) {
+                font-size: 200px;
+
+            }
+
+            @media only screen and (max-width: 992px) {
+                font-size: 167.463px;
+
+            }
+
+            @media only screen and (max-width: 768px) {
+                text-align: center;
+
+            }
+
+            @media only screen and (max-width: 420px) {
+                font-size: 150.463px;
+            }
         }
 
         p {
@@ -85,7 +123,20 @@
             font-style: normal;
             font-weight: 700;
             line-height: 89.177%;
-            text-align: end;
+            text-align: left;
+
+            @media only screen and (max-width: 992px) {
+                font-size: 22.166px;
+
+            }
+
+            @media only screen and (max-width: 768px) {
+                text-align: center;
+            }
+
+            @media only screen and (max-width: 420px) {
+                font-size: 20.625px;
+            }
         }
     }
 }
@@ -99,7 +150,6 @@
     .dark-text-center {
         background: #171C24;
         width: 100%;
-
         position: relative;
 
 
@@ -133,6 +183,20 @@
         position: relative;
         top: -150px;
         z-index: -1;
+
+        @media only screen and (max-width: 575px) {
+
+
+
+
+            background-position: left 39% center;
+
+            background-size: 490% 103%;
+
+            // top: -149px;
+
+
+        }
     }
 }
 
@@ -165,6 +229,35 @@
     width: 100%;
     min-height: 900px;
     bottom: 0;
+    padding-bottom: 25px;
+ 
+    @media only screen and (max-width: 800px) {
+        bottom: 86px;
+
+    }
+    @media only screen and (max-width: 575px) {
+        min-height: 750px;
+      
+
+    }
+    @media only screen and (max-width: 383px) {
+        bottom: 50px;
+      
+
+    }
+    @media only screen and (max-width: 355px) {
+        bottom: 30px;
+      
+
+    }
+    @media only screen and (max-width: 347px) {
+        bottom: -50px;
+      
+    }
+    @media only screen and (max-width: 333px) {
+        bottom: -100px;
+      
+    }
 
     &::after {
         position: absolute;
@@ -172,6 +265,7 @@
         background: linear-gradient(175deg, #161B23 0%, #27303F 100%);
         height: 100%;
         z-index: 0;
+
     }
 
 
@@ -180,9 +274,15 @@
         position: absolute;
         width: 100%;
         height: 100%;
-        background: url('../../../../assets/seo/orangebackground.png');
+        background: url('../../../../assets/seo/orangebackground.png'), linear-gradient(180deg, transparent 0%, #27303F 100%);
         background-position: bottom;
         background-size: 100% 100%;
+
+        @media only screen and (max-width: 800px) {
+            display: none;
+
+        }
+
     }
 
     .seo-btn-section {
@@ -191,6 +291,53 @@
         bottom: 264px;
         width: 73%;
         z-index: 2;
+        @media only screen and (max-width: 800px) {
+            bottom: 0;
+            border-radius: 32.41px;
+           
+
+        }
+
+        .-seo-mobile {
+            display: none;
+
+            @media only screen and (max-width: 800px) {
+                display: block;
+
+                h1 {
+                    color: #D9D9D9;
+                    text-align: center;
+                    font-family: Poppins;
+                    font-size: 25px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 104.177%;
+
+                }
+
+                p {
+                    padding:0px 100px;
+                    color: #FFF;
+                    text-align: center;
+                    font-family: Poppins;
+                    font-size: 14.816px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 25.928px;
+                    @media only screen and (max-width: 423px) {
+                        padding:0px 30px;
+            
+                    }
+                }
+
+            }
+
+        }
+
+        @media only screen and (max-width: 800px) {
+            width: 100%;
+
+        }
 
 
         h1 {
@@ -202,6 +349,21 @@
             line-height: 90.5%;
             letter-spacing: 1.8px;
             text-align: center;
+
+            @media only screen and (max-width: 1024px) {
+                font-size: 100px;
+
+            }
+
+            @media only screen and (max-width: 992px) {
+                font-size: 100px;
+
+            }
+
+            @media only screen and (max-width: 575px) {
+                font-size: 61px;
+
+            }
         }
 
         h3 {
@@ -215,6 +377,11 @@
             font-weight: 700;
             line-height: 90.5%;
             letter-spacing: 1.2px;
+
+            @media only screen and (max-width: 575px) {
+                font-size: 61px;
+
+            }
 
         }
 
