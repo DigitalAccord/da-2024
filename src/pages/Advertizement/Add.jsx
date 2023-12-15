@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React, { useState,useEffect } from 'react'
 import './add.scss'
 import { FacebookIcon, GoogleIcon, InstaIcon, LinkedinIcon } from '../../assets/svgIcons'
 import sunFlower from '../../assets/Addvertizement/Sunlover.png'
@@ -10,23 +10,36 @@ const Add = () => {
     const handleButtonClick = (type) => {
         console.log('Selected Ad Type:', type);
         setAdType(type);
-      
+
         switch (type) {
-          case 'Facebook':
-            console.log('Setting image for Facebook');
-            setSelectedImage(sunFlower);
-            break;
-          case 'Instagram':
-            console.log('Setting image for Instagram');
-            setSelectedImage(instagramImage);
-            break;
-          // Add more cases for other ad types if needed
-          default:
-            console.log('Setting default image');
-            setSelectedImage(sunFlower);
+            case 'Facebook':
+                console.log('Setting image for Facebook');
+                setSelectedImage(sunFlower);
+                break;
+            case 'Instagram':
+                console.log('Setting image for Instagram');
+                setSelectedImage(instagramImage);
+                break;
+
+            default:
+                console.log('Setting default image');
+                setSelectedImage(sunFlower);
         }
-      };
+    };
+
+    const [selectedIndex, setSelectedIndex] = useState(0);
+
+    useEffect(() => {
+      const timer = setTimeout(() => {
       
+        setSelectedIndex((prevIndex) => (prevIndex + 1) % 7);
+      }, 1000);
+  
+     
+      return () => clearTimeout(timer);
+    }, [selectedIndex]);
+  
+
     return (
         <>
             <div className='add-section'>
@@ -40,6 +53,7 @@ const Add = () => {
                         <p>The average Australian spends 2.24 hours on social media per day. With that in mind, if you are not advertising on social media than you are missing out on some strong exposure to your specific audience every day. Digital Accord offers affordable social media management that incorporates creative messaging and stand out ads – you are bound to improve brand awareness and enquiries with the right audience.</p>
                     </div>
                 </div>
+                <div className='arrow-img'></div>
             </div>
             <div className='add-section2'>
                 <div className='add-section2-wrapper'>
@@ -53,16 +67,19 @@ const Add = () => {
                             <div className='inner_timeline'></div>
                             <div className='events'>
                                 <ol>
-                                    <li className='selected'><p >
-                                        Lead Generation
-                                    </p></li>
-                                    <li><p>Messages (Automated)</p></li>
-                                    <li><p>Traffic Building & Brand Awareness</p></li>
-                                    <li><p>Catalog Sales</p></li>
-                                    <li ><p>Store Visitors</p></li>
-                                    <li><p>App Installs</p></li>
-                                    <li><p>Video Views</p></li>
-
+                                    {/* <li className='selected'></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li ></li>
+                                    <li></li>
+                                    <li><p>Video Views</p></li> */}
+                                    {Array.from({ length: 7 }, (_, index) => (
+                                        <li key={index} className={index === selectedIndex ? 'selected' : ''}>
+                                            <p>Lead Generation</p>
+                                          
+                                        </li>
+                                    ))}
                                 </ol>
 
 
@@ -86,8 +103,12 @@ const Add = () => {
                         </div>
 
                     </div>
-                    <div className='section2-right'>
-                    <div className='section-right-img' style={{ backgroundImage: `url(${selectedImage})` }}></div>
+                    <div className='section2-right' style={{ backgroundImage: `url(${selectedImage})` }}> 
+                    {/* <img src={sunFlower} /> */}
+                        {/* <div className='section-right-img' ></div> */}
+                        {/* <div className='section-right-img' > */}
+                            
+                        {/* </div> */}
                     </div>
                 </div>
             </div>
