@@ -1,0 +1,497 @@
+.user_banner {
+    background: url('../../../assets//user//grid.png');
+    width: 100%;
+    min-height: 1157px;
+    height: 100vh;
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+  
+    
+  
+    .hover-circle {
+        position: absolute;
+        width: 100%;
+        max-width: 800px;
+        transform: rotate(351deg);
+        left: 10%;
+        top: 30%;
+        display: flex;
+        // background-color: aliceblue;
+        
+
+        .box1 {
+            width: 376px;
+            height: 200px; // Adjust the height based on the desired appearance
+            // background: #8C3305;
+            position: relative;
+            transform: rotate(51deg);
+            left: 21px;
+            top: 28px;
+
+            // margin-top: 100px;
+           
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                width: 0;
+                border-left: 188px solid transparent;
+                border-right: 188px solid transparent;
+            }
+
+            &::before {
+                bottom: 100%;
+                border-bottom: 100px solid transparent; // Adjust the height based on the desired appearance
+            }
+
+            &::after {
+                top: 100%;
+                border-top: 100px solid transparent; // Adjust the height based on the desired appearance
+            }
+        }
+
+        .box2 {
+            width: 376px;
+            height: 200px; // Adjust the height based on the desired appearance
+            // background: #8C3305;
+            position: relative;
+            transform: rotate(347deg);
+            right: -20px;
+            top: -16px;
+
+            // margin-top: 100px;
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                width: 0;
+                border-left: 188px solid transparent;
+                border-right: 188px solid transparent;
+            }
+
+            &::before {
+                bottom: 100%;
+                border-bottom: 100px solid transparent; // Adjust the height based on the desired appearance
+            }
+
+            &::after {
+                top: 100%;
+                border-top: 100px solid transparent; // Adjust the height based on the desired appearance
+            }
+        }
+
+
+        .box3 {
+            width: 350px;
+            height: 206px;
+           
+            position: relative;
+            left: -106px;
+            top: 124px;
+            transform: rotate(52deg);
+
+            // margin-top: 100px;
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                width: 0;
+                border-left: 161px solid transparent;
+                border-right: 188px solid transparent;
+            }
+
+            &::before {
+                bottom: 100%;
+                border-bottom: 100px solid transparent; // Adjust the height based on the desired appearance
+            }
+
+            &::after {
+                top: 100%;
+                border-top: 100px solid transparent; // Adjust the height based on the desired appearance
+            }
+        }
+    }
+
+    .user_bg_text {
+        position: absolute;
+        left: 60%;
+        top: 53%;
+        bottom: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        h1 {
+            background: var(--Classic-Orange-Fill, linear-gradient(155deg, #F36A24 15.87%, #8C3305 101.33%));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            font-family: Poppins;
+            font-size: 148px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 89.177%;
+
+        }
+
+        button {
+            max-width: 173px;
+            padding: 18px 0px;
+            width: 100%;
+            border-radius: 28px;
+            border: 1px solid #FFF;
+            color: #FFF;
+            font-family: Poppins;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            background: transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-top: 27px;
+        }
+    }
+}
+.right1{
+    background: url('../../../assets//user//Component.png');
+    width: 100%;
+    min-height: 1157px;
+    height: 100vh;
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.vision-section {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 134px;
+    position: relative;
+
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        border-radius: 790px;
+        bottom: 0;
+        right: 0;
+        filter: blur(100px);
+        opacity: 0.27;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%);
+
+
+    }
+
+    .vision-left {
+        max-width: 732px;
+        width: 100%;
+        min-height: 1080px;
+        height: 100%;
+        border-radius: 12px;
+        background: linear-gradient(155deg, #F36A24 15.87%, #8C3305 101.33%);
+
+        .vision-left-text {
+            width: 390px;
+            min-height: 696px;
+            padding-left: 113px;
+            margin-top: 10%;
+
+            h1 {
+                color: #FFF;
+                font-family: Poppins;
+                font-size: 80px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 80px;
+            }
+        }
+
+        p {
+            color: #FFF;
+            text-align: right;
+            font-family: Poppins;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 67px;
+            text-align: right;
+            width: 90%;
+            padding-top: 100px;
+            // margin-left: auto;
+        }
+    }
+
+    .vision-right {
+        max-width: 935px;
+        width: 100%;
+
+        h1 {
+            color: #FFF;
+            font-family: Poppins;
+            font-size: 54px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 67px;
+          
+        }
+
+        p {
+            color: #FFF;
+            font-family: Poppins;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 25px;
+            
+        }
+    }
+}
+
+.inspo-section {
+    display: flex;
+    width: 100%;
+    min-height: 1067px;
+    gap: 16px;
+
+    .inspo-left {
+        max-width: 1234px;
+        width: 100%;
+
+        .inspo-left-bottom {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 568px;
+
+            .vision-right {
+                max-width: 935px;
+                width: 100%;
+
+                h1 {
+                    color: #FFF;
+                    font-family: Poppins;
+                    font-size: 54px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 67px;
+                    /* 124.074% */
+                }
+
+                p {
+                    color: #FFF;
+                    font-family: Poppins;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 300;
+                    line-height: 25px;
+
+                }
+            }
+        }
+
+        .section-left-img {
+            width: 100%;
+            min-height: 528px;
+            max-width: 1234px;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+    }
+
+    .inspo-right {
+        max-width: 670px;
+        height: 100%;
+        min-height: 1067px;
+        width: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+    }
+}
+
+.ideote {
+    width: 94%;
+    min-height: 507px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .ideote_left {
+        max-width: 732px;
+        width: 100%;
+        min-height: 507px;
+
+    }
+
+    .ideote_right {
+        max-width: 935px;
+        width: 100%;
+        min-height: 507px;
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+
+
+        h1 {
+            color: #FFF;
+            text-align: right;
+            font-family: Poppins;
+            font-size: 54px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 67px;
+
+        }
+
+        p {
+            color: #FFF;
+            text-align: right;
+            font-family: Poppins;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 25px;
+        }
+
+    }
+}
+
+.designer {
+    background: url('../../../assets//user/Component.png');
+    width: 100%;
+    min-height: 1157px;
+    height: 100%;
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    transform: translateY(-31%);
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 1157px;
+        height: 1000px;
+        border-radius: 790px;
+        top: 50%;
+        left: 0;
+        filter: blur(100px);
+        opacity: 0.27;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%);
+        transform: translateX(-75%);
+
+    }
+
+    .designer-content {
+        background: url('../../../assets//user/tree.png');
+        width: 100%;
+        max-width: 664px;
+        min-height: 556px;
+        object-fit: cover;
+        background-position: right;
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        right: 0;
+        top: 26%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 30px 40px;
+
+        h4 {
+            color: #FFF;
+            font-family: Poppins;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+
+        }
+
+        h1 {
+            color: #FFF;
+            font-family: Poppins;
+            font-size: 25px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 25px;
+        }
+    }
+
+    .design-text {
+        position: absolute;
+        top: 100%;
+        max-width: 935px;
+        width: 100%;
+        // margin:0 auto;
+        right: 50%;
+        transform: translateX(50%);
+
+        h1 {
+            color: #FFF;
+            text-align: center;
+            font-family: Poppins;
+            font-size: 54px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 67px;
+        }
+
+        p {
+            color: #FFF;
+            text-align: center;
+            font-family: Poppins;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 25px;
+            padding-top: 40px;
+        }
+    }
+}
+
+.launch {
+    background: url('../../../assets//user/launch.png');
+    width: 100%;
+    min-height: 560px;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        color: #FFF;
+        text-align: center;
+        font-family: Poppins;
+        font-size: 54px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 67px;
+    }
+}

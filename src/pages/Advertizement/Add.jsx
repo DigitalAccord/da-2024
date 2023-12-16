@@ -3,6 +3,10 @@ import './add.scss'
 import { FacebookIcon, GoogleIcon, InstaIcon, LinkedinIcon } from '../../assets/svgIcons'
 import sunFlower from '../../assets/Addvertizement/Sunlover.png'
 import instagramImage from '../../assets/about/orangebg.png'
+import Category from '../../component/category/Category'
+import Gallery from '../Seo/component/Gallery/Gallery'
+import Accordian from '../Seo/component/Accordian/Accordian'
+import LetsTalk from '../../component/LetsTalk/LetsTalk'
 const Add = () => {
     const [adType, setAdType] = useState('Facebook');
     const [selectedImage, setSelectedImage] = useState(sunFlower);
@@ -112,6 +116,10 @@ const Add = () => {
                     </div>
                 </div>
             </div>
+            <Gallery/>
+            <Category/>
+            <Accordian/>
+            <LetsTalk/>
         </>
     )
 }
