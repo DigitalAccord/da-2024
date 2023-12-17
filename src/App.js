@@ -23,6 +23,7 @@ import OurWork from './pages/OurWorks/OurWork';
 import Seo from './pages/Seo/Seo';
 import Add from './pages/Advertizement/Add';
 import User from './pages/UserExperience/User';
+import Development from './pages/Development/Development';
 
 
 
@@ -41,6 +42,7 @@ function App() {
           <Route path="/seo" element={<Seo />} />
           <Route path="/add" element={<Add />} />
           <Route path="/user" element={<User />} />
+          <Route path="/development" element={<Development />} />
       </Routes>
         <Footer/>
     </BrowserRouter>
