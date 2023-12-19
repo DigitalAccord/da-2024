@@ -1,0 +1,395 @@
+.socialmedia {
+    background-image: url("../../assets//management/socialmediabackground.png");
+    width: 100%;
+    height: 100%;
+    min-height: 1855px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  
+  @media only screen and (max-width: 992px) {
+  min-height: 1440px;
+    // background-image:url(../../asset/socialmediabackground1.png);
+  }
+    .socialmedia-text {
+      p {
+        display: none;
+  
+        @media only screen and (max-width: 428px) {
+          display: block;
+          text-align: center;
+          line-height: 34.91px;
+          font-size: 29px;
+          font-family: Poppins sans-serif;
+          color:#ffffff;
+          font-weight:700;
+        }
+      }
+    }
+  
+    .media {
+      text-align: center;
+      font-family: Poppins sans-serif;
+      width: 100%;
+      height: 813px;
+      background-image: url("../../assets//management/media2.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  
+      @media only screen and (max-width: 428px) {
+        background-image: url("../../assets//management/media2.png");
+        height: 364px;
+      }
+  
+      .media-text {
+        margin-top: 26px;
+  
+        p {
+          font-size: 17px;
+          font-weight: 700;
+          line-height: 20.62px;
+          color: #FFFFFF;
+  
+          @media only screen and (max-width: 428px) {
+            display: none;
+          }
+        }
+  
+        h2 {
+          font-size: 106px;
+          background: linear-gradient(45deg, #F36A24, #8C3305);
+          -webkit-background-clip: text;
+          color: transparent;
+          font-weight: 700;
+  
+          @media only screen and (max-width: 768px) {
+            font-size: 70px;
+          }
+  
+          @media only screen and (max-width: 428px) {
+            font-size: 47px;
+            line-height: 47.58px
+          }
+        }
+  
+      }
+    }
+  
+    .social-text {
+      width: 100%;
+      max-width: 465px;
+      margin: auto;
+      height: 856px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @media only screen and (max-width: 500px) {
+        padding: 40px 30px;
+      }
+      @media only screen and (max-width: 428px) {
+       display: block;
+      }
+      .bottom-text {
+        p {
+          color: #ffffff;
+          font-size: 16px;
+          font-family: Poppins sans-serif;
+          font-weight: 300;
+          text-align: center;
+          line-height: 25px;
+          @media only screen and (max-width: 500px) {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+
+
+  .facebook {
+    width: 100%;
+    height: 920px;
+
+    &.instagram {
+        background: radial-gradient(55.15% 82.77% at 16.09% -1.25%, #4168C9 0%, rgba(65, 104, 201, 0.00) 99.9%);
+      }
+  
+
+    @media only screen and (max-width: 992px) {
+        height: 987px;
+    }
+
+    .container {
+        max-width: 1499px;
+        .add-section2-wrapper {
+            max-width: 1510px;
+            width: 100%;
+            position: relative;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 12px;
+
+
+            @media only screen and (max-width: 992px) {
+                flex-direction: column-reverse;
+            }
+
+            .section2-left {
+                width: 50%;
+                @media only screen and (max-width: 992px) {
+
+                    width: 100%;
+                }
+
+                .section2-text {
+                    max-width: 744px;
+                    max-width: 100%;
+                    flex-direction: column;
+                    justify-content: start;
+
+                    @media only screen and (max-width: 992px) {
+
+                        max-width: 100%;
+                    }
+
+                    h2 {
+                        background: rgba(39, 48, 63, 0.01);
+                        filter: blur(4.207316875457764px);
+                        color: #FFF;
+                        font-family: 'Poppins', sans-serif;
+                        font-size: 80px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 90.5%;
+                        letter-spacing: 1.2px;
+                        margin: 0;
+
+
+                        @media only screen and (max-width: 992px) {
+                            margin-top: 40px;
+                            text-align: center;
+                        }
+
+                        @media only screen and (max-width: 768px) {
+
+                            font-size: 49.51px;
+                        }
+
+                    }
+
+                    h1 {
+                        color: #FFF;
+                        font-family: Poppins;
+                        font-size: 120px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 90.5%;
+                        letter-spacing: 1.8px;
+
+                        @media only screen and (max-width: 1024px) {
+                            font-size: 70px;
+                        }
+
+                        @media only screen and (max-width: 992px) {
+
+                            text-align: center;
+                        }
+
+                        @media only screen and (max-width: 768px) {
+
+                            font-size: 100px;
+                        }
+
+                        @media only screen and (max-width: 768px) {
+
+                            font-size: 61.508px;
+                        }
+
+                        @media only screen and (max-width: 427px) {
+
+                            font-size: 50.508px;
+                        }
+
+
+                    }
+
+                    p {
+                        color: #FFF;
+                        font-family: Poppins;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 300;
+                        line-height: 25px;
+                        padding-top: 70px;
+
+                        @media only screen and (max-width: 992px) {
+                            padding-top: 40px;
+                            text-align: center;
+                            padding-bottom: 40px;
+                        }
+
+                        @media only screen and (max-width: 575px) {
+                            font-size: 14px;
+                            padding-bottom: 40px;
+                        }
+                    }
+                }
+            }
+
+            .section2-right {
+                width: 100%;
+                max-width: 563px;
+                min-height: 563px;
+                margin-top: -130px;
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: right 133% center;
+
+                @media only screen and (max-width: 992px) {
+                    min-height: 382px;
+                    background-position: bottom;
+                    background-size: 100% 100%;
+
+                }
+
+                @media only screen and (max-width: 575px) {
+                    background-size: 120% 100%;
+                }
+            }
+
+        }
+        .socialmedia-facebook {
+            margin-top: 200px;
+            @media only screen and (max-width: 992px) {
+                margin-top: 80px;
+            }
+
+            .facebook-bottom {
+                h2 {
+                    margin-bottom: 32px;
+
+                    @media only screen and (max-width: 992px) {
+                        display: none;
+                    }
+
+                    span {
+                        -webkit-text-stroke: 1px #ffffff;
+                        color: transparent;
+                    }
+
+                    font-size: 36px;
+                    font-weight: 700;
+                    font-family: Poppins sans-serif;
+                    line-height: 32.1px;
+                    text-align: center;
+                    color: #ffffff;
+                }
+
+                .socialmedia-button {
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 28px;
+                    @media only screen and (max-width: 992px) {
+                        justify-content: center;
+                        gap: 15px;
+                    }
+
+                    button {
+                        border: 1px solid #ffffff;
+                        background: transparent;
+                        width: 100%;
+                        max-width: 353px;
+                        height: 56px;
+                        border-radius: 50px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        &:hover {
+                            background: #ffffff;
+                            color: #181D26;
+
+                            p {
+                                color: #181D26;
+                            }
+                            svg{
+                                stroke:#181D26;
+                                fill:  #181D26;
+                            }
+                        }
+
+
+                        @media only screen and (max-width: 992px) {
+                            width: 56px;
+                            height: 56px;
+                            gap: 15px;
+                        }
+
+
+                        p {
+                            font-size: 16px;
+                            font-weight: 700;
+                            line-height: 24px;
+                            font-family: Poppins sans-serif;
+                            color: #ffffff;
+                            margin: 0;
+
+                           
+
+                            @media only screen and (max-width: 992px) {
+                                display: none;
+                            }
+
+                        }
+
+                        svg {
+                            width: 22px;
+                            height: 22px;
+                            margin-right: 16px;
+                            fill: #FFF;
+                            // &:hover {
+                            //    stroke:   #111111;
+                            //    fill:  #111111;
+                            // }
+
+                            @media only screen and (max-width: 992px) {
+                                margin-right: 0px;
+                            }
+
+                            .facebook-icon {
+                                fill: #FFF;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .casestudies {
+            display: none;
+
+            @media only screen and (max-width: 992px) {
+                display: block;
+                text-align: center;
+                margin-top: 75px;
+
+                h5 {
+                    color: #ffffff;
+                    font-size: 14px;
+                    line-height: 25.93px;
+                    font-family: Poppins sans-serif;
+                }
+
+                img {
+                    width: 13px;
+                    height: 14px;
+                }
+            }
+        }
+    }
+}

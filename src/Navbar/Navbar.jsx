@@ -24,7 +24,7 @@ const MobileMenu = () => {
         <p className={`mobileSubMenuItems ${activeMenu === 'subMenuMobile1' ? 'show' : ''}`}>
             <a className='menuItemBack' href='/#' onClick={() => addClassActive(null)}><BackArrow /></a><br /><br />
             <a className='menuItem' href='/#' ><PeopleIcon />Our Work</a><br /><br />
-            <a className='subMenuItems' href='/#'>Google Advertising</a><br /><br />
+            <a className='subMenuItems' href='/case'>Google Advertising</a><br /><br />
             <a className='subMenuItems' href='/#'>Google Advertising</a><br /><br />
             <a className='subMenuItems' href='/#'>Google Advertising</a><br />
         </p>
@@ -268,16 +268,16 @@ const Navbar = () => {
                         <a href='/#'>User experience</a>
                     </div>
                     <div className={`subMenuItems ${activeMenu === 'submenu3' ? 'show' : ''}`}>
-                        <a href='/#'>Google Advertising</a>
-                        <a href='/#'>Social Media Management</a>
-                        <a href='/#'>Social Media advertising</a>
+                        <NavLink to='/case' onClick={handleClosePopup}>Google Advertising</NavLink>
+                        <NavLink to='/manegment' onClick={handleClosePopup}>Social Media Management</NavLink>
+                        <NavLink to='/google' onClick={handleClosePopup}>Social Media advertising</NavLink>
                         <a href='/#'>our work</a>
                     </div>
                     <div className={`subMenuItems ${activeMenu === 'submenu4' ? 'show' : ''}`}>
-                        <a href='/#'>Google Advertising</a>
-                        <a href='/#'>Social Media Management</a>
-                        <a href='/#'>Social Media advertising</a>
-                        <a href='/#'>case studies</a>
+                        <NavLink to='/user' onClick={handleClosePopup}>Google Advertising</NavLink>
+                        <NavLink to='/development' onClick={handleClosePopup}>Social Media Management</NavLink>
+                        <NavLink to='/development' onClick={handleClosePopup}>Social Media advertising</NavLink>
+                        <NavLink to='/add' onClick={handleClosePopup}>case studies</NavLink>
                     </div>
                     <div className={`subMenuItems ${activeMenu === 'submenu5' ? 'show' : ''}`}>
                         <a href='/#'>Google Advertising</a>

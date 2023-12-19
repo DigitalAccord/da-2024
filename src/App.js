@@ -24,6 +24,9 @@ import Seo from './pages/Seo/Seo';
 import Add from './pages/Advertizement/Add';
 import User from './pages/UserExperience/User';
 import Development from './pages/Development/Development';
+import CaseStudy from './pages/CaseStudy/CaseStudy';
+import Manegement from './pages/Management/Manegement';
+import GoogleAds from './pages/GoogleAds/GoogleAds';
 
 
 
@@ -43,6 +46,11 @@ function App() {
           <Route path="/add" element={<Add />} />
           <Route path="/user" element={<User />} />
           <Route path="/development" element={<Development />} />
+          
+          <Route path="/case" element={<CaseStudy/>} />
+          <Route path="/manegment" element={<Manegement/>} />
+          <Route path="/google" element={<GoogleAds/>} />
+          
       </Routes>
         <Footer/>
     </BrowserRouter>

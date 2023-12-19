@@ -31,7 +31,7 @@ const UserBanner = () => {
     </div>
   </div>
 
-  <div className='vision-section'>
+  {/* <div className='vision-section'>
     <div className='vision-left'>
         <div className='vision-left-text'>
          <h1>We Shape The Future, One Pixel At<br/> A Time.</h1>
@@ -86,7 +86,7 @@ const UserBanner = () => {
   </div>
   <div className='launch'>
     <h1>Launch.</h1>
-  </div>
+  </div> */}
 
   </>
   )
