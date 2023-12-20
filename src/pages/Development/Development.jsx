@@ -9,13 +9,40 @@ import mobile from '../../assets/development/mobile.png'
 
 
 const Development = () => {
-    const [currentSection, setCurrentSection] = useState(0);
+    // const [currentSection, setCurrentSection] = useState(0);
 
 
-    var he = 100;
-    const test = {
-        background: `linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(254,254,254,1) ${he}%, rgba(0,0,0,1) ${he}%, rgba(3,3,3,1) 100%)`,
-    }
+    // var he = 100;
+    // const test = {
+    //     background: `linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(254,254,254,1) ${he}%, rgba(0,0,0,1) ${he}%, rgba(3,3,3,1) 100%)`,
+    // }
+    useEffect(() => {
+        const handleScroll = () => {
+          const scrollTop = window.scrollY || document.documentElement.scrollTop;
+          const timelineSection = document.getElementById('timelineSection');
+          const rightsContainer = document.querySelector('.rights');
+          const gradientLine = rightsContainer ? rightsContainer.querySelector('.gradient-line') : null;
+    
+          if (timelineSection && gradientLine) {
+            const timelineHeight = timelineSection.offsetHeight;
+            const timelineTop = timelineSection.offsetTop;
+            const maxGradientHeight = timelineHeight - 400;
+    
+            if (scrollTop >= timelineTop && scrollTop <= timelineTop + timelineHeight) {
+              const scrollPercentage = (scrollTop - timelineTop) / (timelineHeight - window.innerHeight);
+              const gradientHeight = Math.min(maxGradientHeight, maxGradientHeight * scrollPercentage);
+              gradientLine.style.height = `${gradientHeight}px`;
+            }
+          }
+        };
+    
+        window.addEventListener('scroll', handleScroll);
+    
+        return () => {
+          window.removeEventListener('scroll', handleScroll);
+        };
+      }, []);
+      
     return (
         <>
             <div className='development-banner-section'>
@@ -103,7 +130,7 @@ const Development = () => {
 
            <div className='process_timeline-bg'>
 
-                    <div className='devcie-Frame'>
+                    <div className='devcie-Frame' >
                         <DeviceFrameset device="iPhone X" color="gold" >
                         <img src={mobile} alt='' style={{width:"100%",height:"100%"}}/>
                         </DeviceFrameset>
@@ -113,12 +140,14 @@ const Development = () => {
                     <div className="container container_costom" >
 
                         <div className="row">
-                            <div className="v-timeline" id='section1'>
+                            <div className="v-timeline" id='timelineSection'>
 
-                                <div className="v-container rights">
+                                <div className="v-container rights" >
                                     <div className="v-content " >
                                         <h1>Consultation & Initial Scope</h1>
-                                        <p>Our initial stages begin with a consultation with stakeholders and staff to allow for a complete brief of what you after so we can ensure we are on the same page with delivery and expectations.</p>
+                                        <p>Our initial stages begin with a consultation with stakeholders and 
+                                            staff to allow for a complete brief of what you after so we can ensure
+                                             we are on the same page with delivery and expectations.</p>
                                     </div>
                                 </div>
 
@@ -146,21 +175,6 @@ const Development = () => {
                                 <div className="v-container lefts">
    
                                 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                             </div>
                         </div>
                         <div className='blur_text'>
