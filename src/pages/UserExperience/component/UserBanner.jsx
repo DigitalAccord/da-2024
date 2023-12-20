@@ -3,6 +3,8 @@ import './user.scss'
 import inspo from '../../../assets/user/infobanner.png'
 import inspoRight from '../../../assets/user/inspoRight.png'
 import ideote from '../../../assets/user/ideote.png'
+import Accordian from '../../Seo/component/Accordian/Accordian'
+import LetsTalk from '../../../component/LetsTalk/LetsTalk'
 const UserBanner = () => {
 
     const [isbg1, setIsbg1] = useState(false);
@@ -30,8 +32,31 @@ const UserBanner = () => {
         </div>
     </div>
   </div>
+    <div className='user_bg_text_mobile'>
+        <h1>Brand &<br/> Design</h1>
+       <div className='btn'>
+       <button>Learn More</button>
+       </div>
+    </div>
 
-  {/* {/* <div className='vision-section'>
+  <div className={`user_banner_mobile ${isbg1 && ' right1 '} ${isbg2 && ' right2 '}`}>
+  
+    <div className='hover-circle'>
+        <div>
+
+        <div className='box1'></div>
+        </div>
+        <div>
+        <div className='box2'   onMouseEnter={() => setIsbg1(true)}
+                onMouseLeave={() => setIsbg1(false)}></div>
+        <div className='box3'  onMouseEnter={() => setIsbg2(true)}
+                onMouseLeave={() => setIsbg2(false)}></div>
+
+        </div>
+    </div>
+  </div>
+
+   <div className='vision-section'>
     <div className='vision-left'>
         <div className='vision-left-text'>
          <h1>We Shape The Future, One Pixel At<br/> A Time.</h1>
@@ -52,7 +77,7 @@ const UserBanner = () => {
         <div className='inspo-left-bottom'>
 
         <div className='vision-right'>
-        <h1>Vision.</h1>
+        <h1>Inspo.</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut felis nunc. Sed molestie rhoncus rutrum. Maecenas lorem mi, hendrerit fermentum congue pretium, iaculis sed orci. Proin vel eros risus. Maecenas non risus eget turpis ultricies pharetra at sed mauris. Maecenas commodo massa consequat auctor lacinia. Sed hendrerit pellentesque placerat. Duis vehicula consectetur tincidunt. Nullam finibus et est non gravida. Maecenas iaculis orci et ante finibus, a fermentum erat mattis. Donec congue commodo risus, sit amet molestie nibh hendrerit eu. Nulla maximus ex non eleifend porttitor.</p>
     </div>
         </div>
@@ -60,16 +85,18 @@ const UserBanner = () => {
     <div className='inspo-right'>
         <img src={inspoRight} alt='wdwd//'/>
     </div>
-  </div> */}
+  </div> 
 
-  <div className='ideote'>
+   <div className='ideote'>
     <div className='ideote_left'>
         <img src={ideote} alt="ideote" />
     </div>
     <div className='ideote_right'>
- 
+ <div className='ideote_right_content'>
+
         <h1>Vision.</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut felis nunc. Sed molestie rhoncus rutrum. Maecenas lorem mi, hendrerit fermentum congue pretium, iaculis sed orci. Proin vel eros risus. Maecenas non risus eget turpis ultricies pharetra at sed mauris. Maecenas commodo massa consequat auctor lacinia. Sed hendrerit pellentesque placerat. Duis vehicula consectetur tincidunt. Nullam finibus et est non gravida. Maecenas iaculis orci et ante finibus, a fermentum erat mattis. Donec congue commodo risus, sit amet molestie nibh hendrerit eu. Nulla maximus ex non eleifend porttitor.</p>
+ </div>
    
     </div>
   </div>
@@ -84,9 +111,23 @@ const UserBanner = () => {
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut felis nunc. Sed molestie rhoncus rutrum. Maecenas lorem mi, hendrerit fermentum congue pretium, iaculis sed orci. Proin vel eros risus. Maecenas non risus eget turpis ultricies pharetra at sed mauris. Maecenas commodo massa consequat auctor lacinia. Sed hendrerit pellentesque placerat. Duis vehicula consectetur tincidunt. Nullam finibus et est non gravida. Maecenas iaculis orci et ante finibus, a fermentum erat mattis. Donec congue commodo risus, sit amet molestie nibh hendrerit eu. Nulla maximus ex non eleifend porttitor.</p>
   </div>
   </div>
+
+  <div className='designer_mobile'>
+  <div className='designer-content'>
+     <h4>ASSISTANT DESIGNER</h4>   
+     <h1>FERNando</h1>
+    </div>    
+  </div>
+  <div className='design-text_mobile'>
+  <h1>Design.</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut felis nunc. Sed molestie rhoncus rutrum. Maecenas lorem mi, hendrerit fermentum congue pretium, iaculis sed orci. Proin vel eros risus. Maecenas non risus eget turpis ultricies pharetra at sed mauris. Maecenas commodo massa consequat auctor lacinia. Sed hendrerit pellentesque placerat. Duis vehicula consectetur tincidunt. Nullam finibus et est non gravida. Maecenas iaculis orci et ante finibus, a fermentum erat mattis. Donec congue commodo risus, sit amet molestie nibh hendrerit eu. Nulla maximus ex non eleifend porttitor.</p>
+  </div>
   <div className='launch'>
     <h1>Launch.</h1>
-  </div> 
+  </div>  
+<Accordian/>
+<LetsTalk/>
+
 
   </>
   )

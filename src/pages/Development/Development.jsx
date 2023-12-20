@@ -95,51 +95,13 @@ const Development = () => {
 
             </div>
 
-            {/* <div className='process_timeline-bg'>
-                <div className='timeline'>
-                    <ul>
-                        <li>
-                            <div class="timeline-content">
-                                <h1>Consultation & Initial Scope</h1>
-                                <p>Our initial stages begin with a consultation with stakeholders and staff to allow for a complete brief of what you after so we can ensure we are on the same page with delivery and expectations.</p>
-                            </div>
-                        </li>
+           
+           <div className='process_text'>
+             <h1>Our Process</h1>
+             <p>Design & Development</p>
+           </div>
 
-                        <li>
-                            <div class="timeline-content">
-                                <h1>Heading 1</h1>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur tempora ab laudantium voluptatibus aut eos placeat laborum, quibusdam exercitationem labore.</p>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="timeline-content">
-                                <h1>Heading 1</h1>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur tempora ab laudantium voluptatibus aut eos placeat laborum, quibusdam exercitationem labore.</p>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="timeline-content">
-                                <h1>Heading 1</h1>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur tempora ab laudantium voluptatibus aut eos placeat laborum, quibusdam exercitationem labore.</p>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="timeline-content">
-                                <h1>Heading 1</h1>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur tempora ab laudantium voluptatibus aut eos placeat laborum, quibusdam exercitationem labore.</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div> */}
-<div className='process_text'>
-    <h1>Our Process</h1>
-    <p>Design & Development</p>
-</div>
-                <div className='process_timeline-bg'>
+           <div className='process_timeline-bg'>
 
                     <div className='devcie-Frame'>
                         <DeviceFrameset device="iPhone X" color="gold" >
@@ -209,8 +171,24 @@ const Development = () => {
                    
                     
 
+           </div>
 
+           {/* <div className='process_timeline-bg'>
+                    <div className='devcie-Frame'>
+                        <DeviceFrameset device="iPhone X" color="gold" >
+                        <img src={mobile} alt='' style={{width:"100%",height:"100%"}}/>
+                        </DeviceFrameset>
             </div>
+           </div> */}
+
+
+
+
+
+
+
+
+
             {/* <div className='bottom_overlay'></div> */}
             {/* <div className='process_timeline-bg1'>
             </div> */}

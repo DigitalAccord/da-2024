@@ -1,0 +1,341 @@
+.caseStudy-Section {
+  width: 100%;
+  position: relative;
+  background: #181D26;
+  min-height: 1097px;
+}
+.caseStudy-Section::after {
+  content: "";
+  width: 409px;
+  height: 912px;
+  border-radius: 32.41px;
+  background: linear-gradient(155deg, #F36A24 15.87%, #8C3305 101.33%);
+  position: absolute;
+  right: 0;
+  top: 70px;
+  z-index: 1;
+}
+@media only screen and (max-width: 992px) {
+  .caseStudy-Section::after {
+    width: 300px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .caseStudy-Section::after {
+    display: none;
+  }
+}
+.caseStudy-Section .section-container {
+  max-width: 1587px !important;
+  width: 100%;
+  padding-top: 70px;
+}
+.caseStudy-Section .section-container .case-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+@media only screen and (max-width: 1024px) {
+  .caseStudy-Section .section-container .case-wrapper {
+    gap: 22px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .caseStudy-Section .section-container .case-wrapper {
+    flex-direction: column;
+  }
+}
+.caseStudy-Section .section-container .case-wrapper .case-left {
+  width: 60%;
+  margin: auto;
+}
+@media only screen and (max-width: 1300px) {
+  .caseStudy-Section .section-container .case-wrapper .case-left {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .caseStudy-Section .section-container .case-wrapper .case-left {
+    width: 100%;
+  }
+}
+.caseStudy-Section .section-container .case-wrapper .case-left .case-left-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 891px;
+  width: 100%;
+}
+.caseStudy-Section .section-container .case-wrapper .case-left .case-left-content h1 {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 120px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 89.177%;
+  /* 107.012px */
+}
+@media only screen and (max-width: 1300px) {
+  .caseStudy-Section .section-container .case-wrapper .case-left .case-left-content h1 .case-right {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 1300px) and (max-width: 425px) {
+  .caseStudy-Section .section-container .case-wrapper .case-left .case-left-content h1 {
+    font-size: 72px;
+  }
+}
+.caseStudy-Section .section-container .case-wrapper .case-left .case-left-content h2 {
+  font-family: Poppins;
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 97.5%;
+  /* 43.875px */
+  background: var(--Classic-Orange-Fill, linear-gradient(155deg, #F36A24 15.87%, #8C3305 101.33%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.caseStudy-Section .section-container .case-wrapper .case-left .case-left-content p {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 275;
+  line-height: 25px;
+  max-width: 729px;
+}
+.caseStudy-Section .section-container .case-wrapper .case-left .case-left-content .case-button button {
+  border-radius: 62px;
+  border: 1px solid #FFF;
+  color: #ffffff;
+  padding: 19px 86px;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.caseStudy-Section .section-container .case-wrapper .case-left .case-left-content .case-button button:hover {
+  background: transparent;
+}
+.caseStudy-Section .section-container .case-wrapper .case-right {
+  width: 40%;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: end;
+  top: 50px;
+}
+@media only screen and (max-width: 1300px) {
+  .caseStudy-Section .section-container .case-wrapper .case-right {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .caseStudy-Section .section-container .case-wrapper .case-right {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .caseStudy-Section .section-container .case-wrapper .case-right {
+    justify-content: center;
+  }
+}
+.caseStudy-Section .section-container .case-wrapper .case-right .case-right-content {
+  padding: 48px 37px 45px 45px;
+  width: 543px;
+  max-width: 543px;
+  width: 100%;
+  height: 808px;
+  border-radius: 20px;
+  background: #FFF;
+}
+@media only screen and (max-width: 425px) {
+  .caseStudy-Section .section-container .case-wrapper .case-right .case-right-content {
+    padding: 10px;
+  }
+}
+.caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .custom-select {
+  max-width: 458px;
+  position: relative;
+  margin: auto;
+  width: 100%;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .custom-select::after {
+  content: "";
+  background: url("../../assets//caseStudy/Vector (14).png");
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  right: 10px;
+  top: 34px;
+  pointer-events: none;
+}
+.caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .custom-select label {
+  color: #27303F;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28.25px;
+  /* 176.563% */
+}
+.caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .custom-select select {
+  -moz-appearance: none;
+       appearance: none;
+  /* safari */
+  -webkit-appearance: none;
+  /* other styles for aesthetics */
+  max-width: 458px !important;
+  width: 100%;
+  font-size: 1.15rem;
+  padding: 0.675em 6em 0.675em 1em;
+  border-radius: 55px;
+  border: 1px solid #EEEEF0;
+  background: #EEEEF0;
+}
+.caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .Budget-Range {
+  padding: 96px 0px 24px 0px;
+}
+.caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .Budget-Range img {
+  width: 454px;
+  max-width: 454px;
+  width: 100%;
+  height: 124px;
+  flex-shrink: 0;
+}
+.caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .price-button .min-button h6,
+.caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .price-button .max-button h6 {
+  color: #27303F;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 300;
+}
+.caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .price-button .min-button button,
+.caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .price-button .max-button button {
+  width: 218px;
+  max-width: 218px;
+  height: 56px;
+  border-radius: 55px;
+  border: 0.5px solid #EEEEF0;
+  color: #27303F;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28.25px;
+}
+.caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .price-button .min-button button:hover,
+.caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .price-button .max-button button:hover {
+  border: 0.5px solid #F36A24;
+  color: #F36A24;
+}
+@media only screen and (max-width: 1200px) {
+  .caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .price-button .min-button button,
+  .caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .price-button .max-button button {
+    width: 190px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .price-button .min-button button,
+  .caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .price-button .max-button button {
+    width: 120px;
+    height: 50px;
+  }
+}
+.caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .ProjectDuration {
+  padding: 95px 0px 76px 0px;
+}
+.caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .ProjectDuration .Duration .project h5 {
+  color: #27303F;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28.25px;
+}
+.caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .ProjectDuration .Duration .Avg h5 {
+  color: #27303F;
+  text-align: right;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 28.25px;
+}
+.caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .ProjectDuration .duration-button .weeks button {
+  border-radius: 55px;
+  border: 0.5px solid #EEEEF0;
+  width: 140px;
+  height: 56px;
+  color: #27303F;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28.25px;
+}
+.caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .ProjectDuration .duration-button .weeks button:hover {
+  background: var(--Classic-Orange-Fill, linear-gradient(155deg, #F36A24 15.87%, #8C3305 101.33%));
+  color: #FFF;
+}
+@media only screen and (max-width: 1200px) {
+  .caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .ProjectDuration .duration-button .weeks button {
+    width: 120px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .ProjectDuration .duration-button .weeks button {
+    width: 85px;
+    height: 40px;
+  }
+}
+.caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .case-right-button .clear button,
+.caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .case-right-button .apply button {
+  border-radius: 55px;
+  border: 0.5px solid #F36A24;
+  width: 214px;
+  height: 56px;
+  color: #F36A24;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 28.25px;
+}
+.caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .case-right-button .clear button:hover,
+.caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .case-right-button .apply button:hover {
+  color: #FFF !important;
+  font-weight: 700;
+  background: var(--Classic-Orange-Fill, linear-gradient(155deg, #F36A24 15.87%, #8C3305 101.33%));
+  border-radius: 55px;
+}
+@media only screen and (max-width: 1200px) {
+  .caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .case-right-button .clear button,
+  .caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .case-right-button .apply button {
+    width: 190px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .case-right-button .clear button,
+  .caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .case-right-button .apply button {
+    width: 120px;
+    height: 40px;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .case-right-button .clear button,
+  .caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .case-right-button .apply button {
+    width: 120px;
+    height: 40px;
+  }
+}/*# sourceMappingURL=caseStudy.css.map */
