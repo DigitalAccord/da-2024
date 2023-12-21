@@ -5,6 +5,7 @@
     import Solutions from '../component/solution/Solutions';
     import CenterMode from '../component/MySwiper/Swiper';
     import Category from '../component/category/Category';
+import LetsTalk from '../component/LetsTalk/LetsTalk';
 
 
 
@@ -102,6 +103,7 @@
                 <Solutions/>
                 <CenterMode/>
                 <Category/>
+                <LetsTalk/>
             </>
         )
     }

@@ -50,7 +50,10 @@
       max-height: 930px;
     }
     @media screen and (max-width:475px) {
-      background-size: 160%; 
+      background-size: 136% 61%;
+    }
+    @media screen and (max-width:360px) {
+      background-size: 162% 61%;
     }
     &.animation{
       background-position: center bottom 40%;
@@ -58,7 +61,7 @@
         background-position: center bottom 15%;
       }
       @media screen and (max-width:475px) {
-        background-position: center bottom 30%;
+        background-position: center bottom 16%;
       }
     }
     .bannerLayerBuildings{
@@ -131,9 +134,13 @@
           justify-content: space-evenly;
           align-items: center;
           flex-direction: column;
-          min-height: 420px;
+          min-height: 343px;
+          transform: translateY(181px);
+          @media screen and (max-width:992px) {
+            transform: translateY(41px);
+          }
           @media screen and (max-width:767px) {
-            min-height: 225px;
+            min-height: 314px;
           }
           span {
             filter: blur(3px);

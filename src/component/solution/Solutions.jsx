@@ -108,7 +108,7 @@ const Solutions = () => {
             <div className='year-section-parent mt-2'>
               <div className='year-section'>
                 <div className='year-section-left year-section-box'>
-                  <h3>About Us</h3>
+                  <h3>About <br/> Us</h3>
                   {/* <div className='hover-container'>
                     <img src={arrow} alt='Arrow' className='arrow-image'/>
                     <div className='hover-icon'>
@@ -116,7 +116,7 @@ const Solutions = () => {
                   </div> */}
                 </div>
                 <div className='year-section-right year-section-box'>
-                  <h3>IT Solutions</h3>
+                  <h3>IT <br/>Solutions</h3>
 
                   {/* <div className='hover-container'>
                     <img src={thumb} alt='thumb' className='arrow-image' />
@@ -128,7 +128,7 @@ const Solutions = () => {
 
               <div className='progress-div d-none d-md-flex gap-3 mt-3'>
                 <div className='progress-div-box'>
-                      <div className='text-center mt-3'>
+                      <div className='text-center  mt-3'>
                         <h1>2014</h1>
                         <h3>0%</h3>
                         <p>Digital Accords Beginning</p>
@@ -159,27 +159,27 @@ const Solutions = () => {
               <div className='progress-div mobile gap-1 d-md-none mt-3'>
                 <Slider {...settings}>
                     <div className='progress-div-box first'>
-                          <div className='text-center mt-3'>
-                            <h1>2014</h1>
+                          <div className='progress_text '>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae placerat dui, et rhoncus sapien.</p>
                             <h3>0%</h3>
-                            <p>Digital Accords Beginning</p>
+                            <h1>2014</h1>
 
                           </div>
                     </div>
                     <div className='progress-div-box second'>
-                      <div className='text-center mt-3'>
+                      <div className='progress_text '>
                             <h1>2017</h1>
                             <h3>0%</h3>
                       </div>
                     </div>
                     <div className='progress-div-box third'>
-                          <div className='text-center mt-3'>
+                          <div className='progress_text '>
                             <h1>2020</h1>
                             <h3>0%</h3>
                           </div>
                     </div>
                     <div className='progress-div-box fourth'>
-                            <div className='text-center mt-3'>
+                            <div className='progress_text '>
                               <h1>Present</h1>
                               <h3>0%</h3>
                       </div>
