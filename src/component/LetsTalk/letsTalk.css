@@ -3,6 +3,23 @@
   padding: 50px 0px;
   position: relative;
 }
+@media only screen and (max-width: 768px) {
+  .form-section {
+    background: url("../../assets/banner/mobileMap.png");
+    background-position: center;
+    background-size: 100% 98%;
+    background-repeat: no-repeat;
+  }
+  .form-section::before {
+    content: "";
+    position: absolute;
+    background: linear-gradient(180deg, #181D26 0%, rgba(24, 29, 38, 0) 50%, #181D26 100%);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+}
 .form-section .circle-blur {
   position: absolute;
   width: 300px;
@@ -14,6 +31,7 @@
 }
 .form-section .talk-wrapper {
   width: 100%;
+  position: relative;
 }
 .form-section .talk-wrapper .talk-content {
   display: flex;

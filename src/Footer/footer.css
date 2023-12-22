@@ -195,24 +195,31 @@
 .footer .footer-arrow-img {
   border-radius: 62px;
   border: 1px solid #FFF;
-  padding: 18px 42px;
+  padding: 20px 42px 20px 42px;
   cursor: pointer;
+  position: relative;
 }
 @media only screen and (max-width: 576px) {
   .footer .footer-arrow-img {
     width: 100%;
-    padding: 4px 20px;
+    padding: 20px 20px;
+    justify-content: space-around;
   }
 }
 .footer .footer-arrow-img p {
   font-weight: bold;
   color: white;
-  margin-top: 12px;
+  margin: 0;
+}
+@media only screen and (max-width: 400px) {
+  .footer .footer-arrow-img p {
+    font-size: 12px;
+  }
 }
 .footer .footer-line {
   background-color: #FFF;
   height: 1px;
-  width: 70%;
+  width: 73%;
 }
 @media only screen and (max-width: 576px) {
   .footer .footer-line {

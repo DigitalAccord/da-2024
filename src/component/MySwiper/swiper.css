@@ -27,6 +27,11 @@
 .slider-bg {
   padding: 100px 0px;
 }
+@media screen and (max-width: 768px) {
+  .slider-bg {
+    padding: 60px 0px;
+  }
+}
 .slider-bg .slider-width {
   width: 59%;
 }

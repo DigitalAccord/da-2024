@@ -686,7 +686,10 @@
             margin: auto;
             margin-top: 50px;
             margin-bottom: 50px;
-
+            
+            @media only screen and (max-width: 992px) {
+               margin: 0;
+            }
 
             .building-section {
 
@@ -1430,6 +1433,9 @@
                     font-weight: 700;
                     line-height: 112.375%;
                     /* 71.92px */
+                    @media only screen and (max-width: 769px) {
+                        font-size: 50px;
+                    }
                 }
 
                 p {
@@ -1439,7 +1445,12 @@
                     font-style: normal;
                     font-weight: 300;
                     line-height: 30px;
-                    /* 150% */
+
+                    @media only screen and (max-width: 769px) {
+                        font-size: 14px;
+                    }
+                    
+                   
                 }
 
                 button {
@@ -1464,6 +1475,9 @@
                     font-style: normal;
                     font-weight: 700;
                     line-height: normal;
+                    @media only screen and (max-width: 769px) {
+                        font-size: 15px;
+                    }
                 }
             }
 
@@ -1473,6 +1487,7 @@
                 img {
                     max-width: 632px;
                     min-height: 601px;
+                   
                 }
             }
 
@@ -1587,14 +1602,14 @@
 
                     p {
                         color: #FFF;
-                        font-family: Avenir Next Condensed;
-                        font-size: 10px;
+                        font-family: Poppins;
+                        font-size: 20px;
                         font-style: normal;
                         font-weight: 400;
-                        line-height: 93.6%;
+                        line-height: 53.6%;
                         /* 9.36px */
                         letter-spacing: 2.25px;
-                        text-transform: uppercase;
+                       
                         margin-left: 70px;
 
                         @media only screen and (max-width: 769px) {

@@ -276,11 +276,13 @@
 }
 .process_timeline-bg .container_costom {
   position: absolute;
-  top: 26%;
+  top: 0 !important;
   z-index: 2;
   overflow-y: scroll;
   max-width: 150rem;
   height: 400px;
+  margin-top: 3%;
+  padding-top: 241px;
 }
 .process_timeline-bg .container_costom::-webkit-scrollbar {
   width: 0;
@@ -349,6 +351,18 @@
 }
 .v-timeline .v-container.lefts {
   position: relative;
+}
+.v-timeline .v-container.lefts .line {
+  z-index: 4;
+  position: absolute;
+  width: 2px;
+  height: 100px;
+  color: red;
+  background: red;
+  right: 0;
+  transform: translateX(50%);
+  top: 178px;
+  transition: all 0.4s linear;
 }
 .v-timeline .v-container.lefts:nth-child(2):after {
   position: absolute;
@@ -419,7 +433,19 @@
   align-items: center;
 }
 .v-timeline .v-container.rights {
+  float: right;
   position: relative;
+}
+.v-timeline .v-container.rights .line {
+  z-index: 3;
+  position: absolute;
+  width: 2px;
+  height: 100px;
+  color: red;
+  background: red;
+  left: 0;
+  top: 178px;
+  transition: all 0.4s linear;
 }
 .v-timeline .v-container.rights:first-child::after {
   content: "1";
@@ -441,14 +467,15 @@
   background: #FFF;
 }
 .v-timeline .v-container.rights::before {
+  height: calc(100% - 178px);
   content: "";
   position: absolute;
   width: 1px;
-  height: calc(100% - 178px);
   left: 0px;
-  background: linear-gradient(180deg, #F36A24 0%, #F36A24 25%, #FFF 25%, #FFF 100%);
+  background: blue;
   top: 178px;
   z-index: 3;
+  transition: height 0.3s ease;
 }
 .v-timeline .v-container.rights::after {
   content: "3";
@@ -481,37 +508,6 @@
 
 .rights {
   left: 50%;
-}
-
-.bottom_overlay {
-  width: 100%;
-  background: linear-gradient(180deg, #181D26 0%, rgba(24, 29, 38, 0) 100%);
-  height: 264px;
-}
-
-.process_timeline-bg1 {
-  position: relative;
-  width: 100%;
-  mix-blend-mode: overlay;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  min-height: 1300px;
-  height: 120vh;
-  background-repeat: no-repeat;
-  background: url("../../assets/development/Homepage.png");
-  background-position: top;
-  background-size: 100% 100%;
-  z-index: 0;
-  filter: blur(23px);
-}
-.process_timeline-bg1::after {
-  content: "";
-  position: absolute;
-  background: linear-gradient(180deg, #181D26 0%, rgba(24, 29, 38, 0) 100%);
-  top: 0;
-  width: 100%;
-  height: 100%;
 }
 
 .blur_text {

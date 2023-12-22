@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState ,useRef} from 'react'
 import './solutions.scss'
 import CountUp from 'react-countup';
 import arrow from "../../assets/arrow.png"
@@ -12,41 +12,70 @@ import { FiArrowUpRight } from 'react-icons/fi';
 import developmentImg from '../../assets/developImg.png'
 import digitalMarketingImg from '../../assets/digitalMarketingImg.png'
 import itImg from '../../assets/ItImg.png'
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
 import $ from 'jquery';
 import Solution_respo from '../Sulution_respo/Solution_respo'
 import waves1 from '../../assets/wave1.png'
 const Solutions = () => {
-  const intialWidth = window.innerWidth - 15
+const intialWidth = window.innerWidth - 15;
   const [windowWidth, setWindowWidth] = useState(intialWidth);
   const [windowWidth1, setWindowWidth1] = useState(intialWidth);
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef();
 
   const handleResize = () => {
     setWindowWidth(window.innerWidth - 15);
   };
 
+  const handleResize1 = () => {
+    setWindowWidth1(window.innerWidth * 80 / 100);
+  };
+
   useEffect(() => {
     window.addEventListener('resize', handleResize);
+    window.addEventListener('resize', handleResize1);
     return () => {
       window.removeEventListener('resize', handleResize);
+      window.removeEventListener('resize', handleResize1);
     };
   }, []);
 
   useEffect(() => {
-    const $scrollWidthDiv = $(".scroll-width-div");
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.7, 
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, [sectionRef]);
+
+  useEffect(() => {
+    const $scrollWidthDiv = $('.scroll-width-div');
 
     const handleWheel = function (event) {
+      if (isVisible) {
+        if (event.originalEvent.deltaY > 0 && this.scrollLeft < this.scrollWidth - this.clientWidth) {
+          this.scrollLeft += event.originalEvent.deltaY;
+          event.preventDefault();
+        }
 
-      if (event.originalEvent.deltaY > 0 && this.scrollLeft < this.scrollWidth - this.clientWidth) {
-        this.scrollLeft += event.originalEvent.deltaY;
-        event.preventDefault();
-      }
-
-
-      if (event.originalEvent.deltaY < 0 && this.scrollLeft > 0) {
-        this.scrollLeft += event.originalEvent.deltaY;
-        event.preventDefault();
+        if (event.originalEvent.deltaY < 0 && this.scrollLeft > 0) {
+          this.scrollLeft += event.originalEvent.deltaY;
+          event.preventDefault();
+        }
       }
     };
 
@@ -55,19 +84,7 @@ const Solutions = () => {
     return () => {
       $scrollWidthDiv.off('wheel', handleWheel);
     };
-  }, []);
-
-  
-  const handleResize1 = () => {
-      // if (intialWidth > )
-      setWindowWidth1( window.innerWidth * 80 / 100 );
-  };
-  useEffect(() => {
-    window.addEventListener('resize', handleResize1);
-    return () => {
-      window.removeEventListener('resize', handleResize1);
-    };
-  }, []);
+  }, [isVisible]);
 
   const settings = {
     dots: true,
@@ -109,20 +126,12 @@ const Solutions = () => {
               <div className='year-section'>
                 <div className='year-section-left year-section-box'>
                   <h3>About <br/> Us</h3>
-                  {/* <div className='hover-container'>
-                    <img src={arrow} alt='Arrow' className='arrow-image'/>
-                    <div className='hover-icon'>
-                    </div>
-                  </div> */}
+                  
                 </div>
                 <div className='year-section-right year-section-box'>
                   <h3>IT <br/>Solutions</h3>
 
-                  {/* <div className='hover-container'>
-                    <img src={thumb} alt='thumb' className='arrow-image' />
-                    <div className='hover-icon'>
-                    </div>
-                  </div> */}
+               
                 </div>
               </div>
 
@@ -190,7 +199,7 @@ const Solutions = () => {
           </div>
         </div>
 
-        <div className='scroll-width-div' style={{ width: windowWidth }}>
+        <div className='scroll-width-div' style={{ width: windowWidth }} ref={sectionRef}>
           <div className='slider-bg'>
             <div className='d-flex justify-content-center align-items-center d-none d-md-block' style={{ width: windowWidth1 }}>
               <div className='solution-text-wrapper container' >

@@ -1,6 +1,7 @@
 import React from 'react'
 import './letsTalk.scss'
 import arrow from '../../assets/Arrow 4.png'
+import map from '../../assets/banner/map.png'
 const LetsTalk = () => {
   return (
     <>
@@ -22,7 +23,8 @@ const LetsTalk = () => {
             <div className='col-md-9'>
               <div className='left-section-wraper'>
                 <div className='map-wraper'>
-                  <iframe className='iframe' style={{ filter: "invert(80%)", width: "100%", height: "596px", borderRadius: "35px" }} src="https://www.google.com/maps/embed?..."></iframe>
+                  {/* <iframe className='iframe' style={{ filter: "invert(80%)", width: "100%", height: "596px", borderRadius: "35px" }} src="https://www.google.com/maps/embed?..."></iframe> */}
+                  <img src={map} alt="" />
 
 
                 </div>

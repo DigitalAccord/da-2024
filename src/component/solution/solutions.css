@@ -4,7 +4,6 @@
 .solutions-wrapper .custom-container-solution {
   max-width: 1420px !important;
   margin: auto;
-  margin-top: 50px;
 }
 .solutions-wrapper .custom-container-solution .building-section {
   background-image: url("../../assets/buildinbg.png");
@@ -79,92 +78,6 @@
 @media only screen and (max-width: 575px) {
   .solutions-wrapper .custom-container-solution .year-section-parent .year-section {
     margin-top: 10px;
-  }
-}
-.solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-left {
-  position: relative;
-  width: 50%;
-  min-height: 377px;
-  border-radius: 35px;
-  background: linear-gradient(0deg, rgba(39, 48, 63, 0.8) 0%, rgba(39, 48, 63, 0.8) 100%), url("../../assets/Aboutimg.png"), lightgray -7.633px 0px/138.298% 100% no-repeat;
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  padding: 30px 20px;
-}
-.solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-left .arrow-image {
-  transition: opacity 0.3s ease-in-out;
-  width: 63px;
-  height: 63px;
-  position: absolute;
-  bottom: 32px;
-  right: 30px;
-}
-.solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-left .arrow-image:hover {
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
-.solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-left .hover-container {
-  display: inline-block;
-}
-.solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-left .hover-container .hover-icon {
-  transition: opacity 0.3s ease-in-out;
-  width: 63px;
-  height: 63px;
-  position: absolute;
-  bottom: 32px;
-  right: 30px;
-}
-.solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-left .hover-container .hover-icon {
-  font-size: 35px;
-  color: #F36A24;
-  position: absolute;
-  right: 0px;
-  bottom: 0px;
-  opacity: 0;
-  display: none;
-  background-image: url("../../assets/img-hover.png");
-  transition: opacity 0.3s ease-in-out;
-  height: 377px;
-  width: 100%;
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  border-radius: 35px;
-}
-.solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-left .hover-container .hover-icon:hover {
-  opacity: 1;
-  height: 100%;
-  width: 100%;
-  color: #C74300 !important;
-  display: block;
-}
-.solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-left h3 {
-  color: #FFF;
-  font-family: Poppins;
-  font-size: 39px;
-  font-style: normal;
-  font-weight: 800;
-  line-height: 56px;
-  /* 143.59% */
-  text-transform: capitalize;
-  z-index: 2;
-}
-@media only screen and (max-width: 575px) {
-  .solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-left h3 {
-    position: absolute;
-    top: 0;
-    font-size: 20px;
-  }
-}
-@media only screen and (max-width: 575px) {
-  .solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-left img {
-    position: absolute;
-    right: 10px;
-    width: 40px;
-    height: 40px;
   }
 }
 .solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-right {
@@ -285,7 +198,7 @@
 .solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box {
   width: 197px;
   min-width: 135px;
-  min-height: 377px;
+  min-height: px;
   border-radius: 35px;
   position: relative;
   overflow: hidden;
@@ -809,33 +722,6 @@
     background-position: right 0px bottom 0px;
   }
 }
-.solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box h1 {
-  color: #FFF;
-  font-family: Poppins;
-  font-size: 25px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
-.solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box h3 {
-  color: #FFF;
-  font-family: Poppins;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: normal;
-}
-.solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box p {
-  width: 60%;
-  margin: auto;
-  color: #FFF;
-  text-align: center;
-  font-family: Poppins;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 275;
-  line-height: normal;
-}
 .solutions-wrapper .solution-text-wrapper {
   max-width: 1046px;
   background: rgba(255, 255, 255, 0);
@@ -846,6 +732,11 @@
   margin: auto;
   margin-top: 50px;
   margin-bottom: 50px;
+}
+@media only screen and (max-width: 992px) {
+  .solutions-wrapper .custom-container-solution {
+    margin: 0;
+  }
 }
 .solutions-wrapper .custom-container-solution .building-section {
   background-image: url("../../assets/buildinbg.png");
@@ -942,6 +833,12 @@
   padding: 30px 20px;
   overflow: hidden;
 }
+@media only screen and (max-width: 768px) {
+  .solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-left {
+    background-position: center;
+    background-size: cover;
+  }
+}
 .solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-left::after {
   transition: opacity 0.3s ease;
   width: 63px;
@@ -991,11 +888,18 @@
   text-transform: capitalize;
   z-index: 2;
 }
+.solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-left h3 br {
+  display: none;
+}
 @media only screen and (max-width: 575px) {
   .solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-left h3 {
     position: absolute;
-    top: 0;
+    top: 22px;
     font-size: 20px;
+    line-height: 30px;
+  }
+  .solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-left h3 br {
+    display: block;
   }
 }
 .solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-right {
@@ -1009,6 +913,12 @@
   justify-content: space-between;
   padding: 30px 20px;
   overflow: hidden;
+}
+@media only screen and (max-width: 768px) {
+  .solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-right {
+    background-position: right;
+    background-size: cover;
+  }
 }
 .solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-right::after {
   transition: opacity 0.3s ease;
@@ -1063,11 +973,20 @@
   text-transform: capitalize;
   z-index: 2;
 }
+.solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-right h3 br {
+  display: none;
+}
+@media only screen and (max-width: 575px) {
+  .solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-right h3 br {
+    display: block;
+  }
+}
 @media only screen and (max-width: 575px) {
   .solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-right h3 {
     position: absolute;
-    top: 0;
+    top: 22px;
     font-size: 20px;
+    line-height: 30px;
   }
 }
 .solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box {
@@ -1078,6 +997,49 @@
   position: relative;
   overflow: hidden;
   background: linear-gradient(156deg, #F36A24 14.61%, #9B3400 86.76%);
+}
+@media only screen and (max-width: 575px) {
+  .solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box {
+    min-height: 654px;
+  }
+}
+.solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box .progress_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 600px;
+  padding-top: 45px;
+}
+.solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box .progress_text h1 {
+  color: #FFF;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 56.979px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box .progress_text h3 {
+  color: #FFF;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 117.758px;
+  font-style: normal;
+  font-weight: 250;
+  line-height: normal;
+}
+.solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box .progress_text p {
+  width: 60%;
+  margin: auto;
+  color: #FFF;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 275;
+  line-height: normal;
+  margin: 0;
 }
 @media screen and (min-width: 768px) {
   .solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box:nth-child(1)::before {
@@ -1420,6 +1382,11 @@
   line-height: 112.375%;
   /* 71.92px */
 }
+@media only screen and (max-width: 769px) {
+  .scroll-width-div .design-development-wrapper .design-development-text h1 {
+    font-size: 50px;
+  }
+}
 .scroll-width-div .design-development-wrapper .design-development-text p {
   color: #FFF;
   font-family: Poppins;
@@ -1427,7 +1394,11 @@
   font-style: normal;
   font-weight: 300;
   line-height: 30px;
-  /* 150% */
+}
+@media only screen and (max-width: 769px) {
+  .scroll-width-div .design-development-wrapper .design-development-text p {
+    font-size: 14px;
+  }
 }
 .scroll-width-div .design-development-wrapper .design-development-text button {
   display: flex;
@@ -1450,6 +1421,11 @@
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+}
+@media only screen and (max-width: 769px) {
+  .scroll-width-div .design-development-wrapper .design-development-text button {
+    font-size: 15px;
+  }
 }
 .scroll-width-div .design-development-wrapper .design-development-img img {
   max-width: 632px;
@@ -1552,14 +1528,13 @@
 }
 .scroll-width-div .solution-text-wrapper .solution-text-heading .circle-arrow p {
   color: #FFF;
-  font-family: Avenir Next Condensed;
-  font-size: 10px;
+  font-family: Poppins;
+  font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  line-height: 93.6%;
+  line-height: 53.6%;
   /* 9.36px */
   letter-spacing: 2.25px;
-  text-transform: uppercase;
   margin-left: 70px;
 }
 @media only screen and (max-width: 769px) {

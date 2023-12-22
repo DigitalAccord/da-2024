@@ -32,6 +32,10 @@
 
 .slider-bg {
   padding: 100px 0px;
+  @media screen and (max-width:768px) {
+    padding: 60px 0px;
+
+    }
   .slider-width{
     width: 59%;
     @media screen and (max-width:1400px) {
@@ -42,6 +46,7 @@
       width: 94%;
  
       }
+     
   }
   .your-item {
     margin-left: 66%;
