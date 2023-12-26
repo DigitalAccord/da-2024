@@ -413,7 +413,7 @@
     }
 
     @media only screen and (max-width: 333px) {
-        padding-top: 140px;
+        // padding-top: 140px;
 
     }
 
@@ -496,6 +496,11 @@
             font-style: normal;
             font-weight: 700;
             line-height: normal;
+            @media only screen and (max-width: 575px) {
+                font-size: 12px;
+                padding: 16px 0px;
+            }
+
 
         }
 

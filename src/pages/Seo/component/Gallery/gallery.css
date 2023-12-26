@@ -351,11 +351,6 @@
     padding-top: 90px;
   }
 }
-@media only screen and (max-width: 333px) {
-  .mobile-gallery-section {
-    padding-top: 140px;
-  }
-}
 .mobile-gallery-section .mabile-gallery-content {
   display: flex;
   justify-content: center;
@@ -425,4 +420,10 @@
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+}
+@media only screen and (max-width: 575px) {
+  .mobile-gallery-section .gallery-content-box1 button {
+    font-size: 12px;
+    padding: 16px 0px;
+  }
 }/*# sourceMappingURL=gallery.css.map */

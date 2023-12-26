@@ -46,14 +46,14 @@ function App() {
           <Route path="/add" element={<Add />} />
           <Route path="/user" element={<User />} />
           <Route path="/development" element={<Development />} />
-          
           <Route path="/case" element={<CaseStudy/>} />
-          <Route path="/manegment" element={<Manegement/>} />
+          <Route path="/management" element={<Manegement/>} />
           <Route path="/google" element={<GoogleAds/>} />
           
       </Routes>
         <Footer/>
     </BrowserRouter>
+   
    
 
    

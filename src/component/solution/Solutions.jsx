@@ -223,12 +223,7 @@ const intialWidth = window.innerWidth - 15;
                 </div>
               </div>
             </div>
-            <div className='d-flex justify-content-center align-items-center d-md-none' style={{ width: windowWidth1 }}>
-            <div className=''>
-              <Solution_respo />
-            </div>
-
-            </div>
+       
             <div className='d-flex justify-content-center align-items-center' style={{ width: windowWidth1 }}>
 
               <div className='design-development-wrapper container'>
@@ -282,6 +277,9 @@ const intialWidth = window.innerWidth - 15;
         </div>
       </div>
 
+      <Solution_respo/>
+     
+            
 
 
 

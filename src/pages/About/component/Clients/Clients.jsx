@@ -30,10 +30,10 @@ const Clients = () => {
             }
 
           </div>
-          <div className={`client-section-right ${isbg1 && ' right1 '} ${isbg2 && ' right2 '}`}>
+          <div className={`client-section-right ${isbg1 && ' Client_right1 '} ${isbg2 && ' Client_right2 '}`}>
             <div className='text-boxes'>
 
-              <div className='text-box1 '
+              <div className='text-box1'
                 onMouseEnter={() => setIsbg2(true)}
                 onMouseLeave={() => setIsbg2(false)}
               >

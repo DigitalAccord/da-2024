@@ -6,7 +6,7 @@ import LetsTalk from '../../component/LetsTalk/LetsTalk'
 const CaseStudy = () => {
   return (
    <>
-     <div className='caseStudy-Section'>
+       <div className='caseStudy-Section'>
                 <div className='container section-container'>
                     <div className='case-wrapper'>
                         <div className='case-left'>
@@ -15,7 +15,9 @@ const CaseStudy = () => {
                                 <h2>Discover Your Project Possibilities.</h2>
                                 <p>
                                     <p>Our digital marketing and design company takes great pride in our portfolio of compelling case studies.</p>
+                                    <p>
                                     These stories showcase our expertise in creating impactful digital campaigns and visually stunning designs that drive results. Each case study delves into the unique challenges our clients faced and how we tailored our strategies to meet their specific goals. From boosting website traffic and engagement to elevating brand recognition and customer conversions, our case studies are a testament to our ability to deliver measurable success for our clients.
+                                    </p>
                                     <p>Explore these real-world examples to witness the transformational power of our digital marketing and design solutions.</p>
 
                                 </p>
@@ -86,8 +88,11 @@ const CaseStudy = () => {
                 </div>
                 
                 </div>
-                <Gallery/>
-                <Gallery/>
+          <div>
+    <Gallery/>
+          </div>
+            
+               
                 <LetsTalk/>
    </>
   )

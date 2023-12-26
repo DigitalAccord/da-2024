@@ -269,7 +269,7 @@ const Navbar = () => {
                     </div>
                     <div className={`subMenuItems ${activeMenu === 'submenu3' ? 'show' : ''}`}>
                         <NavLink to='/case' onClick={handleClosePopup}>Google Advertising</NavLink>
-                        <NavLink to='/manegment' onClick={handleClosePopup}>Social Media Management</NavLink>
+                        <NavLink to='/management' onClick={handleClosePopup}>Social Media Management</NavLink>
                         <NavLink to='/google' onClick={handleClosePopup}>Social Media advertising</NavLink>
                         <a href='/#'>our work</a>
                     </div>

@@ -4,6 +4,7 @@ import Values from './component/Values/Values'
 import Clients from './component/Clients/Clients'
 import Team from './component/Team/Team'
 import Cards from './component/Cards/Cards'
+import LetsTalk from '../../component/LetsTalk/LetsTalk'
 const About = () => {
   return (
    <>
@@ -27,6 +28,8 @@ const About = () => {
    <div id='down'>
    <Team/>
    <Cards/>
+   <LetsTalk/>
+
    </div>
   
    </>

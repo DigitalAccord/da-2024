@@ -27,119 +27,119 @@
         min-height: 500px;
     }
 
-    // @media only screen and (max-width: 768px) {
-    //     background: url('../../../assets//user/mobileLayer.png');
-    //     background-repeat: no-repeat;
-    //     background-position: bottom;
-    //     background-size: contain;
+    @media only screen and (max-width: 768px) {
+        background: url('../../../assets//user/mobileLayer.png');
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: contain;
 
-    // }
-
-
-    // .hover-circle {
-    //     position: absolute;
-    //     width: 100%;
-    //     max-width: 800px;
-    //     transform: rotate(351deg);
-    //     left: 10%;
-    //     top: 30%;
-    //     display: flex;
-    //     // background-color: aliceblue;
+    }
 
 
-    //     .box1 {
-    //         width: 376px;
-    //         height: 200px; // Adjust the height based on the desired appearance
-    //         // background: #8C3305;
-    //         position: relative;
-    //         transform: rotate(51deg);
-    //         left: 21px;
-    //         top: 28px;
-
-    //         // margin-top: 100px;
-
-
-    //         &::before,
-    //         &::after {
-    //             content: '';
-    //             position: absolute;
-    //             width: 0;
-    //             border-left: 188px solid transparent;
-    //             border-right: 188px solid transparent;
-    //         }
-
-    //         &::before {
-    //             bottom: 100%;
-    //             border-bottom: 100px solid transparent; // Adjust the height based on the desired appearance
-    //         }
-
-    //         &::after {
-    //             top: 100%;
-    //             border-top: 100px solid transparent; // Adjust the height based on the desired appearance
-    //         }
-    //     }
-
-    //     .box2 {
-    //         width: 376px;
-    //         height: 200px; // Adjust the height based on the desired appearance
-    //         // background: #8C3305;
-    //         position: relative;
-    //         transform: rotate(347deg);
-    //         right: -20px;
-    //         top: -16px;
+    .hover-circle {
+        position: absolute;
+        width: 100%;
+        max-width: 800px;
+        transform: rotate(351deg);
+        left: 10%;
+        top: 30%;
+        display: flex;
+        // background-color: aliceblue;
 
 
-    //         &::before,
-    //         &::after {
-    //             content: '';
-    //             position: absolute;
-    //             width: 0;
-    //             border-left: 188px solid transparent;
-    //             border-right: 188px solid transparent;
-    //         }
+        .box1 {
+            width: 376px;
+            height: 200px; // Adjust the height based on the desired appearance
+            // background: #8C3305;
+            position: relative;
+            transform: rotate(51deg);
+            left: 21px;
+            top: 28px;
 
-    //         &::before {
-    //             bottom: 100%;
-    //             border-bottom: 100px solid transparent; // Adjust the height based on the desired appearance
-    //         }
-
-    //         &::after {
-    //             top: 100%;
-    //             border-top: 100px solid transparent; // Adjust the height based on the desired appearance
-    //         }
-    //     }
+            // margin-top: 100px;
 
 
-    //     .box3 {
-    //         width: 350px;
-    //         height: 206px;
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                width: 0;
+                border-left: 188px solid transparent;
+                border-right: 188px solid transparent;
+            }
 
-    //         position: relative;
-    //         left: -106px;
-    //         top: 124px;
-    //         transform: rotate(52deg);
+            &::before {
+                bottom: 100%;
+                border-bottom: 100px solid transparent; // Adjust the height based on the desired appearance
+            }
 
-    //         // margin-top: 100px;
-    //         &::before,
-    //         &::after {
-    //             content: '';
-    //             position: absolute;
-    //             width: 0;
-    //             border-left: 161px solid transparent;
-    //             border-right: 188px solid transparent;
-    //         }
+            &::after {
+                top: 100%;
+                border-top: 100px solid transparent; // Adjust the height based on the desired appearance
+            }
+        }
 
-    //         &::before {
-    //             bottom: 100%;
-    //             border-bottom: 100px solid transparent; // Adjust the height based on the desired appearance
-    //         }
+        .box2 {
+            width: 376px;
+            height: 200px; // Adjust the height based on the desired appearance
+            // background: #8C3305;
+            position: relative;
+            transform: rotate(347deg);
+            right: -20px;
+            top: -16px;
 
-    //         &::after {
-    //             top: 100%;
-    //             border-top: 100px solid transparent; // Adjust the height based on the desired appearance
-    //         }
-    //     }
-    // }
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                width: 0;
+                border-left: 188px solid transparent;
+                border-right: 188px solid transparent;
+            }
+
+            &::before {
+                bottom: 100%;
+                border-bottom: 100px solid transparent; // Adjust the height based on the desired appearance
+            }
+
+            &::after {
+                top: 100%;
+                border-top: 100px solid transparent; // Adjust the height based on the desired appearance
+            }
+        }
+
+
+        .box3 {
+            width: 350px;
+            height: 206px;
+
+            position: relative;
+            left: -106px;
+            top: 124px;
+            transform: rotate(52deg);
+
+            // margin-top: 100px;
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                width: 0;
+                border-left: 161px solid transparent;
+                border-right: 188px solid transparent;
+            }
+
+            &::before {
+                bottom: 100%;
+                border-bottom: 100px solid transparent; // Adjust the height based on the desired appearance
+            }
+
+            &::after {
+                top: 100%;
+                border-top: 100px solid transparent; // Adjust the height based on the desired appearance
+            }
+        }
+    }
 
     .user_bg_text {
         position: absolute;
@@ -177,7 +177,7 @@
             font-size: 148px;
             font-style: normal;
             font-weight: 700;
-            line-height: 120.177%;
+            line-height: 127.177%;
 
             @media only screen and (max-width: 1400px) {
                 font-size: 130px;
@@ -208,7 +208,7 @@
 
         button {
             max-width: 173px;
-            padding: 18px 0px;
+            padding: 16px 0px;
             width: 100%;
             border-radius: 28px;
             border: 1px solid #FFF;

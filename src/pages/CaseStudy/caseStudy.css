@@ -2,7 +2,7 @@
   width: 100%;
   position: relative;
   background: #181D26;
-  min-height: 1097px;
+  padding-top: 88px;
 }
 .caseStudy-Section::after {
   content: "";
@@ -12,7 +12,7 @@
   background: linear-gradient(155deg, #F36A24 15.87%, #8C3305 101.33%);
   position: absolute;
   right: 0;
-  top: 70px;
+  top: 84px;
   z-index: 1;
 }
 @media only screen and (max-width: 992px) {
@@ -28,7 +28,7 @@
 .caseStudy-Section .section-container {
   max-width: 1587px !important;
   width: 100%;
-  padding-top: 70px;
+  min-height: 1027px;
 }
 .caseStudy-Section .section-container .case-wrapper {
   display: flex;
@@ -68,7 +68,7 @@
 }
 .caseStudy-Section .section-container .case-wrapper .case-left .case-left-content h1 {
   color: #FFF;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 120px;
   font-style: normal;
   font-weight: 700;
@@ -80,13 +80,18 @@
     width: 50%;
   }
 }
+@media only screen and (max-width: 1300px) and (max-width: 920px) {
+  .caseStudy-Section .section-container .case-wrapper .case-left .case-left-content h1 {
+    font-size: 60px;
+  }
+}
 @media only screen and (max-width: 1300px) and (max-width: 425px) {
   .caseStudy-Section .section-container .case-wrapper .case-left .case-left-content h1 {
     font-size: 72px;
   }
 }
 .caseStudy-Section .section-container .case-wrapper .case-left .case-left-content h2 {
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 45px;
   font-style: normal;
   font-weight: 700;
@@ -96,15 +101,24 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin-bottom: 60px;
 }
 .caseStudy-Section .section-container .case-wrapper .case-left .case-left-content p {
   color: #FFF;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 275;
   line-height: 25px;
   max-width: 729px;
+}
+.caseStudy-Section .section-container .case-wrapper .case-left .case-left-content .case-button {
+  margin-top: 73px;
+}
+@media only screen and (max-width: 920px) {
+  .caseStudy-Section .section-container .case-wrapper .case-left .case-left-content .case-button {
+    margin-top: 20px;
+  }
 }
 .caseStudy-Section .section-container .case-wrapper .case-left .case-left-content .case-button button {
   border-radius: 62px;
@@ -112,8 +126,8 @@
   color: #ffffff;
   padding: 19px 86px;
   text-align: center;
-  font-family: Poppins;
-  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(12px, 2.5vw, 16px);
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -123,6 +137,7 @@
 }
 .caseStudy-Section .section-container .case-wrapper .case-right {
   width: 40%;
+  max-height: 900px;
   position: relative;
   z-index: 2;
   display: flex;
@@ -139,9 +154,16 @@
     width: 100%;
   }
 }
+@media only screen and (max-width: 340px) {
+  .caseStudy-Section .section-container .case-wrapper .case-right {
+    max-height: 800px;
+  }
+}
 @media only screen and (max-width: 768px) {
   .caseStudy-Section .section-container .case-wrapper .case-right {
     justify-content: center;
+    top: 0px;
+    padding-bottom: 20px;
   }
 }
 .caseStudy-Section .section-container .case-wrapper .case-right .case-right-content {
@@ -163,7 +185,7 @@
   position: relative;
   margin: auto;
   width: 100%;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
@@ -171,7 +193,7 @@
 }
 .caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .custom-select::after {
   content: "";
-  background: url("../../assets//caseStudy/Vector (14).png");
+  background: url("../../assets/caseStudy/Vector (14).png");
   width: 28px;
   height: 28px;
   position: absolute;
@@ -179,9 +201,14 @@
   top: 34px;
   pointer-events: none;
 }
+@media only screen and (min-width: 769px) {
+  .caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .custom-select::after {
+    top: 39px;
+  }
+}
 .caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .custom-select label {
   color: #27303F;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
@@ -197,10 +224,16 @@
   max-width: 458px !important;
   width: 100%;
   font-size: 1.15rem;
+  font-family: "Poppins", sans-serif;
   padding: 0.675em 6em 0.675em 1em;
   border-radius: 55px;
   border: 1px solid #EEEEF0;
   background: #EEEEF0;
+}
+@media only screen and (max-width: 768px) {
+  .caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .custom-select select {
+    font-size: 14px;
+  }
 }
 .caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .Budget-Range {
   padding: 96px 0px 24px 0px;
@@ -215,7 +248,7 @@
 .caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .price-button .min-button h6,
 .caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .price-button .max-button h6 {
   color: #27303F;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 12px;
   font-style: normal;
   font-weight: 300;
@@ -228,7 +261,7 @@
   border-radius: 55px;
   border: 0.5px solid #EEEEF0;
   color: #27303F;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
@@ -257,7 +290,7 @@
 }
 .caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .ProjectDuration .Duration .project h5 {
   color: #27303F;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
@@ -266,7 +299,7 @@
 .caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .ProjectDuration .Duration .Avg h5 {
   color: #27303F;
   text-align: right;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 12px;
   font-style: normal;
   font-weight: 300;
@@ -278,7 +311,7 @@
   width: 140px;
   height: 56px;
   color: #27303F;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
@@ -306,7 +339,7 @@
   width: 214px;
   height: 56px;
   color: #F36A24;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 300;

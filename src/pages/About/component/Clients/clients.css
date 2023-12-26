@@ -91,7 +91,8 @@
   background: url("../../../../assets//about//hoverbg.png");
   background-position: center;
   background-size: cover;
-  min-height: 593px;
+  max-height: 593px;
+  height: 100vh;
 }
 @media only screen and (max-width: 1300px) {
   .client-section .div-client-wrapper .client-section-right {
@@ -227,7 +228,7 @@
     font-size: 12px;
   }
 }
-.client-section .div-client-wrapper .right1 {
+.client-section .div-client-wrapper .Client_right1 {
   max-width: 1060px;
   width: 100%;
   display: flex;
@@ -236,5 +237,6 @@
   background: url("../../../../assets//about//mainImg.png");
   background-position: center;
   background-size: cover;
-  min-height: 593px;
+  max-height: 593px;
+  background-repeat: no-repeat;
 }/*# sourceMappingURL=clients.css.map */

@@ -27,6 +27,92 @@
     min-height: 500px;
   }
 }
+@media only screen and (max-width: 768px) {
+  .user_banner {
+    background: url("../../../assets//user/mobileLayer.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+  }
+}
+.user_banner .hover-circle {
+  position: absolute;
+  width: 100%;
+  max-width: 800px;
+  transform: rotate(351deg);
+  left: 10%;
+  top: 30%;
+  display: flex;
+}
+.user_banner .hover-circle .box1 {
+  width: 376px;
+  height: 200px;
+  position: relative;
+  transform: rotate(51deg);
+  left: 21px;
+  top: 28px;
+}
+.user_banner .hover-circle .box1::before, .user_banner .hover-circle .box1::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 188px solid transparent;
+  border-right: 188px solid transparent;
+}
+.user_banner .hover-circle .box1::before {
+  bottom: 100%;
+  border-bottom: 100px solid transparent;
+}
+.user_banner .hover-circle .box1::after {
+  top: 100%;
+  border-top: 100px solid transparent;
+}
+.user_banner .hover-circle .box2 {
+  width: 376px;
+  height: 200px;
+  position: relative;
+  transform: rotate(347deg);
+  right: -20px;
+  top: -16px;
+}
+.user_banner .hover-circle .box2::before, .user_banner .hover-circle .box2::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 188px solid transparent;
+  border-right: 188px solid transparent;
+}
+.user_banner .hover-circle .box2::before {
+  bottom: 100%;
+  border-bottom: 100px solid transparent;
+}
+.user_banner .hover-circle .box2::after {
+  top: 100%;
+  border-top: 100px solid transparent;
+}
+.user_banner .hover-circle .box3 {
+  width: 350px;
+  height: 206px;
+  position: relative;
+  left: -106px;
+  top: 124px;
+  transform: rotate(52deg);
+}
+.user_banner .hover-circle .box3::before, .user_banner .hover-circle .box3::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 161px solid transparent;
+  border-right: 188px solid transparent;
+}
+.user_banner .hover-circle .box3::before {
+  bottom: 100%;
+  border-bottom: 100px solid transparent;
+}
+.user_banner .hover-circle .box3::after {
+  top: 100%;
+  border-top: 100px solid transparent;
+}
 .user_banner .user_bg_text {
   position: absolute;
   left: 60%;
@@ -62,7 +148,7 @@
   font-size: 148px;
   font-style: normal;
   font-weight: 700;
-  line-height: 120.177%;
+  line-height: 127.177%;
 }
 @media only screen and (max-width: 1400px) {
   .user_banner .user_bg_text h1 {
@@ -91,7 +177,7 @@
 }
 .user_banner .user_bg_text button {
   max-width: 173px;
-  padding: 18px 0px;
+  padding: 16px 0px;
   width: 100%;
   border-radius: 28px;
   border: 1px solid #FFF;

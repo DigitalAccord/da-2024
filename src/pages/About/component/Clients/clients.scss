@@ -89,16 +89,16 @@
 
         .client-section-right {
             max-width: 1060px;
-
             width: 100%;
-
             display: flex;
             justify-content: center;
             align-items: center;
             background: url("../../../../assets//about//hoverbg.png");
             background-position: center;
             background-size: cover;
-            min-height: 593px;
+            max-height: 593px;
+            height: 100vh;
+
 
             @media only screen and (max-width: 1300px) {
                 width: 100%;
@@ -120,7 +120,6 @@
                 justify-content: end;
                 align-items: end;
                 position: relative;
-
                 .text-box1 {
                     position: absolute;
                     right: 91px;
@@ -131,10 +130,7 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                   
                     transition: opacity 0.3s ease;
-
-
                     border-radius: 90px;
                     padding-top: 35px;
 
@@ -178,7 +174,7 @@
                     right: -112px;
                     top: -172px;
                     transition: 0.3s ease;
-                   
+
                     width: 194px;
                     height: 140px;
                     display: flex;
@@ -222,7 +218,7 @@
                     position: absolute;
                     top: 79px;
                     right: -75px;
-                   
+
 
                     @media only screen and (max-width: 768px) {
 
@@ -255,17 +251,18 @@
 
         }
 
-        .right1 {
+        .Client_right1 {
             max-width: 1060px;
             width: 100%;
-
             display: flex;
             justify-content: center;
             align-items: center;
             background: url("../../../../assets//about//mainImg.png");
             background-position: center;
             background-size: cover;
-            min-height: 593px
+            max-height: 593px;
+            background-repeat: no-repeat;
+
         }
 
 
