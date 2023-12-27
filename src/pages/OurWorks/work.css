@@ -83,6 +83,40 @@
   justify-content: space-between;
   height: 82px;
   padding: 10px 10px;
+  position: relative;
+}
+.work-section .overlay-text .project-option::after {
+  content: "";
+  background: url("../../assets/work/workOptions.png");
+  width: 76px;
+  height: 65px;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  pointer-events: none;
+}
+.work-section .overlay-text .project-option select {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #FFF;
+  padding: 0px 20px;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 67px;
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+}
+.work-section .overlay-text .project-option select option {
+  background: #343c4b !important;
+  opacity: 0;
+}
+.work-section .overlay-text .project-option select option:focus-visible {
+  background: #343c4b !important;
 }
 @media only screen and (max-width: 1400px) {
   .work-section .overlay-text .project-option {
@@ -108,11 +142,12 @@
   /* 279.167% */
 }
 
-.our-slider {
-  margin-top: -600px;
+.our-slider1 {
+  position: relative;
+  margin-top: -500px;
 }
 @media only screen and (max-width: 768px) {
-  .our-slider {
+  .our-slider1 {
     margin-top: -400px;
   }
 }

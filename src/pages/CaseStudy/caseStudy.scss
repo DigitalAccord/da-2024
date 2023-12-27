@@ -1,11 +1,9 @@
-
-
 .caseStudy-Section {
     width: 100%;
     position: relative;
     background: #181D26;
     padding-top: 88px;
-   
+
 
     &::after {
         content: "";
@@ -17,15 +15,16 @@
         right: 0;
         top: 84px;
         z-index: 1;
+
         @media only screen and (max-width: 992px) {
             width: 300px;
         }
 
         @media only screen and (max-width: 768px) {
-          display: none;
+            display: none;
         }
-        
-      
+
+
     }
 
     .section-container {
@@ -39,52 +38,58 @@
             width: 100%;
 
             @media only screen and (max-width: 1024px) {
-               gap: 22px;
-            
+                gap: 22px;
+
             }
+
             @media only screen and (max-width: 768px) {
-               flex-direction: column;
-             
-             }
+                flex-direction: column;
+
+            }
 
             .case-left {
                 width: 60%;
                 margin: auto;
+
                 @media only screen and (max-width: 1300px) {
                     width: 50%;
-                
+
                 }
+
                 @media only screen and (max-width: 768px) {
                     width: 100%;
-                  
-                  }
+
+                }
+
                 .case-left-content {
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
                     max-width: 891px;
                     width: 100%;
-                   
+
                     h1 {
                         color: #FFF;
-                        font-family: "Poppins",sans-serif;
+                        font-family: "Poppins", sans-serif;
                         font-size: 120px;
                         font-style: normal;
                         font-weight: 700;
                         line-height: 89.177%;
-                        /* 107.012px */ 
-                        @media only screen and (max-width: 1300px) {
-                    .case-right {
-                        width: 50%;
-                    }
-                    @media only screen and (max-width: 920px) {
-                        font-size: 60px;
-                       }
 
-                    @media only screen and (max-width: 425px) {
-                      font-size: 72px;
-                     }
-                }
+                        /* 107.012px */
+                        @media only screen and (max-width: 1300px) {
+                            .case-right {
+                                width: 50%;
+                            }
+
+                            @media only screen and (max-width: 920px) {
+                                font-size: 60px;
+                            }
+
+                            @media only screen and (max-width: 425px) {
+                                font-size: 72px;
+                            }
+                        }
                     }
 
                     h2 {
@@ -99,23 +104,26 @@
                         -webkit-background-clip: text;
                         -webkit-text-fill-color: transparent;
                         margin-bottom: 60px;
-                        
+
                     }
 
                     p {
                         color: #FFF;
-                        font-family: "Poppins",sans-serif;
+                        font-family: "Poppins", sans-serif;
                         font-size: 14px;
                         font-style: normal;
                         font-weight: 275;
                         line-height: 25px;
                         max-width: 729px;
                     }
-.case-button {
+
+                    .case-button {
                         margin-top: 73px;
+
                         @media only screen and (max-width: 920px) {
                             margin-top: 20px;
                         }
+
                         button {
                             border-radius: 62px;
                             border: 1px solid #FFF;
@@ -135,38 +143,42 @@
                         }
                     }
                 }
-               
-                
+
+
             }
-           
+
             .case-right {
                 width: 40%;
                 max-height: 900px;
+
                 @media only screen and (max-width: 1300px) {
                     width: 50%;
                 }
+
                 @media only screen and (max-width: 768px) {
                     width: 100%;
-                  
-                  }
-                  @media only screen and (max-width: 340px) {
+
+                }
+
+                @media only screen and (max-width: 340px) {
                     max-height: 800px;
-                  
-                  }
+
+                }
 
                 position: relative;
                 z-index: 2;
                 display: flex;
                 justify-content: end;
                 top: 50px;
+
                 @media only screen and (max-width: 768px) {
-                  justify-content: center;
-                  top: 0px;
-                  padding-bottom: 20px;
-                  
-                  }
-                  
-                
+                    justify-content: center;
+                    top: 0px;
+                    padding-bottom: 20px;
+
+                }
+
+
                 .case-right-content {
                     padding: 48px 37px 45px 45px;
                     width: 543px;
@@ -175,8 +187,9 @@
                     height: 808px;
                     border-radius: 20px;
                     background: #FFF;
+
                     @media only screen and (max-width: 425px) {
-                       padding: 10px;
+                        padding: 10px;
                     }
 
                     .custom-select {
@@ -184,7 +197,7 @@
                         position: relative;
                         margin: auto;
                         width: 100%;
-                        
+
                         &::after {
                             content: "";
                             background: url("../../assets/caseStudy/Vector\ \(14\).png");
@@ -194,11 +207,14 @@
                             right: 10px;
                             top: 34px;
                             pointer-events: none;
+
                             @media only screen and (min-width: 769px) {
                                 top: 39px;
-                              }
+                            }
                         }
-                        font-family: "Poppins",sans-serif;
+
+                        font-family: "Poppins",
+                        sans-serif;
                         font-size: 16px;
                         font-style: normal;
                         font-weight: 700;
@@ -211,10 +227,11 @@
                             font-style: normal;
                             font-weight: 700;
                             line-height: 28.25px;
-                           
+
                             /* 176.563% */
                         }
-select {
+
+                        select {
                             appearance: none;
                             /* safari */
                             -webkit-appearance: none;
@@ -227,9 +244,10 @@ select {
                             border-radius: 55px;
                             border: 1px solid #EEEEF0;
                             background: #EEEEF0;
+                         
                             @media only screen and (max-width: 768px) {
-                               font-size: 14px;
-                             }
+                                font-size: 14px;
+                            }
                         }
                     }
 
@@ -246,11 +264,12 @@ select {
                     }
 
                     .price-button {
+
                         .min-button,
                         .max-button {
                             h6 {
                                 color: #27303F;
-                                font-family: "Poppins",sans-serif;
+                                font-family: "Poppins", sans-serif;
                                 font-size: 12px;
                                 font-style: normal;
                                 font-weight: 300;
@@ -263,7 +282,7 @@ select {
                                 border-radius: 55px;
                                 border: 0.5px solid #EEEEF0;
                                 color: #27303F;
-                                font-family: "Poppins",sans-serif;
+                                font-family: "Poppins", sans-serif;
                                 font-size: 16px;
                                 font-style: normal;
                                 font-weight: 700;
@@ -273,9 +292,11 @@ select {
                                     border: 0.5px solid #F36A24;
                                     color: #F36A24;
                                 }
+
                                 @media only screen and (max-width: 1200px) {
                                     width: 190px;
                                 }
+
                                 @media only screen and (max-width: 992px) {
                                     width: 120px;
                                     height: 50px;
@@ -291,7 +312,7 @@ select {
                             .project {
                                 h5 {
                                     color: #27303F;
-                                    font-family: "Poppins",sans-serif;
+                                    font-family: "Poppins", sans-serif;
                                     font-size: 16px;
                                     font-style: normal;
                                     font-weight: 700;
@@ -303,7 +324,7 @@ select {
                                 h5 {
                                     color: #27303F;
                                     text-align: right;
-                                    font-family: "Poppins",sans-serif;
+                                    font-family: "Poppins", sans-serif;
                                     font-size: 12px;
                                     font-style: normal;
                                     font-weight: 300;
@@ -311,7 +332,8 @@ select {
                                 }
                             }
                         }
-.duration-button {
+
+                        .duration-button {
                             .weeks {
                                 button {
                                     border-radius: 55px;
@@ -325,16 +347,18 @@ select {
                                     font-weight: 700;
                                     line-height: 28.25px;
 
-                                    &:hover{
+                                    &:hover {
                                         background: var(--Classic-Orange-Fill, linear-gradient(155deg, #F36A24 15.87%, #8C3305 101.33%));
                                         color: #FFF;
                                     }
+
                                     @media only screen and (max-width: 1200px) {
                                         width: 120px;
                                     }
+
                                     @media only screen and (max-width: 992px) {
                                         width: 85px;
-                                      height: 40px;
+                                        height: 40px;
                                     }
                                 }
                             }
@@ -342,6 +366,7 @@ select {
                     }
 
                     .case-right-button {
+
                         .clear,
                         .apply {
                             button {
@@ -350,41 +375,42 @@ select {
                                 width: 214px;
                                 height: 56px;
                                 color: #F36A24;
-                                font-family:"Poppins",sans-serif;
+                                font-family: "Poppins", sans-serif;
                                 font-size: 16px;
                                 font-style: normal;
                                 font-weight: 300;
                                 line-height: 28.25px;
-                            
-                            &:hover {
-                               
-                                color: #FFF !important;
-                                font-weight: 700;
-                                background: var(--Classic-Orange-Fill, linear-gradient(155deg, #F36A24 15.87%, #8C3305 101.33%));
-                                border-radius: 55px;
-                            }
-                            @media only screen and (max-width: 1200px) {
-                                width: 190px;
-                            }
-                            @media only screen and (max-width: 992px) {
-                                width:120px;
-                                height: 40px;
-                            }
-                            @media only screen and (max-width: 425px) {
-                                width:120px;
-                                height: 40px;
+
+                                &:hover {
+
+                                    color: #FFF !important;
+                                    font-weight: 700;
+                                    background: var(--Classic-Orange-Fill, linear-gradient(155deg, #F36A24 15.87%, #8C3305 101.33%));
+                                    border-radius: 55px;
+                                }
+
+                                @media only screen and (max-width: 1200px) {
+                                    width: 190px;
+                                }
+
+                                @media only screen and (max-width: 992px) {
+                                    width: 120px;
+                                    height: 40px;
+                                }
+
+                                @media only screen and (max-width: 425px) {
+                                    width: 120px;
+                                    height: 40px;
+                                }
                             }
                         }
-                    }
-                        
+
                     }
 
-                } 
+                }
             }
-          
+
         }
     }
-    
+
 }
-
-

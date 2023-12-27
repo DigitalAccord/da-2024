@@ -176,6 +176,8 @@
                             font-style: normal;
                             font-weight: 700;
                             line-height: 36px;
+                            padding-bottom: 35px;
+                            margin: 0;
 
                             span {
                                 color: #F36A24;
@@ -261,6 +263,9 @@
                         font-style: normal;
                         font-weight: 700;
                         line-height: 36px;
+                        padding-bottom: 32px;
+                        margin: 0;
+
 
                         span {
                             color: #F36A24;
@@ -355,6 +360,8 @@
                     font-style: normal;
                     font-weight: 700;
                     line-height: 36px;
+                    padding-bottom: 35px;
+                    margin: 0;
 
                     span {
                         color: #F36A24;
@@ -434,7 +441,7 @@
             font-weight: 400;
             line-height: 25.928px;
             margin-bottom: 0;
-           
+
         }
     }
 
@@ -496,6 +503,7 @@
             font-style: normal;
             font-weight: 700;
             line-height: normal;
+
             @media only screen and (max-width: 575px) {
                 font-size: 12px;
                 padding: 16px 0px;

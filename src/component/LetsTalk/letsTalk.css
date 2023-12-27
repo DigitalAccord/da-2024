@@ -3,7 +3,7 @@
   padding: 50px 0px;
   position: relative;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   .form-section {
     background: url("../../assets/banner/mobileMap.png");
     background-position: center;
@@ -97,7 +97,7 @@
   background-color: #fff;
   position: absolute;
   border-radius: 40px;
-  top: 45px;
+  top: 36px;
   left: 100px;
   background: linear-gradient(to bottom, transparent, #F36A24);
   padding: 3px;

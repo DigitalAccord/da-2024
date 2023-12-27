@@ -1,5 +1,6 @@
 .custom-container {
     max-width: 1510px !important;
+   
 }
 
 .form-section {
@@ -215,7 +216,10 @@
 
 // footer starts here
 .footer {
-
+    display: block;
+    @media only screen and (max-width: 575px) {
+        display:none;
+    }
     .footer-arrow-img {
         border-radius: 62px;
         border: 1px solid #FFF;
@@ -292,6 +296,10 @@
 }
 .copyright-row{
 margin-top: 100px;
+display: block;
+@media only screen and (max-width: 575px) {
+    display: none;
+}
 @media only screen and (max-width: 576px) {
     margin-top: 20px;
 }

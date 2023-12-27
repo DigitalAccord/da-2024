@@ -8,7 +8,7 @@
     background-position: top;
     .category_row{
         
-        @media only screen and (max-width: 768px) {
+        @media only screen and (max-width: 767px) {
             flex-direction: column-reverse;
         }
     }

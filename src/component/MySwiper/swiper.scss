@@ -30,8 +30,21 @@
   font-size: 20px !important;
 }
 
+
 .slider-bg {
   padding: 100px 0px;
+
+      .slick-dots{
+        li{
+          button{
+            &::before{
+              opacity: 1 !important;
+            }
+          }
+        }
+      }
+    
+  
   @media screen and (max-width:768px) {
     padding: 60px 0px;
 

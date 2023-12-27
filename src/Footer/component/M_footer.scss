@@ -1,0 +1,134 @@
+.mobile_footer{
+    padding: 0px 12px;
+   
+    display: none;
+    @media only screen and (max-width: 575px) {
+        display: block;
+    }
+    .footer-arrow-img {
+        border-radius: 62px;
+        border: 1px solid #FFF;
+        padding: 20px 42px 20px 42px;
+        cursor: pointer;
+        position: relative;
+     
+    
+        @media only screen and (max-width: 576px) {
+            width: 100%;
+            padding: 20px 20px;
+            justify-content: space-around;
+        }
+    
+        p {
+            font-weight: bold;
+            color: white;
+          margin: 0;
+    
+          @media only screen and (max-width: 400px) {
+            font-size: 12px;
+        }
+    
+        }
+    }
+    .list {
+        p {
+            color: #FFF;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+        }
+
+        .footer-address {
+            color: #FFF;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 300;
+        }
+
+        ul {
+            list-style: none;
+
+            @media only screen and (max-width: 1200px) {
+                padding-left: 0px;
+            }
+
+            li {
+               
+                margin: 15px 0px;
+                cursor: pointer;
+                a{
+                    color: #FFF;
+                    font-size: 16px;
+                    font-weight: 300;
+                    line-height: 25px;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    .copyright-row{
+        margin-top: 100px;
+        display: none;
+        @media only screen and (max-width: 575px) {
+            display: block;
+        }
+        @media only screen and (max-width: 576px) {
+            margin-top: 20px;
+        }
+            .copyright-wrapper{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            @media only screen and (max-width: 830px) {
+               flex-direction: column-reverse;
+               text-align: center;
+            }
+        
+           
+            
+            
+                .copyrightLeft {
+                    display: flex;
+                    gap: 20px;
+                    align-items: center;
+                
+                    p {
+                        color: #FFF;
+                        font-family: Poppins;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: normal;
+                        margin: 0;
+                        padding: 0;
+                    }
+                    @media only screen and (max-width: 576px) {
+                        margin-top: 20px;
+                    }
+                }
+                
+                .corightRight {
+                    p {
+                        text-align: end;
+                        color: #FFF;
+                        text-align: right;
+                        font-family: Poppins;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: normal;
+                        margin: 0;
+                        padding: 0;
+                        @media only screen and (max-width: 830px) {
+                          
+                            text-align: center;
+                         }
+                        
+                    }
+                }
+            }
+        }
+}
+

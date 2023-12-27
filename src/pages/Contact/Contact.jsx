@@ -33,6 +33,7 @@ const Contact = () => {
 
 
       <div className='map-section'>
+        <div className='bulr_effect_contact'></div>
         <div className='container contact_container'>
           <div className='row map_row'>
           <div className='map_section_left'>
@@ -76,8 +77,6 @@ const Contact = () => {
             </form>
           </div>
         </div>
-         
-         
           </div>
         </div>
       </div>
@@ -122,6 +121,7 @@ const Contact = () => {
             </form>
           </div>
         </div>
+        <div className='contact_line'></div>
       </div>
 
       {/* <div className='map-section-mobile'>

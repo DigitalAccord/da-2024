@@ -270,6 +270,8 @@
   line-height: 25px;
   padding-top: 64px;
   line-height: 25.928px;
+  display: flex;
+  min-height: 260px;
 }
 @media only screen and (max-width: 1024px) {
   .search .search-section2-wrapper .section2-left .section2-text p {
@@ -404,25 +406,150 @@
   -webkit-text-stroke: 1px #ffffff;
   color: transparent;
 }
-.search .search-googledads .search-button {
+@media only screen and (max-width: 428px) {
+  .search .search-googledads {
+    font-size: 14px;
+    padding-top: 46px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .search .search-googledads {
+    font-size: 14px;
+    padding-bottom: 40px;
+  }
+}
+
+.section2-right {
+  background-image: url("../../assets//management/searchimg.png");
+  width: 100%;
+  height: 100%;
+  max-width: 537px;
+  min-height: 625px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
+  margin-top: -120px;
+  position: relative;
+}
+@media only screen and (max-width: 1024px) {
+  .section2-right {
+    margin-top: 0px;
+    max-width: 400px;
+    min-height: 300px;
+  }
+}
+@media only screen and (max-width: 428px) {
+  .section2-right {
+    margin-top: -50px;
+  }
+}
+.section2-right .section2-icon {
+  position: absolute;
+  top: 37%;
+  left: 38%;
+}
+@media only screen and (max-width: 1100px) {
+  .section2-right .section2-icon {
+    top: 29%;
+    left: 38%;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .section2-right .section2-icon {
+    top: 42%;
+    left: 44%;
+  }
+}
+.section2-right .section2-icon img {
+  width: 133px;
+  height: 133px;
+}
+@media only screen and (max-width: 1024px) {
+  .section2-right .section2-icon img {
+    width: 56.112px;
+    height: 56.112px;
+  }
+}
+.section2-right .section2-bottom {
+  width: 100%;
+  max-width: 789px;
+  min-height: 118.399px;
+  border-radius: 789px;
+  border-radius: 789px;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0.51) 0%, rgba(221, 221, 221, 0) 100%);
+  position: absolute;
+  bottom: -30px;
+  right: 0px;
+}
+@media only screen and (max-width: 1040px) {
+  .section2-right .section2-bottom {
+    max-width: 343px;
+    min-height: 51.471px;
+    border-radius: 343px;
+    top: 92%;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0.51) 0%, rgba(221, 221, 221, 0) 100%);
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .section2-right .section2-bottom {
+    bottom: 30px;
+  }
+}
+
+.search-googledads {
+  max-width: 1499px;
+  min-height: 244px;
+  border-radius: 32.41px;
+  background: var(--Classic-Orange-Fill, linear-gradient(155deg, #F36A24 15.87%, #8C3305 101.33%));
+  text-align: center;
+  padding: 49px 102px 48px 102px;
+  margin-top: 50px;
+}
+@media only screen and (max-width: 1024px) {
+  .search-googledads {
+    background: none;
+    margin-top: 0px;
+    padding: 0;
+    min-height: 0px;
+  }
+}
+.search-googledads h2 {
+  color: #FFF;
+  font-family: "Poppins", sans-serif;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 89.177%;
+  margin-bottom: 59px;
+}
+@media only screen and (max-width: 1024px) {
+  .search-googledads h2 {
+    display: none;
+  }
+}
+.search-googledads h2 span {
+  -webkit-text-stroke: 1px #ffffff;
+  color: transparent;
+}
+.search-googledads .search-button {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 30px;
 }
 @media only screen and (max-width: 1440px) {
-  .search .search-googledads .search-button {
+  .search-googledads .search-button {
     justify-content: center;
     gap: 10px;
     margin-top: 7px;
   }
 }
 @media only screen and (max-width: 992px) {
-  .search .search-googledads .search-button {
+  .search-googledads .search-button {
     margin-top: 0px;
   }
 }
-.search .search-googledads .search-button button {
+.search-googledads .search-button button {
   display: flex;
   width: 100%;
   max-width: 234px;
@@ -435,47 +562,28 @@
   gap: 15px;
 }
 @media only screen and (max-width: 1440px) {
-  .search .search-googledads .search-button button {
+  .search-googledads .search-button button {
     max-width: 200px;
     min-height: 50px;
   }
 }
 @media only screen and (max-width: 1440px) {
-  .search .search-googledads .search-button button {
+  .search-googledads .search-button button {
     max-width: 150px;
     min-height: 50px;
   }
 }
 @media only screen and (max-width: 1024px) {
-  .search .search-googledads .search-button button {
-    width: 56px;
-    height: 56px;
-    justify-content: center;
-    align-items: center;
-    gap: 12.908px;
-    border-radius: 53.354px;
-    border: 0.861px solid #27303F;
-    margin-top: 20px;
-  }
-  .search .search-googledads .search-button button:hover {
-    background: var(--Classic-Orange-Fill, linear-gradient(155deg, #F36A24 15.87%, #8C3305 101.33%));
-    border: none;
+  .search-googledads .search-button button {
+    display: none;
   }
 }
-.search .search-googledads .search-button button svg {
+.search-googledads .search-button button svg {
   width: 25px;
   height: 25px;
   fill: #fff;
 }
-@media only screen and (max-width: 1024px) {
-  .search .search-googledads .search-button button svg {
-    fill: #27303F;
-  }
-  .search .search-googledads .search-button button svg:hover {
-    fill: #FFF;
-  }
-}
-.search .search-googledads .search-button button p {
+.search-googledads .search-button button p {
   color: #FFF;
   text-align: center;
   font-family: "Poppins", sans-serif;
@@ -486,26 +594,86 @@
   margin: 0;
 }
 @media only screen and (max-width: 1024px) {
-  .search .search-googledads .search-button button p {
+  .search-googledads .search-button button p {
     display: none;
   }
 }
-.search .casestudies {
+.search-googledads .search-button button .search_button {
+  display: none;
+}
+.search-googledads .search-button .search-button2 {
+  display: flex;
+  gap: 12px;
+  gap: 12px;
+}
+@media only screen and (max-width: 425px) {
+  .search-googledads .search-button .search-button2 {
+    gap: 5px;
+  }
+}
+.search-googledads .search-button .search-button2 button {
   display: none;
 }
 @media only screen and (max-width: 1024px) {
-  .search .casestudies {
+  .search-googledads .search-button .search-button2 button {
+    display: block;
+    width: 56px;
+    height: 56px;
+    justify-content: center;
+    align-items: center;
+    gap: 12.908px;
+    border-radius: 53.354px;
+    border: 0.861px solid #27303F;
+    margin-top: 20px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .search-googledads .search-button .search-button2 button svg {
+    fill: #27303F;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.casestudies {
+  display: none;
+}
+@media only screen and (max-width: 1024px) {
+  .casestudies {
     display: block;
     text-align: center;
     margin-top: 36px;
   }
-  .search .casestudies h5 {
+  .casestudies h5 {
     color: #27303F;
     font-size: 14px;
     line-height: 25.93px;
     font-family: Poppins sans-serif;
   }
-  .search .casestudies svg {
+  .casestudies svg {
+    width: 13px;
+    height: 14px;
+    fill: #AAA;
+    margin-top: -17px;
+  }
+}
+
+.casestudies {
+  display: none;
+}
+@media only screen and (max-width: 1024px) {
+  .casestudies {
+    display: block;
+    text-align: center;
+    margin-top: 36px;
+  }
+  .casestudies h5 {
+    color: #27303F;
+    font-size: 14px;
+    line-height: 25.93px;
+    font-family: Poppins sans-serif;
+  }
+  .casestudies svg {
     width: 13px;
     height: 14px;
     fill: #AAA;

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './work.scss'
 import { WorkProject } from '../../assets/svgIcons'
 import Swiper from 'swiper'
@@ -16,6 +16,11 @@ import dashContent from '../../assets/work/dashContent.png'
 import dashFilter from '../../assets/work/dashFilter.png'
 import LetsTalk from '../../component/LetsTalk/LetsTalk'
 const OurWork = () => {
+    const [selectedOption, setSelectedOption] = useState('');
+    const handleOptionChange = (event) => {
+        setSelectedOption(event.target.value);
+    };
+
     return (
         <>
             <div className='work-section'>
@@ -23,14 +28,20 @@ const OurWork = () => {
                     <div className='py-5'></div>
                     <div className='overlay-text'>
                         <h1>Our Work.</h1>
-                        <div className='project-option'>
-                            <p>ALL PROJECTS</p>
-                            <WorkProject />
+
+                        <div className="project-option">
+                            <select value={selectedOption} onChange={handleOptionChange}>
+                                <option value="option1" className="bg-red">ALL PROJECTS</option>
+                                <option value="option2" className="bg-blue">Option 2</option>
+                                <option value="option3" className="bg-green">Option 3</option>
+                            </select>
+                           
                         </div>
+
                     </div>
                 </div>
             </div>
-            <div className='our-slider'>
+            <div className='our-slider1'>
                 <CenterMode />
             </div>
             <div className='section-work-images'>
@@ -55,14 +66,14 @@ const OurWork = () => {
 
             <div className='section2-work-images'>
                 <div className='section2-left-images'>
-                <img src={dash1} alt='/55dee' />
+                    <img src={dash1} alt='/55dee' />
                 </div>
                 <div className='section2-right-images'>
                     <div className='section2-right-images-left'>
-                    <img src={dash2} alt='/55dee' />
+                        <img src={dash2} alt='/55dee' />
                     </div>
                     <div className='section2-right-images-bottom'>
-                    <img src={dash3} alt='/55dee' />
+                        <img src={dash3} alt='/55dee' />
                     </div>
                 </div>
             </div>
@@ -86,7 +97,7 @@ const OurWork = () => {
                 </div>
             </div>
 
-<LetsTalk></LetsTalk>
+            <LetsTalk></LetsTalk>
         </>
     )
 }

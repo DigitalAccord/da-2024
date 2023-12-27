@@ -27,6 +27,9 @@
 .slider-bg {
   padding: 100px 0px;
 }
+.slider-bg .slick-dots li button::before {
+  opacity: 1 !important;
+}
 @media screen and (max-width: 768px) {
   .slider-bg {
     padding: 60px 0px;

@@ -5,7 +5,7 @@
   mix-blend-mode: lighten;
   background-position: top;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   .category-wrapper .category_row {
     flex-direction: column-reverse;
   }

@@ -3,6 +3,7 @@ import './footer.scss'
 import arrow from '../assets/Arrow 4.png'
 import footerImg from '../assets/Arrow 2.png'
 import { MainLogo } from '../assets/svgIcons'
+import { M_Footer } from './component/M_Footer'
 const Footer = () => {
   const logoStyle = { height: '83px', width: '75px' };
 
@@ -10,7 +11,7 @@ const Footer = () => {
     <>
     
 
-      <div className='footer'>
+     <div className='footer'>
         <div className='container custom-container'>
           <div className='row'>
             <div className='d-flex justify-content-between align-items-center'>
@@ -62,7 +63,7 @@ const Footer = () => {
 
                         <li>
                           <a href='#/'>Careers</a>
-                          Careers</li>
+                          </li>
                         <li>
                           <a href='#/'>Blog</a>
                         </li>
@@ -97,7 +98,7 @@ const Footer = () => {
         </div>
 
       </div>
-      <div className='container custom-container py-4'>
+      <div className='container custom-container '>
         <div className='row copyright-row' >
           <hr style={{ color: 'white' }} className='d-sm-block d-md-none'></hr>
           <div className='copyright-wrapper'>
@@ -110,7 +111,9 @@ const Footer = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> 
+
+      <M_Footer/>
     </>
   )
 }

@@ -1,8 +1,8 @@
-import React,{useState} from 'react'
+import React, { useState } from 'react'
 import './googleAds.scss'
 import mobile from "../../assets/management/googlemobile.png";
 import { RiVideoLine } from "react-icons/ri";
-import { IoIosSearch} from "react-icons/io";
+import { IoIosSearch } from "react-icons/io";
 import { GoImage } from "react-icons/go";
 import { IoApps } from "react-icons/io5";
 import { CiShoppingTag } from "react-icons/ci";
@@ -74,13 +74,13 @@ const GoogleAds = () => {
                 return searchicon;
         }
     };
-  return (
-    <>
-       <div className='google'>
+    return (
+        <>
+            <div className='google'>
                 <div className="container">
                     <div className='google-ads'>
                         <div className='google-left'>
-                            
+
                         </div>
                         <div className='google-right'>
                             <h2>Drive the right traffic to your website through</h2>
@@ -91,64 +91,186 @@ const GoogleAds = () => {
             </div>
 
 
-            <div className='search'>
-                <div className='container'>
-                    <div className='search-section2-wrapper'>
-                        <div className='section2-left'>
-                            <div className='section2-text'>
-                                <h2>Start With</h2>
-                                <h1>{textContent[adType].title}</h1>
-                                <p>{textContent[adType].content}</p>
-                            </div>
-                        </div>
-                        <div className='section2-right'>
-                            <div className='section2-icon'>
-                                <img src={selectedImage} alt={`Selected ${adType} Image`} />
-                            </div>
-                            <div className='section2-bottom'></div>
-                        </div>
-                    </div>
-                    <div className='search-googledads'>
-                        <div className='googleads'>
-                            <h2> <span> What is </span>Google Ads?</h2>
-                        </div>
-                        <div className="search-button">
-                            <button onClick={() => handleButtonClick('Search')} className="search-button">
-                                <IoIosSearch className="facebook-icon" />
-                                <p>Search</p>
-                            </button>
-                            <button onClick={() => handleButtonClick('Display')} className="display-button">
-                                <GoImage className="facebook-icon" />
-                                <p>Display</p>
-                            </button>
-                            <button onClick={() => handleButtonClick('Shopping')} className="shopping-button">
-                                <CiShoppingTag className="facebook-icon" />
-                                <p>Shopping</p>
-                            </button>
-                            <button onClick={() => handleButtonClick('Video')} className="video-button">
-                                <RiVideoLine className="facebook-icon" />
-                                <p>Video</p>
-                            </button>
-                            <button onClick={() => handleButtonClick('App')} className="app-button">
-                                <IoApps className="facebook-icon" />
-                                <p>App</p>
-                            </button>
-                        </div>
-                    </div>
-                    <div className='casestudies'>
-                        <h5>View Case Studies</h5>
-                        <MdKeyboardDoubleArrowDown />
-                    </div>
-                </div>
-            </div>
 
-      <Gallery/>
-      <Category/>
-      <Accordian/>
-      <LetsTalk/>
-    
-    </>
-  )
+           
+            
+                <div className='search'>
+                    <div className='container'>
+                        <div className='search-section2-wrapper'>
+                            <div className='section2-left'>
+                                <div className='section2-text'>
+                                    <h2>Start With
+                                    </h2>
+                                    <h1>{textContent[adType].title}</h1>
+                                    <p>{textContent[adType].content}</p>
+                                </div>
+                            </div>
+                            <div className='section2-right'>
+                                <div className='section2-icon'>
+                                    <img src={selectedImage}  />
+                                </div>
+                                <div className='section2-bottom'></div>
+                            </div>
+                        </div>
+                        <div className='search-googledads'>
+                            <div className='googleads'>
+                                <h2> <span> What is </span>Google Ads?</h2>
+                            </div>
+
+
+
+
+                            <div className="search-button">
+
+
+                                <button
+                                    onClick={() => handleButtonClick('Search')}
+                                    className="search-button"
+                                    style={{ backgroundColor: adType === 'Search' ? '#fff' : 'transparent', color: adType === 'Search' ? '#000' : '#fff' }}
+                                >
+                                    <IoIosSearch className="facebook-icon" style={{ fill: adType === 'Search' ? '#27303F' : '#fff' }} />
+                                    <p style={{ color: adType === 'Search' ? '#27303F' : '#fff' }}>Search</p>
+                                </button>
+
+
+
+
+
+
+                                <button
+                                    onClick={() => handleButtonClick('Display')}
+                                    className="display-button"
+                                    style={{
+                                        backgroundColor: adType === 'Display' ? '#fff' : 'transparent',
+                                        color: adType === 'Display' ? '#fff' : '#000',
+                                    }}
+                                >
+                                    <GoImage className="facebook-icon" style={{ fill: adType === 'Display' ? '#27303F' : '#fff' }} />
+                                    <p style={{ color: adType === 'Display' ? '#27303F' : '#fff' }}>Display</p>
+                                </button>
+
+
+
+                                <button
+                                    onClick={() => handleButtonClick('Shopping')}
+                                    className="shopping-button"
+                                    style={{
+                                        backgroundColor: adType === 'Shopping' ? '#fff' : 'transparent',
+                                        color: adType === 'Shopping' ? '#fff' : '#000',
+                                    }}
+                                >
+                                    <CiShoppingTag className="facebook-icon" style={{ fill: adType === 'Shopping' ? '#27303F' : '#fff' }} />
+                                    <p style={{ color: adType === 'Shopping' ? '#27303F' : '#fff' }}>Shopping</p>
+                                </button>
+
+                                <button
+                                    onClick={() => handleButtonClick('Video')}
+                                    className="video-button"
+                                    style={{
+                                        backgroundColor: adType === 'Video' ? '#fff' : 'transparent',
+                                        color: adType === 'Video' ? '#fff' : '#000',
+                                    }}
+                                >
+                                    <RiVideoLine className="facebook-icon" style={{ fill: adType === 'Video' ? '#27303F' : '#fff' }} />
+                                    <p style={{ color: adType === 'Video' ? '#27303F' : '#fff' }}>Video</p>
+                                </button>
+
+
+                                <button
+                                    onClick={() => handleButtonClick('App')}
+                                    className="app-button"
+                                    style={{
+                                        backgroundColor: adType === 'App' ? '#fff' : 'transparent',
+                                        color: adType === 'App' ? '#fff' : '#000',
+                                    }}
+                                >
+                                    <IoApps className="facebook-icon" style={{ fill: adType === 'App' ? '#27303F' : '#fff' }} />
+                                    <p style={{ color: adType === 'App' ? '#27303F' : '#fff' }}>App</p>
+                                </button>
+
+                                <div className='search-button2'>
+                                    <button
+                                        onClick={() => handleButtonClick('Search')}
+                                        className="search-button"
+                                        style={{
+                                            background: adType === 'Search'
+                                                ? 'var(--Classic-Orange-Fill, linear-gradient(155deg, #F36A24 15.87%, #8C3305 101.33%))'
+                                                : 'transparent',
+                                            color: adType === 'Search' ? '#fff' : '#27303F'
+                                        }}
+                                    >
+                                        <IoIosSearch className="facebook-icon" style={{ fill: adType === 'Search' ? '#fff' : '#000' }} />
+                                    </button>
+
+                                    <button
+                                        onClick={() => handleButtonClick('Display')}
+                                        className="display-button"
+                                        style={{
+                                            background: adType === 'Display'
+                                                ? 'var(--Classic-Orange-Fill, linear-gradient(155deg, #F36A24 15.87%, #8C3305 101.33%))'
+                                                : 'transparent',
+                                            color: adType === 'Display' ? '#fff' : '#000'
+                                        }}
+                                    >
+                                        <GoImage className="facebook-icon" style={{ fill: adType === 'Display' ? '#fff' : '#000' }} />
+                                    </button>
+
+                                    {/* Shopping Button */}
+                                    <button
+                                        onClick={() => handleButtonClick('Shopping')}
+                                        className="shopping-button"
+                                        style={{
+                                            background: adType === 'Shopping' ? 'var(--Classic-Orange-Fill, linear-gradient(155deg, #F36A24 15.87%, #8C3305 101.33%))' : 'transparent',
+                                            color: adType === 'Shopping' ? '#fff' : '#000',
+                                        }}
+                                    >
+                                        <CiShoppingTag className="facebook-icon" style={{ fill: adType === 'Shopping' ? '#fff' : '#000' }} />
+                                    </button>
+
+                                    {/* Video Button */}
+                                    <button
+                                        onClick={() => handleButtonClick('Video')}
+                                        className="video-button"
+                                        style={{
+                                            background: adType === 'Video' ? 'var(--Classic-Orange-Fill, linear-gradient(155deg, #F36A24 15.87%, #8C3305 101.33%))' : 'transparent',
+                                            color: adType === 'Video' ? '#fff' : '#000',
+                                        }}
+                                    >
+                                        <RiVideoLine className="facebook-icon" style={{ fill: adType === 'Video' ? '#fff' : '#000' }} />
+                                    </button>
+
+
+                                    <button
+                                        onClick={() => handleButtonClick('App')}
+                                        className="app-button"
+                                        style={{
+                                            background: adType === 'App' ? 'var(--Classic-Orange-Fill, linear-gradient(155deg, #F36A24 15.87%, #8C3305 101.33%))' : 'transparent',
+                                            color: adType === 'App' ? '#fff' : '#000',
+                                        }}
+                                    >
+                                        <IoApps className="facebook-icon" style={{ fill: adType === 'App' ? '#fff' : '#000' }} />
+                                    </button>
+                                </div>
+
+                            </div >
+                        </div >
+                        <div className='casestudies'>
+                            <h5>View Case Studies</h5>
+                            <MdKeyboardDoubleArrowDown />
+                        </div >
+                    </div >
+                </div >
+        
+        
+
+
+            <Gallery />
+            <Category />
+            <Accordian />
+            <LetsTalk />
+
+        </>
+    )
 }
 
 export default GoogleAds

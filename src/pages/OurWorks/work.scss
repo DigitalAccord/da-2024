@@ -86,6 +86,46 @@
             justify-content: space-between;
             height: 82px;
             padding: 10px 10px;
+            position: relative;
+
+            &::after {
+                content: "";
+                background: url("../../assets/work/workOptions.png");
+                width: 76px;
+                height: 65px;
+                position: absolute;
+                right: 4px;
+                top: 4px;
+                pointer-events: none;
+
+            }
+
+            select {
+                width: 100%;
+                border: none;
+                outline: none;
+                background: transparent;
+                color: #FFF;
+                padding: 0px 20px;
+                font-family: Poppins;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: 67px;
+                appearance: none;
+                -webkit-appearance: none;
+                
+                option{
+                    background: #343c4b !important;
+                    opacity: 0;
+                    &:focus-visible{
+                        background: #343c4b !important;
+                    }
+                
+                }
+            }
+
+           
 
             @media only screen and (max-width:1400px) {
                 height: 70px;
@@ -114,8 +154,9 @@
     }
 }
 
-.our-slider {
-    margin-top: -600px;
+.our-slider1 {
+    position: relative;
+    margin-top: -500px;
 
     @media only screen and (max-width:768px) {
         margin-top: -400px;
@@ -367,7 +408,7 @@
         width: 100%;
         display: flex;
         gap: 24px;
-       
+
         .section3-left-images-innerLeft {
             max-width: 364px;
             width: 100%;
@@ -392,6 +433,7 @@
             min-height: 311.491px;
             display: flex;
             gap: 27px;
+
             @media only screen and (max-width:428px) {
                 max-width: 192px;
                 min-height: 163px;
@@ -416,6 +458,7 @@
             max-width: 364px;
             width: 100%;
             min-height: 311.491px;
+
             @media only screen and (max-width:428px) {
                 max-width: 192px;
                 min-height: 163px;
@@ -433,6 +476,7 @@
             max-width: 364px;
             width: 100%;
             min-height: 311.491px;
+
             @media only screen and (max-width:428px) {
                 max-width: 192px;
                 min-height: 163px;

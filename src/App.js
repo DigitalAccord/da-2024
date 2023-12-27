@@ -27,11 +27,14 @@ import Development from './pages/Development/Development';
 import CaseStudy from './pages/CaseStudy/CaseStudy';
 import Manegement from './pages/Management/Manegement';
 import GoogleAds from './pages/GoogleAds/GoogleAds';
+import Test from './Test/Test';
+import { ApolloProvider, gql } from '@apollo/client';
 
 
 
 function App() {
 
+  
 
   return (
    <>
@@ -54,7 +57,7 @@ function App() {
         <Footer/>
     </BrowserRouter>
    
-   
+   {/* <Test/> */}
 
    
 
