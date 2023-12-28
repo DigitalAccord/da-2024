@@ -12,12 +12,12 @@ const client = new ApolloClient({
 });
 
 const AboveTextCarousel = ({ cardsData, activeCardId, setting }) => {
-  console.log({ cardsData, activeCardId })
+ 
 
   const activeIndex = activeCardId;
   const titlesBeforeActive = activeCardId === 0 ? cardsData.length - 1 : activeCardId - 1
   const titleAfterActive = activeCardId === cardsData.length - 1 ? 0 : activeCardId + 1
-  console.log("title slider", titlesBeforeActive, activeCardId, titleAfterActive)
+
 
 
 
@@ -78,7 +78,7 @@ const CenterMode = () => {
       `,
       })
       .then((result) => {
-        console.log(result?.data?.caseStudies?.nodes)
+        console.log(result?.data?.caseStudies?.nodes?.slice(0,10))
         setCases(result?.data?.caseStudies?.nodes)
       });
   }, [])
@@ -215,7 +215,7 @@ const CenterMode = () => {
         </Slider>
       </div>
       <Slider {...settings}>
-        {cases?.length > 0 && cases?.map((card, index) => {
+        {cases?.length > 0 && cases?.slice(0,10).map((card, index) => {
           const imgSrc = card?.caseStudyData?.mainImage?.mediaItemUrl
           return <div
             key={card.caseStudyId}
@@ -224,21 +224,22 @@ const CenterMode = () => {
           >
 
             <div className="slider-content" style={{
+              backgroundSize: (index === activeCardId )? `cover` : `auto`,
               background: (index === activeCardId) ? `linear-gradient(180deg, rgba(243, 106, 36, 0.00) 0%, rgba(243, 106, 36, 0.80) 45.83%, rgba(0, 0, 0, 0.80) 100%), url(${imgSrc ?? dummy} ) center no-repeat, lightgray -1.874px 0px / 178.199% 100% no-repeat` : `linear-gradient(0deg, rgba(39, 48, 63, 0.85) 0%, rgba(39, 48, 63, 0.85) 100%),
                url(${imgSrc ?? dummy} ) cover/center no-repeat , lightgray -786.457px -122px / 285.415% 130.476% no-repeat;
         box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.25)`}}>
               <div className="slider-content-top">
                 <h3>{card?.title}</h3>
-                <p>{card?.slug}</p>
+                <p>{card?.caseStudyData?.type}</p>
               </div>
               <div className="slider-content-bottom">
-                <h1>Century Pools</h1>
+                <h1>{card?.title}</h1>
                 <div className="bottom-line"></div>
                 <button>Case Study</button>
               </div>
             </div>
           </div>
-        })}
+        }).slice(0, 6)}
       </Slider>
     </div>
   );
