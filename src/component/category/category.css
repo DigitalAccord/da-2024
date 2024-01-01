@@ -68,9 +68,9 @@
     align-items: flex-start;
   }
 }
-@media only screen and (max-width: 576px) {
-  .category-wrapper .category-inner-section1 .inner-text .star-icon svg {
-    width: 120px;
+@media only screen and (max-width: 768px) {
+  .category-wrapper .category-inner-section1 .inner-text .star-icon .rating_star {
+    font-size: 20px;
   }
 }
 .category-wrapper .category-inner-section1 .inner-text p {

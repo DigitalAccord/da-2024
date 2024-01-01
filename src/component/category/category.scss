@@ -72,11 +72,11 @@
             }
 
             .star-icon {
-                svg {
-                    @media only screen and (max-width: 576px) {
-                        width: 120px;
-                    }
-                }
+               .rating_star{
+                 @media only screen and (max-width: 768px) {
+                    font-size: 20px;
+                 }
+               }
             }
 
 

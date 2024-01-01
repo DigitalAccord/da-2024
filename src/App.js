@@ -31,13 +31,13 @@ import Test from './Test/Test';
 import { ApolloProvider, gql } from '@apollo/client';
 
 
-
 function App() {
 
   
 
   return (
    <>
+     
    <BrowserRouter>
       <Navbar/>
       <Routes>
@@ -49,14 +49,14 @@ function App() {
           <Route path="/add" element={<Add />} />
           <Route path="/user" element={<User />} />
           <Route path="/development" element={<Development />} />
-          <Route path="/case" element={<CaseStudy/>} />
+          <Route path="/case/:slug" element={<CaseStudy/>} />
           <Route path="/management" element={<Manegement/>} />
           <Route path="/google" element={<GoogleAds/>} />
           
       </Routes>
         <Footer/>
     </BrowserRouter>
-   
+    
    {/* <Test/> */}
 
    

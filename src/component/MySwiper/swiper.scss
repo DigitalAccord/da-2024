@@ -32,8 +32,8 @@
 
 
 .slider-bg {
-  padding: 100px 0px;
-
+  // padding: 100px 0px;
+min-height: 1000px;
       .slick-dots{
         li{
           button{
@@ -44,7 +44,10 @@
         }
       }
     
-  
+      @media screen and (max-width:575px) {
+        min-height: 500px;
+    
+        }
   @media screen and (max-width:768px) {
     padding: 60px 0px;
 
@@ -83,8 +86,11 @@
       margin: 0 auto;
       border: 1px solid black;
       border-radius: 35px;
-      background: linear-gradient(0deg, rgba(39, 48, 63, 0.85) 0%, rgba(39, 48, 63, 0.85) 100%), url("../../assets/card.png"), lightgray -1.874px 0px / 178.199% 100% no-repeat;
+      background: linear-gradient(0deg, rgba(39, 48, 63, 0.85) 0%, rgba(39, 48, 63, 0.85) 100%);
       background-position: center;
+      background-repeat: no-repeat;
+      transition: all 0.3s ease;
+     
       @media screen and (max-width:575px) {
         height:269px ;
         padding: 20px 10px;
@@ -136,12 +142,14 @@
         height: 674px;
         padding: 20px 50px;
         border-radius: 35px;
-        border: 1px solid rgba(255, 132, 69, 0.00);
-        background: linear-gradient(180deg, rgba(243, 106, 36, 0.00) 0%, rgba(243, 106, 36, 0.80) 45.83%, rgba(0, 0, 0, 0.80) 100%), url('../../assets/card.png'), lightgray -786.457px -122px / 285.415% 130.476% no-repeat;
+        // border: 1px solid rgba(255, 132, 69, 0.00);
+        // background: linear-gradient(180deg, rgba(243, 106, 36, 0.00) 0%, rgba(243, 106, 36, 0.80) 45.83%, rgba(0, 0, 0, 0.80) 100%), url('../../assets/card.png'), lightgray -786.457px -122px / 285.415% 130.476% no-repeat;
         box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.25);
         background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
         @media screen and (max-width:575px) {
-        height:378px ;
+        max-height:420px ;
         padding: 20px 10px;
       }
        

@@ -30,30 +30,37 @@ const Gallery = () => {
                             <div className='gallery-inner-left'>
                                 <div className='gallery-inner-left-content'>
                                     <div className='d-flex gap-2'>
-
+                                        <div className='gallery_content_wrapper'>
                                         <div className='gallery-content-box1'>
                                             <h1>Tennis Court Constructions</h1>
                                             <p>Google Ads Case Study</p>
                                             <button>View Case Study</button>
                                         </div>
+
+                                        </div>
+                                        <div className='gallery_content_wrapper'>
                                         <div className='gallery-content-box1'>
                                             <h1>Tennis Court Constructions</h1>
                                             <p>Google Ads Case Study</p>
                                             <button>View Case Study</button>
+                                        </div>
                                         </div>
                                     </div>
 
                                     <div className='d-flex gap-2'>
-
+                                    <div className='gallery_content_wrapper'>
                                         <div className='gallery-content-box1'>
                                             <h1>Tennis Court Constructions</h1>
                                             <p>Google Ads Case Study</p>
                                             <button>View Case Study</button>
                                         </div>
+                                        </div>
+                                        <div className='gallery_content_wrapper'>
                                         <div className='gallery-content-box1'>
                                             <h1>Tennis Court Constructions</h1>
                                             <p>Google Ads Case Study</p>
                                             <button>View Case Study</button>
+                                        </div>
                                         </div>
                                     </div>
 

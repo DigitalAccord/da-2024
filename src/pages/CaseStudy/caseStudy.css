@@ -131,9 +131,11 @@
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  transition: all 0.3s ease;
 }
 .caseStudy-Section .section-container .case-wrapper .case-left .case-left-content .case-button button:hover {
-  background: transparent;
+  background: white;
+  color: #F36A24;
 }
 .caseStudy-Section .section-container .case-wrapper .case-right {
   width: 40%;
