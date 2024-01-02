@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './swiper.css';
 import { ApolloClient, InMemoryCache, ApolloProvider, gql } from '@apollo/client';
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import dummy from "../../assets/card.png"
 import Zoom from 'react-reveal/Zoom';
 const client = new ApolloClient({
@@ -13,15 +13,9 @@ const client = new ApolloClient({
 });
 
 const AboveTextCarousel = ({ cardsData, activeCardId, setting }) => {
-
-
   const activeIndex = activeCardId;
   const titlesBeforeActive = activeCardId === 0 ? cardsData.length - 1 : activeCardId - 1
   const titleAfterActive = activeCardId === cardsData.length - 1 ? 0 : activeCardId + 1
-
-
-
-
   return (
     <div className="above-text-carousel">
       <ul className="carousel-list">
@@ -39,32 +33,37 @@ const AboveTextCarousel = ({ cardsData, activeCardId, setting }) => {
   );
 };
 const CenterMode = () => {
+  const navigate = useNavigate()
   const [activeCardId, setActiveCardId] = useState(1);
   const [cardId, setCardId] = useState(-1);
   const [maxCard, setMaxCard] = useState(0);
   const [cases, setCases] = useState([])
+  const { pathname } = useLocation();
+
+ 
+
   useEffect(() => {
     client
       .query({
         query: gql`
-        query NewQuery {
-          caseStudies(first: 1000) {
-            nodes {
-              caseStudyId
-              slug
-              uri
-              title
-              caseStudyData {
-                type
-                mainImage {
-                  mediaItemUrl
+            query NewQuery {
+              caseStudies(first: 1000) {
+                nodes {
+                  caseStudyId
+                  slug
+                  uri
+                  title
+                  caseStudyData {
+                    type
+                    mainImage {
+                      mediaItemUrl
+                    }
+                  }
+                  id
                 }
               }
-              id
             }
-          }
-        }
-      `,
+          `,
       })
       .then((result) => {
         const filteredCase = result?.data?.caseStudies?.nodes?.filter(
@@ -91,6 +90,14 @@ const CenterMode = () => {
     }
     return text;
   };
+
+  // useEffect(() => {
+  //   const caseStudyRoute = `/case/${card?.slug}`;
+  //   if (pathname === caseStudyRoute) {
+  //     console.log("Scrolling to top.");
+  //     window.scrollTo(0, 0);
+  //   }
+  // }, [pathname]);
 
   const settings = {
     dots: true,
@@ -246,7 +253,7 @@ const CenterMode = () => {
                   <div className="slider-content-bottom">
                     <h1>{truncatedTitle}</h1>
                     <div className="bottom-line"></div>
-                    <Link to={`/case/${card.slug}`}>
+                    <Link to={`/case/${card.slug}`} >
                       <button>Case Study</button>
                     </Link>
                   </div>
