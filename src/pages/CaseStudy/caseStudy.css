@@ -237,15 +237,87 @@
     font-size: 14px;
   }
 }
-.caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .Budget-Range {
-  padding: 96px 0px 24px 0px;
+.caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .budget_range_text {
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10px;
+  margin-top: 86px;
 }
-.caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .Budget-Range img {
-  width: 454px;
-  max-width: 454px;
+.caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .budget_range_text h1 {
+  color: #27303F;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28.25px;
+  padding: 0;
+  margin: 0;
+}
+.caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .budget_range_text p {
+  color: #27303F;
+  text-align: right;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 28.25px;
+  padding: 0;
+  margin: 0;
+}
+.caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .Budget-Range {
+  min-height: 130px;
+  position: relative;
+}
+.caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .Budget-Range .graph_img {
+  position: absolute;
+  top: 97%;
+  transform: translateY(-100%);
   width: 100%;
-  height: 124px;
-  flex-shrink: 0;
+}
+@media only screen and (max-width: 1050px) {
+  .caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .Budget-Range .graph_img {
+    top: 92%;
+  }
+}
+@media only screen and (max-width: 890px) {
+  .caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .Budget-Range .graph_img {
+    top: 90%;
+  }
+}
+@media only screen and (max-width: 820px) {
+  .caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .Budget-Range .graph_img {
+    top: 88%;
+  }
+}
+@media only screen and (max-width: 760px) {
+  .caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .Budget-Range .graph_img {
+    top: 97%;
+  }
+}
+@media only screen and (max-width: 526px) {
+  .caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .Budget-Range .graph_img {
+    top: 94%;
+  }
+}
+@media only screen and (max-width: 422px) {
+  .caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .Budget-Range .graph_img {
+    top: 90%;
+  }
+}
+@media only screen and (max-width: 335px) {
+  .caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .Budget-Range .graph_img {
+    top: 85%;
+  }
+}
+.caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .Budget-Range .graph_img img {
+  width: 100%;
+  height: 100%;
+}
+.caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .Budget-Range circle {
+  fill: #27303F;
+}
+.caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .Budget-Range div {
+  max-width: 450px !important;
 }
 .caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .price-button .min-button h6,
 .caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .price-button .max-button h6 {
@@ -255,8 +327,8 @@
   font-style: normal;
   font-weight: 300;
 }
-.caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .price-button .min-button button,
-.caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .price-button .max-button button {
+.caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .price-button .min-button input,
+.caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .price-button .max-button input {
   width: 218px;
   max-width: 218px;
   height: 56px;
@@ -269,20 +341,20 @@
   font-weight: 700;
   line-height: 28.25px;
 }
-.caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .price-button .min-button button:hover,
-.caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .price-button .max-button button:hover {
+.caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .price-button .min-button input:hover,
+.caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .price-button .max-button input:hover {
   border: 0.5px solid #F36A24;
   color: #F36A24;
 }
 @media only screen and (max-width: 1200px) {
-  .caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .price-button .min-button button,
-  .caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .price-button .max-button button {
+  .caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .price-button .min-button input,
+  .caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .price-button .max-button input {
     width: 190px;
   }
 }
 @media only screen and (max-width: 992px) {
-  .caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .price-button .min-button button,
-  .caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .price-button .max-button button {
+  .caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .price-button .min-button input,
+  .caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .price-button .max-button input {
     width: 120px;
     height: 50px;
   }
@@ -307,6 +379,11 @@
   font-weight: 300;
   line-height: 28.25px;
 }
+.caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .ProjectDuration .duration-button .weeks.active {
+  background: var(--Classic-Orange-Fill, linear-gradient(155deg, #F36A24 15.87%, #8C3305 101.33%));
+  color: #FFF;
+  border-radius: 55px;
+}
 .caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .ProjectDuration .duration-button .weeks button {
   border-radius: 55px;
   border: 0.5px solid #EEEEF0;
@@ -318,6 +395,9 @@
   font-style: normal;
   font-weight: 700;
   line-height: 28.25px;
+}
+.caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .ProjectDuration .duration-button .weeks button.active {
+  color: #FFF;
 }
 .caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .ProjectDuration .duration-button .weeks button:hover {
   background: var(--Classic-Orange-Fill, linear-gradient(155deg, #F36A24 15.87%, #8C3305 101.33%));
@@ -372,5 +452,15 @@
   .caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .case-right-button .apply button {
     width: 120px;
     height: 40px;
+  }
+}
+.caseStudy-Section .Histoslider {
+  max-width: 525px !important;
+  width: 100% !important;
+}
+@media screen and (max-width: 1058px) {
+  .caseStudy-Section .Histoslider {
+    padding: 20px 0px !important;
+    overflow: hidden;
   }
 }/*# sourceMappingURL=caseStudy.css.map */
