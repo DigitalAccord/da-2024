@@ -101,9 +101,9 @@ export const Banner = () => {
                         </div>
                     </div>
                 </div>
-                <Fade bottom>
+                
                 <Solutions />
-                </Fade>
+                
                 <Fade bottom>
                 <CenterMode />
                 </Fade>

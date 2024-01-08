@@ -30,6 +30,7 @@ import GoogleAds from './pages/GoogleAds/GoogleAds';
 import Test from './Test/Test';
 import { ApolloProvider, gql } from '@apollo/client';
 import ScrollToTop from './ScrollToTop';
+import Bussiness from './pages/Bussiness/Bussiness';
 
 
 
@@ -55,19 +56,13 @@ function App() {
           <Route path="/case/:slug" element={<CaseStudy />} />
           <Route path="/management" element={<Manegement />} />
           <Route path="/google" element={<GoogleAds />} />
+          <Route path="/bussiness" element={<Bussiness />} />
 
         </Routes>
         <Footer />
       </BrowserRouter>
 
       {/* <Test/> */}
-
-
-
-
-
-
-
     </>
   );
 }

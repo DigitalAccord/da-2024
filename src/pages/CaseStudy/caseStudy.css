@@ -267,12 +267,14 @@
 .caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .Budget-Range {
   min-height: 130px;
   position: relative;
+  z-index: 10;
 }
 .caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .Budget-Range .graph_img {
   position: absolute;
   top: 97%;
   transform: translateY(-100%);
   width: 100%;
+  z-index: 1;
 }
 @media only screen and (max-width: 1050px) {
   .caseStudy-Section .section-container .case-wrapper .case-right .case-right-content .Budget-Range .graph_img {

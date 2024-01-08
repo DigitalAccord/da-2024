@@ -218,5 +218,71 @@ export function CheckIcon() {
     )
 }
 
+export function BussinessButton() {
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72" fill="none">
+        <circle cx="36" cy="36" r="24.6032" transform="rotate(45 36 36)" stroke="url(#paint0_linear_1130_74486)" stroke-width="0.793651"/>
+        <defs>
+          <linearGradient id="paint0_linear_1130_74486" x1="36" y1="11" x2="36" y2="61" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#FF9A67"/>
+            <stop offset="1" stop-color="#F36A24"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    )
+}
 
+export function BussinessLearn() {
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" width="63" height="63" viewBox="0 0 63 63" fill="none">
+  <circle cx="31.5" cy="31.5" r="31.1032" stroke="url(#paint0_linear_1142_26988)" stroke-width="0.793651"/>
+  <g filter="url(#filter0_i_1142_26988)">
+    <path d="M40.2613 23.9289C40.2613 23.2714 39.7283 22.7384 39.0708 22.7384L28.3566 22.7384C27.6991 22.7384 27.1661 23.2714 27.1661 23.9289C27.1661 24.5864 27.6991 25.1194 28.3566 25.1194H37.8804V34.6432C37.8804 35.3007 38.4134 35.8337 39.0708 35.8337C39.7283 35.8337 40.2613 35.3007 40.2613 34.6432L40.2613 23.9289ZM25.7705 38.9128L39.9126 24.7707L38.2291 23.0871L24.0869 37.2293L25.7705 38.9128Z" fill="white"/>
+  </g>
+  <defs>
+    <filter id="filter0_i_1142_26988" x="24.0869" y="22.7384" width="16.1743" height="19.349" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="3.1746"/>
+      <feGaussianBlur stdDeviation="1.5873"/>
+      <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.25 0"/>
+      <feBlend mode="normal" in2="shape" result="effect1_innerShadow_1142_26988"/>
+    </filter>
+    <linearGradient id="paint0_linear_1142_26988" x1="31.5" y1="0" x2="31.5" y2="63" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF9A67"/>
+      <stop offset="1" stop-color="#F36A24"/>
+    </linearGradient>
+  </defs>
+</svg>
+    )
+}
+
+
+export function BussinessCircle() {
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="42" viewBox="0 0 40 42" fill="none">
+        <g filter="url(#filter0_d_1297_34493)">
+          <circle cx="19.6611" cy="19.6777" r="13.9025" transform="rotate(45 19.6611 19.6777)" fill="url(#paint0_linear_1297_34493)"/>
+        </g>
+        <defs>
+          <filter id="filter0_d_1297_34493" x="1.75854" y="5.77515" width="35.8052" height="35.8051" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+            <feOffset dy="4"/>
+            <feGaussianBlur stdDeviation="2"/>
+            <feComposite in2="hardAlpha" operator="out"/>
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1297_34493"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1297_34493" result="shape"/>
+          </filter>
+          <linearGradient id="paint0_linear_1297_34493" x1="19.6611" y1="5.77515" x2="32.9683" y2="34.3976" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#F36A24"/>
+            <stop offset="1" stop-color="#8C3305"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    )
+}
 

@@ -286,12 +286,13 @@
                     .Budget-Range {
                           min-height: 130px;
                            position: relative;
-
+                            z-index:10;
                            .graph_img{
                             position: absolute;
                             top:calc(100% - 3%);
                             transform: translateY(-100%);
                             width: 100%;
+                            z-index: 1;
 
                             @media only screen and (max-width: 1050px) {
                                 top:calc(100% - 8%);

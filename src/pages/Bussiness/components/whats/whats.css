@@ -1,0 +1,212 @@
+.whats_wrapper {
+  width: 100%;
+  background: url("../../../../assets/bussiness//bussiness_circle.png");
+  background-position: top center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-height: 1098px;
+  position: relative;
+}
+.whats_wrapper::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: url("../../../../assets/bussiness/round.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 52%;
+  left: 99px;
+}
+.whats_wrapper .whats_container {
+  max-width: 1470px;
+  width: 100%;
+}
+.whats_wrapper .whats_left .whats_left_text {
+  position: relative;
+}
+.whats_wrapper .whats_left .whats_left_text::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: url("../../../../assets/bussiness/whiteCircle.png");
+  background-repeat: no-repeat;
+  bottom: 0;
+  right: 0;
+}
+.whats_wrapper .whats_left .whats_left_text .whats_left_blur_text h1 {
+  font-family: Poppins;
+  font-size: 134.828px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 90.5%;
+  letter-spacing: 2.022px;
+  filter: blur(5.5px);
+  color: #FFF;
+}
+.whats_wrapper .whats_left .whats_left_text .whats_left_blur_text span {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 186.794px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 90.5%;
+  letter-spacing: 2.802px;
+}
+.whats_wrapper .whats_left .whats_left_buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+.whats_wrapper .whats_left .whats_left_buttons button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 592px;
+  width: 100%;
+  border-radius: 55px;
+  border: 0.5px solid rgba(255, 255, 255, 0.26);
+  background: transparent;
+  -webkit-backdrop-filter: blur(23.5px);
+          backdrop-filter: blur(23.5px);
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 250;
+  line-height: 67px;
+  padding: 7px 0px 7px 20px;
+  transition: 0.3s ease;
+}
+.whats_wrapper .whats_left .whats_left_buttons button.active {
+  background: linear-gradient(90deg, rgba(243, 106, 36, 0.01) 30.73%, rgba(243, 106, 36, 0.4) 100%);
+  -webkit-backdrop-filter: blur(23.5px);
+          backdrop-filter: blur(23.5px);
+  transition: 0.3s ease;
+}
+.whats_wrapper .whats_left .whats_left_buttons button:first-child {
+  background: linear-gradient(90deg, rgba(243, 106, 36, 0.01) 30.73%, rgba(243, 106, 36, 0.4) 100%);
+  -webkit-backdrop-filter: blur(23.5px);
+          backdrop-filter: blur(23.5px);
+}
+.whats_wrapper .whats_left .whats_left_buttons button .svg-parent {
+  position: relative;
+}
+.whats_wrapper .whats_left .whats_left_buttons button .svg_enable {
+  position: absolute;
+  right: 20px;
+  display: block;
+  width: 27.805px;
+  height: 27.805px;
+  background: red;
+  border-radius: 50%;
+}
+.whats_wrapper .whats_left .whats_left_buttons button .svg_disable {
+  position: absolute;
+  right: 15px;
+  display: none;
+}
+.whats_wrapper .setDisplay {
+  height: 100%;
+}
+.whats_wrapper .setDisplay .whats_right_wrapper .whats_right {
+  display: none;
+  height: 100%;
+  max-width: 744px;
+  width: 100%;
+}
+.whats_wrapper .setDisplay .whats_right_wrapper .whats_right.active {
+  display: block;
+}
+.whats_wrapper .setDisplay .whats_right_wrapper .whats_navbar {
+  width: 100%;
+}
+.whats_wrapper .setDisplay .whats_right_wrapper .whats_navbar ul {
+  display: flex;
+  color: #FFF;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+.whats_wrapper .setDisplay .whats_right_wrapper .whats_navbar ul li {
+  list-style: none;
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 250;
+  line-height: 67px;
+  padding: 0px 20px;
+  cursor: pointer;
+}
+.whats_wrapper .setDisplay .whats_right_wrapper .whats_navbar ul li.active {
+  border-bottom: solid 5px #FFF;
+  font-weight: 400;
+}
+.whats_wrapper .setDisplay .whats_right_wrapper .whats_line {
+  width: 100%;
+  height: 1px;
+  background: #808080;
+  margin-top: -3px;
+}
+.whats_wrapper .setDisplay .whats_right_wrapper .whats_right-content {
+  width: 100%;
+  min-height: 603px;
+  border-radius: 35px;
+  border: 0.5px solid rgba(255, 255, 255, 0.26);
+  background: rgba(217, 217, 217, 0.03);
+  -webkit-backdrop-filter: blur(23.5px);
+          backdrop-filter: blur(23.5px);
+  padding: 63px;
+  margin-top: 53px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.whats_wrapper .setDisplay .whats_right_wrapper .whats_right-content::after {
+  content: "";
+  position: absolute;
+  background: url("../../../../assets//bussiness/round.png");
+  background-size: contain;
+  height: 10px;
+  width: 10px;
+  bottom: 25%;
+  right: -4px;
+}
+.whats_wrapper .setDisplay .whats_right_wrapper .whats_right-content p {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 275;
+  line-height: 25.928px;
+}
+.whats_wrapper .setDisplay .whats_right_wrapper .whats_right-content .whats_learn_more {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 16px;
+}
+.whats_wrapper .setDisplay .whats_right_wrapper .whats_right-content .whats_learn_more p {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 87.9%;
+  margin: 0;
+}
+.whats_wrapper .whats_right1 {
+  display: block;
+}
+.whats_wrapper .whats_right2 {
+  display: block;
+}
+.whats_wrapper .whats_right3 {
+  display: block;
+}/*# sourceMappingURL=whats.css.map */
