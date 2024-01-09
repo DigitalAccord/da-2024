@@ -2,6 +2,8 @@ import React from 'react'
 import './business.scss'
 import bussiness from '../../assets/bussiness/bussiness_ban.png'
 import Whats from './components/whats/Whats'
+import Synergy from './components/Synergy/Synergy'
+import { ChooseUse } from './components/ChooseUse/ChooseUse'
 const Bussiness = () => {
   return (
     <>
@@ -21,6 +23,8 @@ const Bussiness = () => {
         </div> 
     </div>
     <Whats/>
+    <Synergy/>
+    <ChooseUse/>
     </>
   )
 }

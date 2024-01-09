@@ -102,7 +102,7 @@
                 padding: 7px 0px 7px 20px;
                 transition:0.3s ease;
 
-                &.active {
+                &.btn-active {
                     background: linear-gradient(90deg, rgba(243, 106, 36, 0.01) 30.73%, rgba(243, 106, 36, 0.40) 100%);
                     backdrop-filter: blur(23.5px);
                     transition:0.3s ease;
@@ -150,6 +150,7 @@
                 height: 100%;
                 max-width: 744px;
                 width: 100%;
+                padding-top: 160px;
 
                 &.active {
                     display: block;

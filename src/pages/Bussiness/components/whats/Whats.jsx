@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './whats.scss'
 import { BussinessButton, BussinessCircle, BussinessLearn } from '../../../../assets/svgIcons'
 const Whats = () => {
-    const [isActive, setIsActive] = useState(1);
+    const [isActive, setIsActive] = useState("Workstations");
     const [cards, setCards] = useState(1);
     const cardsData = [
         {
@@ -67,15 +67,15 @@ const Whats = () => {
                                 {cardsData.map((section) => (
                                     <button
                                         key={section.id}
-                                        className={cards === section.id ? 'active' : ''}
+                                        className={cards === section.id ? 'btn-active' : ''}
                                         onClick={() => {
                                             setCards(section.id);
-                                            setIsActive(section.id); 
+                                            setIsActive("Workstations"); 
                                         }
                                         }
                                     >
                                         Section {section.id} <BussinessButton className="svg-parent" />
-                                        <div key={section.id} className={isActive === section.id ? 'svg_enable' : 'svg_disable'}>
+                                        <div key={section.id} className={cards === section.id ? 'svg_enable' : 'svg_disable'}>
                                             {/* <BussinessCircle/> */}
                                         </div>
                                     </button>
@@ -91,9 +91,9 @@ const Whats = () => {
                                 <div key={section.id} className={`whats_right ${cards === section.id ? 'active' : ''}`}>
                                     <div className='whats_navbar'>
                                         <ul>
-                                            <li className={isActive === 1 ? "active" : ""} onClick={() => setIsActive(1)}>Workstations</li>
-                                            <li className={isActive === 2 ? "active" : ""} onClick={() => setIsActive(2)}>Servers</li>
-                                            <li className={isActive === 3 ? "active" : ""} onClick={() => setIsActive(3)}>Support</li>
+                                            <li className={isActive === "Workstations" ? "active" : ""} onClick={() => setIsActive("Workstations")}>Workstations</li>
+                                            <li className={isActive === "Servers" ? "active" : ""} onClick={() => setIsActive("Servers")}>Servers</li>
+                                            <li className={isActive === "Support" ? "active" : ""} onClick={() => setIsActive("Support")}>Support</li>
                                         </ul>
                                     </div>
                                     <div className='whats_line'></div>
