@@ -172,7 +172,8 @@
                         line-height: 56px;
                         text-transform: capitalize;
                         z-index: 2;
-
+                        text-decoration: none !important;
+                        
                         @media only screen and (max-width: 575px) {
                             position: absolute;
                             top: 0;
@@ -1067,6 +1068,7 @@
                     }
 
                     h3 {
+                        text-decoration: none;
                         br {
                             display: none;
 
@@ -1707,7 +1709,7 @@
 
             }
 
-            button {
+            .btn-development {
                 display: flex;
                 width: 173px;
                 height: 60px;
@@ -1721,6 +1723,7 @@
                 outline: none;
                 border: none;
                 text-align: right;
+                text-decoration: none;
 
                 color: #FFF;
                 text-align: center;

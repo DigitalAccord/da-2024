@@ -5,6 +5,8 @@ import { CheckIcon } from '../../assets/svgIcons';
 import { DeviceFrameset } from 'react-device-frameset'
 import 'react-device-frameset/styles/marvel-devices.min.css'
 import mobile from '../../assets/development/mobile.png'
+import Accordian from '../Seo/component/Accordian/Accordian';
+import LetsTalk from '../../component/LetsTalk/LetsTalk';
 
 
 
@@ -275,6 +277,8 @@ const Development = () => {
 
 
             </div>
+           <Accordian/>
+           <LetsTalk/>
 
             {/* <div className='process_timeline-bg'>
                         <div className='devcie-Frame'>

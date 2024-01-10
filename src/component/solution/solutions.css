@@ -151,6 +151,7 @@
   line-height: 56px;
   text-transform: capitalize;
   z-index: 2;
+  text-decoration: none !important;
 }
 @media only screen and (max-width: 575px) {
   .solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-right h3 {
@@ -877,6 +878,7 @@
   background: linear-gradient(130deg, rgba(0, 0, 0, 0) 0%, #F36A24 98.82%);
 }
 .solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-left h3 {
+  text-decoration: none;
   color: #FFF;
   font-family: Poppins;
   font-size: 39px;
@@ -1404,7 +1406,7 @@
     font-size: 14px;
   }
 }
-.scroll-width-div .design-development-wrapper .design-development-text button {
+.scroll-width-div .design-development-wrapper .design-development-text .btn-development {
   display: flex;
   width: 173px;
   height: 60px;
@@ -1418,6 +1420,7 @@
   outline: none;
   border: none;
   text-align: right;
+  text-decoration: none;
   color: #FFF;
   text-align: center;
   font-family: Poppins;
@@ -1427,7 +1430,7 @@
   line-height: normal;
 }
 @media only screen and (max-width: 769px) {
-  .scroll-width-div .design-development-wrapper .design-development-text button {
+  .scroll-width-div .design-development-wrapper .design-development-text .btn-development {
     font-size: 15px;
   }
 }

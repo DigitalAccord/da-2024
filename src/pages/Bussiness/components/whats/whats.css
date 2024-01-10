@@ -79,7 +79,7 @@
   padding: 7px 0px 7px 20px;
   transition: 0.3s ease;
 }
-.whats_wrapper .whats_left .whats_left_buttons button.active {
+.whats_wrapper .whats_left .whats_left_buttons button.btn-active {
   background: linear-gradient(90deg, rgba(243, 106, 36, 0.01) 30.73%, rgba(243, 106, 36, 0.4) 100%);
   -webkit-backdrop-filter: blur(23.5px);
           backdrop-filter: blur(23.5px);
@@ -115,6 +115,7 @@
   height: 100%;
   max-width: 744px;
   width: 100%;
+  padding-top: 160px;
 }
 .whats_wrapper .setDisplay .whats_right_wrapper .whats_right.active {
   display: block;

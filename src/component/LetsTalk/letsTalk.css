@@ -98,7 +98,7 @@
   background-color: #fff;
   position: absolute;
   border-radius: 40px;
-  top: 36px;
+  top: 60px;
   left: 100px;
   background: linear-gradient(to bottom, transparent, #F36A24);
   padding: 3px;
@@ -109,9 +109,9 @@
 }
 .form-section .left-section-wraper .map-wraper .map_pointer_wrapper {
   position: relative;
-  height: 100%;
+  height: 61%;
   max-width: 418px;
-  transform: translateY(-50%);
+  transform: translateY(-80%);
 }
 .form-section .left-section-wraper .map-wraper .map_pointer_wrapper .click_content {
   border-radius: 35px;

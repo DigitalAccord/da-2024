@@ -31,6 +31,7 @@ import Test from './Test/Test';
 import { ApolloProvider, gql } from '@apollo/client';
 import ScrollToTop from './ScrollToTop';
 import Bussiness from './pages/Bussiness/Bussiness';
+import ThankYou from './pages/ThankYou/ThankYou';
 
 
 
@@ -57,6 +58,7 @@ function App() {
           <Route path="/management" element={<Manegement />} />
           <Route path="/google" element={<GoogleAds />} />
           <Route path="/bussiness" element={<Bussiness />} />
+          <Route path="/thanks" element={<ThankYou />} />
 
         </Routes>
         <Footer />

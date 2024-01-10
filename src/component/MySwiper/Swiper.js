@@ -40,7 +40,7 @@ const CenterMode = () => {
   const [cases, setCases] = useState([])
   const { pathname } = useLocation();
 
- 
+
 
   useEffect(() => {
     client
@@ -247,8 +247,18 @@ const CenterMode = () => {
               <Zoom>
                 <div className="slider-content" style={index === activeCardId ? bgActive(imgSrc) : bgInActive(imgSrc)}>
                   <div className="slider-content-top">
-                    <h3>{card?.title}</h3>
-                    <p>{card?.caseStudyData?.type}</p>
+                    {index === activeCardId ? (
+                      <>
+                        <h3 style={{margin:"0", padding:"0"}}>Discover our</h3>
+                        <p>{card?.caseStudyData?.type}</p>
+                      </>
+                    ) : (
+                      <>
+                        <h3 style={{margin:"0", padding:"0"}}>{card?.title}</h3>
+                        <p>{card?.caseStudyData?.type}</p>
+
+                      </>
+                    )}
                   </div>
                   <div className="slider-content-bottom">
                     <h1>{truncatedTitle}</h1>

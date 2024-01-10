@@ -3,6 +3,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './chooseuse.scss'
+import { BussinessHeadPhone } from '../../../../assets/svgIcons';
 export const ChooseUse = () => {
     const [active1Index, setActive1Index] = useState(1);
     
@@ -24,13 +25,13 @@ export const ChooseUse = () => {
     <div className='choosUs-row1'>
         <div className='choose_cards'></div>
     </div>
-    <div className='choosUs-row1 '>
+    <div className='choosUs-row1 mt-5'>
    <div className='choose_cards'></div>
    <div className='choose_cards'></div>
    
   
     </div>
-    <div className='choosUs-row1'>
+    <div className='choosUs-row1 mt-5'>
         <div className='div'>
 
     <div className='choose_cards1'></div>
@@ -48,7 +49,7 @@ export const ChooseUse = () => {
 
 
 
-    <div className='crasousel_container'>
+    <div className='crasousel_container mt-5'>
    
       <Slider {...settings}>
         {Array.from({ length: 6 }).map((_, index) => (
@@ -58,6 +59,14 @@ export const ChooseUse = () => {
             key={index}
             className={`carousel-card ${index === active1Index ? 'active' : ''}`}
           >
+            <div className='carousel-card-content'>
+              <div className='card-svg'>
+                <BussinessHeadPhone/>
+              </div>
+              <div className='Card-text'>
+                <p>Our support team is available 24/7 via our ticketing system to answer your queries. Our office is available between 8am – 5pm (AEST) Monday – Friday.</p>
+              </div>
+            </div>
         
           </div>
             </div>

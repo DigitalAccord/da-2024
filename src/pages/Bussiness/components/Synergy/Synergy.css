@@ -1,0 +1,56 @@
+.synergy-wrapper {
+  width: 100%;
+  min-height: 1558px;
+  height: 100vh;
+  background: url("../../../../assets/bussiness//image 62.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.synergy-wrapper::after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(180deg, #181D26 0%, rgba(24, 29, 38, 0) 100%);
+  mix-blend-mode: lighten;
+}
+.synergy-wrapper .synergy_container {
+  max-width: 1470px;
+  width: 100%;
+}
+.synergy-wrapper .synergy_container .syntergy_image_text img {
+  width: 100%;
+  height: 100%;
+}
+.synergy-wrapper .synergy_container .synergy_text_wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.synergy-wrapper .synergy_container .synergy_text_wrapper .text_line {
+  width: 1px;
+  background: white;
+  min-height: 511px;
+}
+.synergy-wrapper .synergy_container .synergy_text {
+  max-width: 320px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.synergy-wrapper .synergy_container .synergy_text p {
+  padding-top: 15px;
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 275;
+  line-height: 25.928px;
+}/*# sourceMappingURL=Synergy.css.map */

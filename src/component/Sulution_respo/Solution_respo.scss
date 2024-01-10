@@ -41,7 +41,7 @@
                 .bg-circle-wrapper {
                     background-image: url("../../assets/round.png");
                     height: 202px;
-                    width: 380px;
+                    max-width: 350px;
                     background-position: left;
                     background-size: 60% 100%;
                     background-repeat: no-repeat;
@@ -50,6 +50,7 @@
                     justify-content: center;
                     position: relative;
                     left: 12px;
+                    width: 100%;
 
                     .circle-overflow {
                         background: linear-gradient(180deg, #F36A24 0%, #C74300 107.94%);

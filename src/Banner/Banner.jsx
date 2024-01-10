@@ -103,7 +103,6 @@ export const Banner = () => {
                 </div>
                 
                 <Solutions />
-                
                 <Fade bottom>
                 <CenterMode />
                 </Fade>

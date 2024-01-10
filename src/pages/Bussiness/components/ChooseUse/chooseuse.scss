@@ -77,9 +77,38 @@
         margin: 0 auto;
         transition: transform 0.3s ease-in-out;
         height: 428px;
-        background-color: aqua;
-      margin-right: 100px;
-         width: 90%;
+        border-radius: 10px;
+        border: 0.5px solid rgba(255, 255, 255, 0.26);
+        background: rgba(217, 217, 217, 0.03);
+        backdrop-filter: blur(23.5px);
+        margin-right: 100px;
+        width: 90%;
+
+        .carousel-card-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+
+            .card-svg {
+                svg {
+                    max-width: 200px;
+                }
+            }
+
+            .Card-text {
+                p {
+                    color: #FFF;
+                    text-align: center;
+                    font-family: Poppins;
+                    font-size: 17.006px;
+                    font-style: normal;
+                    font-weight: 275;
+                    line-height: 22.046px;
+                }
+            }
+        }
 
 
     }
@@ -91,13 +120,14 @@
         // margin-right: 30px !important;
         // width: 100%;
         height: 450px;
-        width: 350px !important;
-        padding-right: 100px !important;
+        width: 90% !important;
+
+
     }
 
     .slick-prev,
     .slick-next {
-        font-size: 24px;
+        font-size: 17px !important;
         line-height: 1;
     }
 
@@ -107,11 +137,16 @@
         position: relative;
         overflow: hidden;
     }
-    &.slick-current{
+
+    &.slick-current {
         margin-right: 130px !important;
     }
+    &.slick-dots li {
+        left: 40% !important;
+        position: absolute !important;
+    }
+    // .slick-dots{
+    //     left: 41% !important;
+   
+    // }
 }
-
-
-
-  

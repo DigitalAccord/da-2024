@@ -5,8 +5,10 @@ import arrow from '../../assets/Arrow 4.png'
 import map from '../../assets/banner/map.png'
 import { Toaster, toast } from 'sonner'
 import map_pointer from '../../assets/contact/market.png'
+import { useNavigate } from 'react-router-dom'
 
 const LetsTalk = () => {
+    const navigate = useNavigate();
 
   const [getData, setGetData] = useState({
     username: "",
@@ -43,12 +45,6 @@ const LetsTalk = () => {
   
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    // const formData = new FormData(e.target);
-    // const data = {};
-    // formData.forEach((value, key) => {
-    //   data[key] = value;
-    // });
     for (const key in getData) {
       if (key !== 'message' && !getData[key].trim()) {
         toast.error(`Please fill in the ${key} field`);
@@ -80,6 +76,7 @@ const LetsTalk = () => {
           message: '',
         });
         setIsFormValid(false);
+        navigate('/thanks');
       } else {
         toast.error('Failed to send email');
         console.error('Failed to send email');
@@ -94,7 +91,7 @@ const LetsTalk = () => {
 
   return (
     <>
-      <div className='form-section'>
+      <div className='form-section' id='targetForm'>
         <div className='circle-blur'></div>
         <div className='container custom-container'>
           <div className='row'>
@@ -112,7 +109,6 @@ const LetsTalk = () => {
             <div className='col-md-9'>
               <div className='left-section-wraper'>
                 <div className='map-wraper'>
-                  {/* <iframe className='iframe' style={{ filter: "invert(80%)", width: "100%", height: "596px", borderRadius: "35px" }} src="https://www.google.com/maps/embed?..."></iframe> */}
                   <img src={map} alt="" />
                   <div className='map_pointer_wrapper'>
                     <div className={click ? "click_content" : ""}>

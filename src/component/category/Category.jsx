@@ -1,6 +1,8 @@
 import React from 'react'
 import './category.scss'
 import { Rating } from '@mui/material';
+
+import { Link } from 'react-router-dom';
 const Category = () => {
     return (
         <>
@@ -50,7 +52,7 @@ const Category = () => {
                             <div className='category-inner-section2 '>
                                 <h1>What Our Customers Are Saying?</h1>
                                 <p>Digital Accord specialises in providing our clients with tailored solutions that optimise results and drive business growth. Our Brisbane-based team works closely with your business to develop a personal strategy that will effectively help your business achieve its objectives.</p>
-                                <div className='d-flex justify-content-start align-items-center gap-3 contact_us  '>
+                                <Link to='/contact' className='d-flex justify-content-start align-items-center gap-3 contact_us text-decoration-none  '>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="63" height="63" viewBox="0 0 63 63" fill="none">
                                         <circle cx="31.5" cy="31.5" r="31.5" fill="url(#paint0_linear_1_12322)" />
                                         <path d="M42.7071 32.7071C43.0976 32.3166 43.0976 31.6834 42.7071 31.2929L36.3431 24.9289C35.9526 24.5384 35.3195 24.5384 34.9289 24.9289C34.5384 25.3195 34.5384 25.9526 34.9289 26.3431L40.5858 32L34.9289 37.6569C34.5384 38.0474 34.5384 38.6805 34.9289 39.0711C35.3195 39.4616 35.9526 39.4616 36.3431 39.0711L42.7071 32.7071ZM22 33L42 33L42 31L22 31L22 33Z" fill="white" />
@@ -62,7 +64,7 @@ const Category = () => {
                                         </defs>
                                     </svg>
                                     <p className='m-0'>Contact Us</p>
-                                </div>
+                                </Link>
                             </div>
                         </div>
                     </div>

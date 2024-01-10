@@ -1,4 +1,6 @@
 .button{
+    max-width: 334px;
+    width: 100%;
     button{
         border-radius: 12px;
 background: transparent;
@@ -11,7 +13,8 @@ font-weight: 700;
 line-height: normal;
 border-radius: 62px;
 border: 1px solid #FFF;
-padding: 10px 50px;
+width: 100%;
+padding: 10px 0px;
     &:hover{
         transition: all 0.4s linear;
         color: #F36A24;

@@ -230,7 +230,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding-top: 10px;
+  padding-top: 13px;
   padding-left: 50px;
   padding-right: 50px;
 }
@@ -260,7 +260,12 @@
   border: 1px solid #E37E49;
   stroke: #E37E49;
   border-radius: 50%;
-  padding: 15px;
+  padding: 10px;
+}
+@media screen and (max-width: 575px) {
+  .navbar .nav ul li .span {
+    padding: 9px;
+  }
 }
 .navbar .nav ul li a {
   color: #FFF;
@@ -354,7 +359,12 @@
   align-items: center;
 }
 .overlay.slideIn {
-  top: 70.25px;
+  top: 55px;
+}
+@media screen and (max-width: 575px) {
+  .overlay.slideIn {
+    top: 13px;
+  }
 }
 .overlay.slideOut {
   top: -110%;
@@ -558,7 +568,7 @@
 }
 @media screen and (max-width: 575px) {
   .overlay .mobileMenuDiv .mobileMenuItems a {
-    font-size: 18px;
+    font-size: 15px;
   }
 }
 .overlay .mobileMenuDiv .mobileMenuItems a:hover svg {
@@ -570,8 +580,8 @@
   background: #161B23;
   border-radius: 50%;
   border-bottom: 0.89px solid #F36A24;
-  min-width: 55px;
-  min-height: 55px;
+  min-width: 49px;
+  min-height: 49px;
   padding: 15px;
 }
 .overlay .mobileMenuDiv .mobileMenuItems.hide {
@@ -916,21 +926,25 @@
 .overlay .outerCircle .bottomRight .subMenuDot1 .menuItems .subMenu li:nth-child(3) {
   right: -25%;
 }
-.overlay .outerCircle .subMenuDot1, .overlay .outerCircle .subMenuDot2 {
+.overlay .outerCircle .subMenuDot1,
+.overlay .outerCircle .subMenuDot2 {
   width: 22px;
   height: 22px;
   border-radius: 50%;
   position: absolute;
 }
-.overlay .outerCircle .subMenuDot1.active, .overlay .outerCircle .subMenuDot2.active {
+.overlay .outerCircle .subMenuDot1.active,
+.overlay .outerCircle .subMenuDot2.active {
   border: 2px solid #fff;
   background: #F36A24;
 }
-.overlay .outerCircle .subMenuDot1.active .menuItems, .overlay .outerCircle .subMenuDot2.active .menuItems {
+.overlay .outerCircle .subMenuDot1.active .menuItems,
+.overlay .outerCircle .subMenuDot2.active .menuItems {
   display: flex;
   align-items: center;
 }
-.overlay .outerCircle .subMenuDot1.active .menuItems .menuItemIcon, .overlay .outerCircle .subMenuDot2.active .menuItems .menuItemIcon {
+.overlay .outerCircle .subMenuDot1.active .menuItems .menuItemIcon,
+.overlay .outerCircle .subMenuDot2.active .menuItems .menuItemIcon {
   background: linear-gradient(180deg, #F36A24 0%, #C74300 100%);
   box-shadow: 0px 0px 12px 0px rgba(255, 173, 132, 0.3);
   border-radius: 50%;

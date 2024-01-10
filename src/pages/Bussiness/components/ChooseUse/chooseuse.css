@@ -1,0 +1,112 @@
+.chooseUs-wrapper {
+  width: 100%;
+}
+.chooseUs-wrapper .choosUs-row1 {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  gap: 53px;
+}
+.chooseUs-wrapper .choosUs-row1 .div {
+  display: flex;
+  width: 80%;
+  gap: 53px;
+  justify-content: end;
+  position: relative;
+}
+.chooseUs-wrapper .choosUs-row1 .div .choose_cards1 {
+  max-width: 311px;
+  width: 100%;
+  height: 433px;
+  border-radius: 10px;
+  border: 0.5px solid rgba(255, 255, 255, 0.26);
+  background: rgba(217, 217, 217, 0.03);
+  -webkit-backdrop-filter: blur(23.5px);
+          backdrop-filter: blur(23.5px);
+}
+.chooseUs-wrapper .choosUs-row1 .div .Coose_overlay {
+  position: absolute;
+  top: 10%;
+  max-width: 836px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  left: 19%;
+}
+.chooseUs-wrapper .choosUs-row1 .div .Coose_overlay h1 {
+  color: #FFF;
+  text-align: right;
+  font-family: Poppins;
+  font-size: 128px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 89.177%;
+}
+.chooseUs-wrapper .choosUs-row1 .choose_cards {
+  max-width: 311px;
+  width: 100%;
+  height: 433px;
+  border-radius: 10px;
+  border: 0.5px solid rgba(255, 255, 255, 0.26);
+  background: rgba(217, 217, 217, 0.03);
+  -webkit-backdrop-filter: blur(23.5px);
+          backdrop-filter: blur(23.5px);
+}
+
+.crasousel_container {
+  min-height: 600px;
+}
+.crasousel_container .carousel-card {
+  margin: 0 auto;
+  transition: transform 0.3s ease-in-out;
+  height: 428px;
+  border-radius: 10px;
+  border: 0.5px solid rgba(255, 255, 255, 0.26);
+  background: rgba(217, 217, 217, 0.03);
+  -webkit-backdrop-filter: blur(23.5px);
+          backdrop-filter: blur(23.5px);
+  margin-right: 100px;
+  width: 90%;
+}
+.crasousel_container .carousel-card .carousel-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+.crasousel_container .carousel-card .carousel-card-content .card-svg svg {
+  max-width: 200px;
+}
+.crasousel_container .carousel-card .carousel-card-content .Card-text p {
+  color: #FFF;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 17.006px;
+  font-style: normal;
+  font-weight: 275;
+  line-height: 22.046px;
+}
+.crasousel_container .active {
+  border-radius: 35px;
+  background: linear-gradient(255deg, #F36A24 2.73%, #8C3305 96.37%);
+  height: 450px;
+  width: 90% !important;
+}
+.crasousel_container .slick-prev,
+.crasousel_container .slick-next {
+  font-size: 17px !important;
+  line-height: 1;
+}
+.crasousel_container .slick-list {
+  padding: 0px 26.3% !important;
+  position: relative;
+  overflow: hidden;
+}
+.crasousel_container.slick-current {
+  margin-right: 130px !important;
+}
+.crasousel_container.slick-dots li {
+  left: 40% !important;
+  position: absolute !important;
+}/*# sourceMappingURL=chooseuse.css.map */

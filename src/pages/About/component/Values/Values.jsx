@@ -25,13 +25,13 @@ const Values = () => {
                 Marketing Tactics
                 </Buttons>
                 <Buttons>
-                Marketing Tactics
+                Sales Approach
                 </Buttons>
                 <Buttons>
-                Marketing Tactics
+                New Technology
                 </Buttons>
                 <Buttons>
-                Marketing Tactics
+                Managed IT Solution
                 </Buttons>
                 </div>
                 

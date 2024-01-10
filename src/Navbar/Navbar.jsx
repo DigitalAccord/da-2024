@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 
 import { BackArrow, BusinessIcon, CaseStudiesIcon, ChatIcon, ExperienceIcon, HomeIcon, MainLogo, MenuBarClose, MenuBarOpen, PeopleIcon, SpeakerIcon, WorkIcon } from '../assets/svgIcons';
-const MobileMenu = () => {
+const MobileMenu = ({handleClosePopup}) => {
     const [activeMenu, setActiveMenu] = useState(null);
     const addClassActive = (menu) => {
         setActiveMenu(menu)
@@ -14,10 +14,10 @@ const MobileMenu = () => {
         </div>
         <p className={`mobileMenuItems ${activeMenu === null ? '' : 'hide'}`}>
             <a className='menuItems' href='/#'><HomeIcon />Home</a><br /><br />
-            <a className='menuItems' href='/#' onClick={() => addClassActive(`subMenuMobile1`)}><PeopleIcon />About us</a><br /><br />
+            <NavLink className='menuItems' to='/about' onClick={handleClosePopup}><PeopleIcon />About us</NavLink><br /><br />
             <a className='menuItems' href='/#' onClick={() => addClassActive(`subMenuMobile2`)}><SpeakerIcon />Services</a><br /><br />
             <a className='menuItems' href='/#' onClick={() => addClassActive(`subMenuMobile3`)}><WorkIcon />Our Work</a><br /><br />
-            <a className='menuItems' href='/#' onClick={() => addClassActive(`subMenuMobile4`)}><CaseStudiesIcon />Case Studies</a><br /><br />
+            <NavLink className='menuItems' to='/case' onClick={handleClosePopup}><CaseStudiesIcon />Case Studies</NavLink><br /><br />
             <a className='menuItems' href='/#' onClick={() => addClassActive(`subMenuMobile5`)}><BusinessIcon />Digital performance</a><br /><br />
             <a className='menuItems' href='/#' onClick={() => addClassActive(`subMenuMobile6`)}><ExperienceIcon />Contact</a><br /><br />
         </p>
@@ -55,9 +55,11 @@ const MobileMenu = () => {
         <p className={`mobileSubMenuItems ${activeMenu === 'subMenuMobile5' ? 'show' : ''}`}>
             <a className='menuItemBack' href='/#' onClick={() => addClassActive(null)}><BackArrow /></a><br /><br />
             <a className='menuItem' href='/#' ><BusinessIcon />Services</a><br /><br />
-            <a className='subMenuItems' href='/#'>Google Advertising</a><br /><br />
-            <a className='subMenuItems' href='/#'>Google Advertising</a><br /><br />
-            <a className='subMenuItems' href='/#'>5 Advertising</a><br />
+            <NavLink className='subMenuItems' to='/google' onClick={handleClosePopup}>Google Advertising</NavLink><br /><br />
+            <NavLink className='subMenuItems' to='/management' onClick={handleClosePopup}>Social Media Management</NavLink><br /><br />
+            <NavLink className='subMenuItems' to='/add' onClick={handleClosePopup}>Social Media Advertizing</NavLink><br />
+            <NavLink className='subMenuItems' to='/seo' onClick={handleClosePopup}>Seo</NavLink><br />
+            
         </p>
 
         <p className={`mobileSubMenuItems ${activeMenu === 'subMenuMobile6' ? 'show' : ''}`}>
@@ -83,13 +85,13 @@ const AboutMenu = ({handleClosePopup}) => {
     );
   };
 
-const PerformanceSubMenu = () => {
+const PerformanceSubMenu = ({handleClosePopup}) => {
  
     return (<>
-        <a href='/#'>Google Advertising</a>
-        <a href='/#'>Social Media Management</a>
-        <a href='/#'>Social Media advertising</a>
-        <NavLink to='/about'>Performance Menu</NavLink>
+        <NavLink to='/google' onClick={handleClosePopup}>Google Advertising</NavLink>
+        <NavLink to='/management' onClick={handleClosePopup}>Social Media Management</NavLink>
+        <NavLink to='/add' onClick={handleClosePopup}>Social Media advertising</NavLink>
+        <NavLink to='/seo' onClick={handleClosePopup}>Performance Menu</NavLink>
     </>
     );
 };
@@ -154,6 +156,9 @@ const Navbar = () => {
             setActiveMenu(menu)
         }
     };
+
+  
+    
     return (
         <>
             <div className={isPopup ? 'navbar dark' : ' navbar'}>
@@ -172,7 +177,7 @@ const Navbar = () => {
                         </li>
 
                         <li>
-                            <a href='/'><span className='menu-text'>Let’s Talk</span>
+                            <a href='#targetForm'  ><span className='menu-text'>Let’s Talk</span>
                                 <span className='span'>
                                     <ChatIcon />
                                 </span></a>
@@ -196,12 +201,12 @@ const Navbar = () => {
                             </div>
                         </div>
                         <div className={`subMenuDot2 ${activeMenu === 'subMenuDot2' ? 'active' : ''}`}>
-                            <div className='menuItems' onClick={() => addClassActive('subMenuDot2')}>
+                            <NavLink to="/about" className='menuItems text-decoration-none' onClick={handleClosePopup}>
                                 <h2 className='MenuHeading'>about us</h2>
                                 <div className='menuItemIcon'>
                                     <PeopleIcon />
                                 </div>
-                            </div>
+                            </NavLink>
                         </div>
                     </div>
                     <div className='topRight'>
@@ -259,16 +264,15 @@ const Navbar = () => {
                         <AboutMenu  handleClosePopup={handleClosePopup}/>
                     </div>
                     <div className={`subMenuItems ${activeMenu === 'submenu1' ? 'show ' : ''}`}>
-                        <PerformanceSubMenu />
+                        <PerformanceSubMenu handleClosePopup={handleClosePopup} />
                     </div>
                     <div className={`subMenuItems ${activeMenu === 'submenu2' ? 'show' : ''}`}>
-                        <a href='/#'>Google Advertising</a>
-                        <a href='/#'>Social Media Management</a>
-                        <a href='/#'>Social Media advertising</a>
-                        <a href='/#'>User experience</a>
+                        <NavLink to='/development' onClick={handleClosePopup}>Website Design & Development</NavLink>
+                        <NavLink to='/user' onClick={handleClosePopup}>Branding & Logo Design</NavLink>
+                        
                     </div>
                     <div className={`subMenuItems ${activeMenu === 'submenu3' ? 'show' : ''}`}>
-                        <NavLink to='/case' onClick={handleClosePopup}>Google Advertising</NavLink>
+                        <NavLink to='/case' onClick={handleClosePopup}>Website Design & Development</NavLink>
                         <NavLink to='/management' onClick={handleClosePopup}>Social Media Management</NavLink>
                         <NavLink to='/google' onClick={handleClosePopup}>Social Media advertising</NavLink>
                         <a href='/#'>our work</a>
@@ -280,14 +284,14 @@ const Navbar = () => {
                         <NavLink to='/add' onClick={handleClosePopup}>case studies</NavLink>
                     </div>
                     <div className={`subMenuItems ${activeMenu === 'submenu5' ? 'show' : ''}`}>
-                        <a href='/#'>Google Advertising</a>
+                        <a href='/#'>Website Design & Development</a>
                         <a href='/#'>Social Media Management</a>
                         <a href='/#'>Social Media advertising</a>
                         <a href='/#'>business it</a>
                     </div>
                 </div>
                 <div className='mobileMenuDiv'>
-                    <MobileMenu />
+                    <MobileMenu handleClosePopup={handleClosePopup}/>
                 </div>
             </NavMenu>
 
