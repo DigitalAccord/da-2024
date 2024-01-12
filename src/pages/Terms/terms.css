@@ -1,0 +1,27 @@
+.terms-container {
+  max-width: 1380px;
+  width: 100%;
+}
+.terms-container .terms-wrapper {
+  padding-top: 150px;
+}
+.terms-container .terms-wrapper .terms h1 {
+  color: #FFF;
+  font-size: 60px;
+  font-weight: bold;
+}
+.terms-container .terms-wrapper .terms p {
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 400px;
+}
+.terms-container .terms-wrapper .terms-head-section h1 {
+  color: #FFF;
+  font-size: 50px;
+  font-weight: bold;
+}
+.terms-container .terms-wrapper .terms-head-section p {
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 400px;
+}/*# sourceMappingURL=terms.css.map */

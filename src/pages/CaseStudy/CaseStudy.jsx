@@ -1,89 +1,48 @@
 import React, { useEffect, useRef, useState } from 'react'
 import './caseStudy.scss'
-import graph from '../../assets/caseStudy/graph.png'
 import Gallery from '../Seo/component/Gallery/Gallery'
 import LetsTalk from '../../component/LetsTalk/LetsTalk'
-import { Histoslider } from 'histoslider';
 
-
+import Slider from '@mui/material/Slider';
+function valuetext(value) {
+    return `$${value.toLocaleString()}`;
+}
 
 
 const CaseStudy = () => {
-    const [selectedRange, setSelectedRange] = useState(["20000", "40000"]);
-        const [selectedYValues, setSelectedYValues] = useState([]);
-        const [minPrice, setMinPrice] = useState('');
-        const [maxPrice, setMaxPrice] = useState('');
-        const [activeDuration, setActiveDuration] = useState("weeks")
-        const [sliderEnabled, setSliderEnabled] = useState(true);
-        const histosliderRef = useRef();
-        useEffect(() => {
-            console.log("props", histosliderRef.current.props);
-        }, []);
-
-        const chartData1 = [
-            { x0: 10000, x: 10000, y: 40 },
-            { x0: 10000, x: 20000, y: 50 },
-            { x0: 20000, x: 30000, y: 60 },
-            { x0: 30000, x: 40000, y: 70 },
-            { x0: 40000, x: 50000, y: 80 },
-            { x0: 50000, x: 60000, y: 90 },
-            { x0: 60000, x: 70000, y: 100 },
-            { x0: 70000, x: 80000, y: 80 },
-            { x0: 80000, x: 90000, y: 90 },
-            { x0: 90000, x: 100000, y: 110 },
-            
-        ].map(item => ({
-            x0: item.x0,
-            x: parseInt(item.x, 10),
-            y: item.y,
-        }));
 
 
-
-        const handleSliderChange = array => {
-            console.log("array", array)
-            setSelectedRange(array);
-
-
-        };
-        const handleMinPriceChange = (event) => {
-            const newMinPrice = event.target.value;
-            const newMaxPrice = maxPrice;
-            setMinPrice(newMinPrice);
-            setMaxPrice(newMaxPrice);
-            updateSelectedRange(newMinPrice, newMaxPrice);
-        };
-
-        const handleMaxPriceChange = (event) => {
-            const newMinPrice = minPrice;
-            const newMaxPrice = event.target.value;
-            setMinPrice(newMinPrice);
-            setMaxPrice(newMaxPrice);
-            updateSelectedRange(newMinPrice, newMaxPrice);
-        };
-
-        const updateSelectedRange = (newMinPrice, newMaxPrice) => {
-            const minPriceValue = parseFloat(newMinPrice);
-            const maxPriceValue = parseFloat(newMaxPrice);
-
-            if (!isNaN(minPriceValue) && !isNaN(maxPriceValue) && minPriceValue >= 10000) {
-                setSelectedRange([minPriceValue, maxPriceValue]);
-                setSliderEnabled(false);
-            } else {
-                setSliderEnabled(true);
-                console.error('Invalid price values');
-            }
-        };
+    const [activeDuration, setActiveDuration] = useState("weeks")
+    const [value, setValue] = useState([10000, 37000]);
+    const [sliderValues, setSliderValues] = useState([10000, 37000]);
+    const [minInput, setMinInput] = useState(10000);
+    const [maxInput, setMaxInput] = useState(37000);
 
 
-        const handleDurationButtonClick = (duration) => {
-            setActiveDuration(duration);
-        };
+    const handleDurationButtonClick = (duration) => {
+        setActiveDuration(duration);
+    };
 
-        const handleClearButton = () => {
-            setSliderEnabled(true);
-            setSelectedRange([20000, 30000]);
-        }
+
+    const handleChange = (event, newSliderValues) => {
+        setSliderValues(newSliderValues);
+        setMinInput(newSliderValues[0]);
+        setMaxInput(newSliderValues[1]);
+    };
+
+    const handleMinInputChange = (e) => {
+        const minValue = parseInt(e.target.value.replace(/\D/g, ''), 10);
+        setMinInput(minValue);
+        setSliderValues([minValue, sliderValues[1]]);
+    };
+
+    const handleMaxInputChange = (e) => {
+        const maxValue = parseInt(e.target.value.replace(/\D/g, ''), 10);
+        setMaxInput(maxValue);
+        setSliderValues([sliderValues[0], maxValue]);
+    };
+
+
 
 
 
@@ -115,12 +74,10 @@ const CaseStudy = () => {
                                     <label>Select Project</label>
                                     <select>
                                         <option value="">Open this select menu</option>
-                                        <option value="">GitHub</option>
-                                        <option value="">Instagram</option>
+                                        <option value="">Ui Development</option>
+                                        <option value="">Bussiness Development</option>
                                         <option value="">Facebook</option>
-                                        <option value="">LinkedIn</option>
-                                        <option value="">Twitter</option>
-                                        <option value="">Reddit</option>
+
                                     </select>
                                 </div>
                                 <div className='d-flex budget_range_text'>
@@ -128,26 +85,25 @@ const CaseStudy = () => {
                                     <p>Avg. $10K</p>
                                 </div>
                                 <div className='Budget-Range' >
-                                    <Histoslider ref={histosliderRef}
-                                        data={chartData1.map(item => ({
-                                            x0: item.x0,
-                                            x: item.x.toString(),
-                                            y: item.y,
-                                        }))}
-
-                                        selection={selectedRange}
-                                        onChange={sliderEnabled ? handleSliderChange : () => { }}
-                                        selectedColor="#27303F"
-                                        unselectedColor="#EEEEF0"
-                                        width={450}
-                                        height={120}
-                                        style={{ maxWidth: "450px" }}
-
-
+                                    <Slider
+                                        aria-label="Currency range"
+                                        value={sliderValues}
+                                        onChange={handleChange}
+                                        valueLabelDisplay="auto"
+                                        getAriaValueText={valuetext}
+                                        min={10000}
+                                        max={100000}
+                                        step={1000}
+                                        sx={{
+                                            '& .MuiSlider-track': {
+                                                backgroundColor: 'black',
+                                            },
+                                            '& .MuiSlider-rail': {
+                                                backgroundColor: '#000000',
+                                            },
+                                        }}
                                     />
-                                    <div className='graph_img'>
-                                        <img src={graph} />
-                                    </div>
+
                                 </div>
                                 <div className='price-button d-flex flex-row justify-content-between'>
                                     <div className='min-button'>
@@ -155,16 +111,20 @@ const CaseStudy = () => {
                                         <input type="text"
                                             class="btn"
                                             placeholder='$35,000'
-                                            value={minPrice}
-                                            onChange={handleMinPriceChange} />
+                                            value={`$${minInput.toLocaleString()}`}
+                                            onChange={handleMinInputChange}
+
+                                        />
                                     </div>
                                     <div className='max-button'>
                                         <h6>Max Price</h6>
                                         <input type="text"
                                             class="btn"
                                             placeholder='$35,000'
-                                            value={maxPrice}
-                                            onChange={handleMaxPriceChange} />
+                                            value={`$${maxInput.toLocaleString()}`}
+                                            onChange={handleMaxInputChange}
+
+                                        />
                                     </div>
                                 </div>
                                 <div className='ProjectDuration'>
@@ -196,12 +156,12 @@ const CaseStudy = () => {
                                 </div>
                                 <div className='case-right-button d-flex flex-row justify-content-between'>
                                     <div className='clear'>
-                                        <button type='button' class="btn" onClick={handleClearButton}>Clear</button>
+                                        <button type='button' class="btn" >Clear</button>
                                     </div>
                                     <div className='apply'>
-                                        <button type='button' class="btn" onClick={updateSelectedRange}>Apply</button>
+                                        <button type='button' class="btn" >Apply</button>
                                     </div>
-                                    
+
                                 </div>
                             </div>
                         </div>

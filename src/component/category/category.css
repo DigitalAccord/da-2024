@@ -4,6 +4,17 @@
   background: linear-gradient(180deg, rgba(24, 29, 38, 0) 0%, #181D26 100%), linear-gradient(180deg, #181D26 0%, rgba(24, 29, 38, 0) 100%), url("../../assets//innerImg.png"), lightgray 50%/cover no-repeat;
   mix-blend-mode: lighten;
   background-position: top;
+  max-width: 1920px;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+}
+@media only screen and (min-width: 1922px) {
+  .category-wrapper {
+    background: linear-gradient(180deg, rgba(24, 29, 38, 0) 0%, #181D26 100%), linear-gradient(180deg, #181D26 0%, rgba(24, 29, 38, 0) 100%), url("../../assets//innerImg.png"), gray 50%/120% 100% no-repeat;
+    mix-blend-mode: lighten;
+    background-position: top;
+    background-repeat: no-repeat;
+  }
 }
 @media only screen and (max-width: 767px) {
   .category-wrapper .category_row {

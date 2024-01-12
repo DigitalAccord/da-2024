@@ -394,7 +394,7 @@ $straightText: 105deg;
     }
 
     .subMenuItems {
-      overflow: hidden;
+      // overflow: hidden;
       opacity: 0;
       border-radius: 50%;
       display: flex;
@@ -406,17 +406,38 @@ $straightText: 105deg;
       transition: height 1s ease, opacity 1s ease;
 
       a {
-        color: #FFF;
+        color: #fff;
         font-family: Poppins;
-        font-size: 14px;
+        font-size: 16px;
         font-style: normal;
-        font-weight: 300;
+        font-weight: 600;
         line-height: normal;
         letter-spacing: 0.56px;
         cursor: pointer;
         text-decoration: none;
         margin-bottom: 10px;
+        background-color: transparent;
+        max-width: 300px;
+        width: 100%;
+        text-align: center;
+        padding: 11px 0;
+        border-radius: 28px;
+        border: 1px solid #fff;
+        margin-bottom: 15px;
+        transition: 0.3s ease;
+      &:hover{
+        background: linear-gradient(180deg, #F36A24 0%, #C74300 100%);  
+        border: 1px solid transparent;
       }
+        
+      }
+      .submenu-active{
+        background: linear-gradient(180deg, #F36A24 0%, #C74300 100%);
+        border: 1px solid transparent;
+       
+       
+      }
+      
 
       &.show {
         height: 500px;
@@ -460,7 +481,14 @@ $straightText: 105deg;
     max-height: 580px;
     overflow: hidden;
     width: 100vw;
-
+   
+    @media screen and (max-width:425px) {
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+      
+    }
     @media screen and (max-width:767px) {
       width: 100vw;
       left: -90px;
@@ -567,6 +595,8 @@ $straightText: 105deg;
         color: #FFF;
         font-family: Poppins;
         font-size: 25px;
+       
+
 
         @media screen and (max-width:575px) {
           font-size: 15px;
@@ -607,6 +637,7 @@ $straightText: 105deg;
 
     .mobileSubMenuItems {
       display: none;
+      
 
       &.show {
         display: initial;
@@ -668,7 +699,6 @@ $straightText: 105deg;
       }
 
       .subMenuItems {
-
         color: #FFF;
         font-family: Poppins;
         font-size: 14px;
@@ -681,10 +711,20 @@ $straightText: 105deg;
         text-decoration: none;
         margin-bottom: 10px;
         text-decoration: none;
-
-        @media screen and (max-width:450px) {
-          padding-left: 20px;
-        }
+        background: #C74300;
+        text-align: center;
+        border-radius: 20px;
+        width: 150px !important;
+        padding: 9px 14px;
+        border: 1px solid white;
+       
+          // a{
+          //   max-width: 200px ;
+          //   width: 100%;
+          // }
+        // @media screen and (max-width:450px) {
+        //   padding-left: 20px;
+        // }
       }
     }
   }

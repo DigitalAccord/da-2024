@@ -1,6 +1,19 @@
 .chooseUs-wrapper {
     width: 100%;
-
+    position: relative;
+    &::after{
+        content: "";
+        position: absolute;
+        max-width: 450px;
+        width: 100%;
+        background: url("../../../../assets/bussiness/Ellipse\ 139\ \(1\).png");
+        height: 450px;
+        bottom: 0;
+        left: 60%;
+        background-size: cover;
+        background-position: center;
+    }
+background: url('../../../../assets/bussiness/Group\ 1306.png');
     .choosUs-row1 {
         width: 100%;
         display: flex;
@@ -50,7 +63,7 @@
             }
         }
 
-        .choose_cards {
+        .choose_cards1 {
             max-width: 311px;
             width: 100%;
             height: 433px;
@@ -69,7 +82,7 @@
 
 
 .crasousel_container {
-    min-height: 600px;
+    
 
 
     .carousel-card {
@@ -82,7 +95,8 @@
         background: rgba(217, 217, 217, 0.03);
         backdrop-filter: blur(23.5px);
         margin-right: 100px;
-        width: 90%;
+        width: 90% !important;
+        margin: 0 auto;
 
         .carousel-card-content {
             display: flex;
@@ -121,6 +135,9 @@
         // width: 100%;
         height: 450px;
         width: 90% !important;
+        margin: 0 auto !important;
+        position: relative;
+       
 
 
     }
@@ -132,21 +149,18 @@
     }
 
     .slick-list {
-        padding: 0px 26.3% !important;
+        padding: 0px 3% !important;
         // margin: 0px 223px !important;
-        position: relative;
-        overflow: hidden;
+        // position: relative;
+        // overflow: hidden;
     }
 
     &.slick-current {
-        margin-right: 130px !important;
+       
     }
     &.slick-dots li {
         left: 40% !important;
         position: absolute !important;
     }
-    // .slick-dots{
-    //     left: 41% !important;
-   
-    // }
+    
 }

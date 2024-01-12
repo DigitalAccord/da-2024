@@ -37,7 +37,11 @@
   background: white;
   min-height: 511px;
 }
-.synergy-wrapper .synergy_container .synergy_text {
+.synergy-wrapper .synergy_container .synergy_wrapper-text {
+  position: relative;
+  width: 100%;
+}
+.synergy-wrapper .synergy_container .synergy_wrapper-text .synergy_text {
   max-width: 320px;
   height: 100%;
   display: flex;
@@ -45,7 +49,7 @@
   align-items: center;
   height: 100%;
 }
-.synergy-wrapper .synergy_container .synergy_text p {
+.synergy-wrapper .synergy_container .synergy_wrapper-text .synergy_text p {
   padding-top: 15px;
   color: #FFF;
   font-family: Poppins;
@@ -53,4 +57,42 @@
   font-style: normal;
   font-weight: 275;
   line-height: 25.928px;
+}
+.synergy-wrapper .synergy-right-cards-wrapper {
+  width: 50%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.synergy-wrapper .synergy-right-cards-wrapper .s-card {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  width: 100%;
+}
+.synergy-wrapper .synergy-right-cards-wrapper .s-card .synergy-right-cards {
+  max-width: 311px;
+  width: 100%;
+  min-height: 433px;
+  border: 0.5px solid rgba(255, 255, 255, 0.26);
+  background: transparent;
+  -webkit-backdrop-filter: blur(23.5px);
+          backdrop-filter: blur(23.5px);
+  border-radius: 15px;
+}
+.synergy-wrapper .synergy-right-cards-wrapper .s-card .s-card1 {
+  width: 100%;
+  display: flex;
+  gap: 30px;
+  justify-content: end;
+}
+.synergy-wrapper .synergy-right-cards-wrapper .s-card .s-card1 .synergy-right-cards {
+  max-width: 311px;
+  width: 100%;
+  min-height: 433px;
+  border: 0.5px solid rgba(255, 255, 255, 0.26);
+  background: transparent;
+  -webkit-backdrop-filter: blur(23.5px);
+          backdrop-filter: blur(23.5px);
+  border-radius: 15px;
 }/*# sourceMappingURL=Synergy.css.map */

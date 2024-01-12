@@ -381,7 +381,6 @@
   }
 }
 .overlay .centerText .subMenuItems {
-  overflow: hidden;
   opacity: 0;
   border-radius: 50%;
   display: flex;
@@ -393,16 +392,33 @@
   transition: height 1s ease, opacity 1s ease;
 }
 .overlay .centerText .subMenuItems a {
-  color: #FFF;
+  color: #fff;
   font-family: Poppins;
-  font-size: 14px;
+  font-size: 16px;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 600;
   line-height: normal;
   letter-spacing: 0.56px;
   cursor: pointer;
   text-decoration: none;
   margin-bottom: 10px;
+  background-color: transparent;
+  max-width: 300px;
+  width: 100%;
+  text-align: center;
+  padding: 11px 0;
+  border-radius: 28px;
+  border: 1px solid #fff;
+  margin-bottom: 15px;
+  transition: 0.3s ease;
+}
+.overlay .centerText .subMenuItems a:hover {
+  background: linear-gradient(180deg, #F36A24 0%, #C74300 100%);
+  border: 1px solid transparent;
+}
+.overlay .centerText .subMenuItems .submenu-active {
+  background: linear-gradient(180deg, #F36A24 0%, #C74300 100%);
+  border: 1px solid transparent;
 }
 .overlay .centerText .subMenuItems.show {
   height: 500px;
@@ -438,6 +454,14 @@
   max-height: 580px;
   overflow: hidden;
   width: 100vw;
+}
+@media screen and (max-width: 425px) {
+  .overlay .mobileMenuDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+  }
 }
 @media screen and (max-width: 767px) {
   .overlay .mobileMenuDiv {
@@ -661,11 +685,12 @@
   text-decoration: none;
   margin-bottom: 10px;
   text-decoration: none;
-}
-@media screen and (max-width: 450px) {
-  .overlay .mobileMenuDiv .mobileSubMenuItems .subMenuItems {
-    padding-left: 20px;
-  }
+  background: #C74300;
+  text-align: center;
+  border-radius: 20px;
+  width: 150px !important;
+  padding: 9px 14px;
+  border: 1px solid white;
 }
 .overlay .outerCircle {
   position: relative;

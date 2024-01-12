@@ -43,22 +43,68 @@
         }
 
     }
-            .synergy_text {
-                max-width: 320px;
-                height: 100%;
-                display: flex;
-            justify-content: center;
-            align-items: center;
-             height: 100%;
+    .synergy_wrapper-text{
+        position: relative;
+        width: 100%;
+       
+        .synergy_text {
+            max-width: 320px;
+            height: 100%;
+            display: flex;
+        justify-content: center;
+        align-items: center;
+         height: 100%;
+       
+        
 
-                p {padding-top: 15px;
-                    color: #FFF;
-                    font-family: Poppins;
-                    font-size: 20px;
-                    font-style: normal;
-                    font-weight: 275;
-                    line-height: 25.928px;
+            p {padding-top: 15px;
+                color: #FFF;
+                font-family: Poppins;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 275;
+                line-height: 25.928px;
+            }
+        }
+    }
+        }
+        .synergy-right-cards-wrapper{
+         
+            width: 50%;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            .s-card{
+                display: flex;
+                flex-direction: column;
+                align-items: end;
+            
+               width: 100%;
+                .synergy-right-cards{
+                max-width: 311px;
+                width: 100%;
+                min-height: 433px;
+                border: 0.5px solid rgba(255, 255, 255, 0.26);
+                background: transparent;
+                backdrop-filter: blur(23.5px);
+                border-radius: 15px;
                 }
+                .s-card1{
+                    width: 100%;
+                    display: flex;
+                    gap:30px;
+                    justify-content: end;
+                    .synergy-right-cards{
+                        max-width: 311px;
+                        width: 100%;
+                        min-height: 433px;
+                        border: 0.5px solid rgba(255, 255, 255, 0.26);
+                        background: transparent;
+                        backdrop-filter: blur(23.5px);
+                        border-radius: 15px;
+                        }
+                }
+
             }
         }
     }

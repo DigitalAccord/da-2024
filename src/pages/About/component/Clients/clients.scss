@@ -124,7 +124,7 @@
                     position: absolute;
                     right: 91px;
                     top: -131px;
-                    transition: opacity 0.3s ease;
+                   
                     width: 211px;
                     height: 185px;
                     display: flex;
@@ -142,7 +142,7 @@
                     }
 
                     &:hover {
-                        opacity: 0.8;
+                        
 
                     }
 
@@ -257,9 +257,22 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background: url("../../../../assets//about//mainImg.png");
+            background: url("../../../../assets//about/MicrosoftTeams-image.png");
             background-position: center;
-            background-size: cover;
+            background-size: 101% 112%;
+            max-height: 593px;
+            background-repeat: no-repeat;
+
+        }
+        .Client_right2 {
+            max-width: 1060px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url("../../../../assets//about/MicrosoftTeams-imag.png");
+            background-position: left 0px center;
+            background-size: 103% 115%;
             max-height: 593px;
             background-repeat: no-repeat;
 

@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import './navbar.scss'
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
-
 import { BackArrow, BusinessIcon, CaseStudiesIcon, ChatIcon, ExperienceIcon, HomeIcon, MainLogo, MenuBarClose, MenuBarOpen, PeopleIcon, SpeakerIcon, WorkIcon } from '../assets/svgIcons';
 const MobileMenu = ({handleClosePopup}) => {
     const [activeMenu, setActiveMenu] = useState(null);
@@ -57,8 +56,8 @@ const MobileMenu = ({handleClosePopup}) => {
             <a className='menuItem' href='/#' ><BusinessIcon />Services</a><br /><br />
             <NavLink className='subMenuItems' to='/google' onClick={handleClosePopup}>Google Advertising</NavLink><br /><br />
             <NavLink className='subMenuItems' to='/management' onClick={handleClosePopup}>Social Media Management</NavLink><br /><br />
-            <NavLink className='subMenuItems' to='/add' onClick={handleClosePopup}>Social Media Advertizing</NavLink><br />
-            <NavLink className='subMenuItems' to='/seo' onClick={handleClosePopup}>Seo</NavLink><br />
+            <NavLink className='subMenuItems' to='/add' onClick={handleClosePopup}>Social Media Advertizing</NavLink><br /><br />
+            <NavLink className='subMenuItems' to='/seo' onClick={handleClosePopup} >Seo</NavLink><br />
             
         </p>
 
@@ -75,7 +74,7 @@ const AboutMenu = ({handleClosePopup}) => {
     
     return (
       <>
-        <NavLink to='/work' onClick={handleClosePopup}>Google Advertising</NavLink>
+        <NavLink to='/work' className="submenu-active" onClick={handleClosePopup}>Google Advertising</NavLink>
         <NavLink to='/contact' onClick={handleClosePopup}>Social Media Management</NavLink>
         <NavLink to='/seo' onClick={handleClosePopup}>Social Media advertising</NavLink>
         <NavLink to='/about' className="about-link" onClick={handleClosePopup}>
@@ -86,9 +85,9 @@ const AboutMenu = ({handleClosePopup}) => {
   };
 
 const PerformanceSubMenu = ({handleClosePopup}) => {
- 
+      
     return (<>
-        <NavLink to='/google' onClick={handleClosePopup}>Google Advertising</NavLink>
+        <NavLink to='/google' className="submenu-active" onClick={handleClosePopup}>Google Advertising</NavLink>
         <NavLink to='/management' onClick={handleClosePopup}>Social Media Management</NavLink>
         <NavLink to='/add' onClick={handleClosePopup}>Social Media advertising</NavLink>
         <NavLink to='/seo' onClick={handleClosePopup}>Performance Menu</NavLink>
@@ -137,15 +136,23 @@ NavMenu.propTypes = {
 const Navbar = () => {
     const [isPopup, setPopup] = useState(false);
     const [activeMenu, setActiveMenu] = useState(null);
+   
     const logoStyle = { height: '31px', width: '30px' };
 
     const handlePopup = () => {
         setPopup(!isPopup);
+        if (!isPopup) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }
 
     };
     const handleClosePopup = () =>{
         setPopup(false);
         setActiveMenu(null);
+       
+        document.body.style.overflow = 'auto';
     }
 
     const addClassActive = (menu) => {
@@ -177,7 +184,7 @@ const Navbar = () => {
                         </li>
 
                         <li>
-                            <a href='#targetForm'  ><span className='menu-text'>Let’s Talk</span>
+                            <a href='#LetsTalk'  ><span className='menu-text'>Let’s Talk</span>
                                 <span className='span'>
                                     <ChatIcon />
                                 </span></a>
@@ -267,24 +274,24 @@ const Navbar = () => {
                         <PerformanceSubMenu handleClosePopup={handleClosePopup} />
                     </div>
                     <div className={`subMenuItems ${activeMenu === 'submenu2' ? 'show' : ''}`}>
-                        <NavLink to='/development' onClick={handleClosePopup}>Website Design & Development</NavLink>
+                        <NavLink to='/development' onClick={handleClosePopup} className="submenu-active">Website Design & Development</NavLink>
                         <NavLink to='/user' onClick={handleClosePopup}>Branding & Logo Design</NavLink>
                         
                     </div>
                     <div className={`subMenuItems ${activeMenu === 'submenu3' ? 'show' : ''}`}>
-                        <NavLink to='/case' onClick={handleClosePopup}>Website Design & Development</NavLink>
+                        <NavLink to='/case' onClick={handleClosePopup} className="submenu-active">Website Design & Development</NavLink>
                         <NavLink to='/management' onClick={handleClosePopup}>Social Media Management</NavLink>
                         <NavLink to='/google' onClick={handleClosePopup}>Social Media advertising</NavLink>
                         <a href='/#'>our work</a>
                     </div>
                     <div className={`subMenuItems ${activeMenu === 'submenu4' ? 'show' : ''}`}>
-                        <NavLink to='/user' onClick={handleClosePopup}>Google Advertising</NavLink>
+                        <NavLink to='/user' onClick={handleClosePopup} className="submenu-active">Google Advertising</NavLink>
                         <NavLink to='/development' onClick={handleClosePopup}>Social Media Management</NavLink>
                         <NavLink to='/development' onClick={handleClosePopup}>Social Media advertising</NavLink>
                         <NavLink to='/add' onClick={handleClosePopup}>case studies</NavLink>
                     </div>
                     <div className={`subMenuItems ${activeMenu === 'submenu5' ? 'show' : ''}`}>
-                        <a href='/#'>Website Design & Development</a>
+                        <a href='/#' className="submenu-active">Website Design & Development</a>
                         <a href='/#'>Social Media Management</a>
                         <a href='/#'>Social Media advertising</a>
                         <a href='/#'>business it</a>

@@ -1,6 +1,6 @@
 .custom-container {
     max-width: 1510px !important;
-   
+
 }
 
 .form-section {
@@ -217,16 +217,18 @@
 // footer starts here
 .footer {
     display: block;
+
     @media only screen and (max-width: 575px) {
-        display:none;
+        display: none;
     }
+
     .footer-arrow-img {
         border-radius: 62px;
         border: 1px solid #FFF;
         padding: 20px 42px 20px 42px;
         cursor: pointer;
         position: relative;
-     
+
 
         @media only screen and (max-width: 576px) {
             width: 100%;
@@ -237,11 +239,11 @@
         p {
             font-weight: bold;
             color: white;
-          margin: 0;
+            margin: 0;
 
-          @media only screen and (max-width: 400px) {
-            font-size: 12px;
-        }
+            @media only screen and (max-width: 400px) {
+                font-size: 12px;
+            }
 
         }
     }
@@ -262,6 +264,12 @@
             font-size: 16px;
             font-style: normal;
             font-weight: 700;
+            a{
+                transition: 0.3s ease;
+                &:hover{
+                    color: #F36A24 !important;
+                }
+            }
         }
 
         .footer-address {
@@ -279,49 +287,60 @@
             }
 
             li {
-               
+
                 margin: 15px 0px;
                 cursor: pointer;
-                a{
+
+                a {
                     color: #FFF;
                     font-size: 16px;
                     font-weight: 300;
                     line-height: 25px;
                     text-decoration: none;
+                    transition: 0.3s ease;
+
+                    &:hover {
+                        color: #F36A24 !important;
+                    }
                 }
             }
         }
     }
 
 }
-.copyright-row{
-margin-top: 100px;
-display: block;
-@media only screen and (max-width: 575px) {
-    display: none;
-}
-@media only screen and (max-width: 576px) {
-    margin-top: 20px;
-}
-    .copyright-wrapper{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    @media only screen and (max-width: 830px) {
-       flex-direction: column-reverse;
-       text-align: center;
+
+.copyright-row {
+    margin-top: 100px;
+    display: block;
+
+    @media only screen and (max-width: 575px) {
+        display: none;
     }
 
-   
-    
-    
+    @media only screen and (max-width: 576px) {
+        margin-top: 20px;
+    }
+
+    .copyright-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        @media only screen and (max-width: 830px) {
+            flex-direction: column-reverse;
+            text-align: center;
+        }
+
+
+
+
         .copyrightLeft {
             display: flex;
             gap: 20px;
             align-items: center;
-        
+
             p {
                 color: #FFF;
                 font-family: Poppins;
@@ -331,12 +350,18 @@ display: block;
                 line-height: normal;
                 margin: 0;
                 padding: 0;
+                transition: 0.3s ease;
+
+                &:hover {
+                    color: #F36A24 !important;
+                }
             }
+
             @media only screen and (max-width: 576px) {
                 margin-top: 20px;
             }
         }
-        
+
         .corightRight {
             p {
                 text-align: end;
@@ -349,24 +374,28 @@ display: block;
                 line-height: normal;
                 margin: 0;
                 padding: 0;
+
+
                 @media only screen and (max-width: 830px) {
-                  
+
                     text-align: center;
-                 }
-                
+                }
+
             }
         }
     }
 }
+
 @keyframes rotateAnimation {
     0% {
-      transform: rotate(0deg);
+        transform: rotate(0deg);
     }
+
     100% {
-      transform: rotate(360deg);
+        transform: rotate(360deg);
     }
-  }
-  
-  .rotate {
-    animation: rotateAnimation 5s linear infinite; 
-  }
+}
+
+.rotate {
+    animation: rotateAnimation 5s linear infinite;
+}

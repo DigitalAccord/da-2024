@@ -1,0 +1,50 @@
+.privacy_container .privacy_wrapper {
+  padding-top: 150px;
+}
+.privacy_container .privacy_wrapper h1 {
+  color: #FFF;
+  font-size: 100px;
+  font-weight: bold;
+}
+.privacy_container .privacy_wrapper p {
+  color: #FFF;
+  font-weight: 300;
+  font-size: 20px;
+  margin-top: 40px;
+}
+.privacy_container .Information h1 {
+  color: #FFF;
+  font-size: 40px;
+  font-weight: bold;
+}
+.privacy_container .Information .personel-info h1 {
+  color: #FFF;
+  font-size: 40px;
+  font-weight: bold;
+}
+.privacy_container .Information .personel-info li {
+  color: #FFF;
+}
+.privacy_container .your_info h1 {
+  color: #FFF;
+  font-size: 50px;
+  font-weight: bold;
+}
+.privacy_container .your_info .personel-info h1 {
+  color: #FFF;
+  font-size: 40px;
+  font-weight: bold;
+}
+.privacy_container .your_info .personel-info li {
+  color: #FFF;
+}
+.privacy_container .information_sharing h1 {
+  color: #FFF;
+  font-size: 50px;
+  font-weight: bold;
+}
+.privacy_container .information_sharing p {
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 400;
+}/*# sourceMappingURL=privacy.css.map */

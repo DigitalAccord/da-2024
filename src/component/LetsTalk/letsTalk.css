@@ -68,6 +68,12 @@
   margin-bottom: 0;
   margin-top: 50px;
 }
+.form-section .talk-wrapper .talk-content p a {
+  transition: 0.3s ease;
+}
+.form-section .talk-wrapper .talk-content p a:hover {
+  color: #F36A24 !important;
+}
 @media only screen and (max-width: 767px) {
   .form-section .talk-wrapper .talk-content p {
     margin-top: 10px;
@@ -159,7 +165,7 @@
     width: 350px;
   }
 }
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1200px) {
   .form-section .left-section-wraper .map-wraper {
     display: none;
   }
@@ -189,7 +195,12 @@
 }
 @media only screen and (max-width: 1200px) {
   .form-section .left-section-wraper .form-wrapper {
-    max-width: 400px;
+    max-width: 500px;
+  }
+}
+@media only screen and (max-width: 860px) {
+  .form-section .left-section-wraper .form-wrapper {
+    max-width: 450px;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -205,7 +216,7 @@
 }
 @media only screen and (max-width: 1400px) {
   .form-section .left-section-wraper .form-wrapper form {
-    width: 58%;
+    width: 65%;
   }
 }
 @media only screen and (max-width: 1200px) {

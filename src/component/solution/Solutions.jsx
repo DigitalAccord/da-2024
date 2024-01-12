@@ -18,14 +18,14 @@ import waves1 from '../../assets/wave1.png'
 import { Link } from 'react-router-dom';
 
 const Solutions = () => {
-  const intialWidth = window.innerWidth - 15;
+  const intialWidth = window.innerWidth - 18;
   const [windowWidth, setWindowWidth] = useState(intialWidth);
   const [windowWidth1, setWindowWidth1] = useState(intialWidth);
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef();
 
   const handleResize = () => {
-    setWindowWidth(window.innerWidth - 15);
+    setWindowWidth(window.innerWidth - 17);
   };
 
   const handleResize1 = () => {

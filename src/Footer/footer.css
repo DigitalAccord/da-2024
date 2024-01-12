@@ -240,6 +240,12 @@
   font-style: normal;
   font-weight: 700;
 }
+.footer .list p a {
+  transition: 0.3s ease;
+}
+.footer .list p a:hover {
+  color: #F36A24 !important;
+}
 .footer .list .footer-address {
   color: #FFF;
   font-size: 16px;
@@ -264,6 +270,10 @@
   font-weight: 300;
   line-height: 25px;
   text-decoration: none;
+  transition: 0.3s ease;
+}
+.footer .list ul li a:hover {
+  color: #F36A24 !important;
 }
 
 .copyright-row {
@@ -307,6 +317,10 @@
   line-height: normal;
   margin: 0;
   padding: 0;
+  transition: 0.3s ease;
+}
+.copyright-row .copyright-wrapper .copyrightLeft p:hover {
+  color: #F36A24 !important;
 }
 @media only screen and (max-width: 576px) {
   .copyright-row .copyright-wrapper .copyrightLeft {

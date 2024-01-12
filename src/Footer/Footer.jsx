@@ -103,7 +103,7 @@ const Footer = () => {
                       </ul>
                     </div>
                     <div className='list' style={{ width: "200px" }}>
-                      <p><a href='tel:(07) 355400017' style={{color:"white",textDecoration:"none"}}>(07) 355400017</a></p>
+                      <p><a href='tel:(07)355400017' style={{color:"white",textDecoration:"none"}}>(07) 3554 0017</a></p>
                       <p className='footer-address pt-2'>Suite 30, Lvl 7 445 Upper Edward ST Spring Hill, BRISBANE CITY 4000</p>
                     </div>
                   </div>
@@ -118,10 +118,10 @@ const Footer = () => {
       <div className='container custom-container '>
         <div className='row copyright-row' >
           <hr style={{ color: 'white' }} className='d-sm-block d-md-none'></hr>
-          <div className='copyright-wrapper'>
+          <div className='copyright-wrapper' style={{paddingBottom:"26px"}}>
             <div className='copyrightLeft'>
-              <p className='text-white'>Privacy</p>
-              <p className='text-white'>Terms & Conditions</p>
+              <Link to="/privacy" style={{textDecoration:"none"}}><p className='text-white'>Privacy</p></Link>
+              <Link to='/terms' style={{textDecoration:"none"}}><p className='text-white'>Terms & Conditions</p></Link>
             </div>
             <div className='corightRight'>
               <p className='text-white'>Copyright © Digital Agency Pty Ltd ACN: 166 737 819 | ABN: 63 166 737 </p>
@@ -129,7 +129,6 @@ const Footer = () => {
           </div>
         </div>
       </div> 
-
       <M_Footer/>
     </>
   )

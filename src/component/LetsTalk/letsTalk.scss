@@ -69,7 +69,12 @@
                 line-height: 30px;
                 margin-bottom: 0;
                 margin-top: 50px;
-
+                     a{
+                        transition: 0.3s ease;
+                        &:hover{
+                            color:#F36A24 !important;
+                        }
+                     }
                 @media only screen and (max-width: 767px) {
                     margin-top: 10px;
                     width: 100%;
@@ -162,25 +167,12 @@
                     left: 50%;
                     transform: translateX(-50%);
 
-                    img {}
+                    
 
                 }
             }
 
-            // &::after {
-            //     content: "";
-            //     background: url("../../assets//contact//market.png");
-            //     position: absolute;
-            //     background-size: cover;
-            //     left: 50%;
-            //     width: 69px;
-            //     height: 100px;
-            //     background-size: 100%;
-            //     top: 50%;
-            //     transform: translateX(-50%);
-            //     // top: 100%;
-            //     // transform: translateY(-50%);
-            // }
+         
 
             @media only screen and (max-width: 1440px) {
                 left: 60px;
@@ -190,7 +182,7 @@
                 width: 350px;
             }
 
-            @media only screen and (max-width: 992px) {
+            @media only screen and (max-width: 1200px) {
                 display: none;
             }
 
@@ -226,7 +218,10 @@
             }
 
             @media only screen and (max-width: 1200px) {
-                max-width: 400px;
+                max-width: 500px;
+            }
+            @media only screen and (max-width: 860px) {
+                max-width: 450px;
             }
 
             @media only screen and (max-width: 767px) {
@@ -241,7 +236,7 @@
                 margin-left: auto;
 
                 @media only screen and (max-width: 1400px) {
-                    width: 58%;
+                    width: 65%;
                 }
 
                 @media only screen and (max-width: 1200px) {
