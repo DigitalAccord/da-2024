@@ -7,13 +7,6 @@ import CenterMode from '../component/MySwiper/Swiper';
 import Category from '../component/category/Category';
 import LetsTalk from '../component/LetsTalk/LetsTalk';
 import { Fade } from 'react-reveal';
-   
-
-
-
-
-
-
 
 const PerformanceSubMenu = () => {
 

@@ -14,6 +14,10 @@
 
 }
 
+.no-scroll {
+  overflow-y: scroll;
+}
+
 .bannerLayerSky {
   background: url("../assets/banner/Sky.png");
   height: 120vh;
@@ -371,9 +375,24 @@ $straightText: 105deg;
   z-index: 998;
   justify-content: center;
   align-items: center;
+  
+  @media screen and (max-width:1600px) {
+    overflow-y: scroll;
+    height: 900px;
+    min-height: 0;
+
+  }
+
+  @media screen and (max-width:992px) {
+    overflow-y: hidden;
+    height: calc(100vh - 70.25px);
+    min-height: 1015px;
+
+  }
 
   &.slideIn {
     top: 55px;
+
     @media screen and (max-width:575px) {
       top: 13px;
     }
@@ -405,6 +424,8 @@ $straightText: 105deg;
       height: 0px;
       transition: height 1s ease, opacity 1s ease;
 
+     
+
       a {
         color: #fff;
         font-family: Poppins;
@@ -425,19 +446,21 @@ $straightText: 105deg;
         border: 1px solid #fff;
         margin-bottom: 15px;
         transition: 0.3s ease;
-      &:hover{
-        background: linear-gradient(180deg, #F36A24 0%, #C74300 100%);  
-        border: 1px solid transparent;
+
+        &:hover {
+          background: linear-gradient(180deg, #F36A24 0%, #C74300 100%);
+          border: 1px solid transparent;
+        }
+
       }
-        
-      }
-      .submenu-active{
+
+      .submenu-active {
         background: linear-gradient(180deg, #F36A24 0%, #C74300 100%);
         border: 1px solid transparent;
-       
-       
+
+
       }
-      
+
 
       &.show {
         height: 500px;
@@ -481,14 +504,15 @@ $straightText: 105deg;
     max-height: 580px;
     overflow: hidden;
     width: 100vw;
-   
+
     @media screen and (max-width:425px) {
       display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: visible;
-      
+      justify-content: center;
+      align-items: center;
+      overflow: visible;
+
     }
+
     @media screen and (max-width:767px) {
       width: 100vw;
       left: -90px;
@@ -595,7 +619,7 @@ $straightText: 105deg;
         color: #FFF;
         font-family: Poppins;
         font-size: 25px;
-       
+
 
 
         @media screen and (max-width:575px) {
@@ -637,7 +661,7 @@ $straightText: 105deg;
 
     .mobileSubMenuItems {
       display: none;
-      
+
 
       &.show {
         display: initial;
@@ -711,17 +735,22 @@ $straightText: 105deg;
         text-decoration: none;
         margin-bottom: 10px;
         text-decoration: none;
-        background: #C74300;
+        
         text-align: center;
         border-radius: 20px;
-        width: 150px !important;
+        width: 250px !important;
         padding: 9px 14px;
         border: 1px solid white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #C74300;
        
-          // a{
-          //   max-width: 200px ;
-          //   width: 100%;
-          // }
+
+        // a{
+        //   max-width: 200px ;
+        //   width: 100%;
+        // }
         // @media screen and (max-width:450px) {
         //   padding-left: 20px;
         // }
@@ -1085,6 +1114,19 @@ $straightText: 105deg;
     background-position: center;
     background-repeat: no-repeat;
     background-size: 530px;
+
+    @media screen and (max-width:1600px) {
+      min-height: 0px !important;
+      height: 1100px !important;
+
+    }
+
+    @media screen and (max-width:992px) {
+
+      height: calc(100vh - 70.25px) !important;
+      min-height: 800px !important;
+
+    }
 
     @media screen and (max-width:1220px) {
       background-position: center left -265px;

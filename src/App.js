@@ -34,6 +34,8 @@ import Bussiness from './pages/Bussiness/Bussiness';
 import ThankYou from './pages/ThankYou/ThankYou';
 import Privacy from './pages/Privacy/Privacy';
 import { Terms } from './pages/Terms/Terms';
+import Blog from './pages/Blog/Blog';
+import Singular from './pages/Singular/Singular';
 
 
 
@@ -63,7 +65,8 @@ function App() {
           <Route path="/thanks" element={<ThankYou />} />
           <Route path="/privacy" element={<Privacy/>} />
           <Route path="/terms" element={<Terms/>} />
-
+          <Route path="/blog" element={<Blog/>} />
+          <Route path="/singular" element={<Singular/>} />
         </Routes>
         <Footer />
       </BrowserRouter>

@@ -36,10 +36,10 @@ const MobileMenu = ({handleClosePopup}) => {
         </p>
 
         <p className={`mobileSubMenuItems ${activeMenu === 'subMenuMobile3' ? 'show' : ''}`}>
-            <a className='menuItemBack' href='/#' onClick={() => addClassActive(null)}><BackArrow /></a><br /><br />
-            <a className='menuItem' href='/#' ><WorkIcon />Services</a><br /><br />
-            <a className='subMenuItems' href='/#'>Google Advertising</a><br /><br />
-            <a className='subMenuItems' href='/#'>Google Advertising</a><br /><br />
+            <a className='menuItemBack' href='/#' onClick={() => addClassActive(null)}><BackArrow /></a><br /><br/>
+            <a className='menuItem' href='/#' ><WorkIcon />Services</a><br /><br/>
+            <a className='subMenuItems' href='/#'>Google Advertising</a><br />
+            <a className='subMenuItems' href='/#'>Google Advertising</a><br />  
             <a className='subMenuItems' href='/#'>3 Advertising</a><br />
         </p>
 
@@ -54,18 +54,18 @@ const MobileMenu = ({handleClosePopup}) => {
         <p className={`mobileSubMenuItems ${activeMenu === 'subMenuMobile5' ? 'show' : ''}`}>
             <a className='menuItemBack' href='/#' onClick={() => addClassActive(null)}><BackArrow /></a><br /><br />
             <a className='menuItem' href='/#' ><BusinessIcon />Services</a><br /><br />
-            <NavLink className='subMenuItems' to='/google' onClick={handleClosePopup}>Google Advertising</NavLink><br /><br />
-            <NavLink className='subMenuItems' to='/management' onClick={handleClosePopup}>Social Media Management</NavLink><br /><br />
-            <NavLink className='subMenuItems' to='/add' onClick={handleClosePopup}>Social Media Advertizing</NavLink><br /><br />
+            <NavLink className='subMenuItems' to='/google' onClick={handleClosePopup}>Google Advertising</NavLink><br />
+            <NavLink className='subMenuItems' to='/management' onClick={handleClosePopup}>Social Media Management</NavLink><br />
+            <NavLink className='subMenuItems' to='/add' onClick={handleClosePopup}>Social Media Advertizing</NavLink><br />
             <NavLink className='subMenuItems' to='/seo' onClick={handleClosePopup} >Seo</NavLink><br />
             
         </p>
 
         <p className={`mobileSubMenuItems ${activeMenu === 'subMenuMobile6' ? 'show' : ''}`}>
             <a className='menuItemBack' href='/#' onClick={() => addClassActive(null)}><BackArrow /></a><br /><br />
-            <a className='menuItem' href='/#' ><ExperienceIcon />Services</a><br /><br />
-            <a className='subMenuItems' href='/#'>Google Advertising</a><br /><br />
-            <a className='subMenuItems' href='/#'>Google Advertising</a><br /><br />
+            <a className='menuItem' href='/#' ><ExperienceIcon />Services</a><br /><br/>
+            <a className='subMenuItems' href='/#'>Google Advertising</a><br />
+            <a className='subMenuItems' href='/#'>Google Advertising</a><br />
             <a className='subMenuItems' href='/#'>6 Advertising</a><br />
         </p>
     </>)
@@ -140,19 +140,22 @@ const Navbar = () => {
     const logoStyle = { height: '31px', width: '30px' };
 
     const handlePopup = () => {
+        
         setPopup(!isPopup);
         if (!isPopup) {
             document.body.style.overflow = 'hidden';
-        } else {
+          } else {
             document.body.style.overflow = 'auto';
-        }
+          }
+       
 
     };
     const handleClosePopup = () =>{
         setPopup(false);
         setActiveMenu(null);
-       
         document.body.style.overflow = 'auto';
+       
+        
     }
 
     const addClassActive = (menu) => {

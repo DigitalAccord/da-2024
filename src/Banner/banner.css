@@ -10,6 +10,10 @@
   filter: blur(3px);
 }
 
+.no-scroll {
+  overflow-y: scroll;
+}
+
 .bannerLayerSky {
   background: url("../assets/banner/Sky.png");
   height: 120vh;
@@ -358,6 +362,20 @@
   justify-content: center;
   align-items: center;
 }
+@media screen and (max-width: 1600px) {
+  .overlay {
+    overflow-y: scroll;
+    height: 900px;
+    min-height: 0;
+  }
+}
+@media screen and (max-width: 992px) {
+  .overlay {
+    overflow-y: hidden;
+    height: calc(100vh - 70.25px);
+    min-height: 1015px;
+  }
+}
 .overlay.slideIn {
   top: 55px;
 }
@@ -685,12 +703,15 @@
   text-decoration: none;
   margin-bottom: 10px;
   text-decoration: none;
-  background: #C74300;
   text-align: center;
   border-radius: 20px;
-  width: 150px !important;
+  width: 250px !important;
   padding: 9px 14px;
   border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #C74300;
 }
 .overlay .outerCircle {
   position: relative;
@@ -980,6 +1001,18 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: 530px;
+}
+@media screen and (max-width: 1600px) {
+  .overlay .popup {
+    min-height: 0px !important;
+    height: 1100px !important;
+  }
+}
+@media screen and (max-width: 992px) {
+  .overlay .popup {
+    height: calc(100vh - 70.25px) !important;
+    min-height: 800px !important;
+  }
 }
 @media screen and (max-width: 1220px) {
   .overlay .popup {

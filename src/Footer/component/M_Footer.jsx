@@ -2,6 +2,7 @@ import React from 'react'
 import './M_footer.scss'
 import { MainLogo } from '../../assets/svgIcons'
 import footerImg from '../../assets/Arrow 2.png'
+import { Link } from 'react-router-dom'
 
 const logoStyle = { height: '83px', width: '75px' };
 export const M_Footer = () => {
@@ -82,8 +83,8 @@ export const M_Footer = () => {
                         <hr style={{ color: 'white' }} className='d-sm-block d-md-none'></hr>
                         <div className='copyright-wrapper'>
                             <div className='copyrightLeft'>
-                                <p className='text-white'>Privacy</p>
-                                <p className='text-white'>Terms & Conditions</p>
+                                <Link to="/privacy" className='text-white text-decoration-none'>Privacy</Link>
+                                <Link to='/terms' className='text-white text-decoration-none'>Terms & Conditions</Link>
                             </div>
                             <div className='corightRight'>
                                 <p className='text-white'>Copyright © Digital Agency Pty Ltd ACN: 166 737 819 | ABN: 63 166 737 </p>

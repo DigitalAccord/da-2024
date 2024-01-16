@@ -294,3 +294,34 @@ export function BussinessHeadPhone() {
       </svg>
     )
 }
+export function BlogArrow() {
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+  <g filter="url(#filter0_i_10_5624)">
+    <path d="M17.5711 1.92891C17.5711 1.10048 16.8995 0.42891 16.0711 0.42891H2.57109C1.74266 0.42891 1.07109 1.10048 1.07109 1.92891C1.07109 2.75734 1.74266 3.42891 2.57109 3.42891H14.5711V15.4289C14.5711 16.2573 15.2427 16.9289 16.0711 16.9289C16.8995 16.9289 17.5711 16.2573 17.5711 15.4289V1.92891ZM2.98962 17.1317L17.1318 2.98957L15.0104 0.868249L0.868295 15.0104L2.98962 17.1317Z" fill="white"/>
+  </g>
+  <defs>
+    <filter id="filter0_i_10_5624" x="0.868286" y="0.428955" width="16.7028" height="20.7028" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="4"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.25 0"/>
+      <feBlend mode="normal" in2="shape" result="effect1_innerShadow_10_5624"/>
+    </filter>
+  </defs>
+</svg>
+
+    )
+}
+
+export function BlogArrow1() {
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" width="56" height="6" viewBox="0 0 56 6" fill="none">
+        <path d="M55 2.5C55.2761 2.5 55.5 2.72386 55.5 3C55.5 3.27614 55.2761 3.5 55 3.5V2.5ZM0 3L5 0.113249V5.88675L0 3ZM55 3.5H4.5V2.5H55V3.5Z" fill="white"/>
+      </svg>
+    )
+}
+

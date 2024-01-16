@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import './swiper.css';
 import { ApolloClient, InMemoryCache, ApolloProvider, gql } from '@apollo/client';
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import dummy from "../../assets/card.png"
+
 import Zoom from 'react-reveal/Zoom';
 const client = new ApolloClient({
   uri: `${process.env.REACT_APP_API_ENDPOINT}`,

@@ -3,9 +3,51 @@ import './cards.scss'
 import userImg from '../../../../assets/about/userImg.png'
 import Slider from "react-slick";
 import { UserBottomArrow } from '../../../../assets/svgIcons';
+import { ApolloClient, InMemoryCache, ApolloProvider, gql } from '@apollo/client';
+const client = new ApolloClient({
+  uri: `${process.env.REACT_APP_API_ENDPOINT}`,
+  cache: new InMemoryCache(),
+});
 const Cards = () => {
-  
+  useEffect(() => {
+    client
+      .query({
+        query: gql`
+            query NewQuery {
+              allTeam {
+                edges {
+                  node {
+                    id
+                    title
+                    content(format: RENDERED)
+                    featuredImage {
+                      node {
+                        mediaItemUrl
+                      }
+                    }
+                  }
+                }
+                nodes {
+                  teamData {
+                    qualification
+                    position
+                    experience
+                  }
+                }
+              }
+            }
+          `,
+      })
+      .then((result) => {
+        const edges = result?.data?.allTeam?.edges || [];
+        const nodes = result?.data?.allTeam?.nodes || [];
+        console.log('Edges:', edges);
+        console.log('Nodes:', nodes);
+        setTeamNodes({ edges, nodes });
+      });
+  }, []);
   const [slideWidth, setSlideWidth] = useState(0);
+  const [teamNodes, setTeamNodes] = useState({ edges: [], nodes: [] });
   const cardData = [
     { id: 1, imgSrc: userImg, text: 'Lorem ipsum 1' },
     { id: 2, imgSrc: userImg, text: 'Lorem ipsum 2' },
@@ -18,10 +60,10 @@ const Cards = () => {
 
   ];
 
-  
-  
 
- 
+
+
+
   const settings = {
     dots: true,
     infinite: false,
@@ -31,13 +73,13 @@ const Cards = () => {
     initialSlide: 0,
     autoplay: false,
     autoplaySpeed: 2000,
-   
+
     centerPadding: '-5%',
     centerMode: true,
-    
+
     responsive: [
       {
-        breakpoint: 525, 
+        breakpoint: 525,
         settings: {
           slidesToShow: 1.5,
           centerPadding: '-7%',
@@ -48,7 +90,7 @@ const Cards = () => {
     ],
     responsive: [
       {
-        breakpoint: 455, 
+        breakpoint: 455,
         settings: {
           slidesToShow: 1.5,
           centerPadding: '-7%',
@@ -59,7 +101,7 @@ const Cards = () => {
     ],
     responsive: [
       {
-        breakpoint: 445, 
+        breakpoint: 445,
         settings: {
           slidesToShow: 1.5,
           centerPadding: '-60px',
@@ -70,7 +112,7 @@ const Cards = () => {
     ],
     responsive: [
       {
-        breakpoint: 430, 
+        breakpoint: 430,
         settings: {
           slidesToShow: 1.5,
           centerPadding: '-9%',
@@ -82,56 +124,59 @@ const Cards = () => {
 
     responsive: [
       {
-        breakpoint: 400, 
+        breakpoint: 400,
         settings: {
           slidesToShow: 1,
           centerPadding: '0',
-         
+
         },
       },
 
     ],
 
-  
+
 
   };
-   
+
 
   return (
     <>
       <div className='card-section'>
-        <div className='card-wrapper container ' id='desktop'>
-          {cardData.map((card) => (
-            <div key={card.id} className='box'>
+      <div className='card-wrapper container ' id='desktop'>
+          {teamNodes.edges.map((data, index) => (
+            <div key={index} className='box'>
               <div className='box-content'>
                 <div className='box-front'>
-                  <img src={card.imgSrc} alt={`Card ${card.id}`} />
+                  <img
+                    src={data.node.featuredImage.node.mediaItemUrl || userImg}
+                    alt={`Card ${index}`}
+                  />
                 </div>
                 <div className='box-back'>
                   <div className='userInfo'>
                     <div className='userName'>
-                      <h3>Josh Flinn</h3>
-                      <p>Managing Director</p>
+                      <h3>{data.node.title}</h3>
+                      <p>{teamNodes.nodes[index]?.teamData?.position || 'N/A'}</p>
                     </div>
                     <div className='userBottomLine'></div>
                     <div className='userQualification'>
                       <h4>Qualifications</h4>
-                      <p>Goes Here</p>
+                      <p>{teamNodes.nodes[index]?.teamData?.qualification || 'N/A'}</p>
                     </div>
                     <div className='userExp'>
-                      <p>10+ Years</p>
+                      <p>{teamNodes.nodes[index]?.teamData?.experience || 'N/A'}</p>
                     </div>
                     <div className='userAbout'>
                       <h3>About Me</h3>
                       <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut felis nunc.
+                       {data.node.content}
                       </p>
-                      <ul>
+                      {/* <ul>
                         <li>- Lorem</li>
                         <li>- Lorem</li>
                         <li>- Lorem</li>
                       </ul>
-                      <p>Sed molestie rhoncus rutrum.</p>
+                      <p>Sed molestie rhoncus rutrum.</p> */}
                     </div>
                     <div className='UserbottomArrow'>
                       <UserBottomArrow />

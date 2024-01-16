@@ -27,14 +27,11 @@ const Footer = () => {
                   </p>
                 <img src={footerImg} />
               </div>
-
               <div className='footer-line'></div>
             </div>
 
             <div className='main-footer' style={{ paddingTop: "45px" }}>
-
               <div className='row'>
-
                 <div className='col-md-12 col-lg-5 '>
                   <div className='mb-4'>
                     <MainLogo height={logoStyle.height} width={logoStyle.width} className="rotate" />
