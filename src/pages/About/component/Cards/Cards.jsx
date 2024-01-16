@@ -190,46 +190,49 @@ const Cards = () => {
 
         <div className='card-wrapper' id='mobile'>
           <Slider {...settings}>
-            {cardData.map((card) => (
-              <div key={card.id} className='box'>
-                <div className='box-content'>
-                  <div className='box-front'>
-                    <img src={card.imgSrc} alt={`Card ${card.id}`} />
-                  </div>
-                  <div className='box-back'>
-                    <div className='userInfo'>
-                      <div className='userName'>
-                        <h3>Josh Flinn</h3>
-                        <p>Managing Director</p>
-                      </div>
-                      <div className='userBottomLine'></div>
-                      <div className='userQualification'>
-                        <h4>Qualifications</h4>
-                        <p>Goes Here</p>
-                      </div>
-                      <div className='userExp'>
-                        <p>10+ Years</p>
-                      </div>
-                      <div className='userAbout'>
-                        <h3>About Me</h3>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut felis nunc.
-                        </p>
-                        <ul>
-                          <li>- Lorem</li>
-                          <li>- Lorem</li>
-                          <li>- Lorem</li>
-                        </ul>
-                        <p>Sed molestie rhoncus rutrum.</p>
-                      </div>
-                      <div className='UserbottomArrow'>
-                        <UserBottomArrow />
-                      </div>
+          {teamNodes.edges.map((data, index) => (
+            <div key={index} className='box'>
+              <div className='box-content'>
+                <div className='box-front'>
+                  <img
+                    src={data.node.featuredImage.node.mediaItemUrl || userImg}
+                    alt={`Card ${index}`}
+                  />
+                </div>
+                <div className='box-back'>
+                  <div className='userInfo'>
+                    <div className='userName'>
+                      <h3>{data.node.title}</h3>
+                      <p>{teamNodes.nodes[index]?.teamData?.position || 'N/A'}</p>
+                    </div>
+                    <div className='userBottomLine'></div>
+                    <div className='userQualification'>
+                      <h4>Qualifications</h4>
+                      <p>{teamNodes.nodes[index]?.teamData?.qualification || 'N/A'}</p>
+                    </div>
+                    <div className='userExp'>
+                      <p>{teamNodes.nodes[index]?.teamData?.experience || 'N/A'}</p>
+                    </div>
+                    <div className='userAbout'>
+                      <h3>About Me</h3>
+                      <p>
+                       {data.node.content}
+                      </p>
+                      {/* <ul>
+                        <li>- Lorem</li>
+                        <li>- Lorem</li>
+                        <li>- Lorem</li>
+                      </ul>
+                      <p>Sed molestie rhoncus rutrum.</p> */}
+                    </div>
+                    <div className='UserbottomArrow'>
+                      <UserBottomArrow />
                     </div>
                   </div>
                 </div>
               </div>
-            ))}
+            </div>
+          ))}
           </Slider>
         </div>
 

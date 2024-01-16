@@ -76,10 +76,10 @@ const Footer = () => {
                         </li>
 
                         <li>
-                          <a href=''>Careers</a>
+                          <Link to='/singular'>Careers</Link>
                           </li>
                         <li>
-                          <a href=''>Blog</a>
+                          <Link to='/blog'>Blog</Link>
                         </li>
 
                       </ul>
