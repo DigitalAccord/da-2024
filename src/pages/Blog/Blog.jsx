@@ -5,6 +5,7 @@ import blogCardBg1 from '../../assets/blog/blogCardBg1.png'
 import blogCardBg2 from '../../assets/blog/blogCardBg2.png'
 import blogCardBg4 from '../../assets/blog/blogCardBg4.png'
 import { BlogArrow } from '../../assets/svgIcons';
+import { Link } from 'react-router-dom';
 import { ApolloClient, InMemoryCache, ApolloProvider, gql } from '@apollo/client';
 const client = new ApolloClient({
   uri: `${process.env.REACT_APP_API_ENDPOINT}`,
@@ -12,6 +13,7 @@ const client = new ApolloClient({
 });
 const Blog = () => {
   const [blog, setBlog] = useState([])
+  const [hover ,setHover]= useState(false)
   useEffect(() => {
     client
       .query({
@@ -68,17 +70,30 @@ const Blog = () => {
 
       <div className='blog-grid container'>
         {blog.map((post, index) => (
-          <div className='blog-card' key={index}style={{
-            backgroundImage: `url(${post.node.featuredImage.node.mediaItemUrl || ''})`,
-          }}>
-            <div className='blog-card-content'>
-            <h1>{post.node.title}</h1>
+          <Link to={`/singular/${post.node.postId}`} key={index} className='blog-card-link text-decoration-none'>
+             <div
+              className='blog-card'
+              style={{
+                backgroundImage: `url(${post.node.featuredImage.node.mediaItemUrl || ''})`,
+                backgroundPosition: '50%',
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat',
+                
+                
+              }}
+            >
+              <div className='blog'></div>
+              <div className='blog-card-content'>
+               <div  className='blog-text-wrap'>
+               <h1>{post.node.title}</h1>
+                <p >As the year comes to a close , it is often the time of the year when... </p>
+               </div>
                 <div className='blog-arrow-circle'>
-
-                <BlogArrow />
+                  <BlogArrow  className="d"/>
                 </div>
+              </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
 

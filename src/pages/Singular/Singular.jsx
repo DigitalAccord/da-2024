@@ -1,6 +1,7 @@
 import React from 'react'
 import './Singular.scss'
 import { BlogArrow1 } from '../../assets/svgIcons'
+import { Link } from 'react-router-dom'
 const Singular = () => {
     return (
         <>
@@ -9,10 +10,10 @@ const Singular = () => {
                     <div className='singular-heading'>
                         <h1>Benefits of cloud back ups and why outsourcing is a great business strategy.</h1>
                     </div>
-                    <div className='singular-back'>
+                    <Link to="/blog" className='singular-back text-decoration-none'>
                           <BlogArrow1/>
                         <p> Go Back To Blog</p>
-                    </div>
+                    </Link>
 
                 </div>
             </div>
