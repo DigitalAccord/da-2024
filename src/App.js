@@ -66,7 +66,7 @@ function App() {
           <Route path="/privacy" element={<Privacy/>} />
           <Route path="/terms" element={<Terms/>} />
           <Route path="/blog" element={<Blog/>} />
-          <Route path={`/singular/:postId`} element={<Singular />} />
+          <Route path={`/:slug`} element={<Singular />} />
         </Routes>
         <Footer />
       </BrowserRouter>

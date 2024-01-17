@@ -109,18 +109,18 @@ const Solutions = () => {
               <div className='building-section'>
                 <div className='building-section-middle text-center'>
                   <div className='building-section-middle-col1 mb-5 mt-0 mt-sm-5'>
-                    <h1 className='p-0 m-0'><CountUp enableScrollSpy={true} start={100} end={0} duration={3} /></h1>
+                    <h1 className='p-0 m-0'><CountUp enableScrollSpy={true} start={0} end={100} duration={3} /></h1>
                     <p className='p-0 m-0'>Happy<br />Clients</p>
 
                   </div>
 
                   <div className='building-section-middle-col1 mb-5'>
-                    <h1 className='text-white'><CountUp enableScrollSpy={true} start={100} end={0} duration={5} /></h1>
+                    <h1 className='text-white'><CountUp enableScrollSpy={true} start={0} end={90} duration={5} /></h1>
                     <p className='p-0 m-0 text-center' >IT Tickets<br />Solved</p>
 
                   </div>
                   <div className='building-section-middle-col1 mb-5 '>
-                    <h1 className='text-white'><CountUp enableScrollSpy={true} start={100} end={0} duration={5} /></h1>
+                    <h1 className='text-white'><CountUp enableScrollSpy={true} start={0} end={130} duration={5} /></h1>
                     <p className='p-0 m-0'>Happy<br />Clients</p>
                   </div>
                 </div>

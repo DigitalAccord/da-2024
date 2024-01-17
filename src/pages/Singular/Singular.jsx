@@ -1,14 +1,50 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react';
 import './Singular.scss'
 import { BlogArrow1 } from '../../assets/svgIcons'
 import { Link } from 'react-router-dom'
+import { ApolloClient, InMemoryCache, ApolloProvider, gql } from '@apollo/client';
+const client = new ApolloClient({
+    uri: `${process.env.REACT_APP_API_ENDPOINT}`,
+    cache: new InMemoryCache(),
+  });
 const Singular = () => {
+    const [blogPosts, setBlogPosts] = useState({});
+    useEffect(() => {
+        client
+          .query({
+            query: gql`
+              query NewQuery {
+                postBy(postId: 1794) {
+                  content
+                  title
+                  uri
+                  featuredImage {
+                    node {
+                      mediaItemUrl
+                    }
+                  }
+                }
+              }
+            `,
+          })
+          .then((result) => {
+            const post = result?.data.postBy || {};
+            console.log('singlePost:', post);
+            setBlogPosts(post);
+          });
+      }, []);
+    
+
     return (
         <>
-            <div className='singular-banner-wrapper'>
+            <div className='singular-banner-wrapper'
+            style={{ backgroundImage: `url(${blogPosts.featuredImage?.node?.mediaItemUrl || ''})`,
+            backgroundRepeat:"no-repeat" ,
+            
+            }}>
                 <div className='singular-banner'>
                     <div className='singular-heading'>
-                        <h1>Benefits of cloud back ups and why outsourcing is a great business strategy.</h1>
+                    <h1>{blogPosts.title}</h1>
                     </div>
                     <Link to="/blog" className='singular-back text-decoration-none'>
                           <BlogArrow1/>
@@ -20,7 +56,7 @@ const Singular = () => {
 
             <div className='singuler-center-div'>
                 <div className='singular-center-content'>
-                    <p>As the year comes to a close, it is often the time of year when businesses start doing general housekeeping and assess changes required in preparation for the new year ahead. This is a great time for businesses to examine their backup solutions and cybersecurity. Outsourcing Cloud Hosting with a business offering Managed IT services, like Digital Accord, is a great route. In this blog, we will go through the benefits of Cloud backups and outsourcing for cloud hosting for businesses.</p>
+                    <p>{blogPosts.content}</p>
                 </div>
             </div>
 
@@ -58,7 +94,10 @@ const Singular = () => {
         <p>
         Get full access to exclusive offers, Package Deals and more!
         </p>
-        <input type='email' placeholder='Enter Your Email Here'/>
+        <div className='mx-3' >
+
+<input type='email' placeholder='Enter Your Email Here'/>
+</div>
             <button className='blog-subscribe'>Subscribe</button>
         </div>
        

@@ -51,7 +51,7 @@ export const M_Footer = () => {
                                     <a href='#/'>Careers</a>
                                 </li>
                                 <li>
-                                    <a href='#/'>Blog</a>
+                                <Link to='/blog'>Blog</Link>
                                 </li>
 
                             </ul>

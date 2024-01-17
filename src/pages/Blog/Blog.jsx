@@ -19,7 +19,7 @@ const Blog = () => {
       .query({
         query: gql`
         query NewQuery {
-          posts(where: {categoryId: 2, orderby: {field: DATE, order: DESC}}) {
+          posts(where: {categoryId: 2, orderby: {field: DATE, order: DESC}},first:1000) {
             edges {
               node {
                 featuredImage {
@@ -38,7 +38,7 @@ const Blog = () => {
       })
       .then((result) => {
         const blogPosts = result?.data.posts.edges || [];
-        console.log('blogPosts:', blogPosts);
+       
         setBlog(blogPosts);
       });
   }, []);
@@ -70,7 +70,7 @@ const Blog = () => {
 
       <div className='blog-grid container'>
         {blog.map((post, index) => (
-          <Link to={`/singular/${post.node.postId}`} key={index} className='blog-card-link text-decoration-none'>
+          <Link to={`/${post.node.slug}`} key={index} className='blog-card-link text-decoration-none'>
              <div
               className='blog-card'
               style={{
@@ -105,7 +105,10 @@ const Blog = () => {
         <p>
         Get full access to exclusive offers, Package Deals and more!
         </p>
+        <div className='mx-3' >
+
         <input type='email' placeholder='Enter Your Email Here'/>
+        </div>
             <button className='blog-subscribe'>Subscribe</button>
         </div>
        
