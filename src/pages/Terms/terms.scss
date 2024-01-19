@@ -8,11 +8,17 @@
                 color:#FFF;
                 font-size: 60px;
                 font-weight: bold;
+                @media only screen and (max-width: 575px) {
+                    font-size: 40px;
+                }
             }
             p{
                 color: #FFF;
                 font-size: 20px;
                 font-weight: 400px;
+                @media only screen and (max-width: 575px) {
+                    font-size: 16px;
+                }
             }
         }
         .terms-head-section{
@@ -20,11 +26,17 @@
                 color:#FFF;
                 font-size: 50px;
                 font-weight: bold;
+                @media only screen and (max-width: 575px) {
+                    font-size: 37px;
+                }
             }
             p{
                 color: #FFF;
                 font-size: 20px;
                 font-weight: 400px;
+                @media only screen and (max-width: 575px) {
+                    font-size: 16px;
+                }
             }
         }
     }

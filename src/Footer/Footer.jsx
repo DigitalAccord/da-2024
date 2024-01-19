@@ -100,7 +100,7 @@ const Footer = () => {
                       </ul>
                     </div>
                     <div className='list' style={{ width: "200px" }}>
-                      <p><a href='tel:(07)355400017' style={{color:"white",textDecoration:"none"}}>(07) 3554 0017</a></p>
+                      <p><a href='tel:0735540017' style={{color:"white",textDecoration:"none"}}>(07) 3554 0017</a></p>
                       <p className='footer-address pt-2'>Suite 30, Lvl 7 445 Upper Edward ST Spring Hill, BRISBANE CITY 4000</p>
                     </div>
                   </div>

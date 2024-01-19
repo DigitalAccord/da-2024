@@ -146,7 +146,7 @@
   display: flex;
   padding: 10px 40px;
   border-radius: 50px;
-  background: var(--Classic-Orange-Fill, linear-gradient(155deg, #F36A24 15.87%, #8C3305 101.33%));
+  background: var(--Classic-Orange-Fill, linear-gradient(189deg, #F36A24 15.87%, #8C3305 211.33%));
 }
 @media only screen and (max-width: 1200px) {
   .map-section .contact_container .map_row .contact-form .form-wrapper .submit-btn {

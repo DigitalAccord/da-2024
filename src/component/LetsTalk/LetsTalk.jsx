@@ -100,7 +100,7 @@ const LetsTalk = () => {
 
                 <div className='talk-content'>
                   <h1>Let’s Talk.</h1>
-                  <p><a href='tel:(07)355400017' style={{color:"white",textDecoration:"none"}}>(07) 3554 0017</a></p>
+                  <p><a href='tel:0735540017' style={{color:"white",textDecoration:"none"}}>(07) 3554 0017</a></p>
                   <p className='small-text pb-4 mt-4'>Suite 30, Lvl 7 445 Upper Edward St Spring Hill, BRISBANE CITY 4000</p>
 
                 </div>

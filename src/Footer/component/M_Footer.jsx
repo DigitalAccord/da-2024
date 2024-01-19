@@ -12,10 +12,10 @@ export const M_Footer = () => {
                 <div className='mb-4'>
                     <MainLogo height={logoStyle.height} width={logoStyle.width} className="rotate" />
                 </div>
-                <div className='footer-arrow-img d-flex align-items-center gap-5 '>
+                <a href='mailto:raahul.decrypt@gmail.com' className='footer-arrow-img d-flex align-items-center gap-5 text-decoration-none'>
                     <p className='' style={{ color: "white" }}>raahul.decrypt@gmail.com</p>
                     <img src={footerImg} />
-                </div>
+                </a>
 
                 <div className='d-flex pb-5' style={{paddingTop:"24px"}}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="208" height="64" viewBox="0 0 208 64" fill="none"  >
@@ -36,15 +36,15 @@ export const M_Footer = () => {
                         <div className='list'>
                             <ul>
                                 <li style={{ marginTop: "0px" }}>
-                                    <a href='#/'>Home</a>
+                                    <Link to='/'>Home</Link>
                                 </li>
 
                                 <li>
-                                    <a href='#/'>Contact Us</a>
+                                    <Link to='/contact'>Contact Us</Link>
                                 </li>
 
                                 <li>
-                                    <a href='#/'>About Us</a>
+                                    <Link to='about'>About Us</Link>
                                 </li>
 
                                 <li>
@@ -59,20 +59,20 @@ export const M_Footer = () => {
                         <div className='list'>
                             <ul>
                                 <li style={{ marginTop: "0px" }}>
-                                    <a href='#/'>Digital Performance</a>
+                                    <Link to='/seo'>Digital Performance</Link>
                                 </li>
                                 <li>
-                                    <a href='#/'>User Experience</a>
+                                    <Link to='/user'>User Experience</Link>
                                 </li>
                                 <li>
-                                    <a href='#/'>Business IT</a>
+                                    <Link to='/bussiness'>Business IT</Link>
                                 </li>
 
 
                             </ul>
                         </div>
                         <div className='list' style={{ width: "200px" }}>
-                            <p>(07) 3554 0017</p>
+                        <p><a href='tel:0735540017' style={{color:"white",textDecoration:"none"}}>(07) 3554 0017</a></p>
                             <p className='footer-address pt-2'>Suite 30, Lvl 7 445 Upper Edward ST Spring Hill, BRISBANE CITY 4000</p>
                         </div>
                     </div>

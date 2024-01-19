@@ -16,7 +16,7 @@ import Solutions from './component/solution/Solutions';
 import { Banner } from './Banner/Banner';
 
 import About from './pages/About/About';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Navbar from './Navbar/Navbar';
 import Contact from './pages/Contact/Contact'
 import OurWork from './pages/OurWorks/OurWork';
@@ -38,17 +38,22 @@ import Blog from './pages/Blog/Blog';
 import Singular from './pages/Singular/Singular';
 
 
+import { ToastContainer, toast } from 'react-toastify';
+
 
 function App() {
 
 
-
+useEffect(()=>{
+  toast.error('test')
+})
   return (
     <>
 
       <BrowserRouter>
+<ToastContainer />
         <Navbar />
-          <ScrollToTop />
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Banner />} />
           <Route path="/about" element={<About />} />
@@ -63,13 +68,16 @@ function App() {
           <Route path="/google" element={<GoogleAds />} />
           <Route path="/bussiness" element={<Bussiness />} />
           <Route path="/thanks" element={<ThankYou />} />
-          <Route path="/privacy" element={<Privacy/>} />
-          <Route path="/terms" element={<Terms/>} />
-          <Route path="/blog" element={<Blog/>} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/blog" element={<Blog />} />
           <Route path={`/:slug`} element={<Singular />} />
+
         </Routes>
         <Footer />
+     
       </BrowserRouter>
+
 
       {/* <Test/> */}
     </>

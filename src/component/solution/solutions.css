@@ -1428,6 +1428,11 @@
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  transition: all 0.5s ease;
+}
+.scroll-width-div .design-development-wrapper .design-development-text .btn-development:hover {
+  background: transparent;
+  border: 1px solid #FFF;
 }
 @media only screen and (max-width: 769px) {
   .scroll-width-div .design-development-wrapper .design-development-text .btn-development {

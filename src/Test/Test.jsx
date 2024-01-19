@@ -1,42 +1,56 @@
-import React, { useState } from 'react';
+import React from 'react';
+import MailchimpSubscribe from 'react-mailchimp-subscribe';
+import { BlogForm } from '../pages/Blog/component/BlogForm';
 
-import './test.scss'
+const CustomForm = ({ status, message, onValidated }) => {
+  let email;
 
-
-import Slider from '@mui/material/Slider';
-function valuetext(value) {
-  return `$${value.toLocaleString()}`;
-}
-
-const Test = () => {
-
-  const [value, setValue] = useState([10000, 37000]);
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
+  const submit = () => {
+    if (email && email.value.indexOf('@') > -1) {
+      onValidated({
+        EMAIL: email.value,
+      });
+    }
   };
- 
 
   return (
-    <>
-   <div style={{width:"500px",margin:"0 auto"}}>
-      <label htmlFor="doubleRange">Double Range Slider:</label>
-
-      <Slider
-          aria-label="Currency range"
-        value={value}
-        onChange={handleChange}
-        valueLabelDisplay="auto"
-        getAriaValueText={valuetext}
-        min={10000}
-        max={100000} // Adjust max value as needed
-        step={1000} // Adjust step size as needed
+    <div>
+      <input
+        ref={(node) => (email = node)}
+        type="email"
+        placeholder="Your email"
       />
-
-    
+      <br />
+      <button onClick={submit}>Subscribe</button>
+      {status === 'sending' && <div style={{ color: 'blue' }}>Sending...</div>}
+      {status === 'error' && (
+        <div
+          style={{ color: 'red' }}
+          dangerouslySetInnerHTML={{ __html: message }}
+        />
+      )}
+      {status === 'success' && (
+        <div style={{ color: 'green' }}>Subscribed!</div>
+      )}
     </div>
-   
-    </>
   );
 };
 
-export default Test;
+const SubscribeForm = () => {
+  const url = `https://gmail.us21.list-manage.com/subscribe/post?u=cb626cea98716e42cf66935c2&id=736ae7fda0&f_id=00eff3e6f0`;
+
+  return (
+    <MailchimpSubscribe
+      url={url}
+      render={({ subscribe, status, message }) => (
+        <BlogForm
+          status={status}
+          message={message}
+          onValidated={(formData) => subscribe(formData)}
+        />
+      )}
+    />
+  );
+};
+
+export default SubscribeForm;

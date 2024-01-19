@@ -10,18 +10,38 @@
   font-size: 60px;
   font-weight: bold;
 }
+@media only screen and (max-width: 575px) {
+  .terms-container .terms-wrapper .terms h1 {
+    font-size: 40px;
+  }
+}
 .terms-container .terms-wrapper .terms p {
   color: #FFF;
   font-size: 20px;
   font-weight: 400px;
+}
+@media only screen and (max-width: 575px) {
+  .terms-container .terms-wrapper .terms p {
+    font-size: 16px;
+  }
 }
 .terms-container .terms-wrapper .terms-head-section h1 {
   color: #FFF;
   font-size: 50px;
   font-weight: bold;
 }
+@media only screen and (max-width: 575px) {
+  .terms-container .terms-wrapper .terms-head-section h1 {
+    font-size: 37px;
+  }
+}
 .terms-container .terms-wrapper .terms-head-section p {
   color: #FFF;
   font-size: 20px;
   font-weight: 400px;
+}
+@media only screen and (max-width: 575px) {
+  .terms-container .terms-wrapper .terms-head-section p {
+    font-size: 16px;
+  }
 }/*# sourceMappingURL=terms.css.map */

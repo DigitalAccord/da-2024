@@ -15,6 +15,18 @@
     min-height: 642px;
   }
 }
+.singular-banner-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 400px;
+  width: 100%;
+  background: url("../../assets/blog/singular.png");
+  background-size: 100% 158%;
+  background-position: left;
+  background-repeat: no-repeat;
+}
 .singular-banner-wrapper::after {
   content: "";
   position: absolute;

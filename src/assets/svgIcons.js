@@ -320,8 +320,8 @@ export function BlogArrow() {
 export function BlogArrow1() {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" width="56" height="6" viewBox="0 0 56 6" fill="none">
-        <path d="M55 2.5C55.2761 2.5 55.5 2.72386 55.5 3C55.5 3.27614 55.2761 3.5 55 3.5V2.5ZM0 3L5 0.113249V5.88675L0 3ZM55 3.5H4.5V2.5H55V3.5Z" fill="white"/>
-      </svg>
+            <path d="M55 2.5C55.2761 2.5 55.5 2.72386 55.5 3C55.5 3.27614 55.2761 3.5 55 3.5V2.5ZM0 3L5 0.113249V5.88675L0 3ZM55 3.5H4.5V2.5H55V3.5Z" fill="white"/>
+        </svg>
     )
 }
 

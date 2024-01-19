@@ -1732,6 +1732,12 @@
                 font-style: normal;
                 font-weight: 700;
                 line-height: normal;
+                transition:all 0.5s ease;
+                &:hover{
+                    
+                    background:transparent;
+                    border: 1px solid #FFF;
+                }
 
                 @media only screen and (max-width: 769px) {
                     font-size: 15px;
