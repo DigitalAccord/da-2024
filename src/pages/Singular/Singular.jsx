@@ -3,6 +3,9 @@ import './Singular.scss'
 import { BlogArrow1 } from '../../assets/svgIcons'
 import { Link, useParams } from 'react-router-dom';
 import { ApolloClient, InMemoryCache, ApolloProvider, gql } from '@apollo/client';
+import MailchimpSubscribe from 'react-mailchimp-subscribe';
+import { BlogForm } from '../Blog/component/BlogForm';
+
 const client = new ApolloClient({
   uri: `${process.env.REACT_APP_API_ENDPOINT}`,
   cache: new InMemoryCache(),
@@ -37,6 +40,8 @@ const Singular = () => {
   }, [slug]);
 
 
+  const url = `https://gmail.us21.list-manage.com/subscribe/post?u=cb626cea98716e42cf66935c2&id=736ae7fda0&f_id=00eff3e6f0`;
+
 
   return (
     <>
@@ -69,6 +74,7 @@ const Singular = () => {
 
 
 
+      
       <div className='blog-conected'>
         <div className='blog-conected-content'>
 
@@ -76,11 +82,18 @@ const Singular = () => {
           <p>
             Get full access to exclusive offers, Package Deals and more!
           </p>
-          <div className='mx-3' >
-
-            <input type='email' placeholder='Enter Your Email Here' />
-          </div>
-          <button className='blog-subscribe'>Subscribe</button>
+         
+          <MailchimpSubscribe
+            url={url}
+            render={({ subscribe, status, message }) => (
+              <BlogForm 
+                status={status}
+                message={message}
+                onValidated={(formData) => subscribe(formData)}
+              />
+            )}
+          />
+            
         </div>
 
 

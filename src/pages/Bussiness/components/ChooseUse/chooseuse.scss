@@ -1,6 +1,7 @@
 .chooseUs-wrapper {
     width: 100%;
     position: relative;
+    background: url('../../../../assets/bussiness/Group\ 1306.png');
     &::after{
         content: "";
         position: absolute;
@@ -13,7 +14,6 @@
         background-size: cover;
         background-position: center;
     }
-background: url('../../../../assets/bussiness/Group\ 1306.png');
     .choosUs-row1 {
         width: 100%;
         display: flex;

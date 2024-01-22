@@ -4,6 +4,7 @@ import bussiness from '../../assets/bussiness/bussiness_ban.png'
 import Whats from './components/whats/Whats'
 import Synergy from './components/Synergy/Synergy'
 import { ChooseUse } from './components/ChooseUse/ChooseUse'
+import { Partner } from './components/Partner/Partner'
 const Bussiness = () => {
   return (
     <>
@@ -23,8 +24,9 @@ const Bussiness = () => {
         </div> 
     </div>
     <Whats/>
-    <Synergy/>
+    {/* <Synergy/>
     <ChooseUse/>
+    <Partner/> */}
     </>
   )
 }

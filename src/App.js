@@ -44,9 +44,7 @@ import { ToastContainer, toast } from 'react-toastify';
 function App() {
 
 
-useEffect(()=>{
-  toast.error('test')
-})
+
   return (
     <>
 

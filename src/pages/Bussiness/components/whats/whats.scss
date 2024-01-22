@@ -1,29 +1,41 @@
 .whats_wrapper {
     width: 100%;
-    background: url('../../../../assets/bussiness//bussiness_circle.png');
-    background-position: top center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    // max-width: 1098px;
-    min-height: 1098px;
+    padding-top: 110px;
     position: relative;
 
     &::before {
         content: "";
         position: absolute;
-        width: 10px;
-        height: 10px;
-        background: url('../../../../assets/bussiness/round.png');
+        background: url('../../../../assets/bussiness//bussiness_circle.png');
         background-repeat: no-repeat;
-        background-size: cover;
-        top: 52%;
-        left: 99px;
+        background-position: top center;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 0;
+
 
     }
+
+    // &::before {
+    //     content: "";
+    //     position: absolute;
+    //     width: 10px;
+    //     height: 10px;
+    //     background: url('../../../../assets/bussiness/round.png');
+    //     background-repeat: no-repeat;
+    //     background-size: cover;
+    //     top: 52%;
+    //     left: 99px;
+
+    // }
 
     .whats_container {
         max-width: 1470px;
         width: 100%;
+        position: relative;
+        z-index: 11;
 
 
     }
@@ -69,7 +81,7 @@
                     font-size: 186.794px;
                     font-style: normal;
                     font-weight: 700;
-                    line-height: 90.5%;
+                    line-height: 85.5%;
                     letter-spacing: 2.802px;
 
                 }
@@ -82,6 +94,7 @@
             display: flex;
             flex-direction: column;
             gap: 13px;
+            margin-top: 57px;
 
             button {
                 display: flex;
@@ -100,19 +113,16 @@
                 font-weight: 250;
                 line-height: 67px;
                 padding: 7px 0px 7px 20px;
-                transition:0.3s ease;
+               
+                
 
                 &.btn-active {
                     background: linear-gradient(90deg, rgba(243, 106, 36, 0.01) 30.73%, rgba(243, 106, 36, 0.40) 100%);
                     backdrop-filter: blur(23.5px);
-                    transition:0.3s ease;
+                    font-weight: 700;
                 }
 
-                &:first-child {
-                    background: linear-gradient(90deg, rgba(243, 106, 36, 0.01) 30.73%, rgba(243, 106, 36, 0.40) 100%);
-                    backdrop-filter: blur(23.5px);
-
-                }
+               
 
                 .svg-parent {
                     position: relative;
@@ -124,7 +134,8 @@
                     display: block;
                     width: 27.805px;
                     height: 27.805px;
-                    background: red;
+                    background: var(--Classic-Orange-Fill, linear-gradient(155deg, #F36A24 15.87%, #8C3305 101.33%));
+                  
                     border-radius: 50%;
                 }
 

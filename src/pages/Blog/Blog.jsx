@@ -19,8 +19,7 @@ const client1 = new ApolloClient({
 
 const Blog = () => {
   const [blog, setBlog] = useState([]);
-  const [hover, setHover] = useState(false);
-  const [email, setEmail] = useState('');
+  
   useEffect(() => {
     client1
       .query({
@@ -49,33 +48,11 @@ const Blog = () => {
         setBlog(blogPosts);
       });
   }, []);
+
+  
   const url = `https://gmail.us21.list-manage.com/subscribe/post?u=cb626cea98716e42cf66935c2&id=736ae7fda0&f_id=00eff3e6f0`;
 
  
-  const handleSubscribe = async () => {
-    try {
-      const response = await axios.post(
-        `https://cors-anywhere.herokuapp.com/https://us21.api.mailchimp.com/3.0/lists/736ae7fda0/members`,
-        {
-          email_address: email,
-          status: 'subscribed',
-        },
-        {
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': 'Basic ' + btoa(`apikey:${process.env.REACT_APP_MAILCHIMP_API_KEY}`),
-          },
-        }
-      );
-
-
-      console.log('Subscription successful!', response);
-    } catch (error) {
-
-      console.error('Subscription failed!', error);
-    }
-  };
-
 
 
   return (
