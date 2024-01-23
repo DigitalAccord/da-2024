@@ -1,64 +1,204 @@
-.synergy-wrapper {
-    width: 100%;
-    min-height: 1558px;
-    height: 100vh;
-    // background-image: url('../../../../assets/bussiness//image\ 62.png');
-    background: url('../../../../assets/bussiness//image\ 62.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.synergry-classes-add{
+    display: block;
+    @media only screen and (max-width: 992px) {
+        display: none;
+    }
 
+    .synergy-wrapper {
+        width: 100%;
+        min-height: 1558px;
+        height: 100vh;
+        // background-image: url('../../../../assets/bussiness//image\ 62.png');
+        background: url('../../../../assets/bussiness//image\ 62.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      
+     
+        margin-top: 70px;
+    
+       
+    
+    
+        &::after {
+            content: "";
+            position: absolute;
+            background: linear-gradient(180deg, #181D26 0%, rgba(24, 29, 38, 0.00) 100%);
+            mix-blend-mode: lighten;
+        }
+    
+        .synergy_container {
+            max-width: 1470px;
+            width: 100%;
+    
+            .syntergy_image_text {
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+    
+            .synergy_text_wrapper {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 87%;
+    
+                .text_line {
+                    width: 1px;
+                    background: white;
+                    min-height: 511px;
+    
+                    @media only screen and (max-width: 992px) {
+                        display: none;
+                    }
+    
+                }
+    
+            }
+    
+            .synergy_wrapper-text {
+                position: relative;
+                width: 100%;
+    
+                @media only screen and (max-width: 992px) {
+                    display: none;
+                }
+    
+                .synergy_text {
+                    max-width: 320px;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100%;
+    
+    
+    
+                    p {
+                        padding-top: 15px;
+                        color: #FFF;
+                        font-family: Poppins;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 275;
+                        line-height: 25.928px;
+                    }
+                }
+            }
+        }
+    
+        .synergy-right-cards-wrapper {
+    
+            width: 50%;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+    
+            .s-card {
+                display: flex;
+                flex-direction: column;
+                align-items: end;
+                width: 100%;
+    
+                @media only screen and (max-width: 1140px) {
+                    display: none;
+                }
+    
+                .synergy-right-cards {
+                    max-width: 311px;
+                    width: 100%;
+                    min-height: 433px;
+                    border: 0.5px solid rgba(255, 255, 255, 0.26);
+                    background: transparent;
+                    backdrop-filter: blur(23.5px);
+                    border-radius: 15px;
+                }
+    
+                .s-card1 {
+                    width: 100%;
+                    display: flex;
+                    gap: 30px;
+                    justify-content: end;
+    
+                    .synergy-right-cards {
+                        max-width: 311px;
+                        width: 100%;
+                        min-height: 433px;
+                        border: 0.5px solid rgba(255, 255, 255, 0.26);
+                        background: transparent;
+                        backdrop-filter: blur(23.5px);
+                        border-radius: 15px;
+                    }
+                }
+    
+            }
+        }
+    }
+
+}
+
+
+.mobile-synergy-wrapper {
+    background: url('../../../../assets/bussiness//image\ 62.png');
+    background-size: 102% 63%;
+    background-repeat: no-repeat;
+    background-position: inherit;
+    display: none;
+    margin-top: 25px;
+    position: relative;
+    overflow: hidden;
     &::after {
         content: "";
         position: absolute;
-        background: linear-gradient(180deg, #181D26 0%, rgba(24, 29, 38, 0.00) 100%);
-        mix-blend-mode: lighten;
+        right: -32px;
+        bottom: 0;
+        width: 94px;
+        height: 131px;
+        border-radius: 3.02px;
+        border: 0.151px solid rgba(255, 255, 255, 0.26);
+        background: rgba(217, 217, 217, 0.03);
+        backdrop-filter: blur(7.0964131355285645px);
+
     }
 
-    .synergy_container {
-        max-width: 1470px;
-        width: 100%;
+    @media only screen and (max-width: 992px) {
+        display: block;
+    }
 
-        .syntergy_image_text {
+
+    .mobile-synergy-content {
+
+        .mobile-synergy-img {
+            padding-top: 139px;
+
             img {
                 width: 100%;
                 height: 100%;
+                object-fit: contain;
             }
         }
-        .synergy_text_wrapper {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-             height: 100%;
-        .text_line {
-            width: 1px;
-            background: white;
-            min-height: 511px;
 
+        .mobile_synergy_line {
+            width: 100%;
+            height: 1px;
+            background-color: #FFF;
+            margin: 55px 0px;
         }
 
-    }
-    .synergy_wrapper-text{
-        position: relative;
-        width: 100%;
-       
-        .synergy_text {
-            max-width: 320px;
-            height: 100%;
-            display: flex;
-        justify-content: center;
-        align-items: center;
-         height: 100%;
-       
-        
+        .mobile-synergy-text {
+            padding: 0px 42px;
 
-            p {padding-top: 15px;
+          
+
+            p {
                 color: #FFF;
+                text-align: center;
                 font-family: Poppins;
                 font-size: 20px;
                 font-style: normal;
@@ -67,44 +207,4 @@
             }
         }
     }
-        }
-        .synergy-right-cards-wrapper{
-         
-            width: 50%;
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            .s-card{
-                display: flex;
-                flex-direction: column;
-                align-items: end;
-            
-               width: 100%;
-                .synergy-right-cards{
-                max-width: 311px;
-                width: 100%;
-                min-height: 433px;
-                border: 0.5px solid rgba(255, 255, 255, 0.26);
-                background: transparent;
-                backdrop-filter: blur(23.5px);
-                border-radius: 15px;
-                }
-                .s-card1{
-                    width: 100%;
-                    display: flex;
-                    gap:30px;
-                    justify-content: end;
-                    .synergy-right-cards{
-                        max-width: 311px;
-                        width: 100%;
-                        min-height: 433px;
-                        border: 0.5px solid rgba(255, 255, 255, 0.26);
-                        background: transparent;
-                        backdrop-filter: blur(23.5px);
-                        border-radius: 15px;
-                        }
-                }
-
-            }
-        }
-    }
+}

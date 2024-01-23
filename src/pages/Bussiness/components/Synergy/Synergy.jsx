@@ -4,6 +4,7 @@ import text_image from '../../../../assets/bussiness/text_image.png'
 const Synergy = () => {
   return (
     <>
+    <div className='synergry-classes-add'>
     <div className='synergy-wrapper'>
           <div className='container synergy_container'>
             <div className='row'>
@@ -44,6 +45,27 @@ const Synergy = () => {
           
               </div> 
 
+    </div>
+
+    </div>
+
+
+    <div className='mobile-synergy-wrapper'>
+      <div className='container'>
+        <div className='row'>
+          <div className='col-lg-12 col-md-12'>
+            <div className='mobile-synergy-content'>
+              <div className='mobile-synergy-img'>
+                <img src={text_image} alt="" />
+              </div>
+              <div className='mobile_synergy_line'></div>
+              <div className='mobile-synergy-text'>
+                <p>consectetur adipiscing elit. Curabitur ut felis nunc. Sed molestie rhoncus rutrum. Maecenas lorem mi, hendrerit fermentum congue pretium, iaculis sed orci. Proin vel eros risus. Maecenas non risus eget turpis ultricies pharetra at sed mauris. Maecenas commodo massa consequat auctor lacinia. Sed hendrerit pellentesque placerat. Duis vehicula consectetur tincidunt. Nullam finibus et est non gravida. Maecenas iaculis orci et ante finibus, a fermentum erat mattis. Donec congue commodo risus, sit amet molestie nibh hendrerit eu.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     </>
   )

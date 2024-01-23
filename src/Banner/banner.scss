@@ -46,7 +46,7 @@
     background-position: center bottom -50%;
     transition: background-position 3s ease;
     background-repeat: no-repeat;
-    background-size: 40%;
+    background-size: 44%;
 
     @media screen and (max-width:992px) {
       background-size: 65%;
@@ -68,7 +68,7 @@
     }
 
     &.animation {
-      background-position: center bottom 40%;
+      background-position: center bottom 42%;
 
       @media screen and (max-width:767px) {
         background-position: center bottom 15%;
@@ -172,10 +172,10 @@
             min-height: 314px;
           }
 
-          span {
-            filter: blur(3px);
-            -webkit-filter: blur(3px);
-          }
+          // span {
+          //   filter: blur(3px);
+          //   -webkit-filter: blur(3px);
+          // }
 
           h1 {
             color: #FFF;
@@ -197,6 +197,17 @@
             line-height: 90.5%;
             letter-spacing: 2.646px;
 
+            span {
+              font-family: 'HeyNovember', sans-serif;
+              background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 69.27%);
+             
+              -webkit-background-clip: text;
+             
+              filter: blur(2.82047700881958px);
+              letter-spacing: 1px;
+
+            }
+
             @media screen and (max-width:575px) {
               font-size: 80px;
             }
@@ -212,7 +223,7 @@
   backdrop-filter: blur(22.5px);
   width: 100%;
   transition: background 1s ease;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 9999;
@@ -220,8 +231,6 @@
   &.dark {
     background: rgba(39, 48, 63, 0.65);
     backdrop-filter: blur(22.5px);
-    position: absolute;
-    z-index: 999;
   }
 
   .nav {
@@ -263,7 +272,7 @@
 
         .span {
           border: 1px solid #E37E49;
-          stroke: #E37E49;
+
           border-radius: 50%;
           padding: 10px;
 
@@ -363,7 +372,7 @@ $lapdot: 255deg;
 $straightText: 105deg;
 
 .overlay {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: -100vh;
   width: 100%;
@@ -371,14 +380,14 @@ $straightText: 105deg;
   min-height: 1015px;
   transition: top 1s ease;
   background: rgba(39, 48, 63, 0.65);
-  backdrop-filter: blur(22.5px);
-  z-index: 998;
+  backdrop-filter: blur(40.5px);
+  z-index: 9989;
   justify-content: center;
   align-items: center;
-  
+
   @media screen and (max-width:1600px) {
     overflow-y: scroll;
-    height: 900px;
+    height: 672px;
     min-height: 0;
 
   }
@@ -424,7 +433,7 @@ $straightText: 105deg;
       height: 0px;
       transition: height 1s ease, opacity 1s ease;
 
-     
+
 
       a {
         color: #fff;
@@ -443,12 +452,14 @@ $straightText: 105deg;
         text-align: center;
         padding: 11px 0;
         border-radius: 28px;
-        border: 1px solid #fff;
+        border: 1px solid #fff9;
         margin-bottom: 15px;
         transition: 0.3s ease;
 
         &:hover {
           background: linear-gradient(180deg, #F36A24 0%, #C74300 100%);
+
+
           border: 1px solid transparent;
         }
 
@@ -494,6 +505,7 @@ $straightText: 105deg;
     span {
       filter: blur(3px);
       -webkit-filter: blur(3px);
+      font-family: 'HeyNovember', sans-serif;
     }
   }
 
@@ -735,17 +747,18 @@ $straightText: 105deg;
         text-decoration: none;
         margin-bottom: 10px;
         text-decoration: none;
-        
+
         text-align: center;
         border-radius: 20px;
-        width: 250px !important;
+
         padding: 9px 14px;
         border: 1px solid white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         background: #C74300;
-       
+
+        @media screen and (max-width:425px) {
+          display: block;
+
+        }
 
         // a{
         //   max-width: 200px ;
@@ -798,7 +811,7 @@ $straightText: 105deg;
         display: flex;
         justify-content: center;
         align-items: center;
-        transition: background 1s ease;
+        transition: background 0.4s ease;
       }
     }
 
@@ -1117,7 +1130,7 @@ $straightText: 105deg;
 
     @media screen and (max-width:1600px) {
       min-height: 0px !important;
-      height: 1100px !important;
+      height: 1058px !important;
 
     }
 

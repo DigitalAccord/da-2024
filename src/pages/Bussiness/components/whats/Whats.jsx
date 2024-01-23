@@ -91,7 +91,7 @@ const Whats = () => {
                                                 setCards(section.id);
                                                 setIsActive("Workstations");
                                             }}
-                                            style={{fontSize:"25px"}}
+                                           
                                         >
                                             {getButtonName(section.id)} <BussinessButton className="svg-parent" />
 

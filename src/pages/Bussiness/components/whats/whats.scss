@@ -2,6 +2,12 @@
     width: 100%;
     padding-top: 110px;
     position: relative;
+    @media only screen and (max-width: 992px) {
+        padding-top: 27%;
+    }
+    @media only screen and (max-width: 757px) {
+        padding-top: 44%;
+     }
 
     &::before {
         content: "";
@@ -15,6 +21,9 @@
         right: 0;
         z-index: 0;
 
+        @media only screen and (max-width: 992px) {
+            top: -121px;
+        }
 
     }
 
@@ -38,6 +47,7 @@
         z-index: 11;
 
 
+
     }
 
 
@@ -48,6 +58,10 @@
     .whats_left {
         .whats_left_text {
             position: relative;
+
+            @media only screen and (max-width: 992px) {
+                text-align: center;
+            }
 
             &::after {
                 content: "";
@@ -71,6 +85,9 @@
                     letter-spacing: 2.022px;
                     filter: blur(5.5px);
                     color: #FFF;
+                    @media only screen and (max-width: 575px) {
+                        font-size: 64px;
+                     }
 
                 }
 
@@ -83,6 +100,10 @@
                     font-weight: 700;
                     line-height: 85.5%;
                     letter-spacing: 2.802px;
+                    @media only screen and (max-width: 575px) {
+                        font-size: 88px;
+                        line-height: 105.5%;
+                     }
 
                 }
             }
@@ -95,6 +116,10 @@
             flex-direction: column;
             gap: 13px;
             margin-top: 57px;
+
+            @media only screen and (max-width: 992px) {
+                align-items: center;
+            }
 
             button {
                 display: flex;
@@ -113,8 +138,13 @@
                 font-weight: 250;
                 line-height: 67px;
                 padding: 7px 0px 7px 20px;
-               
-                
+                @media only screen and (max-width: 575px) {
+                    font-size: 20px;
+                    padding: 3px 0px 3px 20px;
+                   
+                 }
+
+
 
                 &.btn-active {
                     background: linear-gradient(90deg, rgba(243, 106, 36, 0.01) 30.73%, rgba(243, 106, 36, 0.40) 100%);
@@ -122,7 +152,7 @@
                     font-weight: 700;
                 }
 
-               
+
 
                 .svg-parent {
                     position: relative;
@@ -135,7 +165,7 @@
                     width: 27.805px;
                     height: 27.805px;
                     background: var(--Classic-Orange-Fill, linear-gradient(155deg, #F36A24 15.87%, #8C3305 101.33%));
-                  
+
                     border-radius: 50%;
                 }
 
@@ -163,6 +193,11 @@
                 width: 100%;
                 padding-top: 160px;
 
+                @media only screen and (max-width: 992px) {
+                    margin: 0 auto;
+                    padding-top: 60px;
+                }
+
                 &.active {
                     display: block;
                 }
@@ -189,6 +224,12 @@
                         line-height: 67px;
                         padding: 0px 20px;
                         cursor: pointer;
+                        @media only screen and (max-width: 575px) {
+                            font-size: 16px;
+                        }
+                        @media only screen and (max-width: 325px) {
+                            padding: 0px 11px;
+                        }
 
                         &.active {
                             border-bottom: solid 5px #FFF;
@@ -240,6 +281,9 @@
                     font-style: normal;
                     font-weight: 275;
                     line-height: 25.928px;
+                    @media only screen and (max-width: 575px) {
+                        font-size: 16px;
+                    }
                 }
 
                 .whats_learn_more {

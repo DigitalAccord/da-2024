@@ -24,9 +24,9 @@ const Bussiness = () => {
         </div> 
     </div>
     <Whats/>
-    {/* <Synergy/>
+    <Synergy/>
     <ChooseUse/>
-    <Partner/> */}
+    {/* <Partner/> */}
     </>
   )
 }
