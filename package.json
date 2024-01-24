@@ -21,6 +21,7 @@
     "graphql": "^16.8.1",
     "jquery": "^3.7.1",
     "leaflet": "^1.9.4",
+    "lodash": "^4.17.21",
     "nodemailer": "^6.9.8",
     "path": "^0.12.7",
     "rc-slider": "^10.5.0",

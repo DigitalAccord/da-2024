@@ -355,4 +355,9 @@
 }
 .rotate {
   animation: rotateAnimation 5s linear infinite;
+}
+@media only screen and (max-width: 575px) {
+  .rotate {
+    animation: none;
+  }
 }/*# sourceMappingURL=footer.css.map */

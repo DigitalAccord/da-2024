@@ -593,135 +593,6 @@
     background-position: right 69% bottom 0px;
   }
 }
-.solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box:nth-child(4)::before {
-  width: 100%;
-  height: 100%;
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-image: url("../../assets//solution/progresBg.png");
-  mix-blend-mode: color-dodge;
-  background-repeat: no-repeat;
-  background-size: 450%;
-  background-position: right 0px bottom;
-  animation: progressBg 3s linear infinite;
-}
-@keyframes progressBg {
-  0% {
-    background-position: right 0px bottom;
-  }
-  25% {
-    background-position: right -5px bottom;
-  }
-  50% {
-    background-position: right -10px bottom;
-  }
-  75% {
-    background-position: right -5px bottom;
-  }
-  100% {
-    background-position: right 0px bottom;
-  }
-}
-.solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box:nth-child(4)::after {
-  width: 100%;
-  height: 100%;
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-image: url("../../assets//solution/progresBg.png");
-  mix-blend-mode: color-dodge;
-  background-repeat: no-repeat;
-  background-size: 425%;
-  background-position: right 0% bottom;
-  animation: progressBg2 3s linear infinite;
-}
-@keyframes progressBg2 {
-  0% {
-    background-position: right 0px bottom 0px;
-  }
-  25% {
-    background-position: right 0px bottom 5px;
-  }
-  50% {
-    background-position: right 0px bottom 10px;
-  }
-  75% {
-    background-position: right 0px bottom 5px;
-  }
-  100% {
-    background-position: right 0px bottom 0px;
-  }
-}
-@media only screen and (max-width: 575px) {
-  .solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box:nth-child(4) {
-    width: 100%;
-  }
-}
-.solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box.fourth::before {
-  width: 100%;
-  height: 100%;
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-image: url("../../assets//solution/progresBg.png");
-  mix-blend-mode: color-dodge;
-  background-repeat: no-repeat;
-  background-size: 150%;
-  background-position: right 0px bottom;
-  animation: progressBgM 3s linear infinite;
-}
-@keyframes progressBgM {
-  0% {
-    background-position: right 0px bottom 0;
-  }
-  25% {
-    background-position: right -5px bottom 0;
-  }
-  50% {
-    background-position: right -10px bottom 0;
-  }
-  75% {
-    background-position: right -5px bottom 0;
-  }
-  100% {
-    background-position: right 0px bottom 0;
-  }
-}
-.solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box.fourth::after {
-  width: 100%;
-  height: 100%;
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-image: url("../../assets//solution/progresBg.png");
-  mix-blend-mode: color-dodge;
-  background-repeat: no-repeat;
-  background-size: 125%;
-  background-position: right 0% bottom;
-  animation: progressBg2M 3s linear infinite;
-}
-@keyframes progressBg2M {
-  0% {
-    background-position: right 0px bottom 0px;
-  }
-  25% {
-    background-position: right 0px bottom -5px;
-  }
-  50% {
-    background-position: right 0px bottom -10px;
-  }
-  75% {
-    background-position: right 0px bottom -5px;
-  }
-  100% {
-    background-position: right 0px bottom 0px;
-  }
-}
 .solutions-wrapper .solution-text-wrapper {
   max-width: 1046px;
   background: rgba(255, 255, 255, 0);
@@ -872,6 +743,7 @@
   background-repeat: no-repeat;
   background-position: bottom right;
   border: 1px solid #F36A24;
+  border-radius: 35px;
 }
 .solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-left:hover::before {
   opacity: 1;
@@ -884,10 +756,11 @@
   font-size: 39px;
   font-style: normal;
   font-weight: 800;
-  line-height: 56px;
+  line-height: 43px;
   /* 143.59% */
   text-transform: capitalize;
   z-index: 2;
+  margin: 0;
 }
 .solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-left h3 br {
   display: none;
@@ -946,6 +819,9 @@
   background-position: bottom right;
   transition: opacity 0.3s ease;
 }
+.solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-right:hover {
+  border: 1px solid #F36A24;
+}
 .solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-right:hover::after {
   opacity: 1;
   width: 100%;
@@ -969,10 +845,11 @@
   font-size: 39px;
   font-style: normal;
   font-weight: 800;
-  line-height: 56px;
+  line-height: 43px;
   /* 143.59% */
   text-transform: capitalize;
   z-index: 2;
+  margin: 0;
 }
 .solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-right h3 br {
   display: none;
@@ -1292,16 +1169,16 @@
 }
 @keyframes progressBg2 {
   0% {
-    background-position: right 0px bottom 0px;
+    background-position: right 0px bottom -7px;
   }
   25% {
-    background-position: right 0px bottom 5px;
+    background-position: right 0px bottom -5px;
   }
   50% {
-    background-position: right 0px bottom 10px;
+    background-position: right 0px bottom 0px;
   }
   75% {
-    background-position: right 0px bottom 5px;
+    background-position: right 0px bottom 4px;
   }
   100% {
     background-position: right 0px bottom 0px;
@@ -1341,7 +1218,8 @@
 }
 
 .scroll-width-div {
-  overflow-x: scroll;
+  overflow-x: auto;
+  cursor: pointer;
 }
 .scroll-width-div::-webkit-scrollbar {
   width: 0;
@@ -1409,7 +1287,7 @@
 .scroll-width-div .design-development-wrapper .design-development-text .btn-development {
   display: flex;
   width: 173px;
-  height: 60px;
+  height: 56px;
   padding: 19px 27px;
   justify-content: center;
   align-items: center;
@@ -1439,9 +1317,14 @@
     font-size: 15px;
   }
 }
+.scroll-width-div .design-development-wrapper .design-development-img {
+  max-width: 670px;
+  min-height: 670px;
+  width: 100%;
+}
 .scroll-width-div .design-development-wrapper .design-development-img img {
-  max-width: 632px;
-  min-height: 601px;
+  max-width: 670px;
+  min-height: 670px;
 }
 .scroll-width-div .solution-text-wrapper {
   position: relative;

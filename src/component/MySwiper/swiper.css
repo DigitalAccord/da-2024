@@ -56,6 +56,7 @@
 .slider-bg .your-item {
   margin-left: 66%;
   margin-top: 100px;
+  transition: all 0.3s ease;
 }
 @media screen and (max-width: 1024px) {
   .slider-bg .your-item {
@@ -71,16 +72,16 @@
   display: flex;
   flex-direction: column;
   justify-content: end;
-  height: 481px;
   padding: 20px 50px;
-  width: 90% !important;
-  margin: 0 auto;
+  width: 95% !important;
+  margin-left: 20px;
   border: 1px solid black;
   border-radius: 35px;
   background: linear-gradient(0deg, rgba(39, 48, 63, 0.85) 0%, rgba(39, 48, 63, 0.85) 100%);
   background-position: center;
   background-repeat: no-repeat;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
+  min-height: 493px;
 }
 @media screen and (max-width: 575px) {
   .slider-bg .your-item .slider-content {
@@ -118,16 +119,18 @@
   display: none;
 }
 .slider-bg .your-item.active {
-  margin-top: 0;
+  margin-top: 40px;
 }
 .slider-bg .your-item.active .slider-content {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 100% !important;
-  height: 674px;
-  padding: 20px 50px;
+  min-height: 607px;
+  padding: 35px 50px;
   border-radius: 35px;
+  border: 0.5px solid #F36A25;
+  margin: 0px 8px;
   box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.25);
   background-position: center;
   background-size: cover;
@@ -159,6 +162,7 @@
   font-style: normal;
   font-weight: 200;
   line-height: normal;
+  margin-top: -9px;
 }
 @media screen and (max-width: 575px) {
   .slider-bg .your-item.active .slider-content .slider-content-top {
@@ -172,7 +176,7 @@
   width: 30px;
   color: #FFF;
   font-family: Poppins;
-  font-size: 65px;
+  font-size: 55px;
   font-style: normal;
   font-weight: 700;
   line-height: 58px;
@@ -205,7 +209,7 @@
   max-width: 406px;
   height: 3px;
   background: #FFF;
-  margin: 50px 0px;
+  margin: 40px 0px;
   outline: none;
 }
 @media screen and (max-width: 575px) {
@@ -223,7 +227,7 @@
   line-height: normal;
   color: #FFF;
   background: transparent;
-  padding: 10px 30px;
+  padding: 12px 25px;
 }
 @media screen and (max-width: 575px) {
   .slider-bg .your-item.active .slider-content .slider-content-bottom button {
@@ -247,6 +251,8 @@
   font-size: 20px;
   cursor: pointer;
   list-style: none;
+  font-weight: 200;
+  opacity: 0.7;
 }
 @media screen and (max-width: 575px) {
   .above-text-carousel .carousel-item {
@@ -257,13 +263,17 @@
   display: flex;
   padding: 0;
   color: #FFF;
+  justify-content: end;
+  align-items: center;
+  text-align: center;
 }
 .above-text-carousel .carousel-list .carousel-item {
   position: relative;
+  text-align: center;
 }
 .above-text-carousel .carousel-list .carousel-item::before {
   content: "•";
-  margin-right: 5px;
+  margin-right: 20px;
 }
 .above-text-carousel .carousel-list .carousel-item:first-child::before {
   content: "";

@@ -13,23 +13,52 @@
   align-items: center;
   padding-top: 130px;
 }
+@media only screen and (max-width: 992px) {
+  .bussiness_wrapper .bussiness_container .bussiness_banner_section {
+    flex-direction: column-reverse;
+  }
+}
 .bussiness_wrapper .bussiness_container .bussiness_banner_section .bussiness_banner_left {
   max-width: 648.5px;
-  min-height: 712px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-right: 50px;
+}
+@media only screen and (max-width: 992px) {
+  .bussiness_wrapper .bussiness_container .bussiness_banner_section .bussiness_banner_left {
+    margin-right: 0px;
+    min-height: 0px;
+    margin-top: 50px;
+  }
 }
 .bussiness_wrapper .bussiness_container .bussiness_banner_section .bussiness_banner_left img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  transform: rotate(-60deg);
+}
+@media only screen and (max-width: 992px) {
+  .bussiness_wrapper .bussiness_container .bussiness_banner_section .bussiness_banner_left img {
+    transform: rotate(-90deg);
+  }
 }
 .bussiness_wrapper .bussiness_container .bussiness_banner_section .bussiness_banner_right {
   max-width: 760px;
   width: 100%;
+}
+@media only screen and (max-width: 1544px) {
+  .bussiness_wrapper .bussiness_container .bussiness_banner_section .bussiness_banner_right {
+    padding-right: 40px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .bussiness_wrapper .bussiness_container .bussiness_banner_section .bussiness_banner_right {
+    max-width: 100%;
+    padding-right: 0;
+    margin-top: 50px;
+  }
 }
 .bussiness_wrapper .bussiness_container .bussiness_banner_section .bussiness_banner_right p {
   color: #FFF;
@@ -39,6 +68,21 @@
   font-style: normal;
   font-weight: 700;
   line-height: 97.5%;
+}
+@media only screen and (max-width: 1544px) {
+  .bussiness_wrapper .bussiness_container .bussiness_banner_section .bussiness_banner_right p {
+    font-size: 70px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .bussiness_wrapper .bussiness_container .bussiness_banner_section .bussiness_banner_right p {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .bussiness_wrapper .bussiness_container .bussiness_banner_section .bussiness_banner_right p {
+    font-size: 46px;
+  }
 }
 .bussiness_wrapper .bussiness_container .bussiness_banner_section .bussiness_banner_right h1 {
   background: var(--Classic-Orange-Fill, linear-gradient(155deg, #F36A24 15.87%, #8C3305 101.33%));
@@ -51,5 +95,19 @@
   font-style: normal;
   font-weight: 700;
   line-height: 89.177%;
-  /* 102.553px */
+}
+@media only screen and (max-width: 1300px) {
+  .bussiness_wrapper .bussiness_container .bussiness_banner_section .bussiness_banner_right h1 {
+    font-size: 70px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .bussiness_wrapper .bussiness_container .bussiness_banner_section .bussiness_banner_right h1 {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .bussiness_wrapper .bussiness_container .bussiness_banner_section .bussiness_banner_right h1 {
+    font-size: 60px;
+  }
 }/*# sourceMappingURL=business.css.map */

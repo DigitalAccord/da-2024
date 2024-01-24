@@ -1,29 +1,48 @@
 .whats_wrapper {
   width: 100%;
-  background: url("../../../../assets/bussiness//bussiness_circle.png");
-  background-position: top center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  min-height: 1098px;
+  padding-top: 110px;
   position: relative;
+}
+@media only screen and (max-width: 992px) {
+  .whats_wrapper {
+    padding-top: 27%;
+  }
+}
+@media only screen and (max-width: 757px) {
+  .whats_wrapper {
+    padding-top: 44%;
+  }
 }
 .whats_wrapper::before {
   content: "";
   position: absolute;
-  width: 10px;
-  height: 10px;
-  background: url("../../../../assets/bussiness/round.png");
+  background: url("../../../../assets/bussiness//bussiness_circle.png");
   background-repeat: no-repeat;
-  background-size: cover;
-  top: 52%;
-  left: 99px;
+  background-position: top center;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+}
+@media only screen and (max-width: 992px) {
+  .whats_wrapper::before {
+    top: -121px;
+  }
 }
 .whats_wrapper .whats_container {
   max-width: 1470px;
   width: 100%;
+  position: relative;
+  z-index: 11;
 }
 .whats_wrapper .whats_left .whats_left_text {
   position: relative;
+}
+@media only screen and (max-width: 992px) {
+  .whats_wrapper .whats_left .whats_left_text {
+    text-align: center;
+  }
 }
 .whats_wrapper .whats_left .whats_left_text::after {
   content: "";
@@ -45,19 +64,36 @@
   filter: blur(5.5px);
   color: #FFF;
 }
+@media only screen and (max-width: 575px) {
+  .whats_wrapper .whats_left .whats_left_text .whats_left_blur_text h1 {
+    font-size: 64px;
+  }
+}
 .whats_wrapper .whats_left .whats_left_text .whats_left_blur_text span {
   color: #FFF;
   font-family: Poppins;
   font-size: 186.794px;
   font-style: normal;
   font-weight: 700;
-  line-height: 90.5%;
+  line-height: 85.5%;
   letter-spacing: 2.802px;
+}
+@media only screen and (max-width: 575px) {
+  .whats_wrapper .whats_left .whats_left_text .whats_left_blur_text span {
+    font-size: 88px;
+    line-height: 105.5%;
+  }
 }
 .whats_wrapper .whats_left .whats_left_buttons {
   display: flex;
   flex-direction: column;
   gap: 13px;
+  margin-top: 57px;
+}
+@media only screen and (max-width: 992px) {
+  .whats_wrapper .whats_left .whats_left_buttons {
+    align-items: center;
+  }
 }
 .whats_wrapper .whats_left .whats_left_buttons button {
   display: flex;
@@ -77,18 +113,18 @@
   font-weight: 250;
   line-height: 67px;
   padding: 7px 0px 7px 20px;
-  transition: 0.3s ease;
+}
+@media only screen and (max-width: 575px) {
+  .whats_wrapper .whats_left .whats_left_buttons button {
+    font-size: 20px;
+    padding: 3px 0px 3px 20px;
+  }
 }
 .whats_wrapper .whats_left .whats_left_buttons button.btn-active {
   background: linear-gradient(90deg, rgba(243, 106, 36, 0.01) 30.73%, rgba(243, 106, 36, 0.4) 100%);
   -webkit-backdrop-filter: blur(23.5px);
           backdrop-filter: blur(23.5px);
-  transition: 0.3s ease;
-}
-.whats_wrapper .whats_left .whats_left_buttons button:first-child {
-  background: linear-gradient(90deg, rgba(243, 106, 36, 0.01) 30.73%, rgba(243, 106, 36, 0.4) 100%);
-  -webkit-backdrop-filter: blur(23.5px);
-          backdrop-filter: blur(23.5px);
+  font-weight: 700;
 }
 .whats_wrapper .whats_left .whats_left_buttons button .svg-parent {
   position: relative;
@@ -99,7 +135,7 @@
   display: block;
   width: 27.805px;
   height: 27.805px;
-  background: red;
+  background: var(--Classic-Orange-Fill, linear-gradient(155deg, #F36A24 15.87%, #8C3305 101.33%));
   border-radius: 50%;
 }
 .whats_wrapper .whats_left .whats_left_buttons button .svg_disable {
@@ -116,6 +152,12 @@
   max-width: 744px;
   width: 100%;
   padding-top: 160px;
+}
+@media only screen and (max-width: 992px) {
+  .whats_wrapper .setDisplay .whats_right_wrapper .whats_right {
+    margin: 0 auto;
+    padding-top: 60px;
+  }
 }
 .whats_wrapper .setDisplay .whats_right_wrapper .whats_right.active {
   display: block;
@@ -141,6 +183,16 @@
   line-height: 67px;
   padding: 0px 20px;
   cursor: pointer;
+}
+@media only screen and (max-width: 575px) {
+  .whats_wrapper .setDisplay .whats_right_wrapper .whats_navbar ul li {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 325px) {
+  .whats_wrapper .setDisplay .whats_right_wrapper .whats_navbar ul li {
+    padding: 0px 11px;
+  }
 }
 .whats_wrapper .setDisplay .whats_right_wrapper .whats_navbar ul li.active {
   border-bottom: solid 5px #FFF;
@@ -186,6 +238,11 @@
   font-style: normal;
   font-weight: 275;
   line-height: 25.928px;
+}
+@media only screen and (max-width: 575px) {
+  .whats_wrapper .setDisplay .whats_right_wrapper .whats_right-content p {
+    font-size: 16px;
+  }
 }
 .whats_wrapper .setDisplay .whats_right_wrapper .whats_right-content .whats_learn_more {
   display: flex;

@@ -19,10 +19,10 @@ const AboveTextCarousel = ({ cardsData, activeCardId, setting }) => {
   return (
     <div className="above-text-carousel">
       <ul className="carousel-list">
-        <li className="carousel-item active" style={{ fontWeight: "400" }}>
+        <li className="carousel-item active" >
           {cardsData[titlesBeforeActive]?.title}
         </li>
-        <li className={`carousel-item active middle`} style={{ fontWeight: "bold" }}>
+        <li className={`carousel-item active middle`} style={{ fontWeight: "bold",opacity:"1" }}>
           {cardsData[activeIndex]?.title}
         </li>
         <li className="carousel-item active">

@@ -63,11 +63,14 @@
   }
 }
 .singular-banner-wrapper .singular-banner .singular-back {
-  display: flex;
-  justify-content: center;
   align-items: center;
+  display: flex;
   gap: 14px;
-  padding-top: 20px;
+  justify-content: center;
+  max-width: 236px;
+  width: 1005;
+  width: 100%;
+  margin: 10px auto;
 }
 .singular-banner-wrapper .singular-banner .singular-back p {
   color: #FFF;

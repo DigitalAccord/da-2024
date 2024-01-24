@@ -44,7 +44,7 @@
   background-position: center bottom -50%;
   transition: background-position 3s ease;
   background-repeat: no-repeat;
-  background-size: 40%;
+  background-size: 44%;
 }
 @media screen and (max-width: 992px) {
   .bannerLayerSky .bannerLayerSun {
@@ -70,7 +70,7 @@
   }
 }
 .bannerLayerSky .bannerLayerSun.animation {
-  background-position: center bottom 40%;
+  background-position: center bottom 42%;
 }
 @media screen and (max-width: 767px) {
   .bannerLayerSky .bannerLayerSun.animation {
@@ -181,10 +181,6 @@
     min-height: 314px;
   }
 }
-.bannerLayerSky .bannerLayerSun .bannerLayerBuildings .bannerLayerShadow .banner-text-container span {
-  filter: blur(3px);
-  -webkit-filter: blur(3px);
-}
 .bannerLayerSky .bannerLayerSun .bannerLayerBuildings .bannerLayerShadow .banner-text-container h1 {
   color: #FFF;
   text-align: center;
@@ -204,6 +200,13 @@
   line-height: 90.5%;
   letter-spacing: 2.646px;
 }
+.bannerLayerSky .bannerLayerSun .bannerLayerBuildings .bannerLayerShadow .banner-text-container p span {
+  font-family: "HeyNovember", sans-serif;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFF 69.27%);
+  -webkit-background-clip: text;
+  filter: blur(2.8204770088px);
+  letter-spacing: 1px;
+}
 @media screen and (max-width: 575px) {
   .bannerLayerSky .bannerLayerSun .bannerLayerBuildings .bannerLayerShadow .banner-text-container p {
     font-size: 80px;
@@ -216,7 +219,7 @@
           backdrop-filter: blur(22.5px);
   width: 100%;
   transition: background 1s ease;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 9999;
@@ -225,8 +228,6 @@
   background: rgba(39, 48, 63, 0.65);
   -webkit-backdrop-filter: blur(22.5px);
           backdrop-filter: blur(22.5px);
-  position: absolute;
-  z-index: 999;
 }
 .navbar .nav {
   width: 1440px;
@@ -262,7 +263,6 @@
 }
 .navbar .nav ul li .span {
   border: 1px solid #E37E49;
-  stroke: #E37E49;
   border-radius: 50%;
   padding: 10px;
 }
@@ -348,7 +348,7 @@
 }
 
 .overlay {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: -100vh;
   width: 100%;
@@ -356,16 +356,16 @@
   min-height: 1015px;
   transition: top 1s ease;
   background: rgba(39, 48, 63, 0.65);
-  -webkit-backdrop-filter: blur(22.5px);
-          backdrop-filter: blur(22.5px);
-  z-index: 998;
+  -webkit-backdrop-filter: blur(40.5px);
+          backdrop-filter: blur(40.5px);
+  z-index: 9989;
   justify-content: center;
   align-items: center;
 }
 @media screen and (max-width: 1600px) {
   .overlay {
     overflow-y: scroll;
-    height: 900px;
+    height: 672px;
     min-height: 0;
   }
 }
@@ -426,7 +426,7 @@
   text-align: center;
   padding: 11px 0;
   border-radius: 28px;
-  border: 1px solid #fff;
+  border: 1px solid rgba(255, 255, 255, 0.6);
   margin-bottom: 15px;
   transition: 0.3s ease;
 }
@@ -465,6 +465,7 @@
 .overlay .centerText span {
   filter: blur(3px);
   -webkit-filter: blur(3px);
+  font-family: "HeyNovember", sans-serif;
 }
 .overlay .mobileMenuDiv {
   position: relative;
@@ -705,13 +706,14 @@
   text-decoration: none;
   text-align: center;
   border-radius: 20px;
-  width: 250px !important;
   padding: 9px 14px;
   border: 1px solid white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background: #C74300;
+}
+@media screen and (max-width: 425px) {
+  .overlay .mobileMenuDiv .mobileSubMenuItems .subMenuItems {
+    display: block;
+  }
 }
 .overlay .outerCircle {
   position: relative;
@@ -749,7 +751,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: background 1s ease;
+  transition: background 0.4s ease;
 }
 .overlay .outerCircle .subMenu ul {
   list-style: none;
@@ -1005,7 +1007,7 @@
 @media screen and (max-width: 1600px) {
   .overlay .popup {
     min-height: 0px !important;
-    height: 1100px !important;
+    height: 1058px !important;
   }
 }
 @media screen and (max-width: 992px) {

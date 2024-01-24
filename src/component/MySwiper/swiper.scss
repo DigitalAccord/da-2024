@@ -19,12 +19,7 @@
   }
 }
 
-// .slick-dots li button{
-//   background-color: #ffff !important;
-// font-size: 20px !important;
 
-
-// }
 .slick-dots li.slick-active button:before {
   color: orangered !important;
   font-size: 20px !important;
@@ -32,7 +27,6 @@
 
 
 .slider-bg {
-  // padding: 100px 0px;
 min-height: 1000px;
       .slick-dots{
         li{
@@ -75,22 +69,22 @@ min-height: 1000px;
     @media screen and (max-width:575px) {
       margin-top: 60px;
     }
-
+    transition: all 0.3s ease;
     .slider-content {
       display: flex;
       flex-direction: column;
       justify-content: end;
-      height: 481px;
+      // height: 481px;
       padding: 20px 50px;
-      width: 90% !important;
-      margin: 0 auto ;
+      width: 95% !important;
+      margin-left: 20px;
       border: 1px solid black;
       border-radius: 35px;
       background: linear-gradient(0deg, rgba(39, 48, 63, 0.85) 0%, rgba(39, 48, 63, 0.85) 100%);
       background-position: center;
       background-repeat: no-repeat;
-      transition: all 0.3s ease;
-     
+      transition: all 0.5s ease;
+      min-height: 493px;
       @media screen and (max-width:575px) {
         height:269px ;
         padding: 20px 10px;
@@ -131,23 +125,23 @@ min-height: 1000px;
     }
 
     &.active {
-
-      margin-top: 0;
-
+      margin-top: 40px;
       .slider-content {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         width: 100% !important;
-        height: 674px;
-        padding: 20px 50px;
+        // height: 607px;
+        min-height: 607px;
+        padding: 35px 50px;
         border-radius: 35px;
-        // border: 1px solid rgba(255, 132, 69, 0.00);
-        // background: linear-gradient(180deg, rgba(243, 106, 36, 0.00) 0%, rgba(243, 106, 36, 0.80) 45.83%, rgba(0, 0, 0, 0.80) 100%), url('../../assets/card.png'), lightgray -786.457px -122px / 285.415% 130.476% no-repeat;
+        border: 0.5px solid #F36A25;
+        margin: 0px 8px;
         box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.25);
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
+      
         @media screen and (max-width:575px) {
         max-height:420px ;
         padding: 20px 10px;
@@ -173,6 +167,7 @@ min-height: 1000px;
             font-style: normal;
             font-weight: 200;
             line-height: normal;
+            margin-top: -9px;
           }
           @media screen and (max-width:575px) {
             font-size: 14px;;
@@ -181,12 +176,13 @@ min-height: 1000px;
 
         .slider-content-bottom {
           display: block;
+          
 
           h1 {
             width: 30px;
             color: #FFF;
             font-family: Poppins;
-            font-size: 65px;
+            font-size: 55px;
             font-style: normal;
             font-weight: 700;
             line-height: 58px;
@@ -215,7 +211,7 @@ min-height: 1000px;
             max-width: 406px;
             height: 3px;
             background: #FFF;
-            margin: 50px 0px;
+            margin: 40px 0px;
             outline: none;
             @media screen and (max-width:575px) {
               margin: 14px 0px;
@@ -234,7 +230,7 @@ min-height: 1000px;
             line-height: normal;
             color: #FFF;
             background: transparent;
-            padding: 10px 30px;
+            padding: 12px 25px;
             @media screen and (max-width:575px) {
               padding: 10px 23px;
               font-size: 12px;
@@ -264,7 +260,9 @@ min-height: 1000px;
     font-family: Poppins;
     font-size: 20px;
     cursor: pointer;
-    list-style: none;  // Remove default list styles
+    list-style: none;  
+    font-weight: 200;
+    opacity: 0.7;
     
     @media screen and (max-width:575px) {
      
@@ -272,26 +270,29 @@ min-height: 1000px;
 
      }
 
-    #middle {
-      
-    }
+    
   }
 
   .carousel-list {
     display: flex;
     padding: 0;
     color: #FFF;
+    justify-content: end;
+    align-items: center;
+    text-align: center;
 
     .carousel-item {
       position: relative;
+      text-align: center;
+
 
       &::before {
-        content: '•';  // Bullet point
-        margin-right: 5px;
+        content: '•';  
+        margin-right: 20px;
       }
 
       &:first-child::before {
-        content: '';  // Remove bullet point for the first item
+        content: '';  
       }
     }
   }
