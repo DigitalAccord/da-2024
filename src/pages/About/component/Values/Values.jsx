@@ -20,7 +20,7 @@ const Values = () => {
         <div className='values-wrapper'>
             <div className='values-topleft'>
                 <h1>Our Values</h1>
-                <div className='d-flex flex-column align-items-center gap-4'>
+                <div className='d-flex flex-column align-items-center gap-4 w-100 px-4'>
                 <Buttons>
                 Marketing Tactics
                 </Buttons>

@@ -34,7 +34,14 @@
         .client-section-left {
             max-width: 717px;
             width: 70%;
+            @media only screen and (max-width: 1470px)  {
+                margin-left: 10px;
 
+            }
+            @media only screen and (max-width: 992px)  {
+                margin-right: 10px;
+
+            }
             @media only screen and (max-width: 1300px) {
                 width: 50%;
                 max-width: 400px;
@@ -56,7 +63,9 @@
                     font-weight: 700;
                     line-height: 90.5%;
                     letter-spacing: 1.2px;
-
+                    @media only screen and (max-width: 1470px) {
+                        font-size: 70px;
+                    }
                     @media only screen and (max-width: 1300px) {
                         font-size: 50px;
                     }
@@ -98,6 +107,7 @@
             background-size: cover;
             max-height: 593px;
             height: 100vh;
+            transition: background-image 0.3s ease;
 
 
             @media only screen and (max-width: 1300px) {
@@ -109,7 +119,7 @@
                     background-position: center;
                     background-size: inherit;
                     min-height: 460px;
-
+                    transition: background-image 0.3s ease;
                 }
             }
 
@@ -124,7 +134,6 @@
                     position: absolute;
                     right: 91px;
                     top: -131px;
-                   
                     width: 211px;
                     height: 185px;
                     display: flex;
@@ -141,10 +150,7 @@
                         height: 134px;
                     }
 
-                    &:hover {
-                        
-
-                    }
+                    
 
                     p {
                         color: #FFF;
@@ -261,6 +267,7 @@
             background-position: center;
             background-size: 101% 112%;
             max-height: 593px;
+            transition: background-image 0.3s ease;
             background-repeat: no-repeat;
 
         }
@@ -275,6 +282,7 @@
             background-size: 103% 115%;
             max-height: 593px;
             background-repeat: no-repeat;
+            transition: background-image 0.3s ease;
 
         }
 

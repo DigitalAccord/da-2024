@@ -106,13 +106,13 @@
                 }
 
                 .box-front {
-                    background: linear-gradient(180deg, #F36A24 0%, #C74300 107.94%);
+                    background: #FFF;
                   
                     img {
                         border-radius: 10px;
                         width: 100%;
                         height: 100%;
-                        object-fit: contain;
+                        object-fit: fill;
                     }
                 }
 

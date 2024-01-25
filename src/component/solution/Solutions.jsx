@@ -1,20 +1,14 @@
 import React, { useEffect, useState, useRef } from 'react'
 import './solutions.scss'
 import CountUp from 'react-countup';
-import arrow from "../../assets/arrow.png"
 import Slider from "react-slick";
-import thumb from "../../assets/thumb.png"
 import arrow1 from '../../assets/Arrow 4.png'
-import overflow from '../../assets/overflow.png'
 import round from '../../assets/round.png'
-import hover from '../../assets/hoverImg.png'
-import { FiArrowUpRight } from 'react-icons/fi';
 import developmentImg from '../../assets/developImg.png'
 import digitalMarketingImg from '../../assets/digitalMarketingImg.png'
 import itImg from '../../assets/ItImg.png'
 import $ from 'jquery';
 import Solution_respo from '../Sulution_respo/Solution_respo'
-import waves1 from '../../assets/wave1.png'
 import { Link } from 'react-router-dom';
 
 
@@ -34,7 +28,6 @@ const Solutions = () => {
     setWindowWidth1(window.innerWidth * 80 / 100);
   };
 
-
   useEffect(() => {
     window.addEventListener('resize', handleResize);
     window.addEventListener('resize', handleResize1);
@@ -48,17 +41,15 @@ const Solutions = () => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         setIsVisible(entry.isIntersecting);
-        console.log("in the viewport");
       },
       {
         root: null,
         rootMargin: '0px',
-        threshold: 0.8,
+        threshold: 0.7,
       }
     );
 
     if (sectionRef.current) {
-
       observer.observe(sectionRef.current);
     }
 
@@ -69,49 +60,90 @@ const Solutions = () => {
     };
   }, [sectionRef]);
 
+  // useEffect(() => {
+  //   const $scrollWidthDiv = $('.scroll-width-div');
+
+  //   const handleWheel = function (event) {
+  //     console.log(event, event.target.src?.includes("ItImg.71e97b626fb6faf9ca80"))
+  //     if (event.target.src?.includes("ItImg.71e97b626fb6faf9ca80")) {
+  //       document.body.removeEventListener('wheel', (event) => {
+  //         event.preventDefault();
+  //       }, { passive: false });
+  //       document.body.style.overflowY = 'scroll';
+  //       return;
+  //     }
+  //     if (isVisible) {
+
+  //       if (event.originalEvent.deltaY > 0 && this.scrollLeft < this.scrollWidth - this.clientWidth) {
+  //         document.body.addEventListener('wheel', (event) => {
+  //           event.preventDefault();
+  //         }, { passive: false });
+  //         this.scrollLeft += event.originalEvent.deltaY;
+  //         event.preventDefault();
+  //       }
+
+  //       if (event.originalEvent.deltaY < 0 && this.scrollLeft > 0) {
+  //         this.scrollLeft += event.originalEvent.deltaY;
+  //         event.preventDefault();
+  //       }
+
+
+
+  //     }
+
+
+  //   };
+
+  //   $scrollWidthDiv.on('wheel', handleWheel);
+
+  //   return () => {
+  //     $scrollWidthDiv.off('wheel', handleWheel);
+  //   };
+  // }, [isVisible])
+
   useEffect(() => {
-
     const $scrollWidthDiv = $('.scroll-width-div');
-
+  
     const handleWheel = function (event) {
-
+      console.log(event, event.target.src?.includes("ItImg.71e97b626fb6faf9ca80"))
+     
       if (isVisible) {
-        document.body.addEventListener('wheel', (event) => {
+        const scrollWidthDiv = $scrollWidthDiv[0]; // Get the DOM element from the jQuery object
+  
+        if (event.originalEvent.deltaY > 0 && scrollWidthDiv.scrollLeft < scrollWidthDiv.scrollWidth - scrollWidthDiv.clientWidth) {
+          document.body.addEventListener('wheel', preventDefault, { passive: false });
+          scrollWidthDiv.scrollLeft += event.originalEvent.deltaY;
           event.preventDefault();
-        }, { passive: false });
-        if (event.originalEvent.deltaY > 0 && this.scrollLeft < this.scrollWidth - this.clientWidth) {
-
-          this.scrollLeft += event.originalEvent.deltaY;
+        }
+  
+        if (event.originalEvent.deltaY < 0 && scrollWidthDiv.scrollLeft > 0) {
+          scrollWidthDiv.scrollLeft += event.originalEvent.deltaY;
           event.preventDefault();
         }
 
-        if (event.originalEvent.deltaY < 0 && this.scrollLeft > 0) {
-
-          this.scrollLeft += event.originalEvent.deltaY;
-          event.preventDefault();
+        if (event.target.src?.includes("ItImg.71e97b626fb6faf9ca80")) {
+          document.body.removeEventListener('wheel', preventDefault, { passive: false });
+          document.body.style.overflowY = 'scroll';
+          return;
         }
-        // Check if the fourth card is in the viewport
-        // const fourthCard = document.querySelector('.progress-div-box.fourth');
-        // const fourthCardRect = fourthCard.getBoundingClientRect();
-
-        // if (
-        //   fourthCardRect.top >= 0 &&
-        //   fourthCardRect.left >= 0 &&
-        //   fourthCardRect.bottom <= window.innerHeight &&
-        //   fourthCardRect.right <= window.innerWidth
-        // ) {
-        //   console.log('Fourth card is in the viewport!');
-        //   // Add your logic here when the fourth card is in the viewport
-        // }
       }
     };
-
+  
+    const preventDefault = (event) => {
+      event.preventDefault();
+    };
+  
     $scrollWidthDiv.on('wheel', handleWheel);
-
+  
     return () => {
       $scrollWidthDiv.off('wheel', handleWheel);
+      document.body.removeEventListener('wheel', preventDefault);
+      document.body.style.overflowY = ''; // Reset the body vertical overflow style
     };
   }, [isVisible]);
+
+
+
 
   // useEffect(() => {
   //   const handleBodyScroll = (event) => {
@@ -139,6 +171,7 @@ const Solutions = () => {
     initialSlide: 0,
     autoplay: false,
     autoplaySpeed: 2000,
+
   };
 
 
@@ -151,7 +184,7 @@ const Solutions = () => {
             <div className='building-section'>
               <div className='building-section-middle text-center'>
                 <div className='building-section-middle-col1 mb-5 mt-0 mt-sm-5'>
-                  <h1 className='p-0 m-0'> <CountUp start={0} end={100} duration={3} /></h1>
+                  <h1 > <CountUp start={0} end={100} duration={3} /></h1>
                   <p className='p-0 m-0'>Happy<br />Clients</p>
 
                 </div>

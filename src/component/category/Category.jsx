@@ -14,7 +14,7 @@ const Category = () => {
                                 <div className='inner-text'>
                                     <p>Kieran Stockholme</p>
                                     <div className='star-icon'>
-                                    <Rating name="size-large" defaultValue={2} size="large" style={{color:"white"}}
+                                    <Rating name="size-large" defaultValue={5} size="large" style={{color:"white"}}
                                     className='rating_star'/>
                                     </div>
                                 </div>
@@ -27,7 +27,7 @@ const Category = () => {
                                 <div className='inner-text'>
                                     <p>Tina Ollett</p>
                                     <div className='star-icon'>
-                                    <Rating name="size-large" defaultValue={4} size="large" style={{color:"white"}}
+                                    <Rating name="size-large" defaultValue={5} size="large" style={{color:"white"}}
                                     className='rating_star'/>
                                     </div>
                                 </div>
@@ -40,7 +40,7 @@ const Category = () => {
                                 <div className='inner-text'>
                                     <p>Christopher Luong</p>
                                     <div className='star-icon'>
-                                    <Rating name="size-large" defaultValue={1} size="large" style={{color:"white"}} className='rating_star'/>
+                                    <Rating name="size-large" defaultValue={5} size="large" style={{color:"white"}} className='rating_star'/>
                                     </div>
                                 </div>
                                 <div className='inner-text-p'>

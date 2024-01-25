@@ -198,7 +198,6 @@
 .solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box {
   width: 197px;
   min-width: 135px;
-  min-height: px;
   border-radius: 35px;
   position: relative;
   overflow: hidden;
@@ -283,25 +282,25 @@
   background-image: url("../../assets//solution/progresBg.png");
   mix-blend-mode: color-dodge;
   background-repeat: no-repeat;
-  background-size: 150%;
-  background-position: left -33% bottom 0px;
+  background-size: 469% 150%;
+  background-position: left 24% bottom 0px;
   animation: progressFirstM 3s linear infinite;
 }
 @keyframes progressFirstM {
   0% {
-    background-position: left -33% bottom 0px;
+    background-position: left 25% bottom 0px;
   }
   25% {
-    background-position: left -15% bottom -5px;
+    background-position: left 24% bottom -5px;
   }
   50% {
-    background-position: left -10% bottom -10px;
+    background-position: left 22% bottom -8px;
   }
   75% {
-    background-position: left -15% bottom -5px;
+    background-position: left 24% bottom -5px;
   }
   100% {
-    background-position: left -33% bottom 0px;
+    background-position: left 25% bottom 0px;
   }
 }
 .solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box.first::after {
@@ -314,25 +313,25 @@
   background-image: url("../../assets//solution/progresBg.png");
   mix-blend-mode: color-dodge;
   background-repeat: no-repeat;
-  background-size: 150%;
-  background-position: left -30% bottom 0px;
+  background-size: 469% 143%;
+  background-position: left 24% bottom 0px;
   animation: progressFirst2M 3s linear infinite;
 }
 @keyframes progressFirst2M {
   0% {
-    background-position: left -30% bottom 0px;
+    background-position: left 24% bottom -5px;
   }
   25% {
-    background-position: left -20% bottom -5px;
+    background-position: left 24% bottom -7px;
   }
   50% {
-    background-position: left -15% bottom -10px;
+    background-position: left 24% bottom -10px;
   }
   75% {
-    background-position: left -20 bottom -5px;
+    background-position: left 24% bottom -7px;
   }
   100% {
-    background-position: left -30% bottom 0px;
+    background-position: left 24% bottom -5px;
   }
 }
 .solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box:nth-child(2)::before {
@@ -690,7 +689,6 @@
 }
 .solutions-wrapper .custom-container-solution .year-section-parent .year-section h3 {
   max-width: calc(100% - 93px);
-  word-wrap: break-word;
 }
 .solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-left {
   position: relative;
@@ -720,6 +718,13 @@
   right: 37px;
   background: url("../../assets/arrow.png");
   opacity: 1;
+}
+@media only screen and (max-width: 768px) {
+  .solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-left::after {
+    width: 54px;
+    height: 54px;
+    background-size: cover;
+  }
 }
 .solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-left::before {
   width: 100%;
@@ -806,6 +811,13 @@
   background-repeat: no-repeat;
   background-position: bottom right;
 }
+@media only screen and (max-width: 768px) {
+  .solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-right::after {
+    width: 54px;
+    height: 54px;
+    background-size: cover;
+  }
+}
 .solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-right::before {
   opacity: 0;
   width: 100%;
@@ -867,8 +879,18 @@
     line-height: 30px;
   }
 }
+@media only screen and (max-width: 575px) {
+  .solutions-wrapper .custom-container-solution .year-section-parent .year-section .year-section-right h3 {
+    position: absolute;
+    top: 22px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
 .solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box {
-  width: 197px;
+  max-width: 95% !important;
+  margin: 0 auto !important;
+  display: block !important;
   min-width: 135px;
   min-height: 377px;
   border-radius: 35px;
@@ -889,6 +911,11 @@
   min-height: 600px;
   padding-top: 45px;
 }
+@media only screen and (min-width: 575px) {
+  .solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box .progress_text {
+    padding: 45px;
+  }
+}
 .solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box .progress_text h1 {
   color: #FFF;
   text-align: center;
@@ -904,7 +931,7 @@
   font-family: Poppins;
   font-size: 117.758px;
   font-style: normal;
-  font-weight: 250;
+  font-weight: 100;
   line-height: normal;
 }
 .solutions-wrapper .custom-container-solution .year-section-parent .progress-div .progress-div-box .progress_text p {

@@ -60,7 +60,7 @@ const Footer = () => {
                   </div>
                 </div>
                 <div className='col-md-12 col-lg-7'>
-                  <div className='d-flex flex-wrap gap-5'>
+                  <div className='d-flex flex-wrap ' style={{gap:"80px"}}>
                     <div className='list'>
                       <ul>
                         <li style={{ marginTop: "0px" }}>

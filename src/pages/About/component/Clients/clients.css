@@ -35,6 +35,16 @@
   max-width: 717px;
   width: 70%;
 }
+@media only screen and (max-width: 1470px) {
+  .client-section .div-client-wrapper .client-section-left {
+    margin-left: 10px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .client-section .div-client-wrapper .client-section-left {
+    margin-right: 10px;
+  }
+}
 @media only screen and (max-width: 1300px) {
   .client-section .div-client-wrapper .client-section-left {
     width: 50%;
@@ -55,6 +65,11 @@
   font-weight: 700;
   line-height: 90.5%;
   letter-spacing: 1.2px;
+}
+@media only screen and (max-width: 1470px) {
+  .client-section .div-client-wrapper .client-section-left .client-relation-text h1 {
+    font-size: 70px;
+  }
 }
 @media only screen and (max-width: 1300px) {
   .client-section .div-client-wrapper .client-section-left .client-relation-text h1 {
@@ -93,6 +108,7 @@
   background-size: cover;
   max-height: 593px;
   height: 100vh;
+  transition: background-image 0.3s ease;
 }
 @media only screen and (max-width: 1300px) {
   .client-section .div-client-wrapper .client-section-right {
@@ -106,6 +122,7 @@
     background-position: center;
     background-size: inherit;
     min-height: 460px;
+    transition: background-image 0.3s ease;
   }
 }
 .client-section .div-client-wrapper .client-section-right .text-boxes {
@@ -234,6 +251,7 @@
   background-position: center;
   background-size: 101% 112%;
   max-height: 593px;
+  transition: background-image 0.3s ease;
   background-repeat: no-repeat;
 }
 .client-section .div-client-wrapper .Client_right2 {
@@ -247,4 +265,5 @@
   background-size: 103% 115%;
   max-height: 593px;
   background-repeat: no-repeat;
+  transition: background-image 0.3s ease;
 }/*# sourceMappingURL=clients.css.map */

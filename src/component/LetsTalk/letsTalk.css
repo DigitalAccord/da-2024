@@ -107,7 +107,7 @@
   top: 60px;
   left: 100px;
   background: linear-gradient(to bottom, transparent, #F36A24);
-  padding: 3px;
+  padding: 1px;
 }
 .form-section .left-section-wraper .map-wraper img {
   width: 100%;
@@ -131,7 +131,7 @@
   bottom: 100%;
   left: 15px;
   padding: 38px 41px 31px 45px;
-  margin-bottom: 43px;
+  margin-bottom: 77px;
 }
 .form-section .left-section-wraper .map-wraper .map_pointer_wrapper .click_content p {
   color: #FFF;
@@ -151,7 +151,7 @@
 }
 .form-section .left-section-wraper .map-wraper .map_pointer_wrapper .map_pointer {
   position: absolute;
-  top: 0;
+  top: -61px;
   left: 50%;
   transform: translateX(-50%);
 }

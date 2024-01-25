@@ -83,8 +83,8 @@ export const M_Footer = () => {
                         <hr style={{ color: 'white' }} className='d-sm-block d-md-none'></hr>
                         <div className='copyright-wrapper'>
                             <div className='copyrightLeft'>
-                                <Link to="/privacy" className='text-white text-decoration-none'>Privacy</Link>
-                                <Link to='/terms' className='text-white text-decoration-none'>Terms & Conditions</Link>
+                                <Link to="/privacy" className='text-white text-decoration-none fw-bold'>Privacy</Link>
+                                <Link to='/terms' className='text-white text-decoration-none fw-bold'>Terms & Conditions</Link>
                             </div>
                             <div className='corightRight'>
                                 <p className='text-white'>Copyright © Digital Agency Pty Ltd ACN: 166 737 819 | ABN: 63 166 737 </p>

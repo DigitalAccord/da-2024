@@ -56,7 +56,7 @@
             h1 {
                 color: #FFF;
                 font-family: Poppins;
-                font-size: 120px;
+                font-size: clamp(50px, 10vw, 120px);
                 font-style: normal;
                 font-weight: 800;
                 line-height: 60px;
@@ -64,20 +64,20 @@
                 margin-left: 70px;
 
                 @media only screen and (max-width: 992px) {
-                    font-size: 100px;
+                
                     line-height: 50px;
                     margin-left: 0px;
 
                 }
 
                 @media only screen and (max-width: 768px) {
-                    font-size: 80px;
+                    
                     line-height: 40px;
                     margin-left: 0px;
                 }
 
                 @media only screen and (max-width: 575px) {
-                    font-size: 58px;
+                  
                     line-height: 40px;
                     margin-left: 0px;
                     text-align: center;
@@ -87,9 +87,13 @@
 
             .bg-about-text {
                 mix-blend-mode: screen;
-                background: #f85906 -295.246px -0.095px/118.615% 100.018%;
+                // background: #f85906 -295.246px -0.095px/118.615% 100.018%;
+                // background: linear-gradient(155deg, #F36A24 15.87%, #8C3305 101.33%);
+                // background: linear-gradient(169deg, #fc6400 15.87%, #6a0007 105.33%);
+                // background: linear-gradient(163deg, #fc6400 15.87%, #ef5100 105.33%);
+                background: linear-gradient(163deg, #ff6305 31.87%, #6a2400 81.33%);
                 padding: 90px;
-                border-radius: 40px;
+                border-radius: 30px;
                 max-width: 1520px;
 
                 @media only screen and (max-width: 992px) {
@@ -131,18 +135,24 @@
                     }
 
                     button {
+                       
                         border-radius: 62px;
                         border: 1px solid #FFF;
                         color: #FFF;
                         text-align: center;
-                        font-family: Poppins;
+                        font-family: 'Poppins', sans-serif;
                         font-size: 16px;
                         font-style: normal;
                         font-weight: 700;
                         line-height: normal;
                         background: transparent;
-                        padding: 10px 50px;
+                        padding: 12px 50px;
                         margin-top: 20px;
+                        transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
+                        &:hover{
+                            background: #FFF;
+                            color: #f85906;
+                        }
 
                         @media only screen and (max-width: 575px) {
                             text-align: center;

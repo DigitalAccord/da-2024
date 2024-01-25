@@ -1,7 +1,7 @@
-
 .solutions-wrapper {
     position: relative;
-.custom-container-solution {
+
+    .custom-container-solution {
 
 
         max-width: 1420px !important;
@@ -174,7 +174,7 @@
                         text-transform: capitalize;
                         z-index: 2;
                         text-decoration: none !important;
-                        
+
                         @media only screen and (max-width: 575px) {
                             position: absolute;
                             top: 0;
@@ -219,6 +219,7 @@
                         .slick-active {
                             button {
                                 font-size: 50px !important;
+
                                 &::before {
                                     content: "";
                                     width: 20px;
@@ -236,7 +237,7 @@
                 .progress-div-box {
                     width: 197px;
                     min-width: 135px;
-                    min-height: px;
+
                     border-radius: 35px;
                     position: relative;
                     overflow: hidden;
@@ -296,6 +297,8 @@
                                 background-position: left -3% bottom 0px;
                                 animation: progressFirst2 3s linear infinite;
 
+
+
                                 @keyframes progressFirst2 {
                                     0% {
                                         background-position: left -3% bottom 0px
@@ -338,30 +341,33 @@
                             background-image: url('../../assets//solution/progresBg.png');
                             mix-blend-mode: color-dodge;
                             background-repeat: no-repeat;
-                            background-size: 150%;
-                            background-position: left -33% bottom 0px;
+                            background-size: 469% 150%;
+                            background-position: left 24% bottom 0px;
+                            // background-size: 150%;
+                            // background-position: left -33% bottom 0px;
                             animation: progressFirstM 3s linear infinite;
 
                             @keyframes progressFirstM {
                                 0% {
-                                    background-position: left -33% bottom 0px
+                                    background-position: left 25% bottom 0px
                                 }
 
                                 25% {
-                                    background-position: left -15% bottom -5px
+                                    background-position: left 24% bottom -5px
                                 }
 
                                 50% {
-                                    background-position: left -10% bottom -10px
+                                    background-position: left 22% bottom -8px
                                 }
 
                                 75% {
-                                    background-position: left -15% bottom -5px
+                                    background-position: left 24% bottom -5px
                                 }
 
                                 100% {
-                                    background-position: left -33% bottom 0px
+                                    background-position: left 25% bottom 0px
                                 }
+
                             }
                         }
 
@@ -375,29 +381,31 @@
                             background-image: url('../../assets//solution/progresBg.png');
                             mix-blend-mode: color-dodge;
                             background-repeat: no-repeat;
-                            background-size: 150%;
-                            background-position: left -30% bottom 0px;
+                            background-size: 469% 143%;
+                            background-position: left 24% bottom 0px;
+                            // background-position: left -30% bottom 0px;
+                            // background-size: 150%;
                             animation: progressFirst2M 3s linear infinite;
 
                             @keyframes progressFirst2M {
                                 0% {
-                                    background-position: left -30% bottom 0px
+                                    background-position: left 24% bottom -5px
                                 }
 
                                 25% {
-                                    background-position: left -20% bottom -5px
+                                    background-position: left 24% bottom -7px
                                 }
 
                                 50% {
-                                    background-position: left -15% bottom -10px
+                                    background-position: left 24% bottom -10px
                                 }
 
                                 75% {
-                                    background-position: left -20 bottom -5px
+                                    background-position: left 24% bottom -7px
                                 }
 
                                 100% {
-                                    background-position: left -30% bottom 0px
+                                    background-position: left 24% bottom -5px
                                 }
 
                             }
@@ -407,7 +415,7 @@
 
                     &:nth-child(2) {
 
-                        
+
 
                         &::before {
                             width: 100%;
@@ -725,9 +733,9 @@
                         }
                     }
 
-               
 
-                   
+
+
 
 
 
@@ -847,7 +855,7 @@
 
                 h3 {
                     max-width: calc(100% - 93px);
-                    word-wrap: break-word;
+
                 }
 
                 .year-section-left {
@@ -877,6 +885,12 @@
                         right: 37px;
                         background: url('../../assets/arrow.png');
                         opacity: 1;
+
+                        @media only screen and (max-width: 768px) {
+                            width: 54px;
+                            height: 54px;
+                            background-size: cover;
+                        }
                     }
 
                     &::before {
@@ -904,7 +918,7 @@
                             background-position: bottom right;
                             border: 1px solid #F36A24;
                             border-radius: 35px;
-                           
+
                         }
 
                         &::before {
@@ -915,6 +929,7 @@
 
                     h3 {
                         text-decoration: none;
+
                         br {
                             display: none;
 
@@ -957,8 +972,8 @@
                     justify-content: space-between;
                     padding: 30px 20px;
                     overflow: hidden;
-                    
-                    
+
+
 
                     @media only screen and (max-width: 768px) {
                         background-position: right;
@@ -976,6 +991,12 @@
                         background: url('../../assets/thumb.png');
                         background-repeat: no-repeat;
                         background-position: bottom right;
+
+                        @media only screen and (max-width: 768px) {
+                            width: 54px;
+                            height: 54px;
+                            background-size: cover;
+                        }
                     }
 
                     &::before {
@@ -994,6 +1015,7 @@
 
                     &:hover {
                         border: 1px solid #F36A24;
+
                         &::after {
                             opacity: 1;
                             width: 100%;
@@ -1043,6 +1065,14 @@
                             font-size: 20px;
                             line-height: 30px;
                         }
+
+                        @media only screen and (max-width: 575px) {
+                            position: absolute;
+                            top: 22px;
+                            font-size: 20px;
+                            line-height: 30px;
+                        }
+
                     }
                 }
 
@@ -1052,7 +1082,9 @@
             .progress-div {
 
                 .progress-div-box {
-                    width: 197px;
+                    max-width: 95% !important;
+                    margin: 0 auto !important;
+                    display: block !important;
                     min-width: 135px;
                     min-height: 377px;
 
@@ -1072,6 +1104,9 @@
                         align-items: center;
                         min-height: 600px;
                         padding-top: 45px;
+                        @media only screen and (min-width: 575px) {
+                            padding: 45px;
+                        }
 
                         h1 {
                             color: #FFF;
@@ -1089,7 +1124,7 @@
                             font-family: Poppins;
                             font-size: 117.758px;
                             font-style: normal;
-                            font-weight: 250;
+                            font-weight: 100;
                             line-height: normal;
                         }
 
@@ -1482,7 +1517,7 @@
     overflow-x: auto;
     cursor: pointer;
     // visibility: visible;
-    
+
 
 
     &::-webkit-scrollbar {
@@ -1585,10 +1620,11 @@
                 font-style: normal;
                 font-weight: 700;
                 line-height: normal;
-                transition:all 0.5s ease;
-                &:hover{
-                    
-                    background:transparent;
+                transition: all 0.5s ease;
+
+                &:hover {
+
+                    background: transparent;
                     border: 1px solid #FFF;
                 }
 
@@ -1865,7 +1901,7 @@
         border: none;
         outline: none;
         padding: 17px 39px;
-        text-align: center  ;
+        text-align: center;
 
 
     }

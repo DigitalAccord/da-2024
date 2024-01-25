@@ -152,6 +152,9 @@ const CenterMode = () => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
+          
+          
+
 
         }
       }
