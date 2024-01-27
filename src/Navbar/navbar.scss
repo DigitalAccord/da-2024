@@ -1,0 +1,16 @@
+.nav{
+    .desktopLogo{
+        display: none;
+        @media only screen and (min-width: 768px)
+        {
+            display: block;
+        }
+    }
+    .mobileLogo{
+        display: block;
+        @media only screen and (min-width: 768px)
+        {
+            display: none;
+        }
+    }
+}

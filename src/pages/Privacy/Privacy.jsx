@@ -78,7 +78,7 @@ const Privacy = () => {
 
         <div className='mt-5 mb-5'>
             <h1>Contact Us:</h1>
-            <p>If you have any questions regarding this privacy policy, you may contact us at [raahul.decrypt@gmail.com].</p>
+            <p>If you have any questions regarding this privacy policy, you may contact us at [hello@digitalaccord.com.au].</p>
         </div>
        </div>
     </div>

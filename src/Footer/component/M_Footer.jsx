@@ -1,19 +1,19 @@
 import React from 'react'
 import './M_footer.scss'
-import { MainLogo } from '../../assets/svgIcons'
+import { FooterLogo } from '../../assets/svgIcons'
 import footerImg from '../../assets/Arrow 2.png'
 import { Link } from 'react-router-dom'
 
-const logoStyle = { height: '83px', width: '75px' };
+const logoStyle = { height: '76px', width: '282px' };
 export const M_Footer = () => {
     return (
         <>
             <div className='mobile_footer'>
                 <div className='mb-4'>
-                    <MainLogo height={logoStyle.height} width={logoStyle.width} className="rotate" />
+                    <FooterLogo height={logoStyle.height} width={logoStyle.width}/>
                 </div>
-                <a href='mailto:raahul.decrypt@gmail.com' className='footer-arrow-img d-flex align-items-center gap-5 text-decoration-none'>
-                    <p className='' style={{ color: "white" }}>raahul.decrypt@gmail.com</p>
+                <a href='mailto:hello@digitalaccord.com.au' className='footer-arrow-img d-flex align-items-center gap-5 text-decoration-none'>
+                    <p className='' style={{ color: "white" }}>hello@digitalaccord.com.au</p>
                     <img src={footerImg} />
                 </a>
 
@@ -87,7 +87,7 @@ export const M_Footer = () => {
                                 <Link to='/terms' className='text-white text-decoration-none fw-bold'>Terms & Conditions</Link>
                             </div>
                             <div className='corightRight'>
-                                <p className='text-white'>Copyright © Digital Agency Pty Ltd ACN: 166 737 819 | ABN: 63 166 737 </p>
+                                <p className='text-white'>Copyright © Digital Accord Pty Ltd ACN: 166 737 819 | ABN: 63 166 737 819</p>
                             </div>
                         </div>
                     </div>

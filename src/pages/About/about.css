@@ -124,7 +124,8 @@
     font-size: 14px;
   }
 }
-.about-section .about-container .about-text-wrapper .bg-about-text .bg-about-text-inner button {
+.about-section .about-container .about-text-wrapper .bg-about-text .bg-about-text-inner a {
+  text-decoration: none;
   border-radius: 62px;
   border: 1px solid #FFF;
   color: #FFF;
@@ -136,15 +137,17 @@
   line-height: normal;
   background: transparent;
   padding: 12px 50px;
-  margin-top: 20px;
+  margin-top: 60px;
   transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
+  max-width: 213px;
+  display: block;
 }
-.about-section .about-container .about-text-wrapper .bg-about-text .bg-about-text-inner button:hover {
+.about-section .about-container .about-text-wrapper .bg-about-text .bg-about-text-inner a:hover {
   background: #FFF;
   color: #f85906;
 }
 @media only screen and (max-width: 575px) {
-  .about-section .about-container .about-text-wrapper .bg-about-text .bg-about-text-inner button {
+  .about-section .about-container .about-text-wrapper .bg-about-text .bg-about-text-inner a {
     text-align: center;
     display: flex;
     justify-content: center;

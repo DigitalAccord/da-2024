@@ -1,1 +1,16 @@
-/*# sourceMappingURL=navbar.css.map */
+.nav .desktopLogo {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  .nav .desktopLogo {
+    display: block;
+  }
+}
+.nav .mobileLogo {
+  display: block;
+}
+@media only screen and (min-width: 768px) {
+  .nav .mobileLogo {
+    display: none;
+  }
+}/*# sourceMappingURL=navbar.css.map */

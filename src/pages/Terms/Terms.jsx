@@ -8,8 +8,8 @@ export const Terms = () => {
         <div className='terms'>
             <h1>Website Terms and Conditions</h1>
             <p>Please read these terms and conditions carefully
-                before using [decrypt.block@gmail.com] 
-                website operated by [Decrypt Block Metamask]</p>
+                before using [hello@digitalaccord.com.au] 
+                website operated by [Digital Accord]</p>
         </div>
         <div className='terms-head-section'>
             <h1>Conditions of use</h1>

@@ -19,7 +19,7 @@ const About = () => {
               <div className='bg-about-text-inner'>
                 <p>As one of Brisbane’s leading innovative digital agencies, we are specialists in Website Design and Web Development, Digital Marketing, and Business IT Solutions. As the digital age increasingly advances and technology evolves, the need for businesses to have a strong digital presence is paramount. We build websites with advanced design and ultimate usability, that generate more traffic and enquiries for your business.</p>
                 <p>As one of Brisbane’s leading innovative digital agencies, we are specialists in Website Design and Web Development, Digital Marketing, and Business IT Solutions. As the digital age increasingly advances and technology evolves...</p>
-                <a href='#down'> <button>Our Team</button></a>
+                <a href='#down'>Our Team</a>
               </div>
             </div>
           </div>

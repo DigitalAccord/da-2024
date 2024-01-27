@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import './navbar.scss'
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
-import { BackArrow, BusinessIcon, CaseStudiesIcon, ChatIcon, ExperienceIcon, HomeIcon, MainLogo, MenuBarClose, MenuBarOpen, PeopleIcon, SpeakerIcon, WorkIcon } from '../assets/svgIcons';
+import { BackArrow, BusinessIcon, CaseStudiesIcon, ChatIcon, ExperienceIcon, HomeIcon, MainLogo,  MenuBarClose, MenuBarOpen, MobileLogo, PeopleIcon, SpeakerIcon, WorkIcon } from '../assets/svgIcons';
+import {mainlogo} from '../assets/da-main-logo.svg';
 const MobileMenu = ({handleClosePopup}) => {
     const [activeMenu, setActiveMenu] = useState(null);
     const addClassActive = (menu) => {
@@ -177,8 +178,15 @@ const Navbar = () => {
         <>
             <div className={isPopup ? 'navbar dark' : ' navbar'}>
                 <div className='nav'>
+                    <span className='desktopLogo me-auto'>
+                        <NavLink to='/' onClick={handleClosePopup}>
+                            <MainLogo width={160} height={44}/>
+                        </NavLink>
+                    </span>
                     <span className='mobileLogo me-auto'>
-                        <NavLink to='/' onClick={handleClosePopup}><MainLogo height={logoStyle.height} width={logoStyle.width} /></NavLink>
+                        <NavLink to='/' onClick={handleClosePopup}>
+                            <MobileLogo/>
+                        </NavLink>
                     </span>
                     <ul>
                         <li onClick={(e) => {
@@ -191,10 +199,12 @@ const Navbar = () => {
                         </li>
 
                         <li>
-                            <a href='#LetsTalk'  ><span className='menu-text'>Let’s Talk</span>
-                                <span className='span'>
-                                    <ChatIcon />
-                                </span></a>
+                            <NavLink to="/contact">
+                                <span className='menu-text'>Let’s Talk</span>
+                                    <span className='span'>
+                                        <ChatIcon />
+                                    </span>
+                            </NavLink>
                         </li>
                     </ul>
                 </div>
@@ -245,7 +255,7 @@ const Navbar = () => {
                     <div className='bottomLeft'>
                         <div className={`subMenuDot1 submenu3 ${activeMenu === 'submenu3' ? 'active' : ''}`}>
                             <div className='menuItems' onClick={() => addClassActive('submenu3')}>
-                                <h2 className='MenuHeading'>our work</h2>
+                                <h2 className='MenuHeading'>Our Work</h2>
                                 <div className='menuItemIcon'>
                                     <WorkIcon />
                                 </div>
@@ -253,7 +263,7 @@ const Navbar = () => {
                         </div>
                         <div className={`subMenuDot2 submenu4 ${activeMenu === 'submenu4' ? 'active' : ''}`}>
                             <div className='menuItems' onClick={() => addClassActive('submenu4')}>
-                                <h2 className='MenuHeading'>case studies</h2>
+                                <h2 className='MenuHeading'>Case Studies</h2>
                                 <div className='menuItemIcon'>
                                     <CaseStudiesIcon />
                                 </div>
@@ -266,7 +276,7 @@ const Navbar = () => {
                                 <div className='menuItemIcon'>
                                     <BusinessIcon />
                                 </div>
-                                <h2 className='MenuHeading'>business it</h2>
+                                <h2 className='MenuHeading'>Business IT</h2>
                             </div>
                         </div>
                     </div>
@@ -290,19 +300,19 @@ const Navbar = () => {
                         <NavLink to='/case' onClick={handleClosePopup} >Website Design & Development</NavLink>
                         <NavLink to='/management' onClick={handleClosePopup}>Social Media Management</NavLink>
                         <NavLink to='/google' onClick={handleClosePopup}>Social Media advertising</NavLink>
-                        <a href='/#'>our work</a>
+                        <a href='/#'>Our Work</a>
                     </div>
                     <div className={`subMenuItems ${activeMenu === 'submenu4' ? 'show' : ''}`}>
                         <NavLink to='/user' onClick={handleClosePopup} >Google Advertising</NavLink>
                         <NavLink to='/development' onClick={handleClosePopup}>Social Media Management</NavLink>
                         <NavLink to='/development' onClick={handleClosePopup}>Social Media advertising</NavLink>
-                        <NavLink to='/add' onClick={handleClosePopup}>case studies</NavLink>
+                        <NavLink to='/add' onClick={handleClosePopup}>Case Studies</NavLink>
                     </div>
                     <div className={`subMenuItems ${activeMenu === 'submenu5' ? 'show' : ''}`}>
                         <a href='/#' >Website Design & Development</a>
                         <a href='/#'>Social Media Management</a>
                         <a href='/#'>Social Media advertising</a>
-                        <a href='/#'>business it</a>
+                        <a href='/#'>Business IT</a>
                     </div>
                 </div>
                 <div className='mobileMenuDiv'>

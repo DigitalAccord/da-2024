@@ -6,6 +6,7 @@ import Solutions from '../component/solution/Solutions';
 import CenterMode from '../component/MySwiper/Swiper';
 import Category from '../component/category/Category';
 import LetsTalk from '../component/LetsTalk/LetsTalk';
+import Subscription from '../component/subscription/subscription';
 import { Fade } from 'react-reveal';
 
 const PerformanceSubMenu = () => {
@@ -101,6 +102,9 @@ export const Banner = () => {
                 </Fade>
                 <Fade bottom>
                 <Category />
+                </Fade>
+                <Fade bottom>
+                    <Subscription />
                 </Fade>
                 <Fade bottom>
                 <LetsTalk />
