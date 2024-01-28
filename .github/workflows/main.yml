@@ -4,32 +4,32 @@ on:
   push:
     branches:    
       - QA_1
-      
-name: Build and Publish DA
-jobs:
-  FTP-Deploy-Action:
-    name: FTP-Deploy-Action
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@master
-    
-    - name: Use Node.js 18.x
-      uses: actions/setup-node@v1
-      with:
-        node-version: '18.x'
 
-    - name: List output files
-      run: ls
+name: Build and Publish DA
+  jobs:
+    FTP-Deploy-Action:
+      name: FTP-Deploy-Action
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@master
       
-    - name: FTP-Deploy-Action
-      uses: SamKirkland/FTP-Deploy-Action@4.3.4
-      env:
-        server: ${{ secrets.FTP_SERVER }}
-        username: ${{ secrets.FTP_USERNAME }}
-        password: ${{ secrets.FTP_PASSWORD }}
-        port: 22,
-        protocol: ftps
-        local-dir: ./build/
-        server-dir: public_html/da-2024/
-        timeout: 60000
-        dry-run: true
+      - name: Use Node.js 18.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: '18.x'
+
+      - name: List output files
+        run: ls
+        
+      - name: FTP-Deploy-Action
+        uses: SamKirkland/FTP-Deploy-Action@4.3.4
+        env:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: 22,
+          protocol: ftps
+          local-dir: ./build/
+          server-dir: public_html/da-2024/
+          timeout: 60000
+          dry-run: true
