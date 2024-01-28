@@ -11,10 +11,10 @@ const LetsTalk = () => {
     const navigate = useNavigate();
 
   const [getData, setGetData] = useState({
-    username: "",
-    contact: "",
-    email: "",
-    message: ""
+    input_1: "",
+    input_3: "",
+    input_2: "",
+    input_5: ""
   })
 
   const [isFormValid, setIsFormValid] = useState(false);
@@ -27,7 +27,7 @@ const LetsTalk = () => {
 
 
   useEffect(() => {
-    const fieldsToCheck = ['username', 'contact', 'email'];
+    const fieldsToCheck = ['input_1', 'input_3', 'input_2'];
     setIsFormValid(fieldsToCheck.some((field) => getData[field] !== ''));
   }, [getData, recaptchaValue]);
 
@@ -46,7 +46,7 @@ const LetsTalk = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     for (const key in getData) {
-      if (key !== 'message' && !getData[key].trim()) {
+      if (key !== 'input_5' && !getData[key].trim()) {
         toast.error(`Please fill in the ${key} field`);
         return;
       }
@@ -58,13 +58,21 @@ const LetsTalk = () => {
     }
 
     try {
-      const response = await fetch(`${process.env.REACT_APP_API_BASEURL}/send-email`, {
+
+      const base64Credentials = btoa(`${process.env.REACT_APP_GFCK}:${process.env.REACT_APP_GFCS}`);
+
+      console.log("base64creds", base64Credentials);
+
+      const response = await fetch(`${process.env.REACT_APP_GFEP}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Authorization': `Basic ${base64Credentials}`
         },
         body: JSON.stringify(getData),
       });
+
+      console.log("Response", response);
 
       if (response.ok) {
         toast.success('Email sent successfully');
@@ -127,7 +135,7 @@ const LetsTalk = () => {
                     <div class="mb-3">
                       <label for="exampleInputEmail1" class="form-label mb-0">Name</label>
                       <input type="text"
-                        name='username'
+                        name='input_1'
                         value={getData.username}
                         onChange={handleInputChange}
                         class="form-control"
@@ -139,7 +147,7 @@ const LetsTalk = () => {
                     <div className="mb-3">
                       <label htmlFor="exampleInputPassword1" className="form-label mb-0">Contact Number</label>
                       <input type="text"
-                        name="contact"
+                        name="input_3"
                         value={getData.contact}
                         onChange={handleInputChange}
                         className="form-control"
@@ -152,7 +160,7 @@ const LetsTalk = () => {
                       <input type="email"
                         value={getData.email}
                         onChange={handleInputChange}
-                        name='email'
+                        name='input_2'
                         className="form-control"
                         id="exampleInputPassword1"
                         autoComplete="off" />
@@ -164,7 +172,7 @@ const LetsTalk = () => {
                       <input type="text"
                         value={getData.message}
                         onChange={handleInputChange}
-                        name='message'
+                        name='input_5'
                         class="form-control"
                         id="exampleInputPassword1"
                         autoComplete="off" />
@@ -177,7 +185,7 @@ const LetsTalk = () => {
 
                     <button type="submit"
                       className="btn submit-btn d-flex justify-content-between mt-3"
-                      disabled={!getData.username || !getData.contact || !getData.email}
+                      disabled={!getData.input_1 || !getData.input_3 || !getData.input_2}
                     ><p style={{ margin: 0 }}>Submit Message</p><img src={arrow} className='form-btn-arrow' style={{ maxWidth: "68px" }} alt=""/></button>
                   </form>
                   <Toaster position="top-right" richColors />
