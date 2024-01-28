@@ -48,7 +48,7 @@ function App() {
   return (
     <>
 
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.NODE_ENV === 'production' ? '/da-2024' : ''}>
 <ToastContainer />
         <Navbar />
         <ScrollToTop />

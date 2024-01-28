@@ -112,7 +112,7 @@ const LetsTalk = () => {
                   <img src={map} alt="" />
                   <div className='map_pointer_wrapper'>
                     <div className={click ? "click_content" : ""}>
-                      <p className={click ? "click_content_p" : "d-none"}>(01) 2345 6789</p>
+                      <p className={click ? "click_content_p" : "d-none"}>(07) 3554 0017</p>
                       <h5 className={click ? "click_content_h3" : "d-none"}>Suite 30, Lvl 7 445 Upper Edward St Spring Hill, BRISBANE CITY 4000</h5>
                     </div>
                     <div className='map_pointer' onClick={handleClick}>
@@ -170,7 +170,7 @@ const LetsTalk = () => {
                         autoComplete="off" />
                     </div>
                     <ReCAPTCHA
-                      sitekey="6Lfx7EYpAAAAAIygBtjsfzyId4v9PugyraEzOXLm"
+                      sitekey={process.env.NODE_ENV === 'production' ? '6Lef-qQZAAAAAAcIH3xdvIhwX4twfrQg0d4Kpjxh' : '6Lfx7EYpAAAAAIygBtjsfzyId4v9PugyraEzOXLm'}
                       onChange={handleRecaptchaChange}
                       className='re_captcha'
                     />
@@ -178,7 +178,7 @@ const LetsTalk = () => {
                     <button type="submit"
                       className="btn submit-btn d-flex justify-content-between mt-3"
                       disabled={!getData.username || !getData.contact || !getData.email}
-                    ><p style={{ margin: 0 }}>Submit Message</p><img src={arrow} className='form-btn-arrow' style={{ maxWidth: "68px" }} /></button>
+                    ><p style={{ margin: 0 }}>Submit Message</p><img src={arrow} className='form-btn-arrow' style={{ maxWidth: "68px" }} alt=""/></button>
                   </form>
                   <Toaster position="top-right" richColors />
                 </div>
