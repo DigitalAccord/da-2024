@@ -103,19 +103,17 @@ const Solutions = () => {
 
   useEffect(() => {
     const $scrollWidthDiv = $('.scroll-width-div');
-  
-    const handleWheel = function (event) {
-      console.log(event, event.target.src?.includes("ItImg.71e97b626fb6faf9ca80"))
-     
+
+    const handleWheel = function (event) {      
       if (isVisible) {
         const scrollWidthDiv = $scrollWidthDiv[0]; // Get the DOM element from the jQuery object
-  
+
         if (event.originalEvent.deltaY > 0 && scrollWidthDiv.scrollLeft < scrollWidthDiv.scrollWidth - scrollWidthDiv.clientWidth) {
           document.body.addEventListener('wheel', preventDefault, { passive: false });
           scrollWidthDiv.scrollLeft += event.originalEvent.deltaY;
           event.preventDefault();
         }
-  
+
         if (event.originalEvent.deltaY < 0 && scrollWidthDiv.scrollLeft > 0) {
           scrollWidthDiv.scrollLeft += event.originalEvent.deltaY;
           event.preventDefault();
@@ -128,13 +126,13 @@ const Solutions = () => {
         }
       }
     };
-  
+
     const preventDefault = (event) => {
       event.preventDefault();
     };
-  
+
     $scrollWidthDiv.on('wheel', handleWheel);
-  
+
     return () => {
       $scrollWidthDiv.off('wheel', handleWheel);
       document.body.removeEventListener('wheel', preventDefault);

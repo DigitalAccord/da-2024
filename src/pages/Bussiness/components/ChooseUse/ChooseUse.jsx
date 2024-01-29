@@ -3,10 +3,10 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './chooseuse.scss'
-import { BussinessHeadPhone } from '../../../../assets/svgIcons';
-import { max } from 'd3-array';
+
 export const ChooseUse = () => {
   const [activeCardId, setActiveCardId] = useState(4);
+  const [activeCardId1, setActiveCardId1] = useState(4);
   const [cardId, setCardId] = useState(-3);
   const [maxCard, setMaxCard] = useState(0);
 
@@ -23,45 +23,22 @@ export const ChooseUse = () => {
 
   useEffect(() => {
     setMaxCard(cardsData.length);
-    console.log(cardsData, "length")
-  }, [])
-
-
-  const handleCardClick = (id) => {
-    console.log(id, "id")
-    setActiveCardId(id + 2);
-  };
+  }, [cardsData]);
 
   const handleCardChange = (index) => {
-    if(index === 0){
-      setActiveCardId(3);
-    }else{
-      let count = index+3;
-      if(count>=maxCard){
-        setActiveCardId(count-maxCard);
-      }else{
-        setActiveCardId(index+3);
+    const screenWidth = window.innerWidth;
+    if (screenWidth <= 600) {
+      setActiveCardId(index);
+    } else {
+      let count = index + 3;
+      if (count >= maxCard) {
+        setActiveCardId(count - maxCard);
+      } else {
+        setActiveCardId(index + 3);
       }
-
-      
     }
-    
-
-
-    // if (index % maxCard-1 > 4) {
-    //   console.log("index213: ", index + 3)
-    //   setActiveCardId(index + 3)
-    // }
-    // else {
-    //   console.log("index1: ", (index + 3) % maxCard-1)
-    //   setActiveCardId((index + 3) % maxCard-1)
-    // }
-    // if (index === maxCard - 1) {
-    //   setActiveCardId(4);
-    // } else {
-    //   setActiveCardId(index + 3);
-    // }
   };
+
   const settings = {
     dots: true,
     afterChange: handleCardChange,
@@ -78,16 +55,17 @@ export const ChooseUse = () => {
       {
         breakpoint: 1400,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 4,
           slidesToScroll: 1,
           infinite: true,
-          dots: true
+          dots: true,
+          
         }
       },
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 1,
           infinite: true,
           dots: true
@@ -105,18 +83,13 @@ export const ChooseUse = () => {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 1,
-
+          infinite: true,
+          dots: true
         }
       }
+     
     ]
   };
   return (
@@ -124,7 +97,10 @@ export const ChooseUse = () => {
       <div className='chooseUs-wrapper'>
         <div className='choosUs-row1 mt-5'>
           <div className='div'>
-            <div className='choose_cards1'></div>
+            <div className='choose_cards1'>
+
+            
+            </div>
             <div className='choose_cards1'></div>
             <div className='choose_cards1'></div>
             <div className='choose_cards1'></div>
@@ -135,6 +111,38 @@ export const ChooseUse = () => {
               </h1>
             </div>
           </div>
+
+
+        </div>
+        <div className='mobile-choose-container mt-3'>
+          <div className='mobile-choose-wrapper'>
+            <div className='mobile-chose-card-row1'>
+              <div className='choose-row1-card1'></div>
+              <div className='choose-row1-card2' style={{maxWidth:"50px"}}></div>
+            </div>
+          </div>
+
+          <div className='mobile-choose-wrapper mt-3'>
+            <div className='mobile-chose-card-row1'>
+              <div className='choose-row1-card1'></div>
+              <div className='choose-row1-card2'></div>
+              <div className='choose-row1-card1'></div>
+              <div className='choose-row1-card2' style={{maxWidth:"50px"}}></div>
+            </div>
+          </div>
+          <div className='mobile-choose-wrapper mt-3'>
+            <div className='mobile-chose-card-row1'>
+              <div className='choose-row1-card1 small-choose' ></div>
+              <div className='choose-row1-card2'></div>
+              <div className='choose-row1-card1'></div>
+              <div className='choose-row1-card2'></div>
+              <div className='choose-row1-card2' style={{maxWidth:"50px"}}></div>
+            </div>
+          </div>
+          <div className='mobile-choose-text'>
+            <h1>Why Choose Us?</h1>
+          </div>
+
         </div>
 
 
@@ -149,7 +157,7 @@ export const ChooseUse = () => {
                 onClick={() => handleCardChange(card.id)}
               >
                 <div className='carousel-card-content'>
-                  <h3>{card.title}</h3>
+                  <h3 style={{color:"white"}}>{card.title}</h3>
                 </div>
               </div>
             ))}

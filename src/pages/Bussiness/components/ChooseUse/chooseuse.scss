@@ -2,31 +2,44 @@
     width: 100%;
     position: relative;
     background: url('../../../../assets/bussiness/Group\ 1306.png');
-    &::after{
-        content: "";
-        position: absolute;
-        max-width: 450px;
-        width: 100%;
-        background: url("../../../../assets/bussiness/Ellipse\ 139\ \(1\).png");
-        height: 450px;
-        bottom: 0;
-        left: 60%;
-        background-size: cover;
-        background-position: center;
-    }
+
+    // &::after{
+    //     content: "";
+    //     position: absolute;
+    //     max-width: 750px;
+    //     width: 100%;
+    //     background: url("../../../../assets/bussiness/Ellipse\ 139\ \(1\).png");
+    //     height: 450px;
+    //     bottom: 0;
+    //     left: 60%;
+    //     background-size: 600%;
+    //     background-position: center;
+    // }
     .choosUs-row1 {
         width: 100%;
         display: flex;
         justify-content: end;
         gap: 53px;
+        display: block;
+        @media only screen and (max-width: 992px) {
+          display: none;
+        }
 
 
         .div {
             display: flex;
-            width: 80%;
+            width: 100%;
             gap: 53px;
             justify-content: end;
             position: relative;
+
+            @media only screen and (max-width: 1400px) {
+                width: 100%;
+            }
+
+            @media only screen and (max-width: 992px) {
+                gap: 15px
+            }
 
             .choose_cards1 {
                 max-width: 311px;
@@ -36,6 +49,9 @@
                 border: 0.5px solid rgba(255, 255, 255, 0.26);
                 background: rgba(217, 217, 217, 0.03);
                 backdrop-filter: blur(23.5px);
+                // z-index: 1;
+                position: relative;
+
 
 
             }
@@ -47,7 +63,26 @@
                 display: flex;
                 justify-content: flex-start;
                 flex-direction: column;
-                left: 19%;
+                right: 300px;
+                width: 100%;
+
+                @media only screen and (max-width: 1400px) {
+                    right: 200px;
+                }
+
+                @media only screen and (max-width: 1200px) {
+                    right: 100px;
+                }
+
+                @media only screen and (max-width: 992px) {
+                    right: 50px;
+                }
+
+                @media only screen and (max-width: 800px) {
+                    right: 0px;
+                }
+
+
 
                 h1 {
                     color: #FFF;
@@ -58,8 +93,19 @@
                     font-weight: 700;
                     line-height: 89.177%;
 
+                    @media only screen and (max-width: 992px) {
+                        font-size: 86px;
+
+                    }
+
+                    @media only screen and (max-width: 575px) {
+                        font-size: 56px;
+
+                    }
+
 
                 }
+
             }
         }
 
@@ -82,21 +128,37 @@
 
 
 .crasousel_container {
-    
+
 
 
     .carousel-card {
 
-        margin: 0 auto;
+
         transition: transform 0.3s ease-in-out;
         height: 428px;
         border-radius: 10px;
         border: 0.5px solid rgba(255, 255, 255, 0.26);
         background: rgba(217, 217, 217, 0.03);
         backdrop-filter: blur(23.5px);
-        margin-right: 100px;
+
         width: 90% !important;
         margin: 0 auto;
+
+        @media only screen and (max-width: 1400px) {
+            margin-left: -60%;
+        }
+
+        @media only screen and (max-width: 1024px) {
+            margin-left: -158%;
+        }
+
+        @media only screen and (max-width: 900px) {
+            margin-left: -252%;
+        }
+
+        @media only screen and (max-width: 600px) {
+            margin-left: 0;
+        }
 
         .carousel-card-content {
             display: flex;
@@ -128,24 +190,35 @@
     }
 
     .active {
-        // transform: scale(1.1);
         border-radius: 35px;
         background: linear-gradient(255deg, #F36A24 2.73%, #8C3305 96.37%);
-        // margin-right: 30px !important;
-        // width: 100%;
         height: 450px;
-        width: 90% !important;
-        margin: 0 auto !important;
         position: relative;
-       
-
-
+        
+        
     }
 
     .slick-prev,
     .slick-next {
         font-size: 17px !important;
         line-height: 1;
+    }
+    .slick-dots li button:before{
+        left:420px !important;
+        @media only screen and (max-width: 1400px) {
+          left: 320px !important;
+        }
+
+        @media only screen and (max-width: 1024px) {
+            left: 150px !important;
+          }
+
+          @media only screen and (max-width: 900px) {
+            left: 10px !important;
+          }
+        
+
+       
     }
 
     .slick-list {
@@ -155,12 +228,87 @@
         // overflow: hidden;
     }
 
-    &.slick-current {
-       
-    }
-    &.slick-dots li {
-        left: 40% !important;
-        position: absolute !important;
-    }
+    &.slick-current {}
+
+    // .slick-dots li {
+    //     left: -20% !important;
+    //     position: absolute !important;
+    // }
+    // .slick-dots{
+    //     right: -40%;
+    //    position: absolute;
+    //    overflow: hidden;
+    //     bottom:-20px;
+    // }
+
     
+
+}
+
+
+
+
+
+
+
+
+.mobile-choose-container {
+    position: relative;
+        display: none;
+    @media only screen and (max-width: 992px) {
+      display: block;
+    }
+
+
+    .mobile-choose-wrapper {
+        .mobile-chose-card-row1 {
+            display: flex;
+            justify-content: end;
+            gap: 16px;
+
+            .choose-row1-card1 {
+                max-width: 93px;
+                width: 100%;
+                height: 130px;
+                border-radius: 3.02px;
+                border: 0.151px solid rgba(255, 255, 255, 0.26);
+                background: rgba(217, 217, 217, 0.03);
+                backdrop-filter: blur(7.0964131355285645px);
+            }
+
+            .choose-row1-card2 {
+                max-width: 93px;
+                width: 100%;
+                height: 130px;
+                border-radius: 3.02px;
+                border: 0.151px solid rgba(255, 255, 255, 0.26);
+                background: rgba(217, 217, 217, 0.03);
+                backdrop-filter: blur(7.0964131355285645px);
+            }
+            .small-choose{
+                @media only screen and (max-width: 400px) {
+                   max-width: 20px;
+                  }
+            }
+        }
+    }
+
+    .mobile-choose-text {
+        position: absolute;
+        bottom: 50px;
+        right: 100px;
+        max-width: 221px;
+        width: 100%;
+
+        h1 {
+            color: #FFF;
+            text-align: right;
+            font-family: Poppins;
+            font-size: 56px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 89.177%;
+        }
+
+    }
 }

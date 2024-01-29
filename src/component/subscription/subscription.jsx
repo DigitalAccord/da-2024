@@ -1,10 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import './subscription.scss'
-import arrow from '../../assets/Arrow 4.png'
-import map from '../../assets/banner/map.png'
-import { Toaster, toast } from 'sonner'
-import map_pointer from '../../assets/contact/market.png'
-import { useNavigate } from 'react-router-dom'
 
 const Subscription = () => {
   return (

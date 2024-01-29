@@ -1,0 +1,97 @@
+.digital {
+    padding-top: 150px;
+    width: 100%;
+
+    @media only screen and (max-width: 768px) {
+        display: none;
+    }
+
+    .container {
+        max-width: 1200px;
+
+        .digital-text {
+            // padding: 0px 235px;
+            // @media only screen and (max-width: 768px) {
+            //     padding: 0px 10px;
+            // }
+            p {
+                text-align: center;
+                font-family: "Poppins", sans-serif;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 38.5px;
+                background: linear-gradient(317deg, #303D50 -13.75%, #FFF 91.21%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                margin-bottom: 78px;
+
+                @media only screen and (max-width: 862px) {
+                    font-size: 21px;
+                }
+            }
+        }
+
+        .digital-logo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+
+            img.dell {
+                width: 100%;
+                max-width: 136px;
+                height: 42px;
+            }
+
+            img.cpanel {
+                width: 100%;
+                max-width: 165px;
+                height: 42px;
+            }
+
+            img.veeam {
+                width: 100%;
+                max-width: 195px;
+                height: 35px;
+            }
+
+            img.microsoft {
+                width: 100%;
+                max-width: 133px;
+                height: 53px;
+            }
+        }
+
+        .digital-logobottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 55px 120px 0px 120px;
+
+            @media only screen and (max-width: 992px) {
+
+                padding: 55px 0px 0px 0px;
+            }
+
+            img.barracuda {
+                width: 100%;
+                max-width: 178px;
+                height: 42px;
+            }
+
+            img.nextdc {
+                width: 100%;
+                max-width: 240px;
+                height: 42px;
+            }
+
+            img.solusvm {
+                width: 100%;
+                max-width: 221px;
+                height: 42px;
+            }
+        }
+    }
+}
