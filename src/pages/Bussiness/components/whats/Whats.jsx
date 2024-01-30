@@ -1,6 +1,11 @@
 import React, { useState } from 'react'
 import './whats.scss'
 import { BussinessButton, BussinessCircle, BussinessLearn } from '../../../../assets/svgIcons'
+import inactiveSVG from '../../../../assets/bussiness/circle-svg-inactive.svg'
+import activeSVG from '../../../../assets/bussiness/circle-svg-active.svg' 
+import inactiveSVGMob from '../../../../assets/bussiness/circle-svg-inactive-mob.svg'
+import activeSVGMob from '../../../../assets/bussiness/circle-svg-active-mob.svg'
+import learnmorecirlcewitharrow from '../../../../assets/bussiness/learn-more-circle-with-arrow.svg'
 const Whats = () => {
     const [isActive, setIsActive] = useState("Workstations");
     const [cards, setCards] = useState(1);
@@ -93,10 +98,15 @@ const Whats = () => {
                                             }}
                                            
                                         >
-                                            {getButtonName(section.id)} <BussinessButton className="svg-parent" />
-
-                                            <div key={section.id} className={cards === section.id ? 'svg_enable' : 'svg_disable'}>
-                                                {/* <BussinessCircle/> */}
+                                            {getButtonName(section.id)} 
+                                            
+                                            <div className="indicator">
+                                                <div className='desktop'>
+                                                    <img src={cards === section.id ? activeSVG : inactiveSVG} alt=''/>
+                                                </div>
+                                                <div className='mobile'>
+                                                    <img src={cards === section.id ? activeSVGMob : inactiveSVGMob} alt=''/>
+                                                </div>
                                             </div>
                                         </button>
                                     ))}
@@ -123,13 +133,10 @@ const Whats = () => {
                                                         {section.para}
                                                     </p>
                                                 </div>
-                                                <div className='whats_learn_more'>
-                                                    <p>Learn More</p>
-                                                    <BussinessLearn />
-                                                </div>
-
-
-
+                                                <a href="/#" className='whats_learn_more'>
+                                                    <span>Learn More</span>
+                                                    <img src={learnmorecirlcewitharrow} alt='' />
+                                                </a>
                                             </div>
                                         </div>
                                     ))}
