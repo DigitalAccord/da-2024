@@ -300,19 +300,17 @@ const Navbar = () => {
                         <NavLink to='/case' onClick={handleClosePopup} >Website Design & Development</NavLink>
                         <NavLink to='/management' onClick={handleClosePopup}>Social Media Management</NavLink>
                         <NavLink to='/google' onClick={handleClosePopup}>Social Media advertising</NavLink>
-                        <a href='/#'>Our Work</a>
+                        <NavLink to='/work' onClick={handleClosePopup}>Our Work</NavLink>
                     </div>
                     <div className={`subMenuItems ${activeMenu === 'submenu4' ? 'show' : ''}`}>
                         <NavLink to='/user' onClick={handleClosePopup} >Google Advertising</NavLink>
                         <NavLink to='/development' onClick={handleClosePopup}>Social Media Management</NavLink>
                         <NavLink to='/development' onClick={handleClosePopup}>Social Media advertising</NavLink>
-                        <NavLink to='/add' onClick={handleClosePopup}>Case Studies</NavLink>
+                        <NavLink to='/case-studies' onClick={handleClosePopup}>Case Studies</NavLink>
                     </div>
                     <div className={`subMenuItems ${activeMenu === 'submenu5' ? 'show' : ''}`}>
                         <a href='/#' >Website Design & Development</a>
-                        <a href='/#'>Social Media Management</a>
-                        <a href='/#'>Social Media advertising</a>
-                        <a href='/#'>Business IT</a>
+                        <NavLink to='/business-it' onClick={handleClosePopup}>Business IT</NavLink>
                     </div>
                 </div>
                 <div className='mobileMenuDiv'>

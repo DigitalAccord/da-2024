@@ -61,10 +61,11 @@ function App() {
           <Route path="/add" element={<Add />} />
           <Route path="/user" element={<User />} />
           <Route path="/development" element={<Development />} />
+          <Route path="/case-studies" element={<CaseStudy />} />
           <Route path="/case/:slug" element={<CaseStudy />} />
           <Route path="/management" element={<Manegement />} />
           <Route path="/google" element={<GoogleAds />} />
-          <Route path="/bussiness" element={<Bussiness />} />
+          <Route path="/business-it" element={<Bussiness />} />
           <Route path="/thanks" element={<ThankYou />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
