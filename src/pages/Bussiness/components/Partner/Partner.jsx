@@ -4,10 +4,10 @@ import roundArrow from '../../../../assets/bussiness/Group 1178.png'
 import roundArrow1 from '../../../../assets/bussiness/Group 1179.png'
 import { PartnerSvg } from '../../../../assets/svgIcons'
 export const Partner = () => {
-  return (
-   <>
-   <div className='partner-bg'>
-    <div className='partner-wrapper'>
+    return (
+        <>
+            <div className='partner-bg'>
+                <div className='partner-wrapper'>
       <div className='partner-wrapper-inner'>
          <div className='partner-heading'>
             <h1>Let us be your partner</h1>
@@ -52,7 +52,36 @@ export const Partner = () => {
          </div>
       </div>  
     </div>
-   </div>
-   </>
-  )
+
+                <div className='mobile-partner'>
+                    <div className='mobile-partner-content'>
+                        <div className='partner-box2-svg'>
+                            <PartnerSvg />
+                        </div>
+                        <div className='partner-heading'>
+                            <h1>Let us be your partner</h1>
+                            <p>Pellentesque euismod malesuada velit, at vehicula sem. Proin augue eros, placerat non velit sit amet, cursus volutpat mauris. Vivamus pellentesque mi id sodales interdum. Pellentesque pretium tellus diam</p>
+                        </div>
+                        <div className='partner-box1 mt-5'>
+                            <h1>Reliable, On Time Support</h1>
+                            <p>Whether you need equipment guidance or technical support, our friendly in-house staff of IT professionals are here to assist you.</p>
+                        </div>
+
+                        <div className='partner-box1 mt-5'>
+                            <h1>Dedicated In House Team</h1>
+                            <p>Whether you need equipment guidance or technical support, our friendly in-house staff of IT professionals are here to assist you.</p>
+                        </div>
+                        <div className='partner-box1 mt-5'>
+                            <h1>Decrease Your Costs</h1>
+                            <p>Are you fed up with your IT costs steadily rising? Digital Accord works with you to develop a comprehensive plan to reduce costs while keeping your company moving forward.</p>
+                        </div>
+
+
+                      
+
+                    </div>
+                </div>
+            </div>
+        </>
+    )
 }

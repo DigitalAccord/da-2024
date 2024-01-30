@@ -5,6 +5,10 @@ import Whats from './components/whats/Whats'
 import Synergy from './components/Synergy/Synergy'
 import { ChooseUse } from './components/ChooseUse/ChooseUse'
 import { Partner } from './components/Partner/Partner'
+import TellUs from './components/TellUs/TellUs'
+import Digital from './components/Digital/Digital'
+import LetsTalk from '../../component/LetsTalk/LetsTalk'
+import Accordian from '../Seo/component/Accordian/Accordian'
 const Bussiness = () => {
   return (
     <>
@@ -26,7 +30,12 @@ const Bussiness = () => {
     <Whats/>
     <Synergy/>
     <ChooseUse/>
-    {/* <Partner/> */}
+    <Partner/>
+    <TellUs/>
+    <Digital/>
+    <Accordian/>
+    <LetsTalk/>
+    
     </>
   )
 }

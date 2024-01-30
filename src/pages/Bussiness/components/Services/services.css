@@ -1,0 +1,301 @@
+.services {
+  padding-top: 150px;
+}
+.services .container {
+  max-width: 1378px;
+}
+.services .container .tell-what {
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+  .services .container .tell-what {
+    display: block;
+  }
+  .services .container .tell-what h4 {
+    color: #FFF;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    padding-bottom: 40px;
+  }
+}
+.services .container .tellus-box {
+  width: 100%;
+  max-width: 1378px;
+  border-radius: 26px;
+  border: 0.5px solid #FFF;
+  background: #202733;
+  -webkit-backdrop-filter: blur(17px);
+          backdrop-filter: blur(17px);
+  padding: 60px 100px;
+  position: relative;
+}
+@media only screen and (max-width: 1056px) {
+  .services .container .tellus-box {
+    padding: 60px 50px;
+  }
+}
+@media only screen and (max-width: 962px) {
+  .services .container .tellus-box {
+    padding: 50px 30px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .services .container .tellus-box {
+    border-radius: 20px;
+    padding: 37px 39px;
+  }
+}
+.services .container .tellus-box .tell-arrowbutton .button-right {
+  width: 63px;
+  height: 63px;
+  border-radius: 63px;
+  border: 1px solid #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  right: 50px;
+  transform: translateY(-50%);
+}
+@media only screen and (max-width: 920px) {
+  .services .container .tellus-box .tell-arrowbutton .button-right {
+    right: 15px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .services .container .tellus-box .tell-arrowbutton .button-right {
+    display: none;
+  }
+}
+.services .container .tellus-box .tell-arrowbutton .button-right svg {
+  color: #fff;
+  font-size: 20px;
+}
+.services .container .tellus-box .tell-arrowbutton .button-left {
+  width: 63px;
+  height: 63px;
+  border-radius: 63px;
+  border: 1px solid #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50px;
+  transform: translateY(-50%);
+}
+@media only screen and (max-width: 1024px) {
+  .services .container .tellus-box .tell-arrowbutton .button-left {
+    right: 15px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .services .container .tellus-box .tell-arrowbutton .button-left {
+    display: none;
+  }
+}
+.services .container .tellus-box .tell-arrowbutton .button-left svg {
+  color: #fff;
+  font-size: 20px;
+}
+.services .container .tellus-box .tell-text {
+  text-align: center;
+}
+.services .container .tellus-box .tell-text h2 {
+  color: #FFF;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 97.5%;
+}
+@media only screen and (max-width: 768px) {
+  .services .container .tellus-box .tell-text h2 {
+    display: none;
+  }
+}
+.services .container .tellus-box .tell-text img.line {
+  max-width: 359px;
+  width: 100%;
+  margin: 20px 0px;
+}
+@media only screen and (max-width: 768px) {
+  .services .container .tellus-box .tell-text img.line {
+    display: none;
+  }
+}
+.services .container .tellus-box .tell-text p {
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+  .services .container .tellus-box .tell-text p {
+    color: #FFF;
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 275;
+    line-height: 24px;
+    display: block;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .services .container .tellus-box .tell-text p {
+    text-align: start;
+  }
+}
+.services .container .tellus-box .tell-text h1 {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 75px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 97.5%;
+  background: var(--Classic-Orange-Fill, linear-gradient(155deg, #F36A24 15.87%, #8C3305 101.33%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 30px;
+}
+@media only screen and (max-width: 768px) {
+  .services .container .tellus-box .tell-text h1 {
+    -webkit-text-fill-color: #fff;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .services .container .tellus-box .tell-text h1 {
+    text-align: start;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .services .container .tellus-box .tell-buttons {
+    width: 100%;
+    max-width: 301px;
+    margin: auto;
+  }
+}
+.services .container .tellus-box .tell-buttons p {
+  color: #FFF;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 97.5%;
+  margin-bottom: 24px;
+}
+@media only screen and (max-width: 768px) {
+  .services .container .tellus-box .tell-buttons p {
+    display: none;
+  }
+}
+.services .container .tellus-box .tell-buttons button {
+  border-radius: 62px;
+  border: 0.5px solid #FFF;
+  padding: 19px 86px;
+  background: transparent;
+  color: #FFF;
+  text-align: center;
+  font-family: "Poppins", serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+}
+@media only screen and (max-width: 1160px) {
+  .services .container .tellus-box .tell-buttons button {
+    padding: 15px 60px;
+  }
+}
+@media only screen and (max-width: 1350px) {
+  .services .container .tellus-box .tell-buttons button {
+    padding: 15px 50px;
+  }
+}
+@media only screen and (max-width: 926px) {
+  .services .container .tellus-box .tell-buttons button {
+    padding: 15px 30px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .services .container .tellus-box .tell-buttons button {
+    margin: 12px 0px;
+  }
+}
+.services .container .tellus-box .tell-buttons button.active {
+  background: rgba(255, 255, 255, 0.1);
+}
+.services .container .tellus-box .tell-buttons .tell-buttons-top {
+  padding: 0px 130px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 32px;
+}
+@media only screen and (max-width: 1160px) {
+  .services .container .tellus-box .tell-buttons .tell-buttons-top {
+    padding-top: 0px;
+    padding: 0px 60px 32px 60px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .services .container .tellus-box .tell-buttons .tell-buttons-top {
+    flex-direction: column;
+    padding: 0px 0px 0px 0px;
+  }
+}
+.services .container .tellus-box .tell-buttons .tell-buttons-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 27px;
+}
+@media only screen and (max-width: 768px) {
+  .services .container .tellus-box .tell-buttons .tell-buttons-bottom {
+    flex-direction: column;
+    gap: 0px;
+  }
+}
+.services .container .tellus-box .tell-buttons button.button-bottom {
+  width: 100%;
+  padding: 31px 86px;
+  margin-top: 32px;
+}
+@media only screen and (max-width: 1160px) {
+  .services .container .tellus-box .tell-buttons button.button-bottom {
+    padding: 27px 86px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .services .container .tellus-box .tell-buttons button.button-bottom {
+    padding: 27px 86px;
+    margin-top: 12px;
+  }
+}
+.services .container .tellus-box .tell-buttons button.continue {
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+  .services .container .tellus-box .tell-buttons button.continue {
+    display: block;
+    border-radius: 62px;
+    background: var(--Classic-Orange-Fill, linear-gradient(155deg, #F36A24 15.87%, #8C3305 101.33%));
+    padding: 19px 86px;
+    border: none;
+    width: 100%;
+    color: #FFF;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 71px;
+  }
+}/*# sourceMappingURL=services.css.map */

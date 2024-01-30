@@ -3,30 +3,34 @@
   position: relative;
   background: url("../../../../assets/bussiness/Group 1306.png");
 }
-.chooseUs-wrapper::after {
-  content: "";
-  position: absolute;
-  max-width: 450px;
-  width: 100%;
-  background: url("../../../../assets/bussiness/Ellipse 139 (1).png");
-  height: 450px;
-  bottom: 0;
-  left: 60%;
-  background-size: cover;
-  background-position: center;
-}
 .chooseUs-wrapper .choosUs-row1 {
   width: 100%;
   display: flex;
   justify-content: end;
   gap: 53px;
+  display: block;
+}
+@media only screen and (max-width: 992px) {
+  .chooseUs-wrapper .choosUs-row1 {
+    display: none;
+  }
 }
 .chooseUs-wrapper .choosUs-row1 .div {
   display: flex;
-  width: 80%;
+  width: 100%;
   gap: 53px;
   justify-content: end;
   position: relative;
+}
+@media only screen and (max-width: 1400px) {
+  .chooseUs-wrapper .choosUs-row1 .div {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .chooseUs-wrapper .choosUs-row1 .div {
+    gap: 15px;
+  }
 }
 .chooseUs-wrapper .choosUs-row1 .div .choose_cards1 {
   max-width: 311px;
@@ -37,6 +41,7 @@
   background: rgba(217, 217, 217, 0.03);
   -webkit-backdrop-filter: blur(23.5px);
           backdrop-filter: blur(23.5px);
+  position: relative;
 }
 .chooseUs-wrapper .choosUs-row1 .div .Coose_overlay {
   position: absolute;
@@ -45,7 +50,28 @@
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  left: 19%;
+  right: 300px;
+  width: 100%;
+}
+@media only screen and (max-width: 1400px) {
+  .chooseUs-wrapper .choosUs-row1 .div .Coose_overlay {
+    right: 200px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .chooseUs-wrapper .choosUs-row1 .div .Coose_overlay {
+    right: 100px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .chooseUs-wrapper .choosUs-row1 .div .Coose_overlay {
+    right: 50px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .chooseUs-wrapper .choosUs-row1 .div .Coose_overlay {
+    right: 0px;
+  }
 }
 .chooseUs-wrapper .choosUs-row1 .div .Coose_overlay h1 {
   color: #FFF;
@@ -55,6 +81,16 @@
   font-style: normal;
   font-weight: 700;
   line-height: 89.177%;
+}
+@media only screen and (max-width: 992px) {
+  .chooseUs-wrapper .choosUs-row1 .div .Coose_overlay h1 {
+    font-size: 86px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .chooseUs-wrapper .choosUs-row1 .div .Coose_overlay h1 {
+    font-size: 56px;
+  }
 }
 .chooseUs-wrapper .choosUs-row1 .choose_cards1 {
   max-width: 311px;
@@ -68,7 +104,6 @@
 }
 
 .crasousel_container .carousel-card {
-  margin: 0 auto;
   transition: transform 0.3s ease-in-out;
   height: 428px;
   border-radius: 10px;
@@ -76,9 +111,28 @@
   background: rgba(217, 217, 217, 0.03);
   -webkit-backdrop-filter: blur(23.5px);
           backdrop-filter: blur(23.5px);
-  margin-right: 100px;
   width: 90% !important;
   margin: 0 auto;
+}
+@media only screen and (max-width: 1400px) {
+  .crasousel_container .carousel-card {
+    margin-left: -60%;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .crasousel_container .carousel-card {
+    margin-left: -158%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .crasousel_container .carousel-card {
+    margin-left: -252%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .crasousel_container .carousel-card {
+    margin-left: 0;
+  }
 }
 .crasousel_container .carousel-card .carousel-card-content {
   display: flex;
@@ -103,8 +157,6 @@
   border-radius: 35px;
   background: linear-gradient(255deg, #F36A24 2.73%, #8C3305 96.37%);
   height: 450px;
-  width: 90% !important;
-  margin: 0 auto !important;
   position: relative;
 }
 .crasousel_container .slick-prev,
@@ -112,10 +164,79 @@
   font-size: 17px !important;
   line-height: 1;
 }
+.crasousel_container .slick-dots li button:before {
+  left: 420px !important;
+}
+@media only screen and (max-width: 1400px) {
+  .crasousel_container .slick-dots li button:before {
+    left: 320px !important;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .crasousel_container .slick-dots li button:before {
+    left: 150px !important;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .crasousel_container .slick-dots li button:before {
+    left: 10px !important;
+  }
+}
 .crasousel_container .slick-list {
   padding: 0px 3% !important;
 }
-.crasousel_container.slick-dots li {
-  left: 40% !important;
-  position: absolute !important;
+.mobile-choose-container {
+  position: relative;
+  display: none;
+}
+@media only screen and (max-width: 992px) {
+  .mobile-choose-container {
+    display: block;
+  }
+}
+.mobile-choose-container .mobile-choose-wrapper .mobile-chose-card-row1 {
+  display: flex;
+  justify-content: end;
+  gap: 16px;
+}
+.mobile-choose-container .mobile-choose-wrapper .mobile-chose-card-row1 .choose-row1-card1 {
+  max-width: 93px;
+  width: 100%;
+  height: 130px;
+  border-radius: 3.02px;
+  border: 0.151px solid rgba(255, 255, 255, 0.26);
+  background: rgba(217, 217, 217, 0.03);
+  -webkit-backdrop-filter: blur(7.0964131355px);
+          backdrop-filter: blur(7.0964131355px);
+}
+.mobile-choose-container .mobile-choose-wrapper .mobile-chose-card-row1 .choose-row1-card2 {
+  max-width: 93px;
+  width: 100%;
+  height: 130px;
+  border-radius: 3.02px;
+  border: 0.151px solid rgba(255, 255, 255, 0.26);
+  background: rgba(217, 217, 217, 0.03);
+  -webkit-backdrop-filter: blur(7.0964131355px);
+          backdrop-filter: blur(7.0964131355px);
+}
+@media only screen and (max-width: 400px) {
+  .mobile-choose-container .mobile-choose-wrapper .mobile-chose-card-row1 .small-choose {
+    max-width: 20px;
+  }
+}
+.mobile-choose-container .mobile-choose-text {
+  position: absolute;
+  bottom: 50px;
+  right: 100px;
+  max-width: 221px;
+  width: 100%;
+}
+.mobile-choose-container .mobile-choose-text h1 {
+  color: #FFF;
+  text-align: right;
+  font-family: Poppins;
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 89.177%;
 }/*# sourceMappingURL=chooseuse.css.map */
